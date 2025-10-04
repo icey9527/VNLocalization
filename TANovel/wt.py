@@ -1,6 +1,7 @@
 import sys
 import os
 import struct
+import zenhan
 
 def repack_text(original_file, text_file, output_file):
     # 读取原文件
@@ -24,8 +25,7 @@ def repack_text(original_file, text_file, output_file):
         if not text:  # 跳过空行
             continue
             
-        # 将文本编码为UTF-16 LE
-        encoded_text = text.encode('gbk', errors='ignore')
+        encoded_text = zenhan.h2z(text).encode('gbk', errors='ignore')
         text_length = len(encoded_text)
         
         # 计算总长度（文本长度 + 4）
