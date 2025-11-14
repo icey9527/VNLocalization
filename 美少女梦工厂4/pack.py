@@ -102,4 +102,5 @@ print(f"✓ 完成！")
 print(f"  - 数据文件已保存为: {OUTPUT_DATA_FILE}")
 print(f"  - ARM9文件已保存为: {OUTPUT_ARM9_FILE}")
 print(f"  - 地址表位置: 0x{OFFSET_TABLE_START:X}")
+
 print("=" * 50)
