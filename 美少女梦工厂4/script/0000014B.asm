@@ -1,0 +1,158 @@
+LABEL 0
+FLAG 427, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "やあやあ、お前さんか！"
+LINE_FEED
+MESSAGE "よく来てくれたね！"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "どうも……"
+LINE_FEED
+MESSAGE "ここで働かせてもらおうと"
+LINE_FEED
+MESSAGE "思ってきたんですけど……"
+KEY_WAIT
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "よしよし、"
+LINE_FEED
+MESSAGE "そういうことなら話は早い。"
+LINE_FEED
+MESSAGE "さっそく働いてもらうとしよう。"
+KEY_WAIT
+MESSAGE "なに、別に難しいことを"
+LINE_FEED
+MESSAGE "やらせようって言うんじゃない。"
+KEY_WAIT
+MESSAGE "お前さんにはチップ運びや、"
+LINE_FEED
+MESSAGE "ドリンクサービスをやってもらう。"
+LINE_FEED
+MESSAGE "まっ、早い話が小間使いだな。"
+KEY_WAIT
+MESSAGE "まあ、ガラの悪い客もいるが、"
+LINE_FEED
+MESSAGE "せいぜい頑張りな。"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "が、頑張ります。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 428, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "おっ、来たか。"
+LINE_FEED
+MESSAGE "じゃあ、さっそく頼むぜ。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 429, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "驚いたな……完璧じゃないか。"
+LINE_FEED
+MESSAGE "お前さんを雇ってよかったよ。"
+LINE_FEED
+MESSAGE "今度もこの調子で頼むぞ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はいっ、まかせてください！"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 430, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "だめだだめだ！"
+LINE_FEED
+MESSAGE "こんな調子じゃ、客が来なくなる。"
+LINE_FEED
+MESSAGE "給料は払えんぞ。"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そんなぁ……"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 431, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "ほい、お疲れさん。"
+LINE_FEED
+MESSAGE "今度も頼むぜ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。"
+LINE_FEED
+MESSAGE "お疲れさまでした。"
+LINE_FEED
+MESSAGE "次もよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 432, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "だいぶ慣れてきたみたいだな。"
+LINE_FEED
+MESSAGE "よし、サービスだ。次から"
+LINE_FEED
+MESSAGE "給料アップといくか。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ほんとですか㌍"
+LINE_FEED
+MESSAGE "ふふ、うれしいっ！"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 433, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "ふーむ、けっこう続くもんだな。"
+LINE_FEED
+MESSAGE "まあ、こっちも助かってるし、"
+LINE_FEED
+MESSAGE "また給料を上げてやるよ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます！"
+LINE_FEED
+MESSAGE "これからもがんばります！"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 434, 1
+FACE 64
+MESSAGE_NAME "トリタム"
+MESSAGE "よお、お疲れさん。"
+LINE_FEED
+MESSAGE "最近よくやってくれてる"
+LINE_FEED
+MESSAGE "じゃないか。"
+KEY_WAIT
+MESSAGE "そのおかげってわけでもない"
+LINE_FEED
+MESSAGE "だろうが、うちも繁盛してるし、"
+LINE_FEED
+MESSAGE "また、給料を上げてやろう。"
+KEY_WAIT
+MESSAGE "なあに、ご祝儀ってやつだ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わあ、本当ですか㌍"
+LINE_FEED
+MESSAGE "ありがとうございます、オーナー！"
+KEY_WAIT
+END 0

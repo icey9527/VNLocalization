@@ -1,0 +1,72 @@
+LABEL 0
+FLAG 600, 1
+FACE 55
+MESSAGE_NAME "ナルサス"
+MESSAGE "なんじゃ、初めての来院か？"
+LINE_FEED
+MESSAGE "ここは病院じゃよ。"
+KEY_WAIT
+MESSAGE "どんな病気もすぐに治してやろう。"
+LINE_FEED
+MESSAGE "まっ、普段から気をつけておれば"
+LINE_FEED
+MESSAGE "ここの世話にはなるまいがな。"
+KEY_WAIT
+MESSAGE "しかし、油断は禁物じゃ。"
+LINE_FEED
+MESSAGE "なにかあればすぐに来るようにな。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 601, 1
+FACE 55
+MESSAGE_NAME "ナルサス"
+MESSAGE "また来たのか？"
+LINE_FEED
+MESSAGE "どれ、今日の症状は……"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 602, 1
+MESSAGE "なんじゃ、どこも悪くないぞ。"
+LINE_FEED
+MESSAGE "病気になってからまた来なさい。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 603, 1
+MESSAGE_NAME "ナルサス"
+MESSAGE "ふむ、治療費は[汎用数値]Ｇだ。"
+LINE_FEED
+MESSAGE "よろしいかな？"
+LINE_FEED
+SELECT 2, 4, "はい", 5, "いいえ"
+LABEL 4
+END 0
+LABEL 5
+END 1
+LABEL 6
+FLAG 604, 1
+MESSAGE_NAME "ナルサス"
+MESSAGE "これですぐにでも"
+LINE_FEED
+MESSAGE "良くなるじゃろう。"
+KEY_WAIT
+END 0
+LABEL 7
+MESSAGE_NAME "ナルサス"
+MESSAGE "金が足りないようじゃな。"
+LINE_FEED
+MESSAGE "すまんが、お引取り願おう。"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 605, 1
+MESSAGE_NAME "ナルサス"
+MESSAGE "なんじゃ、"
+LINE_FEED
+MESSAGE "治療を受けていかんのか？"
+LINE_FEED
+MESSAGE "あまり無理せんようにな。"
+KEY_WAIT
+END 0

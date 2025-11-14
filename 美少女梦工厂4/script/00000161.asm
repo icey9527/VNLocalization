@@ -1,0 +1,521 @@
+LABEL 0
+FLAG 1233, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "お会いできて光栄でございます。"
+LINE_FEED
+MESSAGE "王妃様。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そんなに固くならないで。"
+LINE_FEED
+MESSAGE "そのための人払いですもの。"
+LINE_FEED
+MESSAGE "ここには、私とあなただけ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "……は、はい。"
+LINE_FEED
+MESSAGE "おそれおおいことでございます。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "だから、"
+LINE_FEED
+MESSAGE "それじゃ呼んだ意味がないの！"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "それはいかなる思し召しでご……"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "ああ、じれったい。"
+LINE_FEED
+MESSAGE "ここでは礼法は"
+LINE_FEED
+MESSAGE "全部捨てちゃいなさい！"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………？"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "ここは嫌いじゃないけど、"
+LINE_FEED
+MESSAGE "たまには違う空気にも"
+LINE_FEED
+MESSAGE "触れたいのよ。"
+KEY_WAIT
+MESSAGE "話を聞いて、"
+LINE_FEED
+MESSAGE "あなたならって思ったの！"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "こ、光栄でございます。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE "（どんな話を聞いたんだろう……"
+LINE_FEED
+MESSAGE "私ならって……どういう意味？？）"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "私はめずらしい話に飢えているの。"
+LINE_FEED
+MESSAGE "そういう話を仕入れたら、"
+LINE_FEED
+MESSAGE "きっと話にくるんですよ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は……はい。"
+END 0
+LABEL 1
+FLAG 1234, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "よく来てくれたわ。"
+KEY_WAIT
+MESSAGE "ここのところ退屈で退屈で。"
+LINE_FEED
+MESSAGE "何か面白い話を"
+LINE_FEED
+MESSAGE "聞かせてちょうだい。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 1235, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そういえばね……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、王妃様。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "陛下にあなたのことをお話したら"
+LINE_FEED
+MESSAGE "すごく興味を示されて、お忍びで"
+LINE_FEED
+MESSAGE "会ってみたいとおっしゃるのよ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "へ、陛下が……恐悦でございます。"
+KEY_WAIT
+MESSAGE "（興味を持たれたって王妃さま、"
+LINE_FEED
+MESSAGE "どんな話をされたんだろう。"
+LINE_FEED
+MESSAGE "胸がドキドキして破裂しそう……）"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "それじゃあ今度、"
+LINE_FEED
+MESSAGE "話を通しておきますからね。"
+KEY_WAIT
+MESSAGE "あっ、でも、"
+LINE_FEED
+MESSAGE "面白い話を仕入れた時は、"
+LINE_FEED
+MESSAGE "私のところにも必ず寄るように。"
+KEY_WAIT
+MESSAGE "いいわね？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は……はい。"
+LINE_FEED
+MESSAGE "もったいないご配慮、"
+LINE_FEED
+MESSAGE "感謝の言葉もございません。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "陛下の反応が楽しみだわ㍍"
+END 0
+LABEL 3
+FLAG 1236, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "私にもあなたぐらいの歳の時が"
+LINE_FEED
+MESSAGE "あったのよねぇ。"
+KEY_WAIT
+MESSAGE "プリンセスに憧れたわ。"
+LINE_FEED
+MESSAGE "夢がかなった時はうれしくて"
+LINE_FEED
+MESSAGE "うれしくて足が地につかなかった。"
+KEY_WAIT
+MESSAGE "でも、今にして思うと、"
+LINE_FEED
+MESSAGE "夢は夢のままの方が幸せだった"
+LINE_FEED
+MESSAGE "気もするのよねぇ。"
+END 0
+LABEL 4
+FLAG 1237, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "退屈だわぁ。"
+LINE_FEED
+MESSAGE "お忍びでどこかに行きたい……"
+KEY_WAIT
+MESSAGE "でも、前の時はお庭に出る前に"
+LINE_FEED
+MESSAGE "すぐばれて大騒ぎに"
+LINE_FEED
+MESSAGE "なっちゃったのよねぇ。"
+END 0
+LABEL 5
+FLAG 1238, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "今、街ではどんな服が"
+LINE_FEED
+MESSAGE "流行っているのかしら？"
+KEY_WAIT
+MESSAGE "舞踏会のドレスのデザインが"
+LINE_FEED
+MESSAGE "どれもこれも退屈なものばかり。"
+KEY_WAIT
+MESSAGE "新しいデザインを取り入れて、"
+LINE_FEED
+MESSAGE "皆をアッと言わせたいの。"
+LINE_FEED
+MESSAGE "ウフフフ。"
+END 0
+LABEL 6
+FLAG 1239, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "陛下は私のことを"
+LINE_FEED
+MESSAGE "愛してくださるわ。"
+LINE_FEED
+MESSAGE "本当に幸せ。"
+KEY_WAIT
+MESSAGE "でも、いつも一緒に"
+LINE_FEED
+MESSAGE "いられるわけじゃなくて……"
+KEY_WAIT
+MESSAGE "貴族の結婚なんてそんなものだけど"
+LINE_FEED
+MESSAGE "下々の者は"
+LINE_FEED
+MESSAGE "夫も子供も一緒に暮らすそうね。"
+KEY_WAIT
+MESSAGE "うらやましいわぁ。"
+END 0
+LABEL 7
+FLAG 1240, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そろそろ収穫祭ね。本当に楽しみ。"
+KEY_WAIT
+MESSAGE "王妃なんて、"
+LINE_FEED
+MESSAGE "まるで籠の中の鳥ですもの。"
+LINE_FEED
+MESSAGE "娯楽も少なくて……"
+KEY_WAIT
+MESSAGE "外出できる時は、数日前から"
+LINE_FEED
+MESSAGE "待ち遠しくて待ち遠しくて……"
+LINE_FEED
+MESSAGE "ウフフ、子供みたいよね。"
+END 0
+LABEL 8
+FLAG 1241, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "外での面白い話のお礼です。"
+LINE_FEED
+MESSAGE "今日は、何でも知りたいことに"
+LINE_FEED
+MESSAGE "答えてあげましょう。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はっ、はい。では……"
+LINE_FEED
+MESSAGE "王妃様から見たお城の人のことを"
+LINE_FEED
+MESSAGE "聞かせていただけませんか？"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そんなことでいいの？"
+LINE_FEED
+MESSAGE "いいわよ、誰のことが"
+LINE_FEED
+MESSAGE "聞きたいの？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "大臣様は？"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "オズワルド？"
+LINE_FEED
+MESSAGE "なんか、感じ悪いなぁ。"
+KEY_WAIT
+MESSAGE "いつも目を伏せてるくせして、"
+LINE_FEED
+MESSAGE "チラッとこっちを見たりするのよ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（うわっ、悪口だ。"
+LINE_FEED
+MESSAGE "話をそらさなきゃ……）"
+KEY_WAIT
+MESSAGE "で、では、執政官は？"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "ネイサム？　なんかやっている"
+LINE_FEED
+MESSAGE "みたいだけど、よく知らないわ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（うわっ、ネイサム様、"
+LINE_FEED
+MESSAGE "お立場が……話をそらさなきゃ"
+LINE_FEED
+MESSAGE "話題……話題……出て来ない……）"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE "そ、そうだ……"
+LINE_FEED
+MESSAGE "王子さまってどんな方ですか？"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "王子？"
+LINE_FEED
+MESSAGE "あなたもプリンセスになりたいの？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そ、そんな畏れ多い……"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "う～ん、まだまだ子供ね。"
+LINE_FEED
+MESSAGE "馬や武術に夢中で、お嫁さんの"
+LINE_FEED
+MESSAGE "ことはまだ先みたいねぇ。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（う～ん、王妃様にかかると"
+LINE_FEED
+MESSAGE "みんな形無し…………）"
+END 0
+LABEL 9
+FLAG 1242, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "ロンバルドは知ってるわよね？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "伯爵様でございますか？"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そう。お忍びで外に出たいって"
+LINE_FEED
+MESSAGE "相談したら、子供じゃないんだから"
+LINE_FEED
+MESSAGE "って言うのよ！"
+KEY_WAIT
+MESSAGE "そりゃあ、爺には子供の時に遊んで"
+LINE_FEED
+MESSAGE "もらったけど。失礼しちゃうわ。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………"
+LINE_FEED
+MESSAGE "（ムリも……ないかも……）"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そうだ、"
+LINE_FEED
+MESSAGE "ロンバルトの秘密を教えてあげる！"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE "えっ㌍"
+LINE_FEED
+MESSAGE "お、おそれ多くて……"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "あのねロンバルトはね、"
+LINE_FEED
+MESSAGE "骨董が好きなのよ。それで、"
+LINE_FEED
+MESSAGE "自分は城下に行ってるらしいの。"
+KEY_WAIT
+MESSAGE "自分だけお忍びで骨董を見に行く"
+LINE_FEED
+MESSAGE "くせに、私には意見するなんて……"
+LINE_FEED
+MESSAGE "う～ん、許せない！"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（なんだか子供の喧嘩みたい……"
+LINE_FEED
+MESSAGE "えらくなり過ぎるとこうなっちゃう"
+LINE_FEED
+MESSAGE "のかな？？？）"
+END 0
+LABEL 10
+FLAG 1243, 1
+SE_PLAY 41
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "あら、何かしら？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "と、とんだ粗相を……"
+LINE_FEED
+MESSAGE "お許しください。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "あら、いいのよ、そんなの。"
+LINE_FEED
+MESSAGE "それより、それ見せてちょうだい。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "王妃様にお目にかけるような"
+LINE_FEED
+MESSAGE "物ではございませんので……"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "くるしゅうない。"
+LINE_FEED
+MESSAGE "こちらに……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は……はい。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "ほぅ……これはめずらしい……"
+LINE_FEED
+MESSAGE "でも何かしら、これ？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "１Ｇ銅貨にございます。"
+LINE_FEED
+MESSAGE "服のどこかに挟まっていたようで"
+LINE_FEED
+MESSAGE "申し訳ございません。"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "へぇ、これが……"
+KEY_WAIT
+MESSAGE "ねぇ、いただいていい？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "お、お許しを！"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "まぁ、残念。"
+LINE_FEED
+MESSAGE "じゃあ、この宝石と交換しましょ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "え、ええっ㌍　めっそうも無い！"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "私はもう飽きちゃったけど、"
+LINE_FEED
+MESSAGE "舞踏会では随分ほめられたから。"
+LINE_FEED
+MESSAGE "価値はあると思うけど、どう？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ひらに、ひらにご容赦を……"
+KEY_WAIT
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "そんなに大切な物なのね。"
+LINE_FEED
+MESSAGE "残念だわ。"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（つ、疲れた……）"
+SE_STOP
+END 0
+LABEL 11
+FLAG 1244, 1
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "どうやってここに来たのですか？"
+LINE_FEED
+MESSAGE "あなたの来る所ではありません。"
+LINE_FEED
+MESSAGE "お帰りなさい。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ご、ご無礼しました。"
+KEY_WAIT
+END 0

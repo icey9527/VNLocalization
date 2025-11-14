@@ -1,0 +1,186 @@
+LABEL 0
+FLAG 313, 1
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "それでは、お嬢様。本日からは"
+LINE_FEED
+MESSAGE "私と一緒に、お屋敷での"
+LINE_FEED
+MESSAGE "お仕事をしていただきます。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "キューブと一緒にお仕事って、"
+LINE_FEED
+MESSAGE "どんなことするの？"
+KEY_WAIT
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "はい、お屋敷の掃除やお洗濯、"
+LINE_FEED
+MESSAGE "お食事の支度などが"
+LINE_FEED
+MESSAGE "主なお仕事ですね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "なるほどぉ……"
+KEY_WAIT
+FACE 1
+MESSAGE "うん、わかったわ。"
+LINE_FEED
+MESSAGE "私、頑張る！"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、張り切りすぎて、"
+LINE_FEED
+MESSAGE "お怪我などをなさいませんように。"
+LINE_FEED
+MESSAGE "なんだか不安だなぁ……"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 314, 1
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "それではお嬢様、"
+LINE_FEED
+MESSAGE "本日もよろしくお願いします。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ふふっ、まかせて！"
+LINE_FEED
+MESSAGE "私にかかったら、"
+LINE_FEED
+MESSAGE "あっという間なんだから。"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "……大丈夫かなぁ？"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 315, 1
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "いやー、さすがお嬢様、"
+LINE_FEED
+MESSAGE "完璧な出来栄えですね！"
+KEY_WAIT
+FACE 26
+MESSAGE "これは旦那様からのお小遣いです。"
+LINE_FEED
+MESSAGE "頑張ったので、いつもより"
+LINE_FEED
+MESSAGE "多めにしてくださいましたよ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わぁ、ありがとう㍍"
+LINE_FEED
+MESSAGE "いつもこうなら、私ももっと"
+LINE_FEED
+MESSAGE "がんばれちゃうんだけどなぁ。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 316, 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "あはははっ……"
+LINE_FEED
+MESSAGE "まあ、長い人生、"
+LINE_FEED
+MESSAGE "こんな時もありますよ。"
+KEY_WAIT
+MESSAGE "次回は、頑張ってくださいね。"
+KEY_WAIT
+FACE 23
+MESSAGE "さて、片付け片付け……"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は～い……"
+LINE_FEED
+MESSAGE "ごめんね、キューブ……"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 317, 1
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お疲れ様でした、お嬢様。"
+LINE_FEED
+MESSAGE "手伝っていただいたおかげで"
+LINE_FEED
+MESSAGE "大変助かりました。"
+KEY_WAIT
+MESSAGE "今度も、"
+LINE_FEED
+MESSAGE "またよろしくお願いします。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "うん、よろしくね、キューブ♪"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 318, 1
+FACE 26
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様がよくやってらっしゃるので"
+LINE_FEED
+MESSAGE "旦那様もお喜びです。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "やったー！"
+LINE_FEED
+MESSAGE "あははっ、うれしいなあ♪"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 319, 1
+FACE 26
+MESSAGE_NAME "キューブ"
+MESSAGE "最近のお嬢様、"
+LINE_FEED
+MESSAGE "頑張ってらっしゃいますね。"
+LINE_FEED
+MESSAGE "私も大変助かります。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "本当に♪"
+LINE_FEED
+MESSAGE "これくらいなら、"
+LINE_FEED
+MESSAGE "いつでもやってあげるわよ。"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 320, 1
+FACE 26
+MESSAGE_NAME "キューブ"
+MESSAGE "いやあ、お嬢様。"
+LINE_FEED
+MESSAGE "もう家事はほとんどマスターしたも"
+LINE_FEED
+MESSAGE "同然ですね。"
+KEY_WAIT
+FACE 27
+MESSAGE "これじゃあ、近いうちに"
+LINE_FEED
+MESSAGE "私の仕事もなくなっちゃい"
+LINE_FEED
+MESSAGE "そうです。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ふふふ、キューブったら。"
+LINE_FEED
+MESSAGE "おだてても何もでないわよ♪"
+KEY_WAIT
+END 0

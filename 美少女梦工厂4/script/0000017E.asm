@@ -1,0 +1,271 @@
+LABEL 0
+FLAG 559, 1
+BG 151
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3744
+MESSAGE "いい匂い……"
+LINE_FEED
+MESSAGE "甘くて、それでいて"
+LINE_FEED
+MESSAGE "さわやかで……"
+KEY_WAIT
+VOICE 3745
+MESSAGE "お父様。私、この香りをかぐと"
+LINE_FEED
+MESSAGE "春が来た気がするの。"
+SELECT 3, 1, "匂いをかぐ", 2, "散歩に誘う", 3, "寝転がる"
+LABEL 1
+FLAG 560, 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3746
+MESSAGE "どう？　お父様……"
+KEY_WAIT
+VOICE 3747
+MESSAGE "ねっ、いい香りでしょ？"
+LINE_FEED
+MESSAGE "香水にできたら素敵だろうなぁ。"
+END 0
+LABEL 2
+FLAG 561, 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3748
+MESSAGE "ええ、ぜひ。"
+LINE_FEED
+MESSAGE "お花を見ながら歩くのって"
+LINE_FEED
+MESSAGE "本当に気持ちいいもの……"
+KEY_WAIT
+VOICE 3749
+MESSAGE "ふふ……小さい時は当たり前"
+LINE_FEED
+MESSAGE "だったのにね。こういう時間が"
+LINE_FEED
+MESSAGE "とても貴重に感じるわ……"
+END 1
+LABEL 3
+FLAG 562, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3750
+MESSAGE "もう、お父様ったら……"
+LINE_FEED
+MESSAGE "春だからってすぐに寝ちゃって……"
+KEY_WAIT
+FACE 0
+VOICE 3751
+MESSAGE "でも……気持ちよさそうね。"
+LINE_FEED
+MESSAGE "うふふ、私も隣りで寝ちゃおっと㍍"
+END 2
+LABEL 4
+FLAG 563, 1
+BG 152
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3752
+MESSAGE "あっ、お父様！　今、その辺りに"
+LINE_FEED
+MESSAGE "男の人が大勢いなかった？"
+KEY_WAIT
+VOICE 3753
+MESSAGE "ええ……なんだか雰囲気が"
+LINE_FEED
+MESSAGE "怖くて……お父様が来てくれて"
+LINE_FEED
+MESSAGE "安心したわ。"
+SELECT 3, 5, "無理もないと言う", 6, "血相を変えて捜す", 7, "泳がないのかと聞く"
+LABEL 5
+FLAG 564, 1
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 3754
+MESSAGE "え？　私が魅力的だからですって？"
+LINE_FEED
+MESSAGE "からかってるの？　え……本当に？"
+KEY_WAIT
+VOICE 3755
+MESSAGE "そんな、恥ずかしいわお父様。"
+LINE_FEED
+MESSAGE "でも、少し、うれしい……"
+END 0
+LABEL 6
+FLAG 565, 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3756
+MESSAGE "お父様！　そ、そんなに"
+LINE_FEED
+MESSAGE "必死にならなくても……"
+KEY_WAIT
+VOICE 3757
+MESSAGE "私はお父様の娘よ。大事に"
+LINE_FEED
+MESSAGE "思ってくれるのは、それは"
+LINE_FEED
+MESSAGE "とても嬉しいけど……"
+KEY_WAIT
+FACE 0
+VOICE 3758
+MESSAGE "恥ずかしいことはしないし、"
+LINE_FEED
+MESSAGE "いざという時は自分の身ぐらい"
+LINE_FEED
+MESSAGE "守ってみせるわ。本当よ？"
+END 1
+LABEL 7
+FLAG 566, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3759
+MESSAGE "さっき少し入ったわ。"
+LINE_FEED
+MESSAGE "でも、今は日差しが強いから……"
+LINE_FEED
+MESSAGE "身だしなみも大事だもの。"
+KEY_WAIT
+VOICE 3760
+MESSAGE "お父様も、日焼けでぼろぼろに"
+LINE_FEED
+MESSAGE "なった肌は見たくないでしょう？"
+END 2
+LABEL 8
+FLAG 567, 1
+BG 153
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3761
+MESSAGE "不思議な気持ち……"
+KEY_WAIT
+VOICE 3762
+MESSAGE "前にあなたと会った気がする……"
+LINE_FEED
+MESSAGE "そんなことあるはずないのに……"
+KEY_WAIT
+VOICE 3763
+MESSAGE "おまえは……"
+SELECT 3, 9, "遠くからながめる", 10, "刀を構える", 11, "そっと近づく"
+LABEL 9
+FLAG 568, 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3764
+MESSAGE "そう……"
+LINE_FEED
+MESSAGE "もう行くのね……"
+KEY_WAIT
+VOICE 3765
+MESSAGE "さようなら……"
+LINE_FEED
+MESSAGE "気をつけてお帰り……"
+END 0
+LABEL 10
+FLAG 569, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3766
+MESSAGE "お父様……そんなものは"
+LINE_FEED
+MESSAGE "しまってください。"
+KEY_WAIT
+VOICE 3767
+MESSAGE "この子は確かに魔と呼ばれる"
+LINE_FEED
+MESSAGE "ものだけど……汚れた存在では"
+LINE_FEED
+MESSAGE "ないわ。ほら、怖がらないで……"
+KEY_WAIT
+FACE 4
+VOICE 3768
+MESSAGE "あっ、待って……！"
+KEY_WAIT
+FACE 3
+VOICE 3769
+MESSAGE "お父様……人外の者を恐れる"
+LINE_FEED
+MESSAGE "あまり暴力をふるうのは……"
+LINE_FEED
+MESSAGE "悲しいと思う………"
+END 1
+LABEL 11
+FLAG 570, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3770
+MESSAGE "お父様。ごめんなさい……"
+LINE_FEED
+MESSAGE "今は来ないで。"
+KEY_WAIT
+VOICE 3771
+MESSAGE "この子はすごく臆病だから……"
+LINE_FEED
+MESSAGE "きっと、逃げてしまう……"
+END 2
+LABEL 12
+FLAG 571, 1
+BG 154
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3772
+MESSAGE "えっ……"
+LINE_FEED
+MESSAGE "きゃあああ！"
+KEY_WAIT
+VOICE 3773
+MESSAGE "お、お父様っ、な、何してるの！"
+KEY_WAIT
+VOICE 3774
+MESSAGE "あっち行って！　もう一緒に"
+LINE_FEED
+MESSAGE "入る歳じゃないでしょーっ！"
+SELECT 3, 13, "謝る", 14, "逃げる", 15, "目が離せない"
+LABEL 13
+FLAG 572, 1
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 3775
+MESSAGE "も、もういいわよ。"
+LINE_FEED
+MESSAGE "お父様が純粋なのは"
+LINE_FEED
+MESSAGE "知ってるから……"
+KEY_WAIT
+FACE 6
+VOICE 3776
+MESSAGE "だから早くあっち行って！"
+LINE_FEED
+MESSAGE "恥ずかしいんだからー！"
+END 0
+LABEL 14
+FLAG 573, 1
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 3777
+MESSAGE "あっ、逃げたっ！"
+KEY_WAIT
+VOICE 3778
+MESSAGE "もう～！"
+LINE_FEED
+MESSAGE "後で文句言ってやらなくちゃ！"
+KEY_WAIT
+FACE 7
+VOICE 3779
+MESSAGE "お父様ったら、いつまで"
+LINE_FEED
+MESSAGE "子供だと思っているのかしら……"
+END 1
+LABEL 15
+FLAG 574, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3780
+MESSAGE "も、もう……お父様！"
+LINE_FEED
+MESSAGE "開き直って……私、本気で"
+LINE_FEED
+MESSAGE "怒るわよーっ！"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 2
+VOICE 3781
+MESSAGE "この！　えーい！"
+END 2

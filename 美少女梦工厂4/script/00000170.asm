@@ -1,0 +1,334 @@
+LABEL 0
+FLAG 1, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "初めまして、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "ワタシがこの講座を担当する"
+LINE_FEED
+MESSAGE "ニエル・マクランよ。"
+KEY_WAIT
+MESSAGE "私が教えることに、これ、という"
+LINE_FEED
+MESSAGE "答えはないけれど……"
+LINE_FEED
+MESSAGE "考えること、それ自体が大切なの。"
+KEY_WAIT
+MESSAGE "私といっしょに、"
+LINE_FEED
+MESSAGE "いろいろなことを考え、"
+LINE_FEED
+MESSAGE "話し合っていきましょう。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、よろしくお願いします！"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 2, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "いらっしゃい、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "今週もいろいろな"
+LINE_FEED
+MESSAGE "お話をしましょうね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はいっ、お願いします。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 3, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "すごいわ、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "まさに、一を聞いて十を知る、ね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そんなことないですよ～"
+LINE_FEED
+MESSAGE "えへへっ……"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 4, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "どうしたの？"
+LINE_FEED
+MESSAGE "なんだか調子が悪いようね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "う～ん、スランプかも……"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 5, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "はい、今週の講座はここまで。"
+LINE_FEED
+MESSAGE "お疲れ様。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございました。"
+LINE_FEED
+MESSAGE "また、よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 6, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "頑張っていますね、"
+LINE_FEED
+MESSAGE "[娘の名前]さん。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ、先生。"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "アナタは話の飲み込みも早いし、"
+LINE_FEED
+MESSAGE "私も話をしていて楽しいわ。"
+KEY_WAIT
+MESSAGE "これからはもう少し難しいことを"
+LINE_FEED
+MESSAGE "話しても大丈夫かしらね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（ついていけるように、"
+LINE_FEED
+MESSAGE "私も頑張らなきゃ！）"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 7, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "[娘の名前]さん、"
+LINE_FEED
+MESSAGE "そろそろ卒業試験を"
+LINE_FEED
+MESSAGE "受けてみる気はある？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "え、私がですか？"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "そうよ。アナタもここに"
+LINE_FEED
+MESSAGE "来るようになって長いし、"
+LINE_FEED
+MESSAGE "かなりのことを学んだはずよ。"
+KEY_WAIT
+MESSAGE "その成果を、私に"
+LINE_FEED
+MESSAGE "見せてほしいの。"
+LINE_FEED
+MESSAGE "どう？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わかりました。"
+LINE_FEED
+MESSAGE "それで、いつから……"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "今からです。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "え？"
+LINE_FEED
+MESSAGE "今からですか？"
+LINE_FEED
+MESSAGE "まだ何の準備も……"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "何の準備も必要ありません。"
+LINE_FEED
+MESSAGE "今から出す質問に、アナタ自身の"
+LINE_FEED
+MESSAGE "考えで答えてください。"
+KEY_WAIT
+MESSAGE "私が教えた事が身についていれば、"
+LINE_FEED
+MESSAGE "難しいことではないはずですから。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい……"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "それでは始めます。"
+LINE_FEED
+MESSAGE "まず第１問……"
+KEY_WAIT
+BG 176
+MESSAGE "…………"
+KEY_WAIT
+BG 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "…………"
+KEY_WAIT
+MESSAGE "語り合ったことは、"
+LINE_FEED
+MESSAGE "しっかりとアナタの中で"
+LINE_FEED
+MESSAGE "実を結んでいるようね。"
+KEY_WAIT
+MESSAGE "おめでとう、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "これからも、考えることを忘れず、"
+LINE_FEED
+MESSAGE "頑張ってちょうだいね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、先生。"
+LINE_FEED
+MESSAGE "これからもよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 8, 1
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "[娘の名前]さん、"
+LINE_FEED
+MESSAGE "お願いがあるんですけど。"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "最近、仕事が大変になってきてし"
+LINE_FEED
+MESSAGE "まって[娘の名前]さんに授業の"
+LINE_FEED
+MESSAGE "手伝いをして欲しいの。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ええ、わたしがですか？"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "おねがいよ。"
+LINE_FEED
+MESSAGE "あなたならできるわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "自信はありませんけど、"
+LINE_FEED
+MESSAGE "わたしにできることがあれば"
+LINE_FEED
+MESSAGE "がんばります。"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "ありがとう。"
+LINE_FEED
+MESSAGE "では、お願いね。"
+KEY_WAIT
+END 0
+LABEL 8
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "よくきてくれました。"
+LINE_FEED
+MESSAGE "知識はいろんなところから"
+LINE_FEED
+MESSAGE "吸収できるわ。"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "一緒にがんばりましょう。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 9
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "さすがだわ。"
+LINE_FEED
+MESSAGE "あなたに任せていれば、"
+LINE_FEED
+MESSAGE "安心ね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます。"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "次もこの調子でがんばって。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "うーん、まだ難しいようね。"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "すみません…"
+KEY_WAIT
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "少しずつ慣れていけば上手に"
+LINE_FEED
+MESSAGE "できるようになるわ。"
+KEY_WAIT
+END 0
+LABEL 11
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "なかなか、よかったわ。"
+LINE_FEED
+MESSAGE "次からはもっとうまくできるように"
+LINE_FEED
+MESSAGE "考えることを忘れないで。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、"
+LINE_FEED
+MESSAGE "がんばります。"
+KEY_WAIT
+END 0
+LABEL 12
+FACE 49
+MESSAGE_NAME "ニエル"
+MESSAGE "今回はここまでよ。"
+LINE_FEED
+MESSAGE "わたしも授業料を払ってもらえない"
+LINE_FEED
+MESSAGE "と困っちゃうわ。"
+KEY_WAIT
+END 0

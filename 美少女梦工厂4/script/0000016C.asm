@@ -1,0 +1,624 @@
+LABEL 0
+FLAG 85, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3155
+MESSAGE "家のお仕事って、思ったより"
+LINE_FEED
+MESSAGE "いっぱいあるんだね。"
+KEY_WAIT
+VOICE 3156
+MESSAGE "毎日こんなにお仕事してる"
+LINE_FEED
+MESSAGE "キューブって、本当は"
+LINE_FEED
+MESSAGE "すごかったんだ……"
+KEY_WAIT
+GOTO 36
+LABEL 1
+FLAG 86, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3157
+MESSAGE "家のお仕事ってひとことで言っても"
+LINE_FEED
+MESSAGE "やることがいっぱいで大変だわ。"
+KEY_WAIT
+FACE 1
+VOICE 3158
+MESSAGE "それに、キューブと一緒に"
+LINE_FEED
+MESSAGE "お仕事をするのも、"
+LINE_FEED
+MESSAGE "なんだか変な感じね！"
+KEY_WAIT
+GOTO 36
+LABEL 2
+FLAG 87, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3159
+MESSAGE "家事をするだけでも"
+LINE_FEED
+MESSAGE "こんなに大変なのに、子供の世話や"
+LINE_FEED
+MESSAGE "仕事までしてるなんて……"
+KEY_WAIT
+VOICE 3160
+MESSAGE "世の中のお母さんたちって"
+LINE_FEED
+MESSAGE "すごいのねぇ……"
+KEY_WAIT
+GOTO 36
+LABEL 3
+FLAG 88, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3161
+MESSAGE "子守りのお仕事って、思ってたより"
+LINE_FEED
+MESSAGE "面白かったよ。"
+KEY_WAIT
+VOICE 3162
+MESSAGE "私より小さな子もいたけど、"
+LINE_FEED
+MESSAGE "私と同じくらいの子もいるし、"
+LINE_FEED
+MESSAGE "半分、遊びみたいな感じかなぁ。"
+KEY_WAIT
+GOTO 36
+LABEL 4
+FLAG 89, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3163
+MESSAGE "子守りのお仕事って、大変ね。"
+KEY_WAIT
+VOICE 3164
+MESSAGE "私よりも小さな子供のお世話を"
+LINE_FEED
+MESSAGE "しなきゃいけないから、"
+LINE_FEED
+MESSAGE "すっごく気を使うわ。"
+KEY_WAIT
+VOICE 3165
+MESSAGE "もしかして、私もちっちゃな頃は"
+LINE_FEED
+MESSAGE "同じくらい大変だったのかな……？"
+KEY_WAIT
+GOTO 36
+LABEL 5
+FLAG 90, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3166
+MESSAGE "小さな子供って、ほんの少しの時間"
+LINE_FEED
+MESSAGE "でもじっとしていられないのよ。"
+LINE_FEED
+MESSAGE "目を離せなくて大変……"
+KEY_WAIT
+FACE 0
+VOICE 3167
+MESSAGE "子供好きなだけじゃ、"
+LINE_FEED
+MESSAGE "できない仕事よね。"
+KEY_WAIT
+GOTO 36
+LABEL 6
+FLAG 91, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3168
+MESSAGE "宿屋のお仕事って、"
+LINE_FEED
+MESSAGE "掃除に洗濯に……"
+LINE_FEED
+MESSAGE "やることがいっぱいあるのね！"
+KEY_WAIT
+FACE 1
+VOICE 3169
+MESSAGE "でも、お客さんが喜んでくれると、"
+LINE_FEED
+MESSAGE "私もうれしくなっちゃう！"
+KEY_WAIT
+GOTO 36
+LABEL 7
+FLAG 92, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3170
+MESSAGE "宿屋のお仕事って、考えていたより"
+LINE_FEED
+MESSAGE "力仕事が多くて……"
+KEY_WAIT
+VOICE 3171
+MESSAGE "お洗濯もそうだけど、"
+LINE_FEED
+MESSAGE "お風呂を沸かすマキ割りなんて、"
+LINE_FEED
+MESSAGE "もう大変だったわ。"
+KEY_WAIT
+GOTO 36
+LABEL 8
+FLAG 93, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3172
+MESSAGE "宿屋のお仕事で、"
+LINE_FEED
+MESSAGE "フロントも任されてるんだけど"
+LINE_FEED
+MESSAGE "すっごく緊張するの。"
+KEY_WAIT
+VOICE 3173
+MESSAGE "でも、アルバイトとは言え"
+LINE_FEED
+MESSAGE "お店の顔だから、"
+LINE_FEED
+MESSAGE "しっかりがんばらないとね。"
+KEY_WAIT
+GOTO 36
+LABEL 9
+FLAG 94, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3174
+MESSAGE "農場のお仕事って、"
+LINE_FEED
+MESSAGE "色々な動物さんがいっぱいいて"
+LINE_FEED
+MESSAGE "楽しかったよ♪"
+KEY_WAIT
+GOTO 36
+LABEL 10
+FLAG 95, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3175
+MESSAGE "農場って、思ってたより"
+LINE_FEED
+MESSAGE "力仕事が多いのね。"
+KEY_WAIT
+FACE 7
+VOICE 3176
+MESSAGE "うーん、"
+LINE_FEED
+MESSAGE "二の腕が太くなっちゃったら"
+LINE_FEED
+MESSAGE "どうしよう……"
+KEY_WAIT
+GOTO 36
+LABEL 11
+FLAG 96, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3177
+MESSAGE "穀物を育てるだけでも、"
+LINE_FEED
+MESSAGE "あんなに手間と時間が"
+LINE_FEED
+MESSAGE "かかるものだったなんて……"
+KEY_WAIT
+VOICE 3178
+MESSAGE "それを思うと、"
+LINE_FEED
+MESSAGE "パンのひとかけらだって"
+LINE_FEED
+MESSAGE "無駄にできないわよね。"
+KEY_WAIT
+GOTO 36
+LABEL 12
+FLAG 97, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3179
+MESSAGE "教会のお仕事で何が大変かって、"
+LINE_FEED
+MESSAGE "いつも静かに"
+LINE_FEED
+MESSAGE "していなきゃいけないの。"
+KEY_WAIT
+VOICE 3180
+MESSAGE "大きな声なんか出したら、"
+LINE_FEED
+MESSAGE "シスターに怒られちゃうんだよ。"
+KEY_WAIT
+GOTO 36
+LABEL 13
+FLAG 98, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3181
+MESSAGE "教会の中って、"
+LINE_FEED
+MESSAGE "とっても静かで落ち着くのよ。"
+LINE_FEED
+MESSAGE "さすが神聖な場所って思ったの。"
+KEY_WAIT
+GOTO 36
+LABEL 14
+FLAG 99, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3182
+MESSAGE "神聖な場所でお仕事するのは、"
+LINE_FEED
+MESSAGE "なんだか身が引き締まる"
+LINE_FEED
+MESSAGE "感じがするわ。"
+KEY_WAIT
+VOICE 3183
+MESSAGE "神様が見てらっしゃるから……"
+LINE_FEED
+MESSAGE "なんて思ってしまうわね。"
+KEY_WAIT
+GOTO 36
+LABEL 15
+FLAG 100, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3184
+MESSAGE "シラクさんの料理屋って、"
+LINE_FEED
+MESSAGE "いっつも大繁盛してるの。"
+KEY_WAIT
+VOICE 3185
+MESSAGE "私も、まかない料理を"
+LINE_FEED
+MESSAGE "食べさせてもらったけど、"
+LINE_FEED
+MESSAGE "すごく美味しかったよ㍍"
+KEY_WAIT
+GOTO 36
+LABEL 16
+FLAG 101, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3186
+MESSAGE "調理場に立っている"
+LINE_FEED
+MESSAGE "シラクさんってすごいのよ。"
+KEY_WAIT
+VOICE 3187
+MESSAGE "いろいろな料理が次々と"
+LINE_FEED
+MESSAGE "できていって……"
+LINE_FEED
+MESSAGE "まるで魔法みたい！"
+KEY_WAIT
+GOTO 36
+LABEL 17
+FLAG 102, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3188
+MESSAGE "シラクさんのレストランって"
+LINE_FEED
+MESSAGE "いつもお客さんでいっぱいだから、"
+LINE_FEED
+MESSAGE "私たちアルバイトも大変なの。"
+KEY_WAIT
+VOICE 3189
+MESSAGE "１日に洗うお皿の数だって、"
+LINE_FEED
+MESSAGE "私が生まれてから使ったお皿より"
+LINE_FEED
+MESSAGE "多いんじゃないかな？"
+KEY_WAIT
+GOTO 36
+LABEL 18
+FLAG 103, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3190
+MESSAGE "家庭教師って大変なのね……"
+KEY_WAIT
+VOICE 3191
+MESSAGE "人に物を教えることが、こんなに"
+LINE_FEED
+MESSAGE "難しいとは思ってもみなかった。"
+KEY_WAIT
+VOICE 3192
+MESSAGE "なんだか生徒と一緒に、私も"
+LINE_FEED
+MESSAGE "勉強してる気分になったわ。"
+KEY_WAIT
+GOTO 36
+LABEL 19
+FLAG 104, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3193
+MESSAGE "家庭教師って、本当に大変な"
+LINE_FEED
+MESSAGE "お仕事なのね……"
+KEY_WAIT
+VOICE 3194
+MESSAGE "でも、教え子の理解が早いと、"
+LINE_FEED
+MESSAGE "教えてる私もなんだかうれしく"
+LINE_FEED
+MESSAGE "なるの。やりがいを感じるわ。"
+KEY_WAIT
+GOTO 36
+LABEL 20
+FLAG 105, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3195
+MESSAGE "酒場って、いろんなお客さんが"
+LINE_FEED
+MESSAGE "来るから、けっこう気を使うのね。"
+LINE_FEED
+MESSAGE "いつも笑顔でいるのも大変！"
+KEY_WAIT
+VOICE 3196
+MESSAGE "でも、ああいうにぎやかな"
+LINE_FEED
+MESSAGE "場所って嫌いじゃないわよ。"
+KEY_WAIT
+GOTO 36
+LABEL 21
+FLAG 106, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3197
+MESSAGE "酒場に毎日飲みに来る常連さんが"
+LINE_FEED
+MESSAGE "いるみたいなんだけど、そんなに"
+LINE_FEED
+MESSAGE "おいしいものかしらね、お酒って。"
+KEY_WAIT
+VOICE 3198
+MESSAGE "私はあんまり飲みたいと"
+LINE_FEED
+MESSAGE "思わないわ。"
+KEY_WAIT
+GOTO 36
+LABEL 22
+FLAG 107, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3199
+MESSAGE "今度のお仕事、最初は"
+LINE_FEED
+MESSAGE "とても緊張したけど……"
+KEY_WAIT
+VOICE 3200
+MESSAGE "お客さんもやさしいし、"
+LINE_FEED
+MESSAGE "給金もいいし。思ったよりも"
+LINE_FEED
+MESSAGE "いいアルバイトかも……㍍"
+KEY_WAIT
+GOTO 36
+LABEL 23
+FLAG 108, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3201
+MESSAGE "世間体が悪いとか、人からいろいろ"
+LINE_FEED
+MESSAGE "言われていたけど、仕事としては"
+LINE_FEED
+MESSAGE "悪くないわよ。"
+KEY_WAIT
+FACE 6
+VOICE 3202
+MESSAGE "お店の人や、お客さんも優しいし。"
+LINE_FEED
+MESSAGE "お父様も、実際に来てみれば"
+LINE_FEED
+MESSAGE "よーくわかるのにな……ウフフ……"
+KEY_WAIT
+GOTO 36
+LABEL 24
+FLAG 109, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3203
+MESSAGE "カジノって、すごい所だったよ。"
+LINE_FEED
+MESSAGE "たった一晩で、あんな大金が"
+LINE_FEED
+MESSAGE "動くなんて……"
+KEY_WAIT
+GOTO 36
+LABEL 25
+FLAG 110, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3204
+MESSAGE "カジノって、お金持ちしか"
+LINE_FEED
+MESSAGE "来ないと思ってたんだけど、"
+LINE_FEED
+MESSAGE "そうでもなかったわね。"
+KEY_WAIT
+VOICE 3205
+MESSAGE "一攫千金にあこがれるのは、"
+LINE_FEED
+MESSAGE "誰でも同じなのかしら……"
+KEY_WAIT
+GOTO 36
+LABEL 26
+FLAG 111, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3206
+MESSAGE "私、まだ小さいから……メイドの"
+LINE_FEED
+MESSAGE "お仕事って言っても、あんまり"
+LINE_FEED
+MESSAGE "複雑なのはさせてもらえないの。"
+KEY_WAIT
+VOICE 3207
+MESSAGE "早く認めてもらえるように"
+LINE_FEED
+MESSAGE "なりたいなあ……"
+KEY_WAIT
+GOTO 36
+LABEL 27
+FLAG 112, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3208
+MESSAGE "フェニキスさんのお屋敷って、"
+LINE_FEED
+MESSAGE "私のほかにもたくさんメイドが"
+LINE_FEED
+MESSAGE "いるのよ！"
+KEY_WAIT
+VOICE 3209
+MESSAGE "あんなにいっぱい働いているのに、"
+LINE_FEED
+MESSAGE "暇な人が１人もいないなんて"
+LINE_FEED
+MESSAGE "びっくりしちゃった！"
+KEY_WAIT
+GOTO 36
+LABEL 28
+FLAG 113, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3210
+MESSAGE "お屋敷のメイド長さんって、"
+LINE_FEED
+MESSAGE "私たちに指示を出しながら、自分の"
+LINE_FEED
+MESSAGE "お仕事もササッと片付けるの。"
+KEY_WAIT
+VOICE 3211
+MESSAGE "本当にすごいと思うわ。"
+LINE_FEED
+MESSAGE "私もいつか、メイド長さんの"
+LINE_FEED
+MESSAGE "ようになれるのかしら……"
+KEY_WAIT
+GOTO 36
+LABEL 29
+FLAG 114, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3212
+MESSAGE "このお仕事、ホールでは"
+LINE_FEED
+MESSAGE "専用の洋服を着るのよ。"
+KEY_WAIT
+VOICE 3213
+MESSAGE "かわいい制服ばかりで、"
+LINE_FEED
+MESSAGE "私、気に入っちゃった♪"
+KEY_WAIT
+VOICE 3214
+MESSAGE "なんでも店長さんが"
+LINE_FEED
+MESSAGE "全部デザインしたらしいの。"
+LINE_FEED
+MESSAGE "すごいよねぇ～"
+KEY_WAIT
+GOTO 36
+LABEL 30
+FLAG 115, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3215
+MESSAGE "店長さん、いつもあの制服で"
+LINE_FEED
+MESSAGE "過ごしてるんだって。"
+KEY_WAIT
+VOICE 3216
+MESSAGE "いくらかわいい服が好きでも、"
+LINE_FEED
+MESSAGE "私なら、ちょっと"
+LINE_FEED
+MESSAGE "考えちゃうなぁ……"
+KEY_WAIT
+GOTO 36
+LABEL 31
+FLAG 116, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3217
+MESSAGE "市場って、いつも活気があって"
+LINE_FEED
+MESSAGE "うるさいくらいなの。"
+KEY_WAIT
+VOICE 3218
+MESSAGE "小さな声じゃ、全然お客さんと"
+LINE_FEED
+MESSAGE "話ができないのよ。"
+LINE_FEED
+MESSAGE "今日ものどが痛くなっちゃった。"
+KEY_WAIT
+GOTO 36
+LABEL 32
+FLAG 117, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3219
+MESSAGE "市場には時折、外国からの珍しい"
+LINE_FEED
+MESSAGE "品物が入荷する事があるのよ。"
+KEY_WAIT
+VOICE 3220
+MESSAGE "街で見ることはほとんど無いん"
+LINE_FEED
+MESSAGE "だけど、ああいったものは"
+LINE_FEED
+MESSAGE "どこで売るのかしらね……"
+KEY_WAIT
+GOTO 36
+LABEL 33
+FLAG 118, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3221
+MESSAGE "木こりの仕事って、コツをつかむと"
+LINE_FEED
+MESSAGE "そんなに力を使わなくても"
+LINE_FEED
+MESSAGE "木を切れるようになるんだって。"
+KEY_WAIT
+VOICE 3222
+MESSAGE "私もそんな風になれるのかな？"
+LINE_FEED
+MESSAGE "続けてないとダメそうだけど……"
+KEY_WAIT
+GOTO 36
+LABEL 34
+FLAG 119, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3223
+MESSAGE "お父さんは、木こりで使う斧って"
+LINE_FEED
+MESSAGE "持ったことある？"
+KEY_WAIT
+VOICE 3224
+MESSAGE "あれって、ちょっとした武器の"
+LINE_FEED
+MESSAGE "何倍も重いから、慣れないうちは"
+LINE_FEED
+MESSAGE "手の皮がむけて大変だったのよ。"
+KEY_WAIT
+GOTO 36
+LABEL 35
+FLAG 120, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3225
+MESSAGE "木こりのお仕事って、見境なく木を"
+LINE_FEED
+MESSAGE "伐採してるように見えたけれど、"
+LINE_FEED
+MESSAGE "ちゃんと計画して切ってるのね。"
+KEY_WAIT
+VOICE 3226
+MESSAGE "ちゃんと植林もしてるのを見て、"
+LINE_FEED
+MESSAGE "私、とても感心したわ。"
+KEY_WAIT
+LABEL 36
+END 0

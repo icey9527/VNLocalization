@@ -1,0 +1,930 @@
+// -------------------------------------
+//  メイン
+// -------------------------------------
+static void analysisScript(void)
+{
+	BOOL result, label_jump;
+	u8 label_num, i, n, next_check;
+
+	result = TRUE;
+	label_jump = FALSE;
+	next_check = 0;
+	if (g_script_start)
+	{
+		label_num = g_start_label;
+		label_jump = TRUE;
+		g_script_start = FALSE;
+	}
+	setChangeLock(TRUE);
+	while (result)
+	{
+		switch (*g_script_ptr)
+		{
+			case SCRIPT_COMMAND_LABEL:			// ラベル(ローカルのみ) byte:ラベル番号
+				if (label_jump)
+				{
+					if (*(g_script_ptr+1) == label_num)
+						label_jump = FALSE;
+				}
+				g_script_ptr += 2;		// スルー
+				break;
+0			case SCRIPT_COMMAND_GOTO:			// ラベルジャンプ byte:ラベル番号
+				if (!label_jump)
+				{
+					label_num = *(g_script_ptr+1);
+					label_jump = TRUE;
+					g_script_ptr = (u8 *)g_script_ptr_base;
+				} else
+					g_script_ptr += 2;		// スルー
+				break;
+1			case SCRIPT_COMMAND_FLAG:			// フラグセット word:フラグ番号 byte:ON/OFF
+				if (!label_jump)
+				{
+					u16 num;
+					BOOL flag;
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+1, 2);
+					if (*(g_script_ptr+3) != 0)
+						flag = TRUE;
+					else
+						flag = FALSE;
+					setLabel(num, flag);
+				}
+				g_script_ptr += 4;
+				break;
+2			case SCRIPT_COMMAND_BG:				// BG変更 word:BG番号
+				if (!label_jump)
+				{
+					u16 num;
+
+					if (next_check != 0 && next_check != 4)
+					{
+						result = FALSE;
+						break;
+					}
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+1, 2);
+					setBgNum(num);
+					next_check = 1;
+				}
+				g_script_ptr += 3;
+				break;
+3			case SCRIPT_COMMAND_BG2:			// BG変更 word:BG番号
+				if (!label_jump)
+				{
+					u16 num;
+
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+1, 2);
+					setBgNum2(num);
+					result = FALSE;
+				}
+				g_script_ptr += 3;
+				break;
+4			case SCRIPT_COMMAND_CHAR:			// CHA変更 byte:位置 word:CHA番号
+				if (!label_jump)
+				{
+					u16 num;
+
+					if (next_check != 0 && next_check != 1)
+					{
+						result = FALSE;
+						break;
+					}
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+2, 2);
+					setChaNum(*(g_script_ptr+1), num);
+					next_check = 4;
+				}
+				g_script_ptr += 4;
+				break;
+5			case SCRIPT_COMMAND_OFF_CHAR:		// CHA消去
+				if (!label_jump)
+				{
+					if (next_check != 0 && next_check != 2)
+					{
+						result = FALSE;
+						break;
+					}
+					clearCha(*(g_script_ptr+1));
+					next_check = 2;
+				}
+				g_script_ptr += 2;
+				break;
+6			case SCRIPT_COMMAND_FACE:			// FACE変更 word:FACE番号
+				if (!label_jump)
+				{
+					u8 nc;
+					u16 num;
+
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+1, 2);
+					if (num != 0xffff)
+						nc = 1;
+					else
+						nc = 2;
+					if (next_check != 0 && next_check != nc && !(nc == 1 && next_check == 4))
+					{
+						result = FALSE;
+						break;
+					}
+					setFace(num);
+					next_check = nc;
+				}
+				g_script_ptr += 3;
+				break;
+7			case SCRIPT_COMMAND_VOICE:			// ボイス再生 dword:ボイス番号
+				if (!label_jump)
+				{
+					u16 num;
+
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+1, 2);
+					playVoice(num);
+					g_voice_play = TRUE;
+				}
+				g_script_ptr += 3;
+				break;
+8			case SCRIPT_COMMAND_TEXT_MODE:		// テキストの表示スイッチ byte:0/ウィンドウ 1/全画面
+				if (!label_jump)
+				{
+					g_text_mode = *(g_script_ptr+1);
+					// テキストの初期位置
+					g_text_x = SCRIPT_TEXT_START_X;
+					g_text_y = SCRIPT_TEXT_START_Y;
+				}
+				g_script_ptr += 2;
+				break;
+9			case SCRIPT_COMMAND_MESSAGE_NAME:	// FACE欄の名前の設定 byte:文字列長 str:名前
+				n = *(g_script_ptr+1);
+				if (!label_jump)
+				{
+					char code[6*2];
+					u8 len;
+
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					memcpyBDS((s8 *)code, (s8 *)(g_script_ptr+2), (u32)(*(g_script_ptr+1)*2));
+					len = changeCode((u16 *)code, *(g_script_ptr+1));
+					setFaceNameCode(len*2, (char *)code);
+					result = FALSE;
+				}
+				g_script_ptr += (n*2)+2;
+				break;
+a			case SCRIPT_COMMAND_MESSAGE:		// メッセージ表示 byte:文字列長 str:文字列
+				if (!label_jump)
+				{
+					char code[20*2];
+					u8 len;
+
+					if (next_check != 0 && next_check != 3)
+					{
+						result = FALSE;
+						break;
+					}
+					memcpyBDS((s8 *)code, (s8 *)(g_script_ptr+2), (u32)(*(g_script_ptr+1)*2));
+					len = changeCode((u16 *)code, *(g_script_ptr+1));
+					if (g_text_mode == 0)
+					{
+						// ウィンドウ表示
+						setMessageCode(g_message_line, len*2, (char *)code);
+						g_step = SCRIPT_STEP_MES_WAIT;
+					} else {
+						// 全画面表示
+						setCodeToBmpPtrPos(getBmpBuf(), (u8 *)code, len*2, 0, SCRIPT_TEXT_START_X, g_text_y);
+						g_text_x = (s16)(SCRIPT_TEXT_START_X + len * 12);
+					}
+					next_check = 3;
+				}
+				n = *(g_script_ptr+1);
+				g_script_ptr += (n*2) + 2;
+				break;
+b			case SCRIPT_COMMAND_LINE_FEED:		// 改行
+				if (!label_jump)
+				{
+					if (next_check != 0 && next_check != 3)
+					{
+						result = FALSE;
+						break;
+					}
+					if (g_text_mode == 0)
+					{
+						// ウィンドウ表示
+						g_message_line++;
+						if (g_message_line > 2)
+							g_message_line = 0;
+					} else {
+						// 全画面表示
+						g_text_x = SCRIPT_TEXT_START_X;
+						g_text_y += 14;
+					}
+					next_check = 3;
+				}
+				g_script_ptr += 1;
+				break;
+c			case SCRIPT_COMMAND_KEY_WAIT:		// キーウェイト
+				if (!label_jump)
+				{
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					if (g_text_mode == 0)
+						setKeyWaitPos(-1, -1);
+					else
+						setKeyWaitPos(g_text_x-4, g_text_y-3);
+					//if (!(getPad() & PAD_BUTTON_X))
+					//{
+						putKeyWait();
+						g_step = SCRIPT_STEP_KEY_WAIT;
+					//} else {
+					//	clearMessage();
+					//	g_message_line = 0;
+					//}
+					result = FALSE;
+				}
+				g_script_ptr += 1;
+				break;
+d			case SCRIPT_COMMAND_MESSAGE_WINDOW:	// メッセージウィンドウON/OFF byte:ON/OFF
+				if (!label_jump)
+				{
+					u8 nc;
+					BOOL put;
+					if (*(g_script_ptr+1) == 1)
+					{
+						nc = 1;
+						put = TRUE;
+					} else {
+						nc = 2;
+						put = FALSE;
+					}
+					if (next_check != 0 && next_check != nc)
+					{
+						result = FALSE;
+						break;
+					}
+					if (g_text_mode == 0)
+						putMessageWindow(put);
+					else
+					if (!put)
+					{
+						updateGraph();
+						g_text_x = SCRIPT_TEXT_START_X;
+						g_text_y = SCRIPT_TEXT_START_Y;
+					}
+					next_check = nc;
+				}
+				g_script_ptr += 2;
+				break;
+e			case SCRIPT_COMMAND_DATE_WINDOW:	// 日付ウィンドウON/OFF byte:ON/OFF
+				if (!label_jump)
+				{
+				}
+				g_script_ptr += 2;
+				break;
+f			case SCRIPT_COMMAND_OFF_FACE_WINDOW:	// FACEウィンドウOFF
+				if (!label_jump)
+				{
+					if (next_check != 0 && next_check != 2)
+					{
+						result = FALSE;
+						break;
+					}
+					clearFaceName();
+					putFaceWindow(FALSE);
+					next_check = 2;
+				}
+				g_script_ptr += 1;
+				break;
+10			case SCRIPT_COMMAND_SELECT:			// 選択肢の表示
+				if (!label_jump)
+				{
+					char code[12*2];
+					u8 len;
+
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					initSelect();
+					n = 2;
+					for (i=0; i<*(g_script_ptr+1); i++)
+					{
+						g_select_label[i] = *(g_script_ptr+n);
+						memcpyBDS((s8 *)code, (s8 *)(g_script_ptr+n+2), (u32)(*(g_script_ptr+n+1)*2));
+						len = changeCode((u16 *)code, *(g_script_ptr+n+1));
+						setSelectCode(i, len*2, (char *)code);
+						n += (u8)((*(g_script_ptr+n+1) * 2) + 2);
+					}
+					putStartSelect();
+					g_step = SCRIPT_STEP_SEL_WAIT;
+					result = FALSE;
+				}
+				n = 2;
+				for (i=0; i<*(g_script_ptr+1); i++)
+				{
+					n++;
+					n += (u8)((*(g_script_ptr+n) * 2) + 1);
+				}
+				g_script_ptr += n;
+				break;
+
+11			case SCRIPT_COMMAND_SE_PLAY:			// 
+				if (!label_jump)
+				{
+					if (getOptionSFX() != 0)
+						playAdxM(g_se_table[*(g_script_ptr+1)]);
+				}
+				g_script_ptr += 2;
+				break;
+
+12			case SCRIPT_COMMAND_SE_WAIT:			// 
+				if (!label_jump)
+				{
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					g_step = SCRIPT_STEP_SE_WAIT;
+					result = FALSE;
+				}
+				g_script_ptr += 1;
+				break;
+
+13			case SCRIPT_COMMAND_SE_STOP:			// 
+				if (!label_jump)
+				{
+					stopAdxM();
+				}
+				g_script_ptr += 1;
+				break;
+
+14			case SCRIPT_COMMAND_BGM_PLAY:		// 
+				if (!label_jump)
+				{
+					int n;
+					n = g_bgm_table[*(g_script_ptr+1)];
+					setBGM(n);
+					playBGM();
+				}
+				g_script_ptr += 2;
+				break;
+
+15			case SCRIPT_COMMAND_ROOM_BGM_PLAY:		// 
+				if (!label_jump)
+					playRoomBGM();
+				g_script_ptr += 1;
+				break;
+
+16			case SCRIPT_COMMAND_BGM_STOP:		// 
+				if (!label_jump)
+				{
+					u16 num;
+
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					memcpyBDS((s8 *)&num, (s8 *)g_script_ptr+1, 2);
+					fadeBGM(num);
+					if (num > 0)
+					{
+						g_fade_time = num;
+						g_step = SCRIPT_STEP_BGM_WAIT;
+						result = FALSE;
+					}
+				}
+				g_script_ptr += 3;
+				break;
+
+17			case SCRIPT_COMMAND_SPECIAL:		// 
+				if (!label_jump)
+				{
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					g_special = *(g_script_ptr+1);
+					g_step = SCRIPT_STEP_SPECIAL;
+					result = FALSE;
+				}
+				g_script_ptr += 2;
+				break;
+
+18			case SCRIPT_COMMAND_QUAKE:			// 
+				if (!label_jump)
+				{
+					if (next_check != 0)
+					{
+						result = FALSE;
+						break;
+					}
+					setQuake();
+					g_step = SCRIPT_STEP_QUAKE_WAIT;
+					result = FALSE;
+				}
+				g_script_ptr += 1;
+				break;
+
+19			case SCRIPT_COMMAND_GOLD:			// 
+				if (!label_jump)
+				{
+				}
+				break;
+1a			case SCRIPT_COMMAND_PARAM:			// 
+				if (!label_jump)
+				{
+				}
+				break;
+
+1b			case SCRIPT_COMMAND_END:
+				if (!label_jump)
+				{
+					//clearMessage();
+					g_script_end_code = *(g_script_ptr+1);
+					if (g_script_ptr_base)
+					{
+						freeBDS(g_script_ptr_base);
+						g_script_ptr_base = NULL;
+					}
+					g_script_exec = FALSE;
+					g_step = SCRIPT_STEP_NONE;
+					result = FALSE;
+				} else
+					g_script_ptr += 2;
+				break;
+			default:
+				;
+		}
+	}
+	if (next_check == 3)
+	{
+		if (g_step == SCRIPT_STEP_MES_WAIT)
+			putStartMessage();
+		if (g_text_mode != 0)
+		{
+			if (getPad() & PAD_BUTTON_X)
+				flipBmpBuf(0);
+			else
+			if (getOptionMessage() == 0)
+				flipBmpBuf(10);
+			else
+				flipBmpBuf(30);
+		}
+	}
+	setChangeLock(FALSE);
+}
+
+
+操作码	命令名称	中文注释	参数格式
+0x00	SCRIPT_COMMAND_LABEL	         标签（仅本地）	byte:标签编号
+0x01	SCRIPT_COMMAND_GOTO	             标签跳转	    byte:标签编号
+0x02	SCRIPT_COMMAND_FLAG	             标志设置	    word:标志编号 byte:开/关
+0x03	SCRIPT_COMMAND_BG	             背景变更	word:背景编号
+0x04	SCRIPT_COMMAND_BG2	             背景变更2	word:背景编号
+0x05	SCRIPT_COMMAND_CHAR	             角色变更	byte:位置 word:角色编号
+0x06	SCRIPT_COMMAND_OFF_CHAR	         角色消除	byte:参数
+0x07	SCRIPT_COMMAND_FACE	             脸部变更	word:脸部编号
+0x08	SCRIPT_COMMAND_VOICE	         语音播放	word:语音编号
+0x09	SCRIPT_COMMAND_TEXT_MODE	     文本显示开关	byte:0/窗口 1/全屏
+0x0A	SCRIPT_COMMAND_MESSAGE_NAME	     对话文本	byte:字符串长度 str:文本内容
+0x0B	SCRIPT_COMMAND_MESSAGE	         消息显示   	无参数
+0x0C	SCRIPT_COMMAND_LINE_FEED	     换行	无参数
+0x0D	SCRIPT_COMMAND_KEY_WAIT	         按键等待	无参数
+0x0E	SCRIPT_COMMAND_MESSAGE_WINDOW	 消息窗口开关	byte:开/关
+0x0F	SCRIPT_COMMAND_DATE_WINDOW	     日期窗口开关	byte:开/关
+0x10	SCRIPT_COMMAND_OFF_FACE_WINDOW	 脸部窗口关闭	无参数
+0x11	SCRIPT_COMMAND_SELECT	         选择肢显示	可变长度选择数据
+0x12	SCRIPT_COMMAND_SE_PLAY	         音效播放	byte:音效编号
+0x13	SCRIPT_COMMAND_SE_WAIT	         音效等待	无参数
+0x14	SCRIPT_COMMAND_SE_STOP	         音效停止	无参数
+0x15	SCRIPT_COMMAND_BGM_PLAY	         背景音乐播放	byte:BGM编号
+0x16	SCRIPT_COMMAND_ROOM_BGM_PLAY	 房间背景音乐播放	无参数
+0x17	SCRIPT_COMMAND_BGM_STOP	         背景音乐停止	word:淡出时间
+0x18	SCRIPT_COMMAND_SPECIAL	         特殊命令	byte:特殊代码
+0x19	SCRIPT_COMMAND_QUAKE	         震动效果	无参数
+0x1A	SCRIPT_COMMAND_GOLD	             金钱处理	无参数
+0x1B	SCRIPT_COMMAND_PARAM	         参数设置	无参数
+0xFF	SCRIPT_COMMAND_END	             脚本结束	byte:结束代码
+
+
+void FUN_0002685c(void)
+
+{
+  char cVar1;
+  bool bVar2;
+  undefined *puVar3;
+  undefined4 uVar4;
+  int iVar5;
+  byte bVar6;
+  undefined *puVar7;
+  int iVar8;
+  uint uVar9;
+  uint uVar10;
+  uint uVar11;
+  uint unaff_r11;
+  bool bVar12;
+  short local_80;
+  undefined2 local_7e;
+  ushort local_7c;
+  undefined2 local_7a;
+  undefined2 local_78;
+  undefined2 local_76;
+  undefined2 local_74;
+  undefined auStack_72 [24];
+  undefined auStack_5a [40];
+  undefined auStack_32 [14];
+  
+  uVar11 = 0;
+  bVar12 = *(int *)(DAT_00027228 + 0x28) != 0;
+  if (bVar12) {
+    unaff_r11 = (uint)(byte)DAT_00027228[3];
+  }
+  bVar2 = true;
+  if (bVar12) {
+    *(undefined4 *)(DAT_00027228 + 0x28) = 0;
+  }
+  FUN_00017034(1);
+  do {
+    puVar3 = DAT_00027228;
+    puVar7 = *(undefined **)(DAT_00027228 + 0x30);
+    switch(*puVar7) {
+    case 0:
+      if ((bVar12) && ((byte)puVar7[1] == unaff_r11)) {
+        bVar12 = false;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      break;
+    case 1:
+      if (bVar12) {
+        *(undefined **)(DAT_00027228 + 0x30) = puVar7 + 2;
+      }
+      else {
+        unaff_r11 = (uint)(byte)puVar7[1];
+        bVar12 = true;
+        *(undefined4 *)(DAT_00027228 + 0x30) = *(undefined4 *)(DAT_00027228 + 0x18);
+      }
+      break;
+    case 2:
+      if (!bVar12) {
+        FUN_00007f2c(&local_74,puVar7 + 1,2);
+        FUN_0000cae8(local_74,*(char *)(*(int *)(DAT_00027228 + 0x30) + 3) != '\0');
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 4;
+      break;
+    case 3:
+      if (!bVar12) {
+        if (uVar11 != 0 && uVar11 != 4) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00007f2c(&local_76,puVar7 + 1,2);
+        FUN_000103bc(local_76);
+        uVar11 = 1;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 3;
+      break;
+    case 4:
+      if (!bVar12) {
+        bVar2 = false;
+        if (uVar11 != 0) break;
+        FUN_00007f2c(&local_78,puVar7 + 1,2);
+        FUN_00010638(local_78);
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 3;
+      break;
+    case 5:
+      if (!bVar12) {
+        if (1 < uVar11) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00007f2c(&local_7a,puVar7 + 2,2);
+        FUN_000106b8(*(undefined *)(*(int *)(DAT_00027228 + 0x30) + 1),local_7a);
+        uVar11 = 4;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 4;
+      break;
+    case 6:
+      if (!bVar12) {
+        if (uVar11 != 0 && uVar11 != 2) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00010a50(puVar7[1]);
+        uVar11 = 2;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      break;
+    case 7:
+      uVar9 = uVar11;
+      if (!bVar12) {
+        FUN_00007f2c(&local_7c,puVar7 + 1,2);
+        if (local_7c == DAT_0002722c) {
+          uVar9 = 2;
+        }
+        else {
+          uVar9 = 1;
+        }
+        if ((uVar11 != 0 && uVar11 != uVar9) && (uVar9 != 1 || uVar11 != 4)) {
+          bVar2 = false;
+          break;
+        }
+        FUN_000148e4();
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 3;
+      uVar11 = uVar9;
+      break;
+    case 8:
+      if (!bVar12) {
+        FUN_00007f2c(&local_7e,puVar7 + 1,2);
+        FUN_000359a4(local_7e);
+        *(undefined4 *)(DAT_00027228 + 0x2c) = 1;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 3;
+      break;
+    case 9:
+      bVar6 = puVar7[1];
+      if (!bVar12) {
+        bVar2 = false;
+        if (uVar11 != 0) break;
+        FUN_00007f2c(auStack_32,puVar7 + 2,(uint)bVar6 << 1);
+        iVar5 = FUN_00027418(auStack_32,*(undefined *)(*(int *)(DAT_00027228 + 0x30) + 1));
+        FUN_00014a6c(iVar5 << 1,auStack_32);
+      }
+      *(uint *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + (uint)bVar6 * 2 + 2;
+      break;
+    case 10:
+      if (!bVar12) {
+        if (uVar11 != 0 && uVar11 != 3) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00007f2c(auStack_5a,*(int *)(DAT_00027228 + 0x30) + 2,
+                     (uint)*(byte *)(*(int *)(DAT_00027228 + 0x30) + 1) << 1);
+        iVar5 = FUN_00027418(auStack_5a,*(undefined *)(*(int *)(DAT_00027228 + 0x30) + 1));
+        if (DAT_00027228[5] == '\0') {
+          FUN_00014e60(DAT_00027228[2],iVar5 << 1,auStack_5a);
+          DAT_00027228[6] = 2;
+        }
+        else {
+          uVar4 = FUN_0000f114();
+          FUN_00004558(uVar4,auStack_5a,iVar5 << 1,0,8,(int)*(short *)(DAT_00027228 + 8));
+          *(short *)(DAT_00027228 + 10) = (short)iVar5 * 0xc + 8;
+        }
+        uVar11 = 3;
+      }
+      *(uint *)(DAT_00027228 + 0x30) =
+           *(int *)(DAT_00027228 + 0x30) +
+           (uint)*(byte *)(*(int *)(DAT_00027228 + 0x30) + 1) * 2 + 2;
+      break;
+    case 0xb:
+      if (!bVar12) {
+        if (uVar11 != 0 && uVar11 != 3) {
+          bVar2 = false;
+          break;
+        }
+        if (DAT_00027228[5] == '\0') {
+          cVar1 = DAT_00027228[2];
+          DAT_00027228[2] = cVar1 + 1U;
+          if (2 < (byte)(cVar1 + 1U)) {
+            puVar3[2] = 0;
+          }
+        }
+        else {
+          *(undefined2 *)(DAT_00027228 + 10) = 8;
+          *(short *)(puVar3 + 8) = *(short *)(puVar3 + 8) + 0xe;
+        }
+        uVar11 = 3;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0xc:
+      if (!bVar12) {
+        if (uVar11 != 0) {
+          bVar2 = false;
+          break;
+        }
+        if (DAT_00027228[5] == '\0') {
+          FUN_00016604(0xffffffff,0xffffffff);
+        }
+        else {
+          FUN_00016604(*(short *)(DAT_00027228 + 10) + -4,*(short *)(DAT_00027228 + 8) + -3);
+        }
+        FUN_00016590();
+        DAT_00027228[6] = 3;
+        bVar2 = false;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0xd:
+      uVar9 = uVar11;
+      if (!bVar12) {
+        if (puVar7[1] == '\x01') {
+          uVar9 = 1;
+        }
+        else {
+          uVar9 = 2;
+        }
+        if (uVar11 != 0 && uVar11 != uVar9) {
+          bVar2 = false;
+          break;
+        }
+        if (DAT_00027228[5] == '\0') {
+          FUN_00014ca4();
+        }
+        else if (puVar7[1] != '\x01') {
+          FUN_000102ac();
+          puVar3 = DAT_00027228;
+          *(undefined2 *)(DAT_00027228 + 10) = 8;
+          *(undefined2 *)(puVar3 + 8) = 8;
+        }
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      uVar11 = uVar9;
+      break;
+    case 0xe:
+      *(undefined **)(DAT_00027228 + 0x30) = puVar7 + 2;
+      break;
+    case 0xf:
+      if (!bVar12) {
+        if (uVar11 != 0 && uVar11 != 2) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00014a58();
+        FUN_00014854(0);
+        uVar11 = 2;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0x10:
+      if (!bVar12) {
+        if (uVar11 != 0) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00015314();
+        iVar5 = DAT_00027230;
+        puVar3 = DAT_00027228;
+        uVar10 = 2;
+        uVar9 = 0;
+        if (*(char *)(*(int *)(DAT_00027228 + 0x30) + 1) != '\0') {
+          do {
+            iVar8 = *(int *)(puVar3 + 0x30) + uVar10;
+            *(undefined *)(iVar5 + uVar9) = *(undefined *)(*(int *)(puVar3 + 0x30) + uVar10);
+            FUN_00007f2c(auStack_72,iVar8 + 2,(uint)*(byte *)(iVar8 + 1) << 1);
+            iVar8 = FUN_00027418(auStack_72,*(undefined *)(*(int *)(puVar3 + 0x30) + uVar10 + 1));
+            FUN_000153c0(uVar9,iVar8 << 1,auStack_72);
+            uVar9 = uVar9 + 1 & 0xff;
+            uVar10 = uVar10 + ((uint)*(byte *)(*(int *)(puVar3 + 0x30) + uVar10 + 1) * 2 + 2 & 0xff)
+                     & 0xff;
+          } while (uVar9 < *(byte *)(*(int *)(puVar3 + 0x30) + 1));
+        }
+        FUN_0001544c();
+        DAT_00027228[6] = 4;
+        bVar2 = false;
+      }
+      uVar9 = 2;
+      iVar5 = *(int *)(DAT_00027228 + 0x30);
+      bVar6 = 0;
+      if (*(char *)(iVar5 + 1) != '\0') {
+        do {
+          uVar9 = uVar9 + 1 & 0xff;
+          bVar6 = bVar6 + 1;
+          uVar9 = uVar9 + ((uint)*(byte *)(iVar5 + uVar9) * 2 + 1 & 0xff) & 0xff;
+        } while (bVar6 < *(byte *)(iVar5 + 1));
+      }
+      *(uint *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + uVar9;
+      break;
+    case 0x11:
+      if ((!bVar12) && (iVar5 = FUN_0000a440(), iVar5 != 0)) {
+        FUN_000084c0(*(undefined2 *)
+                      (DAT_00027234 + (uint)*(byte *)(*(int *)(DAT_00027228 + 0x30) + 1) * 2));
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      break;
+    case 0x12:
+      if (!bVar12) {
+        bVar2 = false;
+        if (uVar11 != 0) break;
+        DAT_00027228[6] = 5;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0x13:
+      if (!bVar12) {
+        FUN_00008664();
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0x14:
+      if (!bVar12) {
+        FUN_000086fc(*(undefined *)(DAT_00027238 + (uint)(byte)puVar7[1]));
+        FUN_00008728();
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      break;
+    case 0x15:
+      if (!bVar12) {
+        FUN_000278cc();
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0x16:
+      if (!bVar12) {
+        if (uVar11 != 0) {
+          bVar2 = false;
+          break;
+        }
+        FUN_00007f2c(&local_80,puVar7 + 1,2);
+        FUN_00008808(local_80);
+        puVar3 = DAT_00027228;
+        if (local_80 != 0) {
+          *(short *)(DAT_00027228 + 0xc) = local_80;
+          puVar3[6] = 6;
+          bVar2 = false;
+        }
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 3;
+      break;
+    case 0x17:
+      if (!bVar12) {
+        DAT_00027228[5] = puVar7[1];
+        *(undefined2 *)(puVar3 + 10) = 8;
+        *(undefined2 *)(puVar3 + 8) = 8;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      break;
+    case 0x18:
+      if (!bVar12) {
+        bVar2 = false;
+        if (uVar11 != 0) break;
+        DAT_00027228[4] = puVar7[1];
+        puVar3[6] = 7;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 2;
+      break;
+    case 0x19:
+      if (!bVar12) {
+        bVar2 = false;
+        if (uVar11 != 0) break;
+        FUN_000102f8();
+        DAT_00027228[6] = 8;
+      }
+      *(int *)(DAT_00027228 + 0x30) = *(int *)(DAT_00027228 + 0x30) + 1;
+      break;
+    case 0x1a:
+      break;
+    case 0x1b:
+      break;
+    case 0x1c:
+      if (bVar12) {
+        *(undefined **)(DAT_00027228 + 0x30) = puVar7 + 2;
+      }
+      else {
+        *DAT_00027228 = puVar7[1];
+        if (*(int *)(puVar3 + 0x18) != 0) {
+          FUN_00007ef4();
+          *(undefined4 *)(DAT_00027228 + 0x18) = 0;
+        }
+        puVar3 = DAT_00027228;
+        bVar2 = false;
+        *(undefined4 *)(DAT_00027228 + 0x14) = 0;
+        puVar3[6] = 0;
+      }
+    }
+    if (!bVar2) {
+      if (uVar11 == 3) {
+        if (DAT_00027228[6] == '\x02') {
+          FUN_00014f70();
+        }
+        if (DAT_00027228[5] != '\0') {
+          uVar11 = FUN_00006700();
+          if ((uVar11 & 0x400) == 0) {
+            iVar5 = FUN_0000a4ac();
+            if (iVar5 == 0) {
+              FUN_0000f124(10);
+            }
+            else {
+              FUN_0000f124(0x1e);
+            }
+          }
+          else {
+            FUN_0000f124(0);
+          }
+        }
+      }
+      FUN_00017034(0);
+      return;
+    }
+  } while( true );
+}
+

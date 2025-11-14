@@ -1,0 +1,792 @@
+LABEL 0
+END 0
+LABEL 1
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "これより武闘大会を開催します。"
+LINE_FEED
+MESSAGE "始めに国王からのお言葉です。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "武の力は国の礎。"
+LINE_FEED
+MESSAGE "普段の鍛錬の成果を今日、"
+LINE_FEED
+MESSAGE "このはれの場で見せてもらいたい！"
+KEY_WAIT
+END 0
+LABEL 2
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2389
+MESSAGE "わぁ～"
+LINE_FEED
+MESSAGE "みんな強そうだなぁ。"
+LINE_FEED
+MESSAGE "でも、負けないんだから！"
+KEY_WAIT
+END 0
+LABEL 3
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2390
+MESSAGE "強そうな人ばかりで、"
+LINE_FEED
+MESSAGE "今から緊張してきちゃった……"
+LINE_FEED
+MESSAGE "ケガしないよう、気をつけなきゃ。"
+KEY_WAIT
+END 0
+LABEL 4
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2391
+MESSAGE "うう、なんだか緊張するわね。"
+LINE_FEED
+MESSAGE "この歳から参加しても"
+LINE_FEED
+MESSAGE "大丈夫かなぁ？"
+KEY_WAIT
+END 0
+LABEL 5
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2392
+MESSAGE "今回も強そうな人ばかりね……"
+LINE_FEED
+MESSAGE "ここは、気合を入れて頑張らないと"
+LINE_FEED
+MESSAGE "パパに笑われちゃうわ。"
+KEY_WAIT
+VOICE 2393
+MESSAGE "よし、行くぞ～！"
+KEY_WAIT
+END 0
+LABEL 6
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2394
+MESSAGE "ここに参加するみんなって、"
+LINE_FEED
+MESSAGE "前より強くなってるんだろうなぁ。"
+KEY_WAIT
+VOICE 2395
+MESSAGE "私だって、前回の大会よりは"
+LINE_FEED
+MESSAGE "強くなってるはず……"
+LINE_FEED
+MESSAGE "よし、頑張ろう！"
+KEY_WAIT
+END 0
+LABEL 7
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2396
+MESSAGE "何度参加しても、"
+LINE_FEED
+MESSAGE "試合前のこの時間は緊張するわ……"
+KEY_WAIT
+VOICE 2397
+MESSAGE "始まってしまえば大丈夫なんだけど"
+LINE_FEED
+MESSAGE "普段の通り……自分の持てる力を"
+LINE_FEED
+MESSAGE "信じて……頑張るだけね。"
+KEY_WAIT
+END 0
+LABEL 8
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "次は私と[娘の名前]の対戦……"
+LINE_FEED
+MESSAGE "ついにこの時がやってきたな！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2398
+MESSAGE "うん。"
+LINE_FEED
+MESSAGE "勝負……だね。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "絶対に勝ぁつ！！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2399
+MESSAGE "わ、私だって……負けないもん！"
+KEY_WAIT
+END 0
+LABEL 9
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "さあ、いよいよだな。"
+LINE_FEED
+MESSAGE "ワタシとオマエ、"
+LINE_FEED
+MESSAGE "どちらが上か勝負だ。"
+KEY_WAIT
+MESSAGE "ふふふ、今日は調子がいい。"
+LINE_FEED
+MESSAGE "たとえ相手がオマエでも、"
+LINE_FEED
+MESSAGE "負ける気がしないな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2400
+MESSAGE "すごい自信ね。"
+LINE_FEED
+MESSAGE "でも、私だって"
+LINE_FEED
+MESSAGE "負けてないんだから！"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "次がワタシたちの試合か。"
+LINE_FEED
+MESSAGE "いい勝負にしたいな。"
+LINE_FEED
+MESSAGE "だが……必勝を期させてもらう。"
+KEY_WAIT
+MESSAGE "父さん……見ていてください。"
+LINE_FEED
+MESSAGE "ワタシは絶対に勝ちます……！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2401
+MESSAGE "リーゼ……"
+LINE_FEED
+MESSAGE "でも、私だって負けられない！"
+KEY_WAIT
+END 0
+LABEL 11
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2402
+MESSAGE "やった～！"
+LINE_FEED
+MESSAGE "私の勝ち～！"
+KEY_WAIT
+END 0
+LABEL 12
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2403
+MESSAGE "運も実力のうちって言うよね。"
+LINE_FEED
+MESSAGE "でも今回は、両方とも私が"
+LINE_FEED
+MESSAGE "上回ってたみたいだね！　えへへ！"
+KEY_WAIT
+END 0
+LABEL 13
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2404
+MESSAGE "今回は僅差で私の勝ちだったね。"
+LINE_FEED
+MESSAGE "充実した、いい内容でした。"
+KEY_WAIT
+VOICE 2405
+MESSAGE "また勝負してください。"
+LINE_FEED
+MESSAGE "競い合う友がいてこその、今回の"
+LINE_FEED
+MESSAGE "成績だから……"
+KEY_WAIT
+END 0
+LABEL 14
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ようし、勝った！"
+LINE_FEED
+MESSAGE "勝ったぞ！"
+LINE_FEED
+MESSAGE "あははははっ！！"
+KEY_WAIT
+MESSAGE "父さ～ん、やったよー！！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2406
+MESSAGE "うう、負けちゃったぁ……"
+KEY_WAIT
+END 0
+LABEL 15
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "よし、勝った！"
+KEY_WAIT
+MESSAGE "なかなかの勝負だったが、"
+LINE_FEED
+MESSAGE "やっぱりワタシのほうが"
+LINE_FEED
+MESSAGE "上だったようだな！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2407
+MESSAGE "ううー！"
+LINE_FEED
+MESSAGE "あともうちょっとだったのに！"
+LINE_FEED
+MESSAGE "悔しいよぉ～"
+KEY_WAIT
+END 0
+LABEL 16
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんとか勝てたか……"
+KEY_WAIT
+MESSAGE "だが、どちらが勝っても"
+LINE_FEED
+MESSAGE "おかしくない勝負だったな。"
+LINE_FEED
+MESSAGE "さすがは[娘の名前]だ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2408
+MESSAGE "うん、負けたのは悔しいけれど、"
+LINE_FEED
+MESSAGE "あなたと勝負できて"
+LINE_FEED
+MESSAGE "楽しかったわ。"
+KEY_WAIT
+VOICE 2409
+MESSAGE "おめでとう、リーゼ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "父さん……勝ちました。"
+LINE_FEED
+MESSAGE "見ていてくれましたか……？"
+KEY_WAIT
+END 0
+LABEL 17
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2410
+MESSAGE "えーん、負けちゃった～！"
+LINE_FEED
+MESSAGE "もう少しだったのにぃ……"
+KEY_WAIT
+END 0
+LABEL 18
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2411
+MESSAGE "いいところまで追い詰めたのに……"
+LINE_FEED
+MESSAGE "私、油断してた？"
+KEY_WAIT
+END 0
+LABEL 19
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2412
+MESSAGE "なんて強さなの！"
+LINE_FEED
+MESSAGE "私がここまで一方的に"
+LINE_FEED
+MESSAGE "負けるなんて……"
+KEY_WAIT
+VOICE 2413
+MESSAGE "まだまだ修行が"
+LINE_FEED
+MESSAGE "足りなかったわね……"
+KEY_WAIT
+END 0
+LABEL 20
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2414
+MESSAGE "やったぁ、勝っちゃった！"
+LINE_FEED
+MESSAGE "あはははは！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ま、負けたぁ～"
+LINE_FEED
+MESSAGE "でも、次は勝つ！"
+LINE_FEED
+MESSAGE "絶対に勝つ！！"
+KEY_WAIT
+END 0
+LABEL 21
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2415
+MESSAGE "ふふっ、今回は私の勝ちだねっ！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "くっ、負けてしまったか……"
+LINE_FEED
+MESSAGE "さすが、ワタシが見込んだ"
+LINE_FEED
+MESSAGE "ライバルだけのことはある。"
+KEY_WAIT
+MESSAGE "だが、次はワタシが勝つぞ！"
+LINE_FEED
+MESSAGE "そのためにも、"
+LINE_FEED
+MESSAGE "早く帰って修行しなければ……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2416
+MESSAGE "ええっ、もう㌍"
+KEY_WAIT
+VOICE 2417
+MESSAGE "（リーゼったら、気が早いなぁ）"
+KEY_WAIT
+END 0
+LABEL 22
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2418
+MESSAGE "危なかった……でも、"
+LINE_FEED
+MESSAGE "これで私の勝ちだね、リーゼ！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、今回は完敗だ。"
+LINE_FEED
+MESSAGE "だが、オマエに負けたのなら"
+LINE_FEED
+MESSAGE "悔いはない。"
+KEY_WAIT
+MESSAGE "父さんも許してくれるだろう……"
+LINE_FEED
+MESSAGE "いい勝負だった、ありがとう。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2419
+MESSAGE "リーゼ……"
+LINE_FEED
+MESSAGE "うん、こちらこそ！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "だが、次はこうはいかないぞ。"
+LINE_FEED
+MESSAGE "覚悟しておけよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2420
+MESSAGE "ふふっ、望むところよ！"
+KEY_WAIT
+END 0
+LABEL 23
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "今回の優勝者は……"
+KEY_WAIT
+END 0
+LABEL 24
+SE_PLAY 11
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 25
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様の優勝おめでとうございます"
+LINE_FEED
+MESSAGE "武闘大会で、お嬢様にかなう相手は"
+LINE_FEED
+MESSAGE "いませんでしたね。"
+KEY_WAIT
+END 0
+LABEL 26
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様の優勝おめでとうございます"
+LINE_FEED
+MESSAGE "最後の対戦相手、強かったですね。"
+LINE_FEED
+MESSAGE "胸がドキドキしてしまいました。"
+KEY_WAIT
+END 0
+LABEL 27
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様の優勝おめでとうございます"
+LINE_FEED
+MESSAGE "これも日ごろの修行の成果ですね。"
+LINE_FEED
+MESSAGE "とても、お強かったです。"
+KEY_WAIT
+END 0
+LABEL 28
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "[娘の名前]よ。"
+LINE_FEED
+MESSAGE "幼いながらも"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2421
+MESSAGE "王様、ありがとうございます。"
+LINE_FEED
+MESSAGE "次もがんばります！"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ、よい心がけだ。"
+LINE_FEED
+MESSAGE "精進するのだぞ。"
+KEY_WAIT
+END 0
+LABEL 29
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "[娘の名前]よ。"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2422
+MESSAGE "ありがとうございます、王様。"
+LINE_FEED
+MESSAGE "でも、父に比べれば、"
+LINE_FEED
+MESSAGE "私はまだまだ未熟です。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "今後もより一層の"
+LINE_FEED
+MESSAGE "精進を重ねるのだぞ。"
+KEY_WAIT
+END 0
+LABEL 30
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "[娘の名前]よ。"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2423
+MESSAGE "謹んでお受けいたします、国王陛下"
+LINE_FEED
+MESSAGE "次も父の名を汚さぬよう、"
+LINE_FEED
+MESSAGE "精一杯頑張ります。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ、期待しておるぞ。"
+KEY_WAIT
+END 0
+LABEL 31
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "リーゼよ、幼いながらも、"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ありがとうございます、王様！"
+LINE_FEED
+MESSAGE "父に負けないよう、"
+LINE_FEED
+MESSAGE "これからも頑張ります！"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ、よい心がけだ。"
+LINE_FEED
+MESSAGE "精進するのだぞ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "はいっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2424
+MESSAGE "（すごいなぁ、リーゼちゃん……"
+LINE_FEED
+MESSAGE "私も頑張らなきゃ！）"
+KEY_WAIT
+END 0
+LABEL 32
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "リーゼよ、"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "は、ありがとうございます陛下。"
+LINE_FEED
+MESSAGE "名誉に恥じないよう、"
+LINE_FEED
+MESSAGE "いっそう励みます。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ。期待しておるぞ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "はいっ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2425
+MESSAGE "（リーゼ、すごいな……"
+LINE_FEED
+MESSAGE "でも、次は私だって！）"
+KEY_WAIT
+END 0
+LABEL 33
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "リーゼよ、"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ありがとうございます陛下。"
+LINE_FEED
+MESSAGE "身に余る光栄、"
+LINE_FEED
+MESSAGE "感謝の言葉もございません。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ。そなたの亡き父も、"
+LINE_FEED
+MESSAGE "喜んでいることだろう。"
+KEY_WAIT
+MESSAGE "今後もより一層の"
+LINE_FEED
+MESSAGE "精進を重ねるのだぞ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "はいっ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2426
+MESSAGE "（すごいな、リーゼ。"
+LINE_FEED
+MESSAGE "次は、私も……！）"
+KEY_WAIT
+END 0
+LABEL 34
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うーん、今回は２人とも"
+LINE_FEED
+MESSAGE "ぱっとしなかったな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2427
+MESSAGE "そうだねー、"
+LINE_FEED
+MESSAGE "試合もリーゼちゃんとは"
+LINE_FEED
+MESSAGE "当たらなかったし……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "応援してくれている人たちのため"
+LINE_FEED
+MESSAGE "にも、次はもっと頑張らなきゃい"
+LINE_FEED
+MESSAGE "けないな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2428
+MESSAGE "うん、頑張ろうね。"
+KEY_WAIT
+END 0
+LABEL 35
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "今年はいまいちだったな。"
+LINE_FEED
+MESSAGE "[娘の名前]との勝負も"
+LINE_FEED
+MESSAGE "次に持ち越しだし……"
+KEY_WAIT
+MESSAGE "こんなことでは父さんに"
+LINE_FEED
+MESSAGE "叱られてしまうよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2429
+MESSAGE "私も……"
+LINE_FEED
+MESSAGE "来年はこんなことにならないように"
+LINE_FEED
+MESSAGE "頑張らなきゃ。ね、リーゼ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうだな。来年こそは"
+LINE_FEED
+MESSAGE "オマエとの勝負をつけて……"
+LINE_FEED
+MESSAGE "そして、優勝だっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2430
+MESSAGE "うん、その意気、その意気㍍"
+KEY_WAIT
+VOICE 2431
+MESSAGE "（私も頑張らなくっちゃね）"
+KEY_WAIT
+END 0
+LABEL 36
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うむむ……こういう結果で"
+LINE_FEED
+MESSAGE "終わってしまったのは"
+LINE_FEED
+MESSAGE "ひどく残念だ。"
+KEY_WAIT
+MESSAGE "[娘の名前]との勝負も"
+LINE_FEED
+MESSAGE "つかずじまいに"
+LINE_FEED
+MESSAGE "なってしまったしな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2432
+MESSAGE "うーん、私も気合いれてたのに。"
+LINE_FEED
+MESSAGE "悔いが残るわね。"
+KEY_WAIT
+END 0
+LABEL 37
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、今回は残念でした。"
+LINE_FEED
+MESSAGE "頑張られましたし、ねぎらって"
+LINE_FEED
+MESSAGE "差し上げたらいかがでしょう？"
+KEY_WAIT
+END 0
+LABEL 38
+FACE 26
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、なかなかの成績でした。"
+KEY_WAIT
+MESSAGE "これも日ごろの訓練の賜物です。"
+LINE_FEED
+MESSAGE "旦那様もお褒めになってください。"
+LINE_FEED
+MESSAGE "きっと、喜ばれますよ。"
+KEY_WAIT
+END 0
+LABEL 39
+OFF_FACE_WINDOW
+FACE 65535
+MESSAGE "装備する武器を選んでください。"
+END 0
+LABEL 40
+OFF_FACE_WINDOW
+FACE 65535
+MESSAGE "装備する防具を選んでください。"
+END 0
+LABEL 41
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "あなたの戦いぶりは、"
+LINE_FEED
+MESSAGE "ひときわ輝いていました。"
+LINE_FEED
+MESSAGE "おめでとう。"
+KEY_WAIT
+END 0
+LABEL 42
+OFF_FACE_WINDOW
+FACE 65535
+MESSAGE "攻撃方法を選択してください。"
+END 0
+LABEL 43
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "そこまで！　判定の結果"
+LINE_FEED
+MESSAGE "勝者は、"
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+END 0
+LABEL 44
+OFF_FACE_WINDOW
+FACE 65535
+MESSAGE "[娘の名前]の攻撃！"
+LINE_FEED
+END 0
+LABEL 45
+MESSAGE "[汎用数値]のダメージをあたえた！"
+END 0
+LABEL 46
+OFF_FACE_WINDOW
+FACE 65535
+MESSAGE "[汎用文字列]の攻撃！"
+LINE_FEED
+END 0
+LABEL 47
+MESSAGE "[娘の名前]は"
+LINE_FEED
+MESSAGE "[汎用数値]のダメージを受けた！"
+END 0

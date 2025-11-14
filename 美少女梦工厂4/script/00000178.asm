@@ -1,0 +1,264 @@
+LABEL 0
+FLAG 462, 1
+BG 127
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3530
+MESSAGE "あはは、かわいいね。"
+LINE_FEED
+MESSAGE "フカフカで気持ちいい～"
+LINE_FEED
+MESSAGE "おまえはどこから来たの？"
+SELECT 3, 1, "獣を倒す", 2, "叱る", 3, "ほめる"
+LABEL 1
+FLAG 463, 1
+FACE 2
+VOICE 3531
+MESSAGE "あっ、パパ！　ダメだよ！"
+LINE_FEED
+MESSAGE "かわいそうじゃないっ！"
+KEY_WAIT
+VOICE 3532
+MESSAGE "この子は悪い子じゃないよ！"
+LINE_FEED
+MESSAGE "私にはわかるんだからー！"
+END 0
+LABEL 2
+FLAG 464, 1
+FACE 3
+VOICE 3533
+MESSAGE "え……㌍"
+LINE_FEED
+MESSAGE "どうして、この子と一緒に"
+LINE_FEED
+MESSAGE "遊んじゃいけないの、パパ？"
+KEY_WAIT
+VOICE 3534
+MESSAGE "こんなに大人しくて"
+LINE_FEED
+MESSAGE "かわいいのに……"
+LINE_FEED
+MESSAGE "わからないよ、パパ……"
+END 1
+LABEL 3
+FLAG 465, 1
+FACE 0
+VOICE 3535
+MESSAGE "え？　うん、平気だよ。"
+LINE_FEED
+MESSAGE "だって、この子、とっても"
+LINE_FEED
+MESSAGE "優しい子だってわかるもの。"
+KEY_WAIT
+VOICE 3536
+MESSAGE "……パパも。そんなに"
+LINE_FEED
+MESSAGE "怖がらなくても大丈夫だよ。"
+LINE_FEED
+MESSAGE "ふふふ……"
+END 2
+LABEL 4
+FLAG 466, 1
+BG 128
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3537
+MESSAGE "パパー！！"
+LINE_FEED
+MESSAGE "ねぇねぇ、お山作るの手伝って？"
+SELECT 3, 5, "手伝う", 6, "娘に対抗する", 7, "呼び戻す"
+LABEL 5
+FLAG 467, 1
+FACE 1
+VOICE 3538
+MESSAGE "わーい、やったあ！"
+LINE_FEED
+MESSAGE "いっしょにお山つくって、"
+LINE_FEED
+MESSAGE "トンネル掘ろうね～！"
+KEY_WAIT
+VOICE 3539
+MESSAGE "どっちが早く開通するか"
+LINE_FEED
+MESSAGE "競争だよ～㍍"
+END 0
+LABEL 6
+FLAG 468, 1
+FACE 4
+VOICE 3540
+MESSAGE "えーっ㌍"
+LINE_FEED
+MESSAGE "パパ、別のお山作るの？"
+KEY_WAIT
+FACE 1
+VOICE 3541
+MESSAGE "よーし、私も負けないから！"
+LINE_FEED
+MESSAGE "どっちが立派か競争！"
+LINE_FEED
+MESSAGE "パパも手加減しちゃダメよ。"
+END 1
+LABEL 7
+FLAG 469, 1
+FACE 4
+VOICE 3542
+MESSAGE "えーっ、どうしても？"
+LINE_FEED
+MESSAGE "もっと遊びたいのになぁ。"
+KEY_WAIT
+FACE 3
+VOICE 3543
+MESSAGE "……でも、パパが言うなら"
+LINE_FEED
+MESSAGE "そうするよ……"
+END 2
+LABEL 8
+FLAG 470, 1
+BG 129
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3544
+MESSAGE "わーっ、おいしーい㍍"
+LINE_FEED
+MESSAGE "秋の山って果物がいっぱいだね。"
+LINE_FEED
+MESSAGE "パパもどう？"
+SELECT 3, 9, "果物をもらう", 10, "新しい果物を教える", 11, "食べ過ぎに注意する"
+LABEL 9
+FLAG 471, 1
+FACE 1
+VOICE 3545
+MESSAGE "えっと……"
+LINE_FEED
+MESSAGE "うん！　たぶんこれっ！"
+LINE_FEED
+MESSAGE "この大きいやつっ。"
+KEY_WAIT
+FACE 0
+VOICE 3546
+MESSAGE "はい、パパ。"
+LINE_FEED
+MESSAGE "おいしいの選んだからね㍍"
+END 0
+LABEL 10
+FLAG 472, 1
+FACE 5
+VOICE 3547
+MESSAGE "えっ、これ㌍"
+LINE_FEED
+MESSAGE "これって……真っ黒だよ？"
+LINE_FEED
+MESSAGE "食べられるの？　ほんと㌍"
+KEY_WAIT
+FACE 4
+VOICE 3548
+MESSAGE "あっ……おいしーい！"
+LINE_FEED
+MESSAGE "へぇーっ、こんな果物も"
+LINE_FEED
+MESSAGE "あったんだー！"
+END 1
+LABEL 11
+FLAG 473, 1
+FACE 0
+VOICE 3549
+MESSAGE "えーっ、こんなにおいしいのに。"
+LINE_FEED
+MESSAGE "どうして、どうしてぇ？"
+KEY_WAIT
+VOICE 3550
+MESSAGE "太るからダメ？　大丈夫だよー、"
+LINE_FEED
+MESSAGE "そのぶん運動すればいいんだもん！"
+END 2
+LABEL 12
+FLAG 474, 1
+BG 130
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 3551
+MESSAGE "パパ～、寒いよぅ……"
+LINE_FEED
+MESSAGE "いったいどこへ行くの～？"
+KEY_WAIT
+FACE 4
+VOICE 3552
+MESSAGE "えっ、これ、なあに？"
+LINE_FEED
+MESSAGE "どうして湯気が立ってるの？"
+KEY_WAIT
+VOICE 3553
+MESSAGE "あっ……温かい！"
+LINE_FEED
+MESSAGE "ねぇねぇ、なんでお湯なの？"
+LINE_FEED
+MESSAGE "えっ、この中に……入るの㌍"
+KEY_WAIT
+FACE 1
+VOICE 3554
+MESSAGE "ん～っ、気持ちいいーっ……"
+LINE_FEED
+MESSAGE "これが温泉っていうんだね！"
+LINE_FEED
+MESSAGE "すごく温かいよ、パパ㍍"
+SELECT 3, 13, "洗ってあげる", 14, "一緒に入る", 15, "じっと見つめる"
+LABEL 13
+FLAG 475, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3555
+MESSAGE "わぁ、洗ってくれるの？"
+LINE_FEED
+MESSAGE "ありがとう、パパ！"
+KEY_WAIT
+VOICE 3556
+MESSAGE "キャハハ、そこ、"
+LINE_FEED
+MESSAGE "くすぐったいよ～㍍"
+KEY_WAIT
+VOICE 3557
+MESSAGE "ん～、つるつるになったよ。"
+KEY_WAIT
+FACE 0
+VOICE 3558
+MESSAGE "あ……パパの手、"
+LINE_FEED
+MESSAGE "冷えちゃってるよ？"
+LINE_FEED
+MESSAGE "一緒に温泉入って温まろう？　ね？"
+END 0
+LABEL 14
+FLAG 476, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3559
+MESSAGE "うん！　わーい、パパと一緒に"
+LINE_FEED
+MESSAGE "お風呂だぁ㍍"
+KEY_WAIT
+VOICE 3560
+MESSAGE "パパ、パパ、"
+LINE_FEED
+MESSAGE "１００数えてから出ようね。"
+KEY_WAIT
+VOICE 3561
+MESSAGE "じゃあ一緒に……"
+LINE_FEED
+MESSAGE "いーち、にーい……㍍"
+END 1
+LABEL 15
+FLAG 477, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3562
+MESSAGE "パパ？　どうしたの、"
+LINE_FEED
+MESSAGE "私のことじーっと"
+LINE_FEED
+MESSAGE "見つめちゃって……？"
+KEY_WAIT
+VOICE 3563
+MESSAGE "ねぇったらぁ？"
+LINE_FEED
+MESSAGE "ニコニコして……変なパパ？？？"
+END 2

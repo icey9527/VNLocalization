@@ -1,0 +1,45 @@
+LABEL 0
+FLAG 1258, 1
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ここが……魔界？"
+LINE_FEED
+MESSAGE "なんだか想像していたよりも……"
+KEY_WAIT
+FACE 78
+MESSAGE_NAME "ギリアム"
+MESSAGE "平和そうな場所だろ？"
+LINE_FEED
+MESSAGE "もっと不気味な場所だと"
+LINE_FEED
+MESSAGE "思ってたかい？"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "えっ……だ、誰ッ㌍"
+KEY_WAIT
+FACE 78
+MESSAGE_NAME "ギリアム"
+MESSAGE "誰……とはご挨拶だなぁ。"
+LINE_FEED
+MESSAGE "せっかくおのぼりさんに"
+LINE_FEED
+MESSAGE "忠告してやろうと思ったのに……"
+KEY_WAIT
+MESSAGE "キミ、初めて魔界に来たんだろ？"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わ、わかるの？"
+KEY_WAIT
+FACE 78
+MESSAGE_NAME "ギリアム"
+MESSAGE "こんな所できょろきょろ周りを"
+LINE_FEED
+MESSAGE "見回してる奴は、十中八九それさ。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0

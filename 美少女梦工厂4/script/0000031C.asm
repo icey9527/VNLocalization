@@ -1,0 +1,297 @@
+LABEL 0
+FLAG 1529, 1
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ここは……"
+LINE_FEED
+MESSAGE "教会かな？"
+KEY_WAIT
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "こんにちは。"
+LINE_FEED
+MESSAGE "お祈りに来られた方ですか？"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あっ、はい。"
+LINE_FEED
+MESSAGE "[娘の名前]といいます。"
+KEY_WAIT
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "はじめまして。"
+LINE_FEED
+MESSAGE "わたくしはここでシスターを"
+LINE_FEED
+MESSAGE "務めている、エヴァと申します。"
+KEY_WAIT
+MESSAGE "[娘の名前]さんは"
+LINE_FEED
+MESSAGE "すばらしいですね。まだ小さいのに"
+LINE_FEED
+MESSAGE "１人で教会に足を運ぶなんて。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はい……あの……"
+KEY_WAIT
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "祈りは神への最大の奉仕です。"
+LINE_FEED
+MESSAGE "信仰心のある方なら、"
+LINE_FEED
+MESSAGE "どなたでも大歓迎ですよ。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 1530, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "こんにちは。"
+KEY_WAIT
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "あら、[娘の名前]さん、"
+LINE_FEED
+MESSAGE "今日はお祈りですか？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あっ、はい。"
+KEY_WAIT
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "いい心がけですね。"
+LINE_FEED
+MESSAGE "では、共に神に祈りましょう。"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 1531, 1
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "ついに聖戦が開始されました。"
+LINE_FEED
+MESSAGE "こうなることが、"
+LINE_FEED
+MESSAGE "運命だったのでしょう。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 1532, 1
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "街中の人々が不安に"
+LINE_FEED
+MESSAGE "包まれています。"
+KEY_WAIT
+MESSAGE "わたくしにできる事は皆さんに"
+LINE_FEED
+MESSAGE "神のお言葉を伝える事だけ……"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 1533, 1
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "無益なことを……"
+LINE_FEED
+MESSAGE "抵抗しても魔族が我ら人間に"
+LINE_FEED
+MESSAGE "勝てるはずなどないというのに……"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 1534, 1
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "収穫祭は本来、豊穣の神に"
+LINE_FEED
+MESSAGE "祈るためのものなのですが……"
+KEY_WAIT
+MESSAGE "今ではただのお祭りに"
+LINE_FEED
+MESSAGE "なっています。"
+KEY_WAIT
+MESSAGE "……悲しいことです。"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 1535, 1
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "聖誕祭は大変です。"
+LINE_FEED
+MESSAGE "皆さんを迎える準備をしなければ。"
+KEY_WAIT
+MESSAGE "[娘の名前]さんも、"
+LINE_FEED
+MESSAGE "ぜひ、お越し下さいね。"
+KEY_WAIT
+END 0
+LABEL 7
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "いらっしゃい、[娘の名前]。"
+LINE_FEED
+MESSAGE "熱心で結構ですね。"
+LINE_FEED
+MESSAGE "今日も共に祈りましょう……"
+KEY_WAIT
+END 0
+LABEL 8
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "祈りは必ず届きます。"
+LINE_FEED
+MESSAGE "偉大なる神の啓示を受けるべく"
+LINE_FEED
+MESSAGE "努力を怠ってはなりません。"
+KEY_WAIT
+END 0
+LABEL 9
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "ダークタウンをご存知ですか？"
+LINE_FEED
+MESSAGE "あそこからは邪悪な気配を"
+LINE_FEED
+MESSAGE "感じます。"
+KEY_WAIT
+MESSAGE "浄化のために向かったのですが……"
+LINE_FEED
+MESSAGE "門番の方が通してくれないのです。"
+LINE_FEED
+MESSAGE "困りましたね……"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "魔法ですか？"
+LINE_FEED
+MESSAGE "我々も癒しの魔法を使いますが……"
+KEY_WAIT
+MESSAGE "最近は魔族が使う、"
+LINE_FEED
+MESSAGE "黒魔法が主流のようですね。"
+LINE_FEED
+MESSAGE "……よくない傾向です。"
+KEY_WAIT
+END 0
+LABEL 11
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "け、化粧なんて、"
+LINE_FEED
+MESSAGE "とんでもありません！"
+KEY_WAIT
+MESSAGE "儀式以外で顔にそんな……"
+LINE_FEED
+MESSAGE "間違っていますよ。"
+KEY_WAIT
+END 0
+LABEL 12
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "我々は生涯、"
+LINE_FEED
+MESSAGE "独身でいなければなりません。"
+KEY_WAIT
+MESSAGE "破廉恥な事はその……"
+LINE_FEED
+MESSAGE "いけないのです。"
+KEY_WAIT
+END 0
+LABEL 13
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "そろそろ髪を結わないと……"
+LINE_FEED
+MESSAGE "[娘の名前]さん、"
+LINE_FEED
+MESSAGE "手伝っていただけませんか？"
+KEY_WAIT
+END 0
+LABEL 14
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "最近の子供たちは信仰心が"
+LINE_FEED
+MESSAGE "薄れてきているようです……"
+KEY_WAIT
+MESSAGE "このままでは大変なことに……"
+LINE_FEED
+MESSAGE "なんとかしなければ。"
+KEY_WAIT
+END 0
+LABEL 15
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "お酒……ですか？"
+LINE_FEED
+MESSAGE "聖誕祭で１度だけ……"
+KEY_WAIT
+MESSAGE "でも、その後の記憶がないんです。"
+LINE_FEED
+MESSAGE "ちょっとだけだったのに……"
+KEY_WAIT
+END 0
+LABEL 16
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "最近は魔法石という物が"
+LINE_FEED
+MESSAGE "あるそうですね。"
+KEY_WAIT
+MESSAGE "なんでも便利な物だそうですが……"
+LINE_FEED
+MESSAGE "わたくしにはよくわかりません。"
+KEY_WAIT
+END 0
+LABEL 17
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "修道衣は全て手作りなんです。"
+KEY_WAIT
+MESSAGE "わたくしはこの世に生を受けてから"
+LINE_FEED
+MESSAGE "ずっとこの聖衣を"
+LINE_FEED
+MESSAGE "身にまとっています。"
+KEY_WAIT
+END 0
+LABEL 18
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "人間は罪深い存在なのです。"
+KEY_WAIT
+MESSAGE "まずはその罪を認める事……"
+LINE_FEED
+MESSAGE "全てはそこから始まります。"
+KEY_WAIT
+END 0
+LABEL 19
+FACE 59
+MESSAGE_NAME "エヴァ"
+MESSAGE "魔族との戦いを恐れては"
+LINE_FEED
+MESSAGE "なりません。"
+KEY_WAIT
+MESSAGE "彼らはこの世にはびこる邪悪の"
+LINE_FEED
+MESSAGE "根源。"
+KEY_WAIT
+MESSAGE "速やかに取り除かないと……"
+KEY_WAIT
+END 0

@@ -1,0 +1,516 @@
+LABEL 0
+LABEL 1
+FLAG 229, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はじめまして。"
+LINE_FEED
+MESSAGE "[娘の名前]です。"
+LINE_FEED
+MESSAGE "今日からよろしくお願いします。"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ、よく来たな。"
+KEY_WAIT
+MESSAGE "俺が剣術師範として"
+LINE_FEED
+MESSAGE "お前の指導にあたる"
+LINE_FEED
+MESSAGE "ウォーボルフだ。"
+KEY_WAIT
+MESSAGE "いいか、剣術というものは、"
+LINE_FEED
+MESSAGE "ただ剣の振るい方を"
+LINE_FEED
+MESSAGE "学ぶものではない。"
+KEY_WAIT
+MESSAGE "力の使い方と同時に己の内面をも"
+LINE_FEED
+MESSAGE "鍛え研ぎ澄ますことができて"
+LINE_FEED
+MESSAGE "初めて、一流の剣士となれるのだ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あの……先生。"
+LINE_FEED
+MESSAGE "え～と……"
+LINE_FEED
+MESSAGE "わ、わかんないです。"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "まあ、口で言ったところで"
+LINE_FEED
+MESSAGE "一朝一夕に"
+LINE_FEED
+MESSAGE "身につくものでもない。"
+KEY_WAIT
+MESSAGE "まずは鍛錬あるのみだ。"
+LINE_FEED
+MESSAGE "基礎体力からビシビシと"
+LINE_FEED
+MESSAGE "鍛えていくので、そのつもりで。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はい、"
+LINE_FEED
+MESSAGE "がんばります、先生！"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ。それから、俺のことは"
+LINE_FEED
+MESSAGE "先生ではなく、師範と呼ぶように。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わかりました、師範！"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 230, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ。来たか。"
+LINE_FEED
+MESSAGE "鍛錬とは基本の積み重ねが"
+LINE_FEED
+MESSAGE "あってこそ活きてくる。"
+KEY_WAIT
+MESSAGE "さっそく構えだ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、師範。"
+LINE_FEED
+MESSAGE "お願いします。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 231, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "う～む。"
+LINE_FEED
+MESSAGE "今回は失敗だったかな……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ええっ㌍"
+LINE_FEED
+MESSAGE "どこかいけなかったんですか？"
+LINE_FEED
+MESSAGE "うまくできたと思ったのに……"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "いや、逆だ。今回の課題、"
+LINE_FEED
+MESSAGE "お前には少々簡単すぎた"
+LINE_FEED
+MESSAGE "ようだからな。"
+KEY_WAIT
+MESSAGE "俺が思った以上に、お前には"
+LINE_FEED
+MESSAGE "剣の才があるようだ。"
+LINE_FEED
+MESSAGE "この調子で鍛錬を続けるように。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そうですか？"
+LINE_FEED
+MESSAGE "ありがとうございます、師範！"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 232, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3458
+MESSAGE "ふふふっ、今週は調子いいなー㍍"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "すごいな、[娘の名前]。"
+LINE_FEED
+MESSAGE "だが、ワタシだって負けないぞ！"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 233, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "おお、すごいじゃないか！"
+LINE_FEED
+MESSAGE "何かコツでもあるのか？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3459
+MESSAGE "コツって程のことは……"
+LINE_FEED
+MESSAGE "一生懸命やっただけだもん。"
+LINE_FEED
+MESSAGE "えへへ……"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 234, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "やるな。"
+LINE_FEED
+MESSAGE "さすがは[娘の名前]だ。"
+LINE_FEED
+MESSAGE "ワタシも励まなければ……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3460
+MESSAGE "うん、ありがとう。"
+LINE_FEED
+MESSAGE "なんだか調子がよかったみたい。"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 235, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ…………"
+KEY_WAIT
+MESSAGE "基本を忘れるな。"
+LINE_FEED
+MESSAGE "伝えることはそれだけだ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、師範。"
+LINE_FEED
+MESSAGE "すみませんでした。"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 236, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんだ、今週は"
+LINE_FEED
+MESSAGE "さっぱりじゃないか。"
+LINE_FEED
+MESSAGE "だらしないぞ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3461
+MESSAGE "ううっ、なんだろう、"
+LINE_FEED
+MESSAGE "調子悪いよー……"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 237, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "どうしたんだ、"
+LINE_FEED
+MESSAGE "オマエらしくもない。"
+LINE_FEED
+MESSAGE "調子が悪いなら、休んだらどうだ？"
+KEY_WAIT
+MESSAGE "あまり周りに……"
+LINE_FEED
+MESSAGE "心配させるものではないぞ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3462
+MESSAGE "う、うん。ごめんね。"
+KEY_WAIT
+END 0
+LABEL 10
+FLAG 238, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3463
+MESSAGE "うう、うまくいかないわ……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "辛いときには、無理せず休むのも"
+LINE_FEED
+MESSAGE "１つの正解だ。"
+KEY_WAIT
+MESSAGE "その、なんだ……"
+LINE_FEED
+MESSAGE "あまり心配をさせないでくれ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3464
+MESSAGE "ありがとう、ごめんね、リーゼ。"
+KEY_WAIT
+END 0
+LABEL 11
+FLAG 239, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ。いくつかの技に、"
+LINE_FEED
+MESSAGE "キレのよいものがあった。"
+LINE_FEED
+MESSAGE "その時の呼吸を忘れるな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、師範！"
+LINE_FEED
+MESSAGE "ありがとうございました。"
+KEY_WAIT
+END 0
+LABEL 12
+FLAG 240, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "このランクで教えられることは"
+LINE_FEED
+MESSAGE "あらかたマスターしたようだな。"
+KEY_WAIT
+MESSAGE "次からは、さらに本格的な"
+LINE_FEED
+MESSAGE "鍛錬を開始する。"
+KEY_WAIT
+MESSAGE "内容は今までより辛いものに"
+LINE_FEED
+MESSAGE "なるだろうが、お前ならば"
+LINE_FEED
+MESSAGE "やり遂げられよう。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい！"
+LINE_FEED
+MESSAGE "師範、ありがとうございます。"
+KEY_WAIT
+END 0
+LABEL 13
+FLAG 241, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "よし、今日はここまで。"
+LINE_FEED
+MESSAGE "[娘の名前]、よくぞ"
+LINE_FEED
+MESSAGE "ここまで鍛錬を積んだな。"
+KEY_WAIT
+MESSAGE "すでにお前の腕前は"
+LINE_FEED
+MESSAGE "一人前といってもいいだろう。"
+KEY_WAIT
+MESSAGE "もう、俺から教えられることは"
+LINE_FEED
+MESSAGE "何もない。"
+LINE_FEED
+MESSAGE "免許皆伝だ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "本当ですか㌍"
+LINE_FEED
+MESSAGE "あ、ありがとうございます！"
+LINE_FEED
+MESSAGE "これも師範のご指導のおかげです。"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "しかし、お前の鍛錬は"
+LINE_FEED
+MESSAGE "これで終わりではない。"
+KEY_WAIT
+MESSAGE "これから後も、"
+LINE_FEED
+MESSAGE "自分を磨き上げていくことを"
+LINE_FEED
+MESSAGE "忘れないように。"
+KEY_WAIT
+MESSAGE "それだけが、俺の願いである。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい！"
+LINE_FEED
+MESSAGE "わかりました。"
+KEY_WAIT
+END 0
+LABEL 14
+FLAG 242, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "それでは師範、失礼します。"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ。だが、その前に"
+LINE_FEED
+MESSAGE "相談したい事があるのだが。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "何ですか？"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "実はな。お前の腕を見込んで、"
+LINE_FEED
+MESSAGE "これからは師範代として"
+LINE_FEED
+MESSAGE "年少の者に指導をして欲しいのだ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "えっ……私が師範代ですか㌍"
+LINE_FEED
+MESSAGE "でも、私はまだ……"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "まあ、そう難しく考えるな。"
+LINE_FEED
+MESSAGE "要は指導の補佐を"
+LINE_FEED
+MESSAGE "してくれればいいんだ。"
+KEY_WAIT
+MESSAGE "もちろん、アルバイトと"
+LINE_FEED
+MESSAGE "同様に、給金も払うぞ。"
+LINE_FEED
+MESSAGE "どうだ？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そうですか……"
+KEY_WAIT
+MESSAGE "分かりました。私でどこまで"
+LINE_FEED
+MESSAGE "力添えできるかわかりませんが……"
+LINE_FEED
+MESSAGE "お受けします！"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ、人に教えるのはいい修行に"
+LINE_FEED
+MESSAGE "なる。励むことだな。"
+KEY_WAIT
+END 0
+LABEL 15
+FLAG 243, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "うむ、来たな。"
+LINE_FEED
+MESSAGE "今回もみんなが待っている。"
+LINE_FEED
+MESSAGE "頼んだぞ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、師範。では……"
+KEY_WAIT
+END 0
+LABEL 16
+FLAG 244, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "ほほう、大したものだ。"
+KEY_WAIT
+MESSAGE "お前には、剣の才覚だけではなく"
+LINE_FEED
+MESSAGE "生まれもった指導者としての"
+LINE_FEED
+MESSAGE "才能があるかもしれないな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "いえ……"
+LINE_FEED
+MESSAGE "私は、師範と同じようにしようと"
+LINE_FEED
+MESSAGE "努力をしているだけです……"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "その調子で、これからも"
+LINE_FEED
+MESSAGE "指導をしてやってくれ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。"
+LINE_FEED
+MESSAGE "心得ました、師範。"
+KEY_WAIT
+END 0
+LABEL 17
+FLAG 245, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "ふむ。今回の指導は、本来の"
+LINE_FEED
+MESSAGE "力が出ていなかったようだな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "すみません師範。"
+LINE_FEED
+MESSAGE "自分の事に、つい気が"
+LINE_FEED
+MESSAGE "いってしまったようです……"
+KEY_WAIT
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "そうか……"
+LINE_FEED
+MESSAGE "まだ自身の鍛錬が"
+LINE_FEED
+MESSAGE "必要なのかもしれんな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（まだ人に教えるには"
+LINE_FEED
+MESSAGE "早いってことなのかしら……）"
+KEY_WAIT
+END 0
+LABEL 18
+FLAG 246, 1
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "ふむ。ご苦労だった。"
+LINE_FEED
+MESSAGE "次はさらにうまくできるように"
+LINE_FEED
+MESSAGE "なるだろう。"
+KEY_WAIT
+MESSAGE "また頑張ってくれ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。ありがとうございました。"
+LINE_FEED
+MESSAGE "次もよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 19
+FACE 47
+MESSAGE_NAME "ウォーボルフ"
+MESSAGE "今回はここまで。"
+LINE_FEED
+MESSAGE "人から教えを請う時にはそれなりの"
+LINE_FEED
+MESSAGE "対価が必要だぞ。"
+KEY_WAIT
+END 0

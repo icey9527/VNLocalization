@@ -1,0 +1,394 @@
+LABEL 0
+FLAG 1245, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "国王陛下、"
+LINE_FEED
+MESSAGE "本日はお目にかかれて"
+LINE_FEED
+MESSAGE "恐悦至極に存じます。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "ふうむ……"
+LINE_FEED
+MESSAGE "そなたがイザベルの娘か。"
+LINE_FEED
+MESSAGE "なるほどの……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はっ㌍"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "いや、よい。大儀であった。"
+LINE_FEED
+MESSAGE "王妃から話は聞いておる。"
+KEY_WAIT
+MESSAGE "なんでも、そなたは様々な"
+LINE_FEED
+MESSAGE "面白いことに通じておる"
+LINE_FEED
+MESSAGE "そうじゃな。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は……ははーぁっ。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE "（王妃様、やっぱりそんな風に……"
+LINE_FEED
+MESSAGE "お恨みしますーー㌍）"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "大臣や執政官から民のことは耳に"
+LINE_FEED
+MESSAGE "しておるが、そなたの目からの"
+LINE_FEED
+MESSAGE "下々の暮らしを聞かせるがよい。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "御意。"
+END 0
+LABEL 1
+FLAG 1246, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "そなたか、"
+LINE_FEED
+MESSAGE "ちょうど肩の凝る建議が"
+LINE_FEED
+MESSAGE "続いたばかりでな。"
+KEY_WAIT
+MESSAGE "ちょうどよい、"
+LINE_FEED
+MESSAGE "少し話をしてまいれ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "御意。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 1248, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "そなたの父は"
+LINE_FEED
+MESSAGE "実に立派な騎士であった。"
+KEY_WAIT
+MESSAGE "余に仕えて欲しかったのだが、"
+LINE_FEED
+MESSAGE "そなたの教育に打ち込みたいと"
+LINE_FEED
+MESSAGE "言いおってな。"
+KEY_WAIT
+MESSAGE "残念だが、召抱えるのは諦めた。"
+LINE_FEED
+MESSAGE "父に感謝して、その名に"
+LINE_FEED
+MESSAGE "恥じぬようにするのじゃな。"
+END 0
+LABEL 3
+FLAG 1249, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "魔族が目障りじゃな。"
+LINE_FEED
+MESSAGE "王国の拡大には魔族の森の"
+LINE_FEED
+MESSAGE "資源が必要なのじゃ。"
+KEY_WAIT
+MESSAGE "我々人間が魔族に対抗するには、"
+LINE_FEED
+MESSAGE "魔法による戦力を"
+LINE_FEED
+MESSAGE "強化せねばならぬ。"
+KEY_WAIT
+MESSAGE "我が治世のうちになんとか"
+LINE_FEED
+MESSAGE "魔王との決着をつけねばな……"
+END 0
+LABEL 4
+FLAG 1250, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "民は幸せに暮らしておるだろうか？"
+KEY_WAIT
+MESSAGE "魔族のせいで"
+LINE_FEED
+MESSAGE "民の生活が脅かされているとすれば"
+LINE_FEED
+MESSAGE "放っておけぬ。"
+END 0
+LABEL 5
+FLAG 1251, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "もうすぐ収穫祭じゃな。"
+LINE_FEED
+MESSAGE "そなたも出るのかな？"
+KEY_WAIT
+MESSAGE "若者が集い競う、"
+LINE_FEED
+MESSAGE "余の最も楽しみとする催しじゃ。"
+KEY_WAIT
+MESSAGE "未来の国を背負う"
+LINE_FEED
+MESSAGE "者達を見ていると心が躍るのぅ。"
+END 0
+LABEL 6
+FLAG 1252, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "余も年か……"
+LINE_FEED
+MESSAGE "体の調子がどうもよくない。"
+KEY_WAIT
+MESSAGE "そろそろ、"
+LINE_FEED
+MESSAGE "王位継承の準備ぐらいは、"
+LINE_FEED
+MESSAGE "しておいた方がいいかもしれぬ。"
+END 0
+LABEL 7
+FLAG 1253, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "国王陛下。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "魔法石は見たことあるかね？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "小さなものなら。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "ふむ。小さなものだと"
+LINE_FEED
+MESSAGE "分からぬかもしれぬが……"
+LINE_FEED
+MESSAGE "魔法石はまこと美しい石じゃ。"
+KEY_WAIT
+MESSAGE "それが我々に有益な魔法の力を"
+LINE_FEED
+MESSAGE "蓄えておる。不思議なものじゃな。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "陛下は魔法は学ばれたのですか？"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "学んでおらぬ。国王たるもの魔法を"
+LINE_FEED
+MESSAGE "使うより、魔法を使う者を手足の"
+LINE_FEED
+MESSAGE "ごとく使えればよいのだ。"
+END 0
+LABEL 8
+FLAG 1254, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "国王陛下、昔は陣頭に立たれて"
+LINE_FEED
+MESSAGE "戦われたそうですね。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "遠い昔の話じゃな。"
+LINE_FEED
+MESSAGE "まだ魔法の力は問題にならず、"
+LINE_FEED
+MESSAGE "武の力のみの戦いであった。"
+KEY_WAIT
+MESSAGE "今は、様変わりじゃ。"
+LINE_FEED
+MESSAGE "余も歳を取った。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そんな……まだお若いです。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "世辞はいい。聞き飽きておる。"
+LINE_FEED
+MESSAGE "若き頃は力で全てが解決できると"
+LINE_FEED
+MESSAGE "思っていた。"
+KEY_WAIT
+MESSAGE "今はそう思えぬ。"
+LINE_FEED
+MESSAGE "この歳になって若き日より惑うとは"
+LINE_FEED
+MESSAGE "思いもしなかった。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "陛下……"
+END 0
+LABEL 9
+FLAG 1255, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "はぁ……"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "陛下？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "お加減が悪いのですか？"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "いや……そんなことはない。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………？"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "そなたになら"
+LINE_FEED
+MESSAGE "話してもいいかもしれぬな。"
+KEY_WAIT
+MESSAGE "会議が紛糾しての。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "御前会議でございますか？"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "魔族の森の鉱山に"
+LINE_FEED
+MESSAGE "軍隊を置いておくかどうかで"
+LINE_FEED
+MESSAGE "意見が二つに割れておってな。"
+KEY_WAIT
+MESSAGE "余にゆだねられた。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "どうされるおつもりですか？"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "…………わからぬ。"
+LINE_FEED
+MESSAGE "しかし、決めねばならぬ。"
+KEY_WAIT
+MESSAGE "我が決断で兵達の運命が決まるかと"
+LINE_FEED
+MESSAGE "思うとたまらなく怖い。"
+KEY_WAIT
+MESSAGE "余は、若き日に戦場に立ったが……"
+LINE_FEED
+MESSAGE "国王になる者は、戦場の過酷さを"
+LINE_FEED
+MESSAGE "知らぬ方がいいのかも知れぬな……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "陛下……"
+END 0
+LABEL 10
+FLAG 1256, 1
+LABEL 11
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "収穫祭の時の活躍、見事であった。"
+KEY_WAIT
+MESSAGE "あれほど素晴らしい勝負を見たのは"
+LINE_FEED
+MESSAGE "久しぶりだ。"
+KEY_WAIT
+MESSAGE "次は実戦での活躍じゃな。"
+LINE_FEED
+MESSAGE "皆の士気を高めてくれる事を"
+LINE_FEED
+MESSAGE "期待するぞ。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます。"
+KEY_WAIT
+MESSAGE "ご期待に沿うよう精進いたします。"
+END 0
+LABEL 12
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "収穫祭の時の活躍、見事であった。"
+KEY_WAIT
+MESSAGE "正直、そなたの絵のどこがよいのか"
+LINE_FEED
+MESSAGE "ワシには分からなかったがな。"
+LINE_FEED
+MESSAGE "芸術は難しいものじゃ。"
+KEY_WAIT
+MESSAGE "だが、皆がそなたの力を"
+LINE_FEED
+MESSAGE "認めたのじゃ、今後も励むがよい。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます。"
+KEY_WAIT
+MESSAGE "ご期待に沿うよう精進いたします。"
+END 0
+LABEL 13
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "収穫祭の時の活躍見事であった。"
+KEY_WAIT
+MESSAGE "あの気高く美しい踊り。"
+LINE_FEED
+MESSAGE "舞踏会でのお披露目が"
+LINE_FEED
+MESSAGE "本当に楽しみじゃ。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます。"
+END 0
+LABEL 14
+FLAG 1257, 1
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "その方、何者だ？"
+LINE_FEED
+MESSAGE "礼を知らぬ者！"
+LINE_FEED
+MESSAGE "下がれ。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ご、ご無礼いたしました。"
+KEY_WAIT
+END 0

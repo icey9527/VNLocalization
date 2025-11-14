@@ -1,0 +1,224 @@
+LABEL 0
+FLAG 623, 1
+FACE 25
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様。大変申しあげにくい事"
+LINE_FEED
+MESSAGE "なのですが、お嬢様に魔族化の"
+LINE_FEED
+MESSAGE "傾向が見られます……"
+KEY_WAIT
+MESSAGE "魔族化を抑える方法を探しだし、"
+LINE_FEED
+MESSAGE "早急に対処された方が良いと"
+LINE_FEED
+MESSAGE "思います。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 624, 1
+FACE 25
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様。お嬢様のことなのですが、"
+LINE_FEED
+MESSAGE "魔族の力が以前よりも"
+LINE_FEED
+MESSAGE "強くなっているようです。"
+KEY_WAIT
+MESSAGE "早めに、何らか対応をした方が、"
+LINE_FEED
+MESSAGE "よろしいのではないでしょうか。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 625, 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様。お嬢様の魔族の力が"
+LINE_FEED
+MESSAGE "ずいぶん強くおなりです。"
+KEY_WAIT
+FACE 25
+MESSAGE "魔族の力の件。お嬢様に、気が"
+LINE_FEED
+MESSAGE "つかれてしまうかもしれません。"
+LINE_FEED
+MESSAGE "早急な御対応を、お願いします。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 626, 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様。申し上げにくい事ですが、"
+LINE_FEED
+MESSAGE "お嬢様の魔族の力が、人間界では"
+LINE_FEED
+MESSAGE "危険な域まで達しようとしてます。"
+KEY_WAIT
+FACE 25
+MESSAGE "お嬢様に人として暮らして"
+LINE_FEED
+MESSAGE "いただきたいなら……一刻も早く"
+LINE_FEED
+MESSAGE "手を打たないといけませんね。"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 627, 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様……。お嬢様は……ほとんど"
+LINE_FEED
+MESSAGE "魔族と言っていい状態になって"
+LINE_FEED
+MESSAGE "しまいました……"
+KEY_WAIT
+FACE 23
+MESSAGE "……手遅れかもしれませんが、"
+LINE_FEED
+MESSAGE "奇跡を信じましょう。手をお打ちに"
+LINE_FEED
+MESSAGE "なるなら最後のチャンスです……"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 628, 1
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "ねえ、ボクの声が聞こえる？"
+LINE_FEED
+MESSAGE "つらいときは、"
+LINE_FEED
+MESSAGE "いつでもボクを呼んでね！"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 629, 1
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "ねえねえ、ボクの声、"
+LINE_FEED
+MESSAGE "よく聞こえるようになったでしょ？"
+LINE_FEED
+MESSAGE "もっといろいろお喋りしようね！"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 630, 1
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "ボクたち、ずっと友だちだよ？"
+LINE_FEED
+MESSAGE "どんな時も、どこにいても、"
+LINE_FEED
+MESSAGE "いつもボクが見守ってるからね！"
+KEY_WAIT
+MESSAGE "うふふふっ♪"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 631, 1
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "え、ボクの声が聞こえにくいの？"
+LINE_FEED
+MESSAGE "おかしいなぁ、ほら、"
+LINE_FEED
+MESSAGE "もっと心を開いて……"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 632, 1
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "最近そっけないなぁ……"
+LINE_FEED
+MESSAGE "呼んでも答えてくれないなんて"
+LINE_FEED
+MESSAGE "どうしちゃったんだい？"
+KEY_WAIT
+END 0
+LABEL 10
+FLAG 633, 1
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "ボクの声、もう聞こえないのかな？"
+LINE_FEED
+MESSAGE "きっともう、必要ないんだね……"
+LINE_FEED
+MESSAGE "さびしいなぁ……"
+KEY_WAIT
+END 0
+LABEL 11
+FLAG 634, 1
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様。"
+LINE_FEED
+MESSAGE "旦那様宛てに"
+LINE_FEED
+MESSAGE "小包が届いております。"
+KEY_WAIT
+FACE 25
+MESSAGE "怪しい事に、差出人のことは"
+LINE_FEED
+MESSAGE "何も記載されておりません。"
+LINE_FEED
+MESSAGE "いかがなさいますか？"
+KEY_WAIT
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "あ、はい？"
+LINE_FEED
+MESSAGE "私が開けるんですか？"
+LINE_FEED
+MESSAGE "……承知しました。"
+KEY_WAIT
+SE_PLAY 36
+SE_WAIT
+FACE 25
+MESSAGE_NAME "キューブ"
+MESSAGE "手紙と、これは首飾りですかね。"
+LINE_FEED
+MESSAGE "どうやらこの２つだけのようです。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_NAME "？？？"
+MESSAGE "『親愛なる貴方へ。"
+KEY_WAIT
+MESSAGE "この首飾りには、魔族の力を"
+LINE_FEED
+MESSAGE "抑える効果がこめてあります。"
+LINE_FEED
+MESSAGE "どうかお役立てください。"
+KEY_WAIT
+MESSAGE "あの子が人間の世界で"
+LINE_FEED
+MESSAGE "幸せにすごせるよう、"
+LINE_FEED
+MESSAGE "私も祈っております。"
+KEY_WAIT
+MESSAGE "貴方も、"
+LINE_FEED
+MESSAGE "幾久しくお健やかに』"
+KEY_WAIT
+MESSAGE "手紙はそこで終わっていた。"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様、どうなされました？"
+KEY_WAIT
+FACE 23
+MESSAGE "……わかりました。"
+LINE_FEED
+MESSAGE "それでは何かありましたら"
+LINE_FEED
+MESSAGE "お呼びください。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+SE_PLAY 57
+MESSAGE "聖女の首飾りを手に入れた！"
+END 0

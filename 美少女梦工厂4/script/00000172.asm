@@ -1,0 +1,601 @@
+LABEL 0
+FLAG 247, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "こんにちは。"
+LINE_FEED
+MESSAGE "私、今日からここで"
+LINE_FEED
+MESSAGE "魔法を習う[娘の名前]です……"
+KEY_WAIT
+MESSAGE "…………あれ？"
+KEY_WAIT
+MESSAGE "……あの、どなたか"
+LINE_FEED
+MESSAGE "いらっしゃいませんか？"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "私はここよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わわっ㌍"
+KEY_WAIT
+MESSAGE "（えっ、あっ！"
+LINE_FEED
+MESSAGE "いつの間に……㌍）"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "初めまして、お嬢さん。"
+LINE_FEED
+MESSAGE "私はカイ。"
+LINE_FEED
+MESSAGE "ここの魔術師範を務めているわ。"
+KEY_WAIT
+MESSAGE "カイ師範、とでも"
+LINE_FEED
+MESSAGE "呼んでちょうだいね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はじめまして、カイ師範！"
+LINE_FEED
+MESSAGE "その、よろしくお願いします。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "ええ、よろしくね"
+LINE_FEED
+MESSAGE "[娘の名前]さん。"
+KEY_WAIT
+MESSAGE "ここにはね。この国で使われている"
+LINE_FEED
+MESSAGE "魔術に関する、ほぼ全ての文献が"
+LINE_FEED
+MESSAGE "そろっているの。"
+KEY_WAIT
+MESSAGE "でも、あなたにその全てが"
+LINE_FEED
+MESSAGE "習得できるかはわからないわ。"
+KEY_WAIT
+MESSAGE "全てはあなたの学習意欲と"
+LINE_FEED
+MESSAGE "……そして才能よ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。"
+LINE_FEED
+MESSAGE "精一杯がんばります。"
+LINE_FEED
+MESSAGE "どうぞよろしく！"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "それじゃあ、さっそく"
+LINE_FEED
+MESSAGE "最初の講義を始めるわね。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 248, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "来たわね、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "さっそくはじめてちょうだい。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、カイ師範。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 249, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "[娘の名前]さん。"
+LINE_FEED
+MESSAGE "素晴らしい成果ね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ、師範。"
+LINE_FEED
+MESSAGE "ありがとうございます。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "でも、これで満足してはダメよ。"
+LINE_FEED
+MESSAGE "魔法の勉強に近道なんて"
+LINE_FEED
+MESSAGE "ないのだから。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい！"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 250, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3465
+MESSAGE "ふふふっ、今週は調子いいなー㍍"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "すごいな、[娘の名前]。"
+LINE_FEED
+MESSAGE "だが、ワタシだって負けないぞ！"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 251, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "おお、すごいじゃないか！"
+LINE_FEED
+MESSAGE "何かコツでもあるのか？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3466
+MESSAGE "コツって程のことは……"
+LINE_FEED
+MESSAGE "一生懸命やっただけだもん。"
+LINE_FEED
+MESSAGE "えへへ……"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 252, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "やるな。"
+LINE_FEED
+MESSAGE "さすがは[娘の名前]だ。"
+LINE_FEED
+MESSAGE "ワタシも励まなければ……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3467
+MESSAGE "うん、ありがとう。"
+LINE_FEED
+MESSAGE "なんだか調子がよかったみたい。"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 253, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "[娘の名前]さん。"
+LINE_FEED
+MESSAGE "あなたらしくないわね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "すみませんでした。"
+LINE_FEED
+MESSAGE "カイ師範……"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "しょげる時間があるのなら、"
+LINE_FEED
+MESSAGE "それをもっと有効に使いなさい。"
+LINE_FEED
+MESSAGE "その方が自分のためよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そうですよね。"
+LINE_FEED
+MESSAGE "私、頑張ります。"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 254, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんだ、今週は"
+LINE_FEED
+MESSAGE "さっぱりじゃないか。"
+LINE_FEED
+MESSAGE "だらしないぞ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3468
+MESSAGE "ううっ、なんだろう、"
+LINE_FEED
+MESSAGE "調子悪いよー……"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 255, 1
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "どうしたんだ、"
+LINE_FEED
+MESSAGE "オマエらしくもない。"
+LINE_FEED
+MESSAGE "調子が悪いなら、休んだらどうだ？"
+KEY_WAIT
+MESSAGE "あまり周りに……"
+LINE_FEED
+MESSAGE "心配させるものではないぞ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3469
+MESSAGE "う、うん。ごめんね。"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 256, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3470
+MESSAGE "うう、うまくいかないわ……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "辛いときには、無理せず休むのも"
+LINE_FEED
+MESSAGE "１つの正解だ。"
+KEY_WAIT
+MESSAGE "その、なんだ……"
+LINE_FEED
+MESSAGE "あまり心配をさせないでくれ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3471
+MESSAGE "ありがとう、ごめんね、リーゼ。"
+KEY_WAIT
+END 0
+LABEL 10
+FLAG 257, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "うん、まあまあね。"
+LINE_FEED
+MESSAGE "その調子で練習を続けなさい。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、カイ師範。"
+LINE_FEED
+MESSAGE "ありがとうございました。"
+LINE_FEED
+MESSAGE "次もよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 11
+FLAG 258, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "はい、そこまで。"
+LINE_FEED
+MESSAGE "大分、腕を上げたみたいね。"
+KEY_WAIT
+MESSAGE "次からはもう１ランク上の魔法に"
+LINE_FEED
+MESSAGE "挑戦してみましょうか。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "えっ、師範。"
+LINE_FEED
+MESSAGE "私、まだ……"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "あら、ダメよ。"
+KEY_WAIT
+MESSAGE "いい？　魔法に限らず、勉強は"
+LINE_FEED
+MESSAGE "実力に見合ったものを学ぶべきよ。"
+LINE_FEED
+MESSAGE "でなければ上達は見込めないの。"
+KEY_WAIT
+MESSAGE "逆を言えば、あなたには"
+LINE_FEED
+MESSAGE "その資格があるってことよ。"
+LINE_FEED
+MESSAGE "自信をもって励みなさい。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "……わかりました。"
+LINE_FEED
+MESSAGE "引き続きご指導を"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 12
+FLAG 259, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "ふう、驚いたわね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "どうかなさったんですか、師範。"
+LINE_FEED
+MESSAGE "驚いたって……？"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "あなたの成長に……よ。"
+LINE_FEED
+MESSAGE "正直、あなたの力の伸びには"
+LINE_FEED
+MESSAGE "目を見張るものがあるわ。"
+KEY_WAIT
+MESSAGE "本来魔法には長い修行の時間が"
+LINE_FEED
+MESSAGE "必要なのだけど……"
+KEY_WAIT
+MESSAGE "それをこの短期間に、"
+LINE_FEED
+MESSAGE "ここまでの力を身につけるなんて、"
+LINE_FEED
+MESSAGE "私にも予想できなかったわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そんな……"
+LINE_FEED
+MESSAGE "カイ師範の指導が"
+LINE_FEED
+MESSAGE "あればこそです。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "それでもよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ、ありがとうございます。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "私から教えられることは、"
+LINE_FEED
+MESSAGE "もう無いかもしれないわね……"
+KEY_WAIT
+MESSAGE "おめでとう、[娘の名前]さん。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい？"
+LINE_FEED
+MESSAGE "と、唐突にどうしたんですか？"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "今日で、あなたは"
+LINE_FEED
+MESSAGE "この講座を卒業よ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "卒業って……本当ですか㌍"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "ええ、本当よ。"
+LINE_FEED
+MESSAGE "これからはあなたも、"
+LINE_FEED
+MESSAGE "一人前の魔術師。"
+KEY_WAIT
+MESSAGE "努力を忘れず、誇りを持って"
+LINE_FEED
+MESSAGE "真理への道を歩みなさい。"
+KEY_WAIT
+MESSAGE "自身の研鑽こそが魔術の神髄。"
+LINE_FEED
+MESSAGE "己に克つ為に……いいわね？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はいっ！！"
+LINE_FEED
+MESSAGE "ありがとうございます師範！"
+KEY_WAIT
+END 0
+LABEL 13
+FLAG 260, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "カイ師範、"
+LINE_FEED
+MESSAGE "今日はこれで失礼します。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "[娘の名前]さん、帰る前に"
+LINE_FEED
+MESSAGE "少しいいかしら？"
+KEY_WAIT
+MESSAGE "あなたにしかできない"
+LINE_FEED
+MESSAGE "お願いがあるんだけど。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、何でしょう？"
+LINE_FEED
+MESSAGE "師範。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "今から私の講義の手伝いを"
+LINE_FEED
+MESSAGE "してちょうだい。"
+KEY_WAIT
+MESSAGE "今後いくつか講座を"
+LINE_FEED
+MESSAGE "担当してもらうから、"
+LINE_FEED
+MESSAGE "そのつもりでね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい……"
+LINE_FEED
+MESSAGE "って、えええっ㌍"
+LINE_FEED
+MESSAGE "唐突にどうしたんですか㌍"
+KEY_WAIT
+MESSAGE "私が師範のお手伝いって……"
+LINE_FEED
+MESSAGE "まだ無理ですよ。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "そうかしら？　自己の知識をしまい"
+LINE_FEED
+MESSAGE "こむより、人に伝えることで"
+LINE_FEED
+MESSAGE "得られる発見も多いものよ。"
+KEY_WAIT
+MESSAGE "実力的にも問題無いと思うし……"
+LINE_FEED
+MESSAGE "いつまでも教えられるだけじゃ、"
+LINE_FEED
+MESSAGE "この先伸びていかないわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "私が、人に……"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "もちろん、"
+LINE_FEED
+MESSAGE "その分のお給金も出すわ。"
+LINE_FEED
+MESSAGE "どうかしら？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わかりました。"
+LINE_FEED
+MESSAGE "私、やってみます。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "フフフッ。"
+LINE_FEED
+MESSAGE "そう言ってくれると思ってたわ。"
+LINE_FEED
+MESSAGE "それじゃ、よろしくね。"
+KEY_WAIT
+END 0
+LABEL 14
+FLAG 261, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "[娘の名前]さん。"
+LINE_FEED
+MESSAGE "今日もお願いするわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、わかりました。"
+KEY_WAIT
+END 0
+LABEL 15
+FLAG 262, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "ふ～ん。"
+LINE_FEED
+MESSAGE "[娘の名前]さん。"
+LINE_FEED
+MESSAGE "先生役も向いているようね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "いえ、そんな。"
+LINE_FEED
+MESSAGE "今回は得意なところだったんで……"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "あら、謙遜しなくてもいいのに。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "それに、自分が理解不足だった"
+LINE_FEED
+MESSAGE "部分もわかるので、なんだか逆に、"
+LINE_FEED
+MESSAGE "私が勉強しているみたいです。"
+KEY_WAIT
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "フフフッ。それに気づいているなら"
+LINE_FEED
+MESSAGE "問題なさそうね。"
+LINE_FEED
+MESSAGE "その調子で頑張ってね。"
+KEY_WAIT
+END 0
+LABEL 16
+FLAG 263, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "あなたらしくないわね。"
+KEY_WAIT
+MESSAGE "それだけの知識……活かさないまま"
+LINE_FEED
+MESSAGE "墓にでも持っていくつもりかしら？"
+KEY_WAIT
+MESSAGE "自分だけ理解したつもりでも、"
+LINE_FEED
+MESSAGE "人に教えられなければ"
+LINE_FEED
+MESSAGE "その知識に意味はないのよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "申し訳ありませんでした……"
+KEY_WAIT
+MESSAGE "（次は……うまくやらなくっちゃ）"
+KEY_WAIT
+END 0
+LABEL 17
+FLAG 264, 1
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "まあこんな感じかしらね。"
+LINE_FEED
+MESSAGE "次も頼むわよ、[娘の名前]さん。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、師範。"
+LINE_FEED
+MESSAGE "次もよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 18
+FACE 48
+MESSAGE_NAME "カイ"
+MESSAGE "次回は、"
+LINE_FEED
+MESSAGE "授業料を持ってきてね。"
+KEY_WAIT
+END 0

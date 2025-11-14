@@ -1,0 +1,188 @@
+LABEL 0
+FLAG 697, 1
+LABEL 1
+FLAG 698, 1
+BGM_STOP 30
+BGM_PLAY 18
+BG 0
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "……ねぇねぇ……ちゃん……"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 542
+MESSAGE "えっ？"
+LINE_FEED
+MESSAGE "誰か……呼んだ？"
+LINE_FEED
+MESSAGE "キューブ……じゃない……誰㌍"
+KEY_WAIT
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "ねぇねぇ……"
+LINE_FEED
+MESSAGE "ボクだよ？　ほらキミのすぐそばに"
+LINE_FEED
+MESSAGE "いるよ。ずっと呼んでいたんだよ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 543
+MESSAGE "もしかして……クマさん？"
+KEY_WAIT
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "ウフフ……"
+LINE_FEED
+MESSAGE "やっと聞こえるようになったね。"
+LINE_FEED
+MESSAGE "ボクは……"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 544
+MESSAGE "うわぁー！　すごいすごい！"
+LINE_FEED
+MESSAGE "クマさんがしゃべってる！"
+LINE_FEED
+MESSAGE "かわいい～！"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 545
+MESSAGE "そうだ！　お父さんにも"
+LINE_FEED
+MESSAGE "教えてあげようっと！"
+LINE_FEED
+MESSAGE "急げー！"
+KEY_WAIT
+OFF_CHAR 3
+FACE 65535
+OFF_FACE_WINDOW
+SE_PLAY 7
+SE_WAIT
+SE_PLAY 2
+SE_WAIT
+SE_PLAY 3
+FACE 91
+MESSAGE_NAME "クマ"
+MESSAGE "あっ、ちょ、ちょっと……"
+KEY_WAIT
+BG 64
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 546
+MESSAGE "あっ、お父さん！"
+LINE_FEED
+MESSAGE "聞いて聞いて！"
+KEY_WAIT
+VOICE 547
+MESSAGE "大変なの！　この子がね、"
+LINE_FEED
+MESSAGE "急にしゃべり始めたの！"
+LINE_FEED
+MESSAGE "すごいでしょ！"
+KEY_WAIT
+FACE 7
+VOICE 548
+MESSAGE "ほら、ねぇ、しゃべって！"
+LINE_FEED
+MESSAGE "……あれ？　おかしいなぁ……"
+LINE_FEED
+MESSAGE "でもウソじゃないよ！"
+KEY_WAIT
+VOICE 549
+MESSAGE "ほんとにしゃべったのに！"
+LINE_FEED
+MESSAGE "変だなぁ……照れてるのかなぁ……"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+BG 0
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お呼びですか？"
+LINE_FEED
+MESSAGE "旦那様。"
+KEY_WAIT
+FACE 23
+MESSAGE "あのクマのぬいぐるみ……ですか？"
+LINE_FEED
+MESSAGE "あれはイザベル様がお持たせに"
+LINE_FEED
+MESSAGE "なったもので……"
+KEY_WAIT
+MESSAGE "魔族の血が目覚めると、クマが"
+LINE_FEED
+MESSAGE "話しているのが聞こえるように"
+LINE_FEED
+MESSAGE "なります。"
+KEY_WAIT
+FACE 25
+MESSAGE "お嬢様がクマがしゃべったと"
+LINE_FEED
+MESSAGE "おっしゃるなら、イザベル様の"
+LINE_FEED
+MESSAGE "心配が当たってしまったようです。"
+KEY_WAIT
+FACE 23
+MESSAGE "魔族の血を極力抑える方法を"
+LINE_FEED
+MESSAGE "ご説明いたしましょうか？"
+SELECT 2, 2, "聞く", 3, "聞かない"
+LABEL 2
+FLAG 699, 1
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "教会の聖水などの抗魔具で"
+LINE_FEED
+MESSAGE "魔族の血を抑えることが"
+LINE_FEED
+MESSAGE "できます。"
+KEY_WAIT
+MESSAGE "ただし、効果には限界があります"
+LINE_FEED
+MESSAGE "ので、抑えるためには折につけ"
+LINE_FEED
+MESSAGE "再度の手当てが必要になります。"
+KEY_WAIT
+MESSAGE "また、魔界に近づいたり魔界関係の"
+LINE_FEED
+MESSAGE "装備品を着けたりしますと魔族の血"
+LINE_FEED
+MESSAGE "はより活性化いたします。"
+KEY_WAIT
+FACE 28
+MESSAGE "お嬢様の精神状態も鍵になります。"
+LINE_FEED
+MESSAGE "旦那様の育て方が重要です。"
+LINE_FEED
+MESSAGE "どうか、ご注意くださいませ。"
+KEY_WAIT
+BGM_STOP 30
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 3
+FLAG 700, 1
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "イザベル様はお嬢様の人としての"
+LINE_FEED
+MESSAGE "成長を望んでおいででした。"
+LINE_FEED
+MESSAGE "後は旦那様のご意志次第です。"
+KEY_WAIT
+BGM_STOP 30
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0

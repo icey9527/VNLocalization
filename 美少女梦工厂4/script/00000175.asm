@@ -1,0 +1,495 @@
+LABEL 0
+FLAG 296, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "あら、あなた、この間の……"
+LINE_FEED
+MESSAGE "さっそく来てくれたのね。"
+LINE_FEED
+MESSAGE "うれしいわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "こ、こんにちは。"
+LINE_FEED
+MESSAGE "よろしくお願いします……"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "フフフ、そんなに"
+LINE_FEED
+MESSAGE "硬くならなくてもいいわ。"
+LINE_FEED
+MESSAGE "舞踊は楽しみながらやらなくちゃ。"
+KEY_WAIT
+MESSAGE "もちろん、本格的な道を進みたい"
+LINE_FEED
+MESSAGE "というなら、話は別だけど。"
+KEY_WAIT
+MESSAGE "そう。踊りに必要なのは、"
+LINE_FEED
+MESSAGE "なんといってもリズム感。"
+LINE_FEED
+MESSAGE "そして動き続けるための体力。"
+KEY_WAIT
+MESSAGE "まずはそこから、"
+LINE_FEED
+MESSAGE "鍛えていきましょうね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はいっ！"
+LINE_FEED
+MESSAGE "頑張ります。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "さあ、それじゃあさっそく、"
+LINE_FEED
+MESSAGE "始めましょうか！"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 297, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "サーナティア先生、"
+LINE_FEED
+MESSAGE "今週もよろしくお願いします。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "いらっしゃい、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "それじゃ、今回も楽しく、"
+LINE_FEED
+MESSAGE "しっかり勉強しましょう。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 298, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "すごいわ、[娘の名前]さん！"
+LINE_FEED
+MESSAGE "あなた、舞踊の才能があるのね……"
+LINE_FEED
+MESSAGE "本格的にプロを目指すべきだわ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "さ、才能だなんて……"
+LINE_FEED
+MESSAGE "今回はきっとまぐれですよ～"
+LINE_FEED
+MESSAGE "えへへ……"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 299, 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "すごいですわ～"
+LINE_FEED
+MESSAGE "とっても調子がよろしいのね！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3493
+MESSAGE "えへへっ、そんなことないよー。"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 300, 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "まあ！　完璧ですわね！"
+LINE_FEED
+MESSAGE "どうしたら、"
+LINE_FEED
+MESSAGE "そんな風にできるのかしら……"
+KEY_WAIT
+MESSAGE "ねえ、わたくしにも、"
+LINE_FEED
+MESSAGE "コツを教えてくださらない？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3494
+MESSAGE "ええっ㌍"
+LINE_FEED
+MESSAGE "コツだなんて……"
+LINE_FEED
+MESSAGE "一生懸命やっただけだよ～"
+KEY_WAIT
+VOICE 3495
+MESSAGE "えへへっ。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 301, 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あら、[娘の名前]さんたら"
+LINE_FEED
+MESSAGE "最近調子よろしいんじゃなくって？"
+LINE_FEED
+MESSAGE "わたくしもあやかりたいですわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3496
+MESSAGE "フフッ、そうかな？"
+LINE_FEED
+MESSAGE "でも、ありがとね、クリスチーナ。"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 302, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "あら……ちょっと"
+LINE_FEED
+MESSAGE "本調子じゃないようね。"
+LINE_FEED
+MESSAGE "無理はしないで休んではどう？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "うう……スランプかも……"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 303, 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "まあ、[娘の名前]さんってば"
+LINE_FEED
+MESSAGE "調子悪いんですの？"
+KEY_WAIT
+MESSAGE "だったら休んでいたほうが"
+LINE_FEED
+MESSAGE "よろしくてよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3497
+MESSAGE "う、う～ん、"
+LINE_FEED
+MESSAGE "うまくいかないなぁ……"
+LINE_FEED
+MESSAGE "ガックリ……"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 304, 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あん、もう……"
+LINE_FEED
+MESSAGE "とても見てられませんわ。"
+KEY_WAIT
+MESSAGE "そんな調子では、見ている"
+LINE_FEED
+MESSAGE "こちらまでハラハラするじゃ"
+LINE_FEED
+MESSAGE "ありませんか。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3498
+MESSAGE "ご、ごめんね、"
+LINE_FEED
+MESSAGE "クリスチーナ……"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 305, 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あら……あまり調子が"
+LINE_FEED
+MESSAGE "優れないようですわね？"
+KEY_WAIT
+MESSAGE "無理はなさらないほうが"
+LINE_FEED
+MESSAGE "よろしいんじゃなくって？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3499
+MESSAGE "ううっ、どうしたのかしら……"
+KEY_WAIT
+END 0
+LABEL 10
+FLAG 306, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "おつかれさま。"
+LINE_FEED
+MESSAGE "また次も頑張ってね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、ありがとうございました。"
+LINE_FEED
+MESSAGE "次回もよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 11
+FLAG 307, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "頑張ってるわね。"
+LINE_FEED
+MESSAGE "これなら、次からは少し複雑な"
+LINE_FEED
+MESSAGE "レッスンにしても大丈夫かしらね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます、先生。"
+LINE_FEED
+MESSAGE "ついていけるように頑張ります。"
+KEY_WAIT
+END 0
+LABEL 12
+FLAG 308, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "最近は調子よさそうね。"
+LINE_FEED
+MESSAGE "踊りもしっかりしてきたし、"
+LINE_FEED
+MESSAGE "そろそろあなたも一人前かしら？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そんな、私なんかまだまだで……"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "ううん、そんなことないわ。"
+LINE_FEED
+MESSAGE "これでも見る目はあるつもりよ？"
+KEY_WAIT
+MESSAGE "せっかくだから、この辺りで"
+LINE_FEED
+MESSAGE "卒業試験を受けてみる気はない？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "え？"
+LINE_FEED
+MESSAGE "卒業試験ですか㌍"
+LINE_FEED
+MESSAGE "でも……"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "大丈夫、いつも通りにしてくれれば"
+LINE_FEED
+MESSAGE "なにも問題ないのよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "……わかりました。"
+LINE_FEED
+MESSAGE "私も、自分の力がどのくらいか、"
+LINE_FEED
+MESSAGE "知りたいです。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "わかったわ。"
+LINE_FEED
+MESSAGE "それじゃ、これから始めましょう。"
+LINE_FEED
+MESSAGE "まずは……"
+KEY_WAIT
+BG 176
+MESSAGE "…………"
+KEY_WAIT
+BG 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "はい、そこまで。"
+LINE_FEED
+MESSAGE "うん……やはり、わたくしの目に"
+LINE_FEED
+MESSAGE "狂いはなかったようね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "それじゃ……？"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "ええ、合格よ。"
+LINE_FEED
+MESSAGE "今までの授業は、しっかりと"
+LINE_FEED
+MESSAGE "身についていたようね。"
+KEY_WAIT
+MESSAGE "おめでとう、[娘の名前]！"
+LINE_FEED
+MESSAGE "先生も、すごく嬉しいわ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ……ありがとうございますっ！"
+LINE_FEED
+MESSAGE "これも、先生のおかげです。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "でも、踊りの道はまだまだ長いわ。"
+KEY_WAIT
+MESSAGE "ここで満足しちゃダメ。"
+LINE_FEED
+MESSAGE "さらに先を……さらに高みを"
+LINE_FEED
+MESSAGE "目指しなさい。いいわね？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はいっ！"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "これからも、いつでもココを使って"
+LINE_FEED
+MESSAGE "いいから。そうね……友人兼"
+LINE_FEED
+MESSAGE "ライバルとして。歓迎するわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "先生……あ、ありがとう"
+LINE_FEED
+MESSAGE "ございますっ！"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "ふふふ……"
+KEY_WAIT
+END 0
+LABEL 13
+FLAG 309, 1
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "ところで[娘の名前]さん"
+LINE_FEED
+MESSAGE "相談があるんだけど。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "なんですか？"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "あなたにダンス教室の"
+LINE_FEED
+MESSAGE "手伝いをして欲しいの。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ええ、わたしが！"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "あなたみたいな元気な子がここに"
+LINE_FEED
+MESSAGE "いてくれれば生徒たちも喜ぶし"
+LINE_FEED
+MESSAGE "お願い。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わたしにどこまでできるか"
+LINE_FEED
+MESSAGE "自信はありませんが、"
+LINE_FEED
+MESSAGE "わかりました。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "よかった。"
+LINE_FEED
+MESSAGE "じゃぁ、お願いね。"
+KEY_WAIT
+END 0
+LABEL 14
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "[娘の名前]さん"
+LINE_FEED
+MESSAGE "よくきてくれたわ。"
+LINE_FEED
+MESSAGE "早速手伝ってちょうだい。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、がんばります。"
+KEY_WAIT
+END 0
+LABEL 15
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "素晴らしいわ。"
+LINE_FEED
+MESSAGE "教えるのも上手なのね。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "生徒たちも喜んでいるし"
+LINE_FEED
+MESSAGE "この調子でがんばってね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。先生。"
+KEY_WAIT
+END 0
+LABEL 16
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "うーん。"
+LINE_FEED
+MESSAGE "まだ、あなたにお願いするのは"
+LINE_FEED
+MESSAGE "早かったのかしら…"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "すみません。"
+LINE_FEED
+MESSAGE "自分で踊るのと教えるのは"
+LINE_FEED
+MESSAGE "違うのかしら…"
+KEY_WAIT
+END 0
+LABEL 17
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "はい、お疲れ様。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "次回もよろしくお願いします。"
+KEY_WAIT
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "助かったわ。"
+LINE_FEED
+MESSAGE "次回もがんばってね。"
+KEY_WAIT
+END 0
+LABEL 18
+FACE 52
+MESSAGE_NAME "サーナティア"
+MESSAGE "私もお仕事なんだから、"
+LINE_FEED
+MESSAGE "授業料は払ってね。"
+KEY_WAIT
+END 0

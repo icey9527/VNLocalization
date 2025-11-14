@@ -1,0 +1,206 @@
+LABEL 0
+FLAG 330, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "こんにちは。あなたが今度、"
+LINE_FEED
+MESSAGE "僕の農場で働いてくれる"
+LINE_FEED
+MESSAGE "[娘の名前]さん？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、そうです。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "ああ、よろしくね。"
+LINE_FEED
+MESSAGE "じゃあ、さっそく仕事に"
+LINE_FEED
+MESSAGE "取り掛かってもらいたいんだけど。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、それで……"
+LINE_FEED
+MESSAGE "私はどんなことを"
+LINE_FEED
+MESSAGE "すればいいんですか？"
+KEY_WAIT
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "そうだねえ、まずは家畜の世話に"
+LINE_FEED
+MESSAGE "作物の栽培、収穫。"
+LINE_FEED
+MESSAGE "あとは出荷とか……"
+KEY_WAIT
+MESSAGE "とかく、力仕事になりがちだから、"
+LINE_FEED
+MESSAGE "女の子にはちょっと"
+LINE_FEED
+MESSAGE "きついかもしれないなぁ。"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "大丈夫です。"
+LINE_FEED
+MESSAGE "ちゃんとやってみせます。"
+KEY_WAIT
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "そうしてくれるとうれしいなぁ。"
+LINE_FEED
+MESSAGE "あ、それと……"
+LINE_FEED
+MESSAGE "動物の世話はやさしく。いいね？"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい。がんばります。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 331, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "やあ、お疲れさん。"
+LINE_FEED
+MESSAGE "辛い仕事も多いが、"
+LINE_FEED
+MESSAGE "がんばってくれよ。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 332, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "[娘の名前]さん、"
+LINE_FEED
+MESSAGE "見どころがあるなぁ！"
+LINE_FEED
+MESSAGE "この調子でどんどん頼むよ。"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい！"
+LINE_FEED
+MESSAGE "がんばります。"
+KEY_WAIT
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "よくやってくれたから、少しだけ"
+LINE_FEED
+MESSAGE "ボーナスを出してあげよう。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 333, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "困ったな……女の子に"
+LINE_FEED
+MESSAGE "農場の仕事は、"
+LINE_FEED
+MESSAGE "やっぱり厳しかったかな……？"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "……ごめんなさい。"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 334, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "ほい、お疲れさん。"
+LINE_FEED
+MESSAGE "汚れを落としてから帰りなよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、ありがとうございます。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 335, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "[娘の名前]さん、"
+LINE_FEED
+MESSAGE "よく続けてくれるなぁ。"
+LINE_FEED
+MESSAGE "作物の育ちも順調だし……"
+KEY_WAIT
+MESSAGE "よし、次から給料を"
+LINE_FEED
+MESSAGE "上げてあげよう。"
+LINE_FEED
+MESSAGE "これからも頼むよ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わ～い、ありがとうございます。"
+LINE_FEED
+MESSAGE "また、よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 336, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "[娘の名前]さんが"
+LINE_FEED
+MESSAGE "来てくれるおかげで、家畜の育ちも"
+LINE_FEED
+MESSAGE "よくなってきた気がするよ。"
+KEY_WAIT
+MESSAGE "うん、また給料を上げてあげよう。"
+LINE_FEED
+MESSAGE "これからもこの調子で頑張ってね。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "本当ですか？"
+LINE_FEED
+MESSAGE "ありがとうございます、"
+LINE_FEED
+MESSAGE "ハムルさん！"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 337, 1
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "いやあ、君は農場の仕事に"
+LINE_FEED
+MESSAGE "向いてるのかもしれないなぁ。"
+LINE_FEED
+MESSAGE "このところ経営も本当に順調だし。"
+KEY_WAIT
+MESSAGE "このままうちに"
+LINE_FEED
+MESSAGE "永久就職してほしいぐらいだよ。"
+LINE_FEED
+MESSAGE "なんてね、はっはっは！"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "やだぁ、ハムルさんたら！"
+LINE_FEED
+MESSAGE "でも、ありがとうございます。"
+KEY_WAIT
+FACE 58
+MESSAGE_NAME "ハムル"
+MESSAGE "よし、さらに給料アップだ。"
+LINE_FEED
+MESSAGE "これからもしっかり頼むよ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、まかせてください。"
+KEY_WAIT
+END 0

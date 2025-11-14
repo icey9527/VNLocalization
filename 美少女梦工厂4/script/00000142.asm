@@ -1,0 +1,220 @@
+LABEL 0
+FLAG 346, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おっ、君が新しいバイトかい？"
+LINE_FEED
+MESSAGE "私はここのマスター、シラクだ。"
+LINE_FEED
+MESSAGE "よろしくな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、よろしくお願いします。"
+KEY_WAIT
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "最高の料理に、最高の接客……"
+LINE_FEED
+MESSAGE "それがうちのモットーさ。"
+KEY_WAIT
+MESSAGE "君も働きながらそのノウハウを"
+LINE_FEED
+MESSAGE "勉強していくといい。"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わかりました。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+LINE_FEED
+MESSAGE "シラクさん。"
+KEY_WAIT
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おっと、私のことは"
+LINE_FEED
+MESSAGE "マスターと呼んでくれたまえ。"
+LINE_FEED
+MESSAGE "はっはっは♪"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はい、マスター。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 347, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おっ、来たね。"
+LINE_FEED
+MESSAGE "よ～し、さっそく下ごしらえだ。"
+LINE_FEED
+MESSAGE "そこの食材を持ってきてくれ。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 348, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "いやぁービックリしたね！"
+LINE_FEED
+MESSAGE "君にはセンスがある。"
+LINE_FEED
+MESSAGE "私が言うんだから間違いない！"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そんな、センスだなんて……"
+LINE_FEED
+MESSAGE "えへへっ……"
+KEY_WAIT
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おかげで売り上げも上々だ。"
+LINE_FEED
+MESSAGE "これはそのお礼だよ。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 349, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "う～ん……"
+LINE_FEED
+MESSAGE "客に文句を言われるようでは、"
+LINE_FEED
+MESSAGE "うちとしても困るんだがなぁ……"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい……"
+LINE_FEED
+MESSAGE "すみませんでした、マスター……"
+KEY_WAIT
+MESSAGE "（うう、がっくり……）"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 350, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "お疲れさん。"
+LINE_FEED
+MESSAGE "なかなか筋もいいみたいだし、"
+LINE_FEED
+MESSAGE "これからもよろしく頼むよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、お疲れ様でした。"
+LINE_FEED
+MESSAGE "また次もよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 351, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "よお、[娘の名前]ちゃん！"
+LINE_FEED
+MESSAGE "君はよく働いてくれているから、"
+LINE_FEED
+MESSAGE "次からはバイト代をアップしよう。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ほんとですか！"
+LINE_FEED
+MESSAGE "ありがとうございます、マスター。"
+KEY_WAIT
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "ああ、またよろしく頼むよ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい！"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 352, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "最近は君のおかげで"
+LINE_FEED
+MESSAGE "客の入りも上々だよ。"
+LINE_FEED
+MESSAGE "まさに看板娘ってとこだな。"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ま、マスター……"
+LINE_FEED
+MESSAGE "なんだか恥ずかしいですよ。"
+KEY_WAIT
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "ハッハッハ、照れない照れない！"
+KEY_WAIT
+MESSAGE "ようし、この際だし……次からは"
+LINE_FEED
+MESSAGE "さらにバイト代アップだ！"
+LINE_FEED
+MESSAGE "頑張ってくれたまえよ！"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わぁ、ありがとうございます！"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 353, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "やあやあ、お疲れ様！"
+LINE_FEED
+MESSAGE "君も仕事が板についてきたね。"
+LINE_FEED
+MESSAGE "私もなんだかうれしいよ。"
+KEY_WAIT
+MESSAGE "これからは、私のサポートにも"
+LINE_FEED
+MESSAGE "まわってくれ。もちろんバイト代も"
+LINE_FEED
+MESSAGE "アップするからな。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ、ありがとうございます！"
+LINE_FEED
+MESSAGE "マスターの役に立てるように、"
+LINE_FEED
+MESSAGE "私、頑張りますから！"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 354, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "う～ん……"
+LINE_FEED
+MESSAGE "今の君に接客は頼めないなぁ。"
+LINE_FEED
+MESSAGE "悪いが他を当たってくれよ。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ええっ㌍"
+LINE_FEED
+MESSAGE "ダメなのぉ！"
+KEY_WAIT
+FACE 0
+MESSAGE "ふん……べつにいいわよ。"
+LINE_FEED
+MESSAGE "他のところに行っちゃうんだから！"
+KEY_WAIT
+END 0

@@ -1,0 +1,278 @@
+LABEL 0
+FLAG 400, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "あら、あなたが"
+LINE_FEED
+MESSAGE "ニエル先生の紹介で来た子？"
+LINE_FEED
+MESSAGE "なるほど、なかなか賢そうな子ね。"
+KEY_WAIT
+MESSAGE "いま、宅の息子は将来宮廷に"
+LINE_FEED
+MESSAGE "仕官するために猛勉強の最中なの。"
+KEY_WAIT
+MESSAGE "そこで、あなたには息子に勉強を"
+LINE_FEED
+MESSAGE "教えてもらうわ。"
+KEY_WAIT
+MESSAGE "もちろん、成果が出ないようなら、"
+LINE_FEED
+MESSAGE "すぐにやめてもらいますから、"
+LINE_FEED
+MESSAGE "そのつもりで。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "が……頑張ります……"
+KEY_WAIT
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "では、さっそく始めてちょうだい。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 401, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "あら、来てくれたのね。"
+LINE_FEED
+MESSAGE "それでは、今週もよろしく"
+LINE_FEED
+MESSAGE "お願いしますわね。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 402, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "素晴らしい！"
+KEY_WAIT
+MESSAGE "宅の息子も"
+LINE_FEED
+MESSAGE "「先生の授業はわかりやすい」と"
+LINE_FEED
+MESSAGE "喜んでますの。"
+KEY_WAIT
+MESSAGE "やはり、あなたを雇って"
+LINE_FEED
+MESSAGE "正解でしたわね。"
+LINE_FEED
+MESSAGE "オホホホホ。"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "いえ、そんな……"
+KEY_WAIT
+FACE 1
+MESSAGE "でも、ありがとうございます！"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 403, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "どういうことかしら？"
+KEY_WAIT
+MESSAGE "これでは、息子ひとりで"
+LINE_FEED
+MESSAGE "勉強していても"
+LINE_FEED
+MESSAGE "変わりがありませんわよ。"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "申し訳ありません、奥様……"
+KEY_WAIT
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "まったく……もっとしっかり"
+LINE_FEED
+MESSAGE "やってちょうだい。"
+LINE_FEED
+MESSAGE "ブツブツ……"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 404, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "ご苦労様。次もよろしく"
+LINE_FEED
+MESSAGE "お願いしますわね。オホホホ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、こちらこそ。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 405, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "なかなか頑張っているよう"
+LINE_FEED
+MESSAGE "ですわね。息子も成績が"
+LINE_FEED
+MESSAGE "上がったと喜んでいましたわ。"
+KEY_WAIT
+MESSAGE "次からは、お手当を"
+LINE_FEED
+MESSAGE "多めにしてもよさそうですわね。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます、奥様。"
+LINE_FEED
+MESSAGE "これからも頑張ります！"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 406, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "ご苦労様。"
+KEY_WAIT
+MESSAGE "あなたに見てもらうようになって"
+LINE_FEED
+MESSAGE "成績がよくなったと"
+LINE_FEED
+MESSAGE "宅の息子も喜んでますのよ。"
+KEY_WAIT
+MESSAGE "私も鼻が高いですわ。"
+LINE_FEED
+MESSAGE "次からまた、お手当を上乗せ"
+LINE_FEED
+MESSAGE "しますわね。ホホホ……"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "本当ですか？"
+LINE_FEED
+MESSAGE "奥様、ありがとうございます。"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 407, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "ご苦労様。"
+LINE_FEED
+MESSAGE "いつもよくやってくれて、"
+LINE_FEED
+MESSAGE "私もうれしいですわ。"
+KEY_WAIT
+MESSAGE "宅の息子も"
+LINE_FEED
+MESSAGE "あなたが教えてくれる日を"
+LINE_FEED
+MESSAGE "いつも楽しみにしてますのよ。"
+KEY_WAIT
+MESSAGE "今後は当家専属の家庭教師として"
+LINE_FEED
+MESSAGE "働いてほしいくらいですわ。"
+KEY_WAIT
+MESSAGE "また少し、お手当を"
+LINE_FEED
+MESSAGE "上げさせていただきますわ。"
+LINE_FEED
+MESSAGE "これからもよろしくね。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ありがとうございます。"
+KEY_WAIT
+FACE 0
+MESSAGE "どこまでお役に立てるかは"
+LINE_FEED
+MESSAGE "わかりませんが、精一杯"
+LINE_FEED
+MESSAGE "つとめさせてもらいますね。"
+KEY_WAIT
+END 0
+LABEL 8
+FLAG 408, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "あなたについては、"
+LINE_FEED
+MESSAGE "あまりよくない噂を聞いてますの。"
+KEY_WAIT
+MESSAGE "そういう人を、宅の息子に"
+LINE_FEED
+MESSAGE "近づけるわけには……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ええっ㌍"
+LINE_FEED
+MESSAGE "それじゃあ……"
+KEY_WAIT
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "今日はお引き取りくださいな。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そんなぁ！"
+LINE_FEED
+MESSAGE "せっかく教えに来たのに……"
+LINE_FEED
+MESSAGE "ケチ！"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 409, 1
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "ああ、そう言えばあなた、"
+LINE_FEED
+MESSAGE "ニエル先生の講座を"
+LINE_FEED
+MESSAGE "卒業なさったと聞きましたが……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ、はい。"
+LINE_FEED
+MESSAGE "この前、卒業の試験に合格して、"
+LINE_FEED
+MESSAGE "卒業ということに……"
+KEY_WAIT
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "そうなの……"
+KEY_WAIT
+MESSAGE "それでしたら、次回からは"
+LINE_FEED
+MESSAGE "あなたのお手当てを上げさせて"
+LINE_FEED
+MESSAGE "いただきますわ。"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "え？"
+LINE_FEED
+MESSAGE "それは……"
+KEY_WAIT
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "ああ、気になさらないで。"
+LINE_FEED
+MESSAGE "有名な学校を卒業なさったのだし、"
+LINE_FEED
+MESSAGE "これくらいは当然のことよ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "本当ですか？"
+LINE_FEED
+MESSAGE "奥様、ありがとうございます。"
+KEY_WAIT
+FACE 61
+MESSAGE_NAME "セリーナ"
+MESSAGE "これからも、"
+LINE_FEED
+MESSAGE "よろしくお願いしますね。"
+KEY_WAIT
+END 0

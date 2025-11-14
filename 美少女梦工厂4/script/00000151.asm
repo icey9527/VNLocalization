@@ -1,0 +1,198 @@
+LABEL 0
+FLAG 1172, 1
+BGM_PLAY 31
+BG 158
+CHAR 0, 1
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "なんだか、最近きな臭い動きが王国"
+LINE_FEED
+MESSAGE "であるんだ。"
+KEY_WAIT
+MESSAGE "何でも、クライスって商人と"
+LINE_FEED
+MESSAGE "オズワルド大臣が手を組んで魔法石"
+LINE_FEED
+MESSAGE "を採りに行こうとしているらしい。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2316
+MESSAGE "えっ、"
+LINE_FEED
+MESSAGE "クライスさんと大臣がまさか！"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "いやぁ、単なるうわさだったら"
+LINE_FEED
+MESSAGE "いいんだけど、魔族との戦争を二人"
+LINE_FEED
+MESSAGE "がけしかけてるって話もある。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2317
+MESSAGE "どうして、そんなうわさが…"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "クライスは、魔法石の利益、"
+LINE_FEED
+MESSAGE "大臣は王国の拡大。"
+LINE_FEED
+MESSAGE "二人の目的が一致してるって。"
+KEY_WAIT
+MESSAGE_NAME "テツ"
+MESSAGE "まぁ、あくまでうわさだし、"
+LINE_FEED
+MESSAGE "僕も信じたくないけどね。"
+LINE_FEED
+MESSAGE "キミはどう思う？"
+SELECT 2, 1, "あの人はいい人だと思う", 2, "あの人は悪い人かも"
+LABEL 1
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2318
+MESSAGE "わたし、クライスさんと"
+LINE_FEED
+MESSAGE "何度かお話したけど、"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2319
+MESSAGE "とてもそんな悪い人には"
+LINE_FEED
+MESSAGE "見えなかったわ。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2320
+MESSAGE "ただ、他の人には分からない"
+LINE_FEED
+MESSAGE "新しいことに目を向けてるだけよ。"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "う～ん、そうなのかなぁ。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2321
+MESSAGE "そうよ、理解できないからって、"
+LINE_FEED
+MESSAGE "一生懸命がんばっている人を悪く"
+LINE_FEED
+MESSAGE "言うのは、いけないわ。"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "ははは、確かにね、"
+LINE_FEED
+MESSAGE "急に大金持ちになって"
+LINE_FEED
+MESSAGE "目立つことしてるからなぁ。"
+KEY_WAIT
+MESSAGE "みんなのやっかみで"
+LINE_FEED
+MESSAGE "悪口いってるのかもね。"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2322
+MESSAGE "どうして、"
+LINE_FEED
+MESSAGE "みんなよく知らない人のこと"
+LINE_FEED
+MESSAGE "悪く言うのかしら……"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 112
+END 0
+LABEL 2
+FLAG 1710, 1
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2323
+MESSAGE "クライスさんが"
+LINE_FEED
+MESSAGE "そんなことするなんて、"
+LINE_FEED
+MESSAGE "信じたくないけど……"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2324
+MESSAGE "怪しいところが"
+LINE_FEED
+MESSAGE "無いともいえないわね。"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "ええぇ、キミ、"
+LINE_FEED
+MESSAGE "クライスと知り合いかい？"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2325
+MESSAGE "いえっ、少しお話したくらいで"
+LINE_FEED
+MESSAGE "そんなに知らないわよ。"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2326
+MESSAGE "そんなうわさが、"
+LINE_FEED
+MESSAGE "本当だとしたら絶対許せないわ。"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "でも、僕らが王国の意向に"
+LINE_FEED
+MESSAGE "どうすることもできないよ。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2327
+MESSAGE "諦めてたら"
+LINE_FEED
+MESSAGE "兵隊さんやこの街だって"
+LINE_FEED
+MESSAGE "ただじゃすまないわよ。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2328
+MESSAGE "また、沢山の犠牲が出てしまうわ！"
+KEY_WAIT
+FACE 74
+MESSAGE_NAME "テツ"
+MESSAGE "そうはいってもなぁ。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2329
+MESSAGE "止めないと、"
+LINE_FEED
+MESSAGE "方法なんて、分からないけど。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2330
+MESSAGE "何か考えないといけない…"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 112
+END 0

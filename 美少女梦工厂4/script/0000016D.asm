@@ -1,0 +1,963 @@
+LABEL 0
+FLAG 121, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3238
+MESSAGE "武術って、ただ楽しいだけじゃ"
+LINE_FEED
+MESSAGE "ないのね。"
+LINE_FEED
+MESSAGE "痛かったり、きつかったり……"
+KEY_WAIT
+FACE 1
+VOICE 3239
+MESSAGE "でも、パパの娘だもん。"
+LINE_FEED
+MESSAGE "私、頑張るわ！"
+KEY_WAIT
+GOTO 58
+LABEL 1
+FLAG 122, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3240
+MESSAGE "武術って、力があるだけじゃ"
+LINE_FEED
+MESSAGE "ダメなんだね。それを活かす"
+LINE_FEED
+MESSAGE "知識もたっくさんいるんだもん。"
+KEY_WAIT
+FACE 7
+VOICE 3241
+MESSAGE "憶える事がいっぱいあって、でも"
+LINE_FEED
+MESSAGE "丸暗記じゃ体がついていかなくて。"
+LINE_FEED
+MESSAGE "むずかしいね～……"
+KEY_WAIT
+GOTO 58
+LABEL 2
+FLAG 123, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3242
+MESSAGE "武術って奥が深い……"
+LINE_FEED
+MESSAGE "剣術の歴史や、その使い方まで"
+LINE_FEED
+MESSAGE "教えられるとは思わなかったわ。"
+KEY_WAIT
+VOICE 3243
+MESSAGE "でも、こういう積み重ねの上に"
+LINE_FEED
+MESSAGE "今の剣術が成り立っているのね……"
+KEY_WAIT
+GOTO 58
+LABEL 3
+FLAG 124, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3244
+MESSAGE "えへへ。自分の腕が上がってるって"
+LINE_FEED
+MESSAGE "実感できる時ってうれしいよね。"
+LINE_FEED
+MESSAGE "練習試合も調子がいいし。"
+KEY_WAIT
+VOICE 3245
+MESSAGE "このまま頑張って、"
+LINE_FEED
+MESSAGE "早くパパに追いつくんだ♪"
+KEY_WAIT
+GOTO 58
+LABEL 4
+FLAG 125, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3246
+MESSAGE "最近、すっごく調子がいいの！"
+LINE_FEED
+MESSAGE "練習試合も連勝中だし、"
+LINE_FEED
+MESSAGE "先生からも誉められるし。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 3247
+MESSAGE "このまま頑張っちゃったら、"
+LINE_FEED
+MESSAGE "そろそろお父さんを"
+LINE_FEED
+MESSAGE "追い抜いちゃうかもね♪"
+KEY_WAIT
+GOTO 58
+LABEL 5
+FLAG 126, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3248
+MESSAGE "このごろ、練習したことが全部、"
+LINE_FEED
+MESSAGE "ちゃんと成果になってる事を"
+LINE_FEED
+MESSAGE "実感できるの。"
+KEY_WAIT
+VOICE 3249
+MESSAGE "なにをやっても、上手くいくって"
+LINE_FEED
+MESSAGE "感じかな？"
+KEY_WAIT
+GOTO 58
+LABEL 6
+FLAG 127, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3250
+MESSAGE "私、もしかして才能ないのかな……"
+LINE_FEED
+MESSAGE "試合も全然勝てないし、"
+LINE_FEED
+MESSAGE "練習も全然身につかないし……"
+KEY_WAIT
+VOICE 3251
+MESSAGE "なんだか、どうでもいいやって"
+LINE_FEED
+MESSAGE "なっちゃいそう……"
+KEY_WAIT
+GOTO 58
+LABEL 7
+FLAG 128, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3252
+MESSAGE "私、武術の才能ないのかな……"
+LINE_FEED
+MESSAGE "素振りしても剣が飛んでいくし、"
+LINE_FEED
+MESSAGE "的には当らないし……"
+KEY_WAIT
+VOICE 3253
+MESSAGE "努力はしてるつもりなんだけど、"
+LINE_FEED
+MESSAGE "自信がなくなってきちゃったなぁ。"
+KEY_WAIT
+GOTO 58
+LABEL 8
+FLAG 129, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3254
+MESSAGE "はあ～っ……"
+LINE_FEED
+MESSAGE "素振りぐらい満足に出来ないのか！"
+LINE_FEED
+MESSAGE "って師範にも怒られたわ……"
+KEY_WAIT
+VOICE 3255
+MESSAGE "才能ない分、努力でカバーしようと"
+LINE_FEED
+MESSAGE "頑張ってきたけど……"
+LINE_FEED
+MESSAGE "どうしようもないのかしらね……"
+KEY_WAIT
+GOTO 58
+LABEL 9
+FLAG 130, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3256
+MESSAGE "魔術ってすごいよね。"
+LINE_FEED
+MESSAGE "離れた場所の物を動かしたり、"
+LINE_FEED
+MESSAGE "空を飛んだり……"
+KEY_WAIT
+VOICE 3257
+MESSAGE "私も一生懸命勉強すれば、"
+LINE_FEED
+MESSAGE "いつかは使えるように"
+LINE_FEED
+MESSAGE "なるのかなぁ？"
+KEY_WAIT
+GOTO 58
+LABEL 10
+FLAG 131, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3258
+MESSAGE "魔術って不思議ね。"
+LINE_FEED
+MESSAGE "何もないところから炎を出したり、"
+LINE_FEED
+MESSAGE "物を呼び寄せたり……"
+KEY_WAIT
+VOICE 3259
+MESSAGE "私もいつかは"
+LINE_FEED
+MESSAGE "あんな風になれるのかなぁ？"
+KEY_WAIT
+GOTO 58
+LABEL 11
+FLAG 132, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3260
+MESSAGE "魔術ってすごく不思議よね。"
+LINE_FEED
+MESSAGE "突然疾風を巻き起こしたり、"
+LINE_FEED
+MESSAGE "今まであった物を忽然と消したり…"
+KEY_WAIT
+VOICE 3261
+MESSAGE "私も勉強すれば、いつかは"
+LINE_FEED
+MESSAGE "あんな風に魔法を使えるように"
+LINE_FEED
+MESSAGE "なれるのかしら？　もう遅い？"
+KEY_WAIT
+GOTO 58
+LABEL 12
+FLAG 133, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3262
+MESSAGE "魔術って面白いね♪"
+KEY_WAIT
+VOICE 3263
+MESSAGE "だって、呪文を唱えるだけで"
+LINE_FEED
+MESSAGE "自然と火が出たり"
+LINE_FEED
+MESSAGE "水が出るんだもん。"
+KEY_WAIT
+GOTO 58
+LABEL 13
+FLAG 134, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3264
+MESSAGE "自分の中の魔力が、最近どんどん"
+LINE_FEED
+MESSAGE "高まっている感じがするの。"
+KEY_WAIT
+VOICE 3265
+MESSAGE "今ならどんな術でも"
+LINE_FEED
+MESSAGE "唱えられそうな気分だわ。"
+LINE_FEED
+MESSAGE "……なーんて、言いすぎかな？"
+KEY_WAIT
+GOTO 58
+LABEL 14
+FLAG 135, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3266
+MESSAGE "続けてきた成果かしら。"
+LINE_FEED
+MESSAGE "最近は魔法に失敗する事も"
+LINE_FEED
+MESSAGE "無くなってきたわ。"
+KEY_WAIT
+VOICE 3267
+MESSAGE "このまま頑張っていれば、"
+LINE_FEED
+MESSAGE "いつかは大魔術師になれるかな？"
+KEY_WAIT
+GOTO 58
+LABEL 15
+FLAG 136, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3268
+MESSAGE "このごろ魔法で失敗ばっかり……"
+LINE_FEED
+MESSAGE "先生にも叱られるし、"
+LINE_FEED
+MESSAGE "なんかついてないなぁ～"
+KEY_WAIT
+GOTO 58
+LABEL 16
+FLAG 137, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3269
+MESSAGE "うう、全然魔術が成功しないの。"
+LINE_FEED
+MESSAGE "私には才能がないのかしら……"
+LINE_FEED
+MESSAGE "自信なくしちゃうなぁ。"
+KEY_WAIT
+GOTO 58
+LABEL 17
+FLAG 138, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3270
+MESSAGE "最近、魔力の成長が悪い気がする。"
+LINE_FEED
+MESSAGE "才能の限界なのかなぁ……"
+LINE_FEED
+MESSAGE "努力でフォローできるかしら……"
+KEY_WAIT
+GOTO 58
+LABEL 18
+FLAG 139, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3271
+MESSAGE "学校って楽しいね！"
+LINE_FEED
+MESSAGE "私と同じ歳の子たちがいっぱいいて"
+LINE_FEED
+MESSAGE "みんなでいろんなお話を聞いたの。"
+KEY_WAIT
+VOICE 3272
+MESSAGE "ちょっとだけ難しい話もあったけど"
+LINE_FEED
+MESSAGE "先生がすごくわかりやすく"
+LINE_FEED
+MESSAGE "教えてくれたのよ。"
+KEY_WAIT
+GOTO 58
+LABEL 19
+FLAG 140, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3273
+MESSAGE "何かを学ぶのって、とっても"
+LINE_FEED
+MESSAGE "楽しい事なんだね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3274
+MESSAGE "いつか、覚えたことが役立つ時が"
+LINE_FEED
+MESSAGE "くるのかな？　ふふ、そっちも"
+LINE_FEED
+MESSAGE "楽しみ～！"
+KEY_WAIT
+GOTO 58
+LABEL 20
+FLAG 141, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3275
+MESSAGE "学校って、本当にいろいろな事を"
+LINE_FEED
+MESSAGE "教えてくれる場所なのね。"
+KEY_WAIT
+VOICE 3276
+MESSAGE "仕事をしているだけじゃ、"
+LINE_FEED
+MESSAGE "きっと私、狭い世の中しか知らない"
+LINE_FEED
+MESSAGE "人間になってたわ。"
+KEY_WAIT
+GOTO 58
+LABEL 21
+FLAG 142, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3277
+MESSAGE "パパ！パパ！　先生によく"
+LINE_FEED
+MESSAGE "できましたってほめられたよ㍍"
+KEY_WAIT
+GOTO 58
+LABEL 22
+FLAG 143, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3278
+MESSAGE "最近は調子がいいなぁ。"
+LINE_FEED
+MESSAGE "先生にも、理解が早いって"
+LINE_FEED
+MESSAGE "ほめられたのよ♪"
+KEY_WAIT
+GOTO 58
+LABEL 23
+FLAG 144, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3279
+MESSAGE "自分でもわかるの。頭が冴えて"
+LINE_FEED
+MESSAGE "きてる……習うこと全てが"
+LINE_FEED
+MESSAGE "吸収できてる気がするわ。"
+KEY_WAIT
+VOICE 3280
+MESSAGE "先生の質問にだって、よどみなく"
+LINE_FEED
+MESSAGE "答えてみせるわよ♪"
+KEY_WAIT
+GOTO 58
+LABEL 24
+FLAG 145, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3281
+MESSAGE "うう……わからない事が多いなあ。"
+LINE_FEED
+MESSAGE "先生にも、よそ見ばっかりしてちゃ"
+LINE_FEED
+MESSAGE "ダメって怒られちゃったの……"
+KEY_WAIT
+GOTO 58
+LABEL 25
+FLAG 146, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3282
+MESSAGE "自分では集中してるつもりなのに…"
+LINE_FEED
+MESSAGE "授業が全然頭に入らないの。"
+LINE_FEED
+MESSAGE "どうしたんだろ、私……"
+KEY_WAIT
+GOTO 58
+LABEL 26
+FLAG 147, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3283
+MESSAGE "最近、集中力を持続できなくて……"
+LINE_FEED
+MESSAGE "先生の話が全然耳に"
+LINE_FEED
+MESSAGE "入ってこないの。"
+KEY_WAIT
+VOICE 3284
+MESSAGE "テストの点数も全然ダメだし、"
+LINE_FEED
+MESSAGE "どうしたらいいのかしら……"
+KEY_WAIT
+GOTO 58
+LABEL 27
+FLAG 148, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3285
+MESSAGE "礼儀作法って、"
+LINE_FEED
+MESSAGE "最初はきちんと挨拶ができれば"
+LINE_FEED
+MESSAGE "大丈夫なんだって！"
+KEY_WAIT
+VOICE 3286
+MESSAGE "初めはなんだか"
+LINE_FEED
+MESSAGE "窮屈な感じがしてたけど……"
+LINE_FEED
+MESSAGE "私でも頑張れそうな気がする！"
+KEY_WAIT
+GOTO 58
+LABEL 28
+FLAG 149, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3287
+MESSAGE "スナチネ先生って、堅苦しくって"
+LINE_FEED
+MESSAGE "いかめしい感じのお爺さんだけど。"
+KEY_WAIT
+VOICE 3288
+MESSAGE "真面目にやっている生徒には"
+LINE_FEED
+MESSAGE "案外やさしいのよ。"
+KEY_WAIT
+GOTO 58
+LABEL 29
+FLAG 150, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3289
+MESSAGE "「礼儀作法はまず挨拶から」"
+LINE_FEED
+MESSAGE "最初は、そんなの当たり前よ、って"
+LINE_FEED
+MESSAGE "思ってたけど……"
+KEY_WAIT
+VOICE 3290
+MESSAGE "勉強すればするほど、挨拶の"
+LINE_FEED
+MESSAGE "大切さがわかってきた気がするの。"
+LINE_FEED
+MESSAGE "うん、奥が深いわ……"
+KEY_WAIT
+GOTO 58
+LABEL 30
+FLAG 151, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3291
+MESSAGE "大きな声でご挨拶！"
+LINE_FEED
+MESSAGE "するほうもされるほうも"
+LINE_FEED
+MESSAGE "気持ちがいいよね♪"
+KEY_WAIT
+GOTO 58
+LABEL 31
+FLAG 152, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3292
+MESSAGE "背筋をきちんと伸ばして"
+LINE_FEED
+MESSAGE "挨拶する……それだけでも"
+LINE_FEED
+MESSAGE "ずいぶん気持ちがいいのね。"
+KEY_WAIT
+VOICE 3293
+MESSAGE "どうして礼法が大事なのか、"
+LINE_FEED
+MESSAGE "なんとなくわかってきたような"
+LINE_FEED
+MESSAGE "気がするわ。"
+KEY_WAIT
+GOTO 58
+LABEL 32
+FLAG 153, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3294
+MESSAGE "正しい姿勢で挨拶をする。"
+LINE_FEED
+MESSAGE "ただそれだけのことができない人が"
+LINE_FEED
+MESSAGE "多い気がするなぁ……"
+KEY_WAIT
+FACE 0
+VOICE 3295
+MESSAGE "私の勉強の成果がお手本になって"
+LINE_FEED
+MESSAGE "くれたらうれしいんだけど……"
+KEY_WAIT
+GOTO 58
+LABEL 33
+FLAG 154, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3296
+MESSAGE "今日、先生に姿勢が悪いって"
+LINE_FEED
+MESSAGE "叱られちゃった。"
+LINE_FEED
+MESSAGE "そんなことじゃダメだって……"
+KEY_WAIT
+GOTO 58
+LABEL 34
+FLAG 155, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3297
+MESSAGE "上の空で授業を受けて、礼法が"
+LINE_FEED
+MESSAGE "身につくはずもないって……"
+LINE_FEED
+MESSAGE "先生に叱られちゃった。"
+KEY_WAIT
+VOICE 3298
+MESSAGE "あーあ、落ち込むなぁ……"
+KEY_WAIT
+GOTO 58
+LABEL 35
+FLAG 156, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3299
+MESSAGE "真面目に礼法の理念を理解する"
+LINE_FEED
+MESSAGE "つもりがあるのかって、"
+LINE_FEED
+MESSAGE "先生に怒られちゃったの……"
+KEY_WAIT
+VOICE 3300
+MESSAGE "ボンヤリしちゃって、授業に"
+LINE_FEED
+MESSAGE "全然集中できなかったのが"
+LINE_FEED
+MESSAGE "原因だけど……ショックだわ……"
+KEY_WAIT
+GOTO 58
+LABEL 36
+FLAG 157, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3301
+MESSAGE "芸術って難しいのね……"
+LINE_FEED
+MESSAGE "私、ちんぷんかんぷんだったわ。"
+KEY_WAIT
+FACE 1
+VOICE 3302
+MESSAGE "でも、絵を描いたり"
+LINE_FEED
+MESSAGE "粘土をこねたりするのは"
+LINE_FEED
+MESSAGE "楽しかったかな♪"
+KEY_WAIT
+GOTO 58
+LABEL 37
+FLAG 158, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3303
+MESSAGE "芸術って、絵や彫刻ばかり"
+LINE_FEED
+MESSAGE "作るものだと思ってたけど、"
+LINE_FEED
+MESSAGE "そうじゃないのよね。"
+KEY_WAIT
+VOICE 3304
+MESSAGE "誰かを感動させられるなら、"
+LINE_FEED
+MESSAGE "料理や文章もまた"
+LINE_FEED
+MESSAGE "芸術なんですって。"
+KEY_WAIT
+GOTO 58
+LABEL 38
+FLAG 159, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3305
+MESSAGE "芸術を志すのに遅すぎるという"
+LINE_FEED
+MESSAGE "ことはなく、また引退という"
+LINE_FEED
+MESSAGE "言葉もない。"
+KEY_WAIT
+VOICE 3306
+MESSAGE "レロン先生が言ってたわ。"
+KEY_WAIT
+FACE 1
+VOICE 3307
+MESSAGE "情熱を失わない限り、その人は"
+LINE_FEED
+MESSAGE "死ぬまで芸術家でありつづける、"
+LINE_FEED
+MESSAGE "ですって。いい事言うわよね！"
+KEY_WAIT
+GOTO 58
+LABEL 39
+FLAG 160, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3308
+MESSAGE "私がしてる事が芸術ってものかは"
+LINE_FEED
+MESSAGE "よくわからないけど……"
+LINE_FEED
+MESSAGE "すっごく楽しいよ♪"
+KEY_WAIT
+VOICE 3309
+MESSAGE "とにかく今は、何でもいいから"
+LINE_FEED
+MESSAGE "作品を作っていたい気分かな♪"
+KEY_WAIT
+GOTO 58
+LABEL 40
+FLAG 161, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3310
+MESSAGE "最近、創作意欲が"
+LINE_FEED
+MESSAGE "どんどん湧いてくる気がするの！"
+KEY_WAIT
+VOICE 3311
+MESSAGE "今だったら、すっごくいいものが"
+LINE_FEED
+MESSAGE "作れそうな気がするわ。うん！"
+KEY_WAIT
+GOTO 58
+LABEL 41
+FLAG 162, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3312
+MESSAGE "ふふふ……独創性なら他の誰にも"
+LINE_FEED
+MESSAGE "負けない自信があるわ。"
+KEY_WAIT
+FACE 1
+VOICE 3313
+MESSAGE "もしかしたら、今なら先生よりも"
+LINE_FEED
+MESSAGE "いい作品を作れるかもしれない。"
+LINE_FEED
+MESSAGE "そんな気分なの♪"
+KEY_WAIT
+GOTO 58
+LABEL 42
+FLAG 163, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3314
+MESSAGE "う～。思った通りの作品が"
+LINE_FEED
+MESSAGE "全然作れないの……なんでだろう？"
+LINE_FEED
+MESSAGE "飽きちゃったのかなあ？"
+KEY_WAIT
+GOTO 58
+LABEL 43
+FLAG 164, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3315
+MESSAGE "私、スランプなのかなぁ？"
+LINE_FEED
+MESSAGE "アイデアも、創作意欲も"
+LINE_FEED
+MESSAGE "ぜんぜん湧いてこないわ……"
+KEY_WAIT
+GOTO 58
+LABEL 44
+FLAG 165, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3316
+MESSAGE "何にも浮かばないの……"
+LINE_FEED
+MESSAGE "何を作りたいのか、それさえも"
+LINE_FEED
+MESSAGE "浮かんでこない……"
+KEY_WAIT
+VOICE 3317
+MESSAGE "これって、スランプなのかな？"
+LINE_FEED
+MESSAGE "それすらもわからないわ……"
+KEY_WAIT
+GOTO 58
+LABEL 45
+FLAG 166, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3318
+MESSAGE "ダンスって、思ってたよりも"
+LINE_FEED
+MESSAGE "体力がいるのね～"
+KEY_WAIT
+VOICE 3319
+MESSAGE "レッスンが終わる頃にはもう"
+LINE_FEED
+MESSAGE "ぐったりしちゃってたわ。"
+LINE_FEED
+MESSAGE "でも、楽しかったぁ……"
+KEY_WAIT
+GOTO 58
+LABEL 46
+FLAG 167, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3320
+MESSAGE "ダンスって、見た目よりも"
+LINE_FEED
+MESSAGE "けっこうハードなんだね。"
+KEY_WAIT
+VOICE 3321
+MESSAGE "レッスンが終わったらクタクタで、"
+LINE_FEED
+MESSAGE "まともに立てなかったぐらいだし。"
+LINE_FEED
+MESSAGE "でも、楽しかったよ♪"
+KEY_WAIT
+GOTO 58
+LABEL 47
+FLAG 168, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3322
+MESSAGE "ダンスに重要なのは足腰だけかと"
+LINE_FEED
+MESSAGE "思ってたんだけど……全身を"
+LINE_FEED
+MESSAGE "使わないと上手く踊れないのね。"
+KEY_WAIT
+VOICE 3323
+MESSAGE "リズム感だってもちろん必要だし。"
+LINE_FEED
+MESSAGE "先生って、本当にすごい人だわ。"
+KEY_WAIT
+GOTO 58
+LABEL 48
+FLAG 169, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3324
+MESSAGE "ダンスが上手ねって、先生から"
+LINE_FEED
+MESSAGE "ほめられちゃったー！"
+LINE_FEED
+MESSAGE "うふふっ、うれしいなぁ♪"
+KEY_WAIT
+GOTO 58
+LABEL 49
+FLAG 170, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3325
+MESSAGE "ねえ、お父さん。私、先生から"
+LINE_FEED
+MESSAGE "舞踊の才能があるって"
+LINE_FEED
+MESSAGE "ほめられちゃった！"
+KEY_WAIT
+VOICE 3326
+MESSAGE "もしかしたら私、プロの"
+LINE_FEED
+MESSAGE "ダンサーになれるのかも？"
+LINE_FEED
+MESSAGE "なーんて、ね♪"
+KEY_WAIT
+GOTO 58
+LABEL 50
+FLAG 171, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3327
+MESSAGE "ふふふ……私には、舞踊について"
+LINE_FEED
+MESSAGE "天性の才能があるらしいの。先生、"
+LINE_FEED
+MESSAGE "とても熱心で……"
+KEY_WAIT
+VOICE 3328
+MESSAGE "これから頑張れば、私でも素敵な"
+LINE_FEED
+MESSAGE "ダンサーになれるかしら。"
+LINE_FEED
+MESSAGE "頑張らないとね㍍"
+KEY_WAIT
+GOTO 58
+LABEL 51
+FLAG 172, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3329
+MESSAGE "うーん、うまく踊れない……"
+LINE_FEED
+MESSAGE "どうしたんだろう、私……"
+KEY_WAIT
+GOTO 58
+LABEL 52
+FLAG 173, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3330
+MESSAGE "はぁ……レッスン中もリズムが"
+LINE_FEED
+MESSAGE "全然あわないし、ステップも"
+LINE_FEED
+MESSAGE "バラバラで……"
+KEY_WAIT
+VOICE 3331
+MESSAGE "私、疲れてるのかなぁ？"
+KEY_WAIT
+GOTO 58
+LABEL 53
+FLAG 174, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3332
+MESSAGE "自分でもわかる……最近、あまり"
+LINE_FEED
+MESSAGE "上手く踊れてないわね……"
+KEY_WAIT
+VOICE 3333
+MESSAGE "先生にも心配されちゃってるし……"
+LINE_FEED
+MESSAGE "もっと頑張らなくっちゃ。"
+KEY_WAIT
+GOTO 58
+LABEL 54
+FLAG 175, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3227
+MESSAGE "やっぱり、習うより教えるほうが"
+LINE_FEED
+MESSAGE "何倍も大変ね。"
+KEY_WAIT
+VOICE 3228
+MESSAGE "うまく伝えられないと"
+LINE_FEED
+MESSAGE "生徒もついてきてくれないし……"
+KEY_WAIT
+VOICE 3229
+MESSAGE "そういう意味では、いい復習に"
+LINE_FEED
+MESSAGE "なってるのかもしれないわ。"
+KEY_WAIT
+GOTO 58
+LABEL 55
+FLAG 176, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3230
+MESSAGE "魔術って、習うより教えるほうが"
+LINE_FEED
+MESSAGE "何倍も大変なのね。"
+KEY_WAIT
+VOICE 3231
+MESSAGE "本に書いてあることだけじゃ、"
+LINE_FEED
+MESSAGE "ぜんぜん足りないわ。"
+KEY_WAIT
+VOICE 3232
+MESSAGE "私自身がもっと"
+LINE_FEED
+MESSAGE "魔術を理解しないと……"
+KEY_WAIT
+GOTO 58
+LABEL 56
+FLAG 177, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3233
+MESSAGE "私が教える立場になって"
+LINE_FEED
+MESSAGE "わかったの。最近の子って"
+LINE_FEED
+MESSAGE "礼儀作法がとてもおざなりだわ。"
+KEY_WAIT
+VOICE 3234
+MESSAGE "でも、昔の私もきっとそう見えて"
+LINE_FEED
+MESSAGE "いたんだ、って思うと……"
+LINE_FEED
+MESSAGE "とても恥ずかしいわ……"
+KEY_WAIT
+GOTO 58
+LABEL 57
+FLAG 178, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3235
+MESSAGE "ロレン先生があんな性格だし、"
+LINE_FEED
+MESSAGE "授業の準備って"
+LINE_FEED
+MESSAGE "ほとんどが助手任せなの。"
+KEY_WAIT
+VOICE 3236
+MESSAGE "でも、一緒に講義をしていると"
+LINE_FEED
+MESSAGE "新しい発見がいっぱいあるし……"
+LINE_FEED
+MESSAGE "とても有意義だわ。"
+KEY_WAIT
+VOICE 3237
+MESSAGE "自分の作品を作る時間も"
+LINE_FEED
+MESSAGE "取れるから、一石二鳥って"
+LINE_FEED
+MESSAGE "感じかしらね。"
+KEY_WAIT
+LABEL 58
+END 0

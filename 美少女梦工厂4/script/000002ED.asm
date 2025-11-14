@@ -1,0 +1,433 @@
+LABEL 0
+SELECT 3, 2, "買いたい", 3, "売りたい", 4, "店を出る"
+LABEL 1
+SELECT 2, 3, "売りたい", 4, "店を出る"
+LABEL 2
+END 0
+LABEL 3
+END 1
+LABEL 4
+END 2
+LABEL 5
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "また、来てくれよ。"
+KEY_WAIT
+END 0
+LABEL 6
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "ゆっくり見ていってくれよ"
+END 0
+LABEL 7
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "どれを売るんだい"
+END 0
+LABEL 8
+FLAG 1705, 1
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "何、家が荷物で一杯だって？"
+LINE_FEED
+MESSAGE "それなら、うちでいらない物を"
+LINE_FEED
+MESSAGE "買い取ってやるよ。"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 1705, 1
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "これ以上、家に荷物を置くことは"
+LINE_FEED
+MESSAGE "できません。"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "このアイテムは既に持っています。"
+END 0
+LABEL 11
+FLAG 597, 1
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "いらっしゃい。"
+LINE_FEED
+MESSAGE "初めてのお客さんだね。"
+LINE_FEED
+MESSAGE "うちは王国一の道具屋だ。"
+KEY_WAIT
+MESSAGE "品ぞろえは抜群！"
+LINE_FEED
+MESSAGE "ない物はないからな。"
+LINE_FEED
+MESSAGE "自由に見ていってくれ。"
+KEY_WAIT
+MESSAGE "買い取りもやってるから、"
+LINE_FEED
+MESSAGE "いらないものがあったら"
+LINE_FEED
+MESSAGE "持ってきてくれ。"
+KEY_WAIT
+MESSAGE "それで、今日はどんな用だい？"
+END 0
+LABEL 12
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "やあ、いらっしゃい。"
+LINE_FEED
+MESSAGE "今日はどんな用だい？"
+END 0
+LABEL 13
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "ありがとうよ。"
+END 0
+LABEL 14
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "なんだ、やめるのか？"
+KEY_WAIT
+END 0
+LABEL 15
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "おや？"
+LINE_FEED
+MESSAGE "お金がたりないぜ。"
+END 0
+LABEL 16
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "今回はお得意様にサービスだ。"
+LINE_FEED
+MESSAGE "少し、値引きしておくよ。"
+END 0
+LABEL 17
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "ありがとう。"
+LINE_FEED
+MESSAGE "また、来てくれよ。"
+KEY_WAIT
+END 0
+LABEL 18
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "どうするよ？"
+END 0
+LABEL 19
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは、練習用の模擬刀だ。"
+LINE_FEED
+MESSAGE "ウォーボルフさんの道場でも"
+LINE_FEED
+MESSAGE "使ってる、なかなかいい物だぞ。"
+END 0
+LABEL 20
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは鉄の長剣だ。"
+LINE_FEED
+MESSAGE "武闘大会に出るんなら、"
+LINE_FEED
+MESSAGE "これぐらいは扱えないとな。"
+END 0
+LABEL 21
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはミスリルの長剣だな。"
+LINE_FEED
+MESSAGE "鉄より軽くて丈夫なもんだから、"
+LINE_FEED
+MESSAGE "武器の中でも人気のある商品だ。"
+END 0
+LABEL 22
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは東方片刃剣っていうんだ。"
+LINE_FEED
+MESSAGE "東方の島国で使われてる剣で、"
+LINE_FEED
+MESSAGE "切れ味は抜群なんだが扱いづれえ。"
+END 0
+LABEL 23
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは見習の杖だ。"
+LINE_FEED
+MESSAGE "装備者の魔術の力を上げてくれるん"
+LINE_FEED
+MESSAGE "でな、値段にしては結構使えるぞ。"
+END 0
+LABEL 24
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは水晶の杖だな。"
+LINE_FEED
+MESSAGE "見習の杖よりも魔術の増幅率が"
+LINE_FEED
+MESSAGE "高い優れものだ。"
+END 0
+LABEL 25
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはミスリルの杖だな。"
+LINE_FEED
+MESSAGE "ミスリルには魔力増強の力もある。"
+LINE_FEED
+MESSAGE "そこらの杖より格段に優秀な杖だ。"
+END 0
+LABEL 26
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは皮の鎧だ。"
+LINE_FEED
+MESSAGE "気休め程度の鎧だが、軽くて"
+LINE_FEED
+MESSAGE "動きやすい。子供にピッタリだな。"
+END 0
+LABEL 27
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは鉄の鎧だ。"
+LINE_FEED
+MESSAGE "武闘大会に出るんなら、せめて"
+LINE_FEED
+MESSAGE "これくらいは装備しとかんとな。"
+END 0
+LABEL 28
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはミスリルの鎧だな。"
+LINE_FEED
+MESSAGE "普通の鎧と違って、そいつは魔術も"
+LINE_FEED
+MESSAGE "防ぐことができる優れもんだ。"
+END 0
+LABEL 29
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはシルクの鎧だ。"
+LINE_FEED
+MESSAGE "見た目からは想像できないが、"
+LINE_FEED
+MESSAGE "鎧としても逸品だな。"
+END 0
+LABEL 30
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは抗魔の法衣だな。"
+LINE_FEED
+MESSAGE "魔力の込められた特別なローブだ。"
+LINE_FEED
+MESSAGE "王宮魔術騎士団でも使われてる。"
+END 0
+LABEL 31
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは油絵セットだ。芸術家を"
+LINE_FEED
+MESSAGE "目指すんだったら、自分用の"
+LINE_FEED
+MESSAGE "道具ぐらいもってないとな。"
+END 0
+LABEL 32
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはダンスシューズだ。"
+LINE_FEED
+MESSAGE "普通の靴よりも格段に"
+LINE_FEED
+MESSAGE "踊りやすいらしいぞ。"
+END 0
+LABEL 33
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはお人形だな。"
+LINE_FEED
+MESSAGE "お嬢ちゃんが疲れたときにそっと"
+LINE_FEED
+MESSAGE "プレゼント。喜ぶぜ、きっとな。"
+END 0
+LABEL 34
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは詩集だ。"
+LINE_FEED
+MESSAGE "感受性を伸ばすんだったら、"
+LINE_FEED
+MESSAGE "読ませて損はないぞ。"
+END 0
+LABEL 35
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは書物だ。"
+LINE_FEED
+MESSAGE "頭をよくしたいんだったら、"
+LINE_FEED
+MESSAGE "本の１冊や２冊読んどくべきだな。"
+END 0
+LABEL 36
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはティーカップだ。"
+LINE_FEED
+MESSAGE "気品あるレディを目指す？　なら、"
+LINE_FEED
+MESSAGE "こういったもんを持ってないとな。"
+END 0
+LABEL 37
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはお化粧道具だ。"
+LINE_FEED
+MESSAGE "ま、子供用だが一通りのもんは"
+LINE_FEED
+MESSAGE "揃ってる。それなりに使えるぞ。"
+END 0
+LABEL 38
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはハイヒールだ。"
+LINE_FEED
+MESSAGE "気品のある女性ってのは、"
+LINE_FEED
+MESSAGE "履くもんから違うんだぜ。"
+END 0
+LABEL 39
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは裁縫道具だ。"
+LINE_FEED
+MESSAGE "家庭的な女性の必需品って奴だ。"
+LINE_FEED
+MESSAGE "家事のときなんかに役立つぜ。"
+END 0
+LABEL 40
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは法律書だ。"
+LINE_FEED
+MESSAGE "小難しい事ばっかり書いてあるが、"
+LINE_FEED
+MESSAGE "知っといて損はないはずだ。"
+END 0
+LABEL 41
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつは磨かれた鏡だ。"
+LINE_FEED
+MESSAGE "毎日、鏡を見ることで自分に"
+LINE_FEED
+MESSAGE "自信が持てる！　……かもな。"
+END 0
+LABEL 42
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "そいつはパワーリストだ。"
+LINE_FEED
+MESSAGE "身につけるだけで自然に筋力が"
+LINE_FEED
+MESSAGE "つくって寸法だ。"
+END 0
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "金のないときゃ、親父の笑顔。"
+LINE_FEED
+MESSAGE "いや、うれしいもんだぜ……"
+KEY_WAIT
+MESSAGE "こいつは花束。"
+LINE_FEED
+MESSAGE "プレゼントの定番だな。"
+LINE_FEED
+MESSAGE "もらって嫌がる娘もいないだろ？"
+KEY_WAIT
+MESSAGE "こいつはオルゴールだ。"
+LINE_FEED
+MESSAGE "ちょっと値が張るが、いい品だぜ。"
+LINE_FEED
+MESSAGE "ま、それなりに喜ばれるだろうさ。"
+KEY_WAIT
+END 0
+LABEL 43
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "まいどあり。"
+END 0
+LABEL 44
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "悪いがそいつは買い取れないな。"
+LINE_FEED
+MESSAGE "他に売るものはあるか？"
+END 0
+LABEL 45
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "今着てるだろ？"
+END 0
+LABEL 46
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "ありがとうよ。"
+LINE_FEED
+END 0
+LABEL 47
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "なんだ、やめるのか？"
+KEY_WAIT
+END 0
+LABEL 48
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "おや？　お金がたりないぜ。"
+LINE_FEED
+MESSAGE "まけてやりたいとこだが、"
+LINE_FEED
+MESSAGE "こっちも商売なんでな。"
+END 0
+LABEL 49
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "今回はお得意様にサービスだ。"
+LINE_FEED
+MESSAGE "少し、値引きしておくよ。"
+KEY_WAIT
+END 0
+LABEL 50
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "さあ、早く家に帰ってやんな。"
+KEY_WAIT
+END 0
+LABEL 51
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "いや、親父の笑顔だけで"
+LINE_FEED
+MESSAGE "うれしいもんだぜ……"
+KEY_WAIT
+END 0
+LABEL 52
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "こいつは花束。"
+LINE_FEED
+MESSAGE "プレゼントの定番だな。"
+LINE_FEED
+MESSAGE "もらって嫌がる娘もいないだろ？"
+END 0
+LABEL 53
+FACE 53
+MESSAGE_NAME "アール"
+MESSAGE "こいつはオルゴールだ。"
+LINE_FEED
+MESSAGE "ちょっと値が張るが、いい品だぜ。"
+LINE_FEED
+MESSAGE "ま、それなりに喜ばれるだろうさ。"
+END 0

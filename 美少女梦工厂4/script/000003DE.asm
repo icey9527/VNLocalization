@@ -1,0 +1,995 @@
+LABEL 0
+END 0
+LABEL 1
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "これよりダンスコンテストを"
+LINE_FEED
+MESSAGE "行います。ご臨席いただく国王より"
+LINE_FEED
+MESSAGE "お言葉をちょうだいします。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "未来の舞踏会で優雅に踊れるよう、"
+LINE_FEED
+MESSAGE "日々練習に励んでいると思う。"
+LINE_FEED
+MESSAGE "典雅な美を望みたい。"
+KEY_WAIT
+END 0
+LABEL 2
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2433
+MESSAGE "うわ～、人がいっぱいいるよ～。"
+LINE_FEED
+MESSAGE "こんな所でちゃんと踊れるかな？"
+KEY_WAIT
+END 0
+LABEL 3
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2434
+MESSAGE "大勢の前でダンスを見せるなんて、"
+LINE_FEED
+MESSAGE "緊張しちゃうよ……"
+LINE_FEED
+MESSAGE "間違えたら恥ずかしいなぁ。"
+KEY_WAIT
+END 0
+LABEL 4
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2435
+MESSAGE "もうすぐ私の出番だわ……"
+LINE_FEED
+MESSAGE "踊ってる最中にステップを"
+LINE_FEED
+MESSAGE "忘れちゃったらどうしましょう？"
+KEY_WAIT
+END 0
+LABEL 5
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2436
+MESSAGE "うわ～、今年も人がいっぱいで"
+LINE_FEED
+MESSAGE "緊張するなあ。体で覚えたステップ"
+LINE_FEED
+MESSAGE "すんなりでてくれるといいけど……"
+KEY_WAIT
+END 0
+LABEL 6
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2437
+MESSAGE "リラックス、リラックス。"
+LINE_FEED
+MESSAGE "落ち着いて、いつも通りに踊れば"
+LINE_FEED
+MESSAGE "何の問題もないんだから……"
+KEY_WAIT
+END 0
+LABEL 7
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2438
+MESSAGE "はぁ……何度体験しても、この"
+LINE_FEED
+MESSAGE "雰囲気には慣れないわね……"
+LINE_FEED
+MESSAGE "落ち着いて……リラックスよ……"
+KEY_WAIT
+END 0
+LABEL 8
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "とうとうわたくしたちの"
+LINE_FEED
+MESSAGE "対戦ですわね……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2439
+MESSAGE "う、うん……"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ふっふっふ……"
+LINE_FEED
+MESSAGE "負けませんわよ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2440
+MESSAGE "わ、私だって！"
+LINE_FEED
+MESSAGE "ぜったいに勝つんだから！"
+KEY_WAIT
+VOICE 2441
+MESSAGE "（よーし、頑張るぞっ！）"
+KEY_WAIT
+END 0
+LABEL 9
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "さあ、雌雄を決する時間が"
+LINE_FEED
+MESSAGE "やって参りましたわね。"
+KEY_WAIT
+MESSAGE "と言っても、既に勝負は"
+LINE_FEED
+MESSAGE "決まったようなものですけれど。"
+LINE_FEED
+MESSAGE "ふふふふっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2442
+MESSAGE "どうかしら？"
+LINE_FEED
+MESSAGE "勝ったと思って油断してると、"
+LINE_FEED
+MESSAGE "足下をすくわれちゃうんだから。"
+KEY_WAIT
+VOICE 2443
+MESSAGE "私だって……負けない！"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "とうとうこの瞬間が"
+LINE_FEED
+MESSAGE "やってきましたわね。"
+KEY_WAIT
+MESSAGE "フフフフフ……"
+LINE_FEED
+MESSAGE "勝利の女神はわたくしのそばに……"
+LINE_FEED
+MESSAGE "勝たせていただきますわ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2444
+MESSAGE "勝負は時の運。"
+LINE_FEED
+MESSAGE "最後まで諦めないからね。"
+LINE_FEED
+MESSAGE "……負けないよ。"
+KEY_WAIT
+END 0
+LABEL 11
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "今回の優勝者は……"
+KEY_WAIT
+END 0
+LABEL 12
+SE_PLAY 11
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+SE_STOP
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 13
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様の優勝おめでとうございます"
+LINE_FEED
+MESSAGE "お嬢様の流れるような踊りに"
+LINE_FEED
+MESSAGE "みんな見とれていたようです。"
+KEY_WAIT
+END 0
+LABEL 14
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様の優勝おめでとうございます"
+LINE_FEED
+MESSAGE "わたしは何度見ても、お嬢様の"
+LINE_FEED
+MESSAGE "ダンスに見とれてしまいます。"
+KEY_WAIT
+END 0
+LABEL 15
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様の優勝おめでとうございます"
+LINE_FEED
+MESSAGE "他の方もお嬢様のダンスを見て"
+LINE_FEED
+MESSAGE "あきらめたようです。"
+KEY_WAIT
+END 0
+LABEL 16
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2445
+MESSAGE "あはっ！"
+LINE_FEED
+MESSAGE "本当に私が優勝でいいの？"
+LINE_FEED
+MESSAGE "……わぁい、やったぁ！"
+KEY_WAIT
+END 0
+LABEL 17
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2446
+MESSAGE "負けても悔いの無いよう必死でした"
+LINE_FEED
+MESSAGE "それが優勝だなんて……まだ"
+LINE_FEED
+MESSAGE "信じられないです！ふふふ……！"
+KEY_WAIT
+END 0
+LABEL 18
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2447
+MESSAGE "毎回、高レベルの争いになる"
+LINE_FEED
+MESSAGE "この大会で勝てたなんて……"
+LINE_FEED
+MESSAGE "とても幸運だったと思います！"
+KEY_WAIT
+END 0
+LABEL 19
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "やったー！　やりましたわっ！"
+LINE_FEED
+MESSAGE "わたくしってやっぱり、すごーい！"
+LINE_FEED
+MESSAGE "あははははっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2448
+MESSAGE "ま、負けちゃった……"
+LINE_FEED
+MESSAGE "ううっ、悔しいよぉ～！！"
+KEY_WAIT
+END 0
+LABEL 20
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ほほほほほ、"
+LINE_FEED
+MESSAGE "あなたもなかなか"
+LINE_FEED
+MESSAGE "頑張ったようですけれど。"
+KEY_WAIT
+MESSAGE "やっぱり、わたくしのほうが"
+LINE_FEED
+MESSAGE "上だったようですわねっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2449
+MESSAGE "ううっ、ごめんなさい"
+LINE_FEED
+MESSAGE "お父さん…"
+LINE_FEED
+MESSAGE "負けちゃったよお～……"
+KEY_WAIT
+END 0
+LABEL 21
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "さすがは、[娘の名前]さん。"
+LINE_FEED
+MESSAGE "いい勝負でしたわね！"
+KEY_WAIT
+MESSAGE "でも、今回はわたくしが"
+LINE_FEED
+MESSAGE "いただきましたわ。"
+LINE_FEED
+MESSAGE "うふふふふっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2450
+MESSAGE "おめでとう、クリスチーナ。"
+LINE_FEED
+MESSAGE "勝てなかったのは悔しいけど……"
+KEY_WAIT
+VOICE 2451
+MESSAGE "でも、次は負けないからね。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ええ、次の勝負も、"
+LINE_FEED
+MESSAGE "楽しみにしていますわ。"
+KEY_WAIT
+END 0
+LABEL 22
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2452
+MESSAGE "うう、失敗しちゃったぁ……"
+LINE_FEED
+MESSAGE "あんなところで転んじゃうなんて、"
+LINE_FEED
+MESSAGE "かっこ悪いよぉ～"
+KEY_WAIT
+END 0
+LABEL 23
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2453
+MESSAGE "自分では悪くない出来だと"
+LINE_FEED
+MESSAGE "思ったんだけど……"
+LINE_FEED
+MESSAGE "私もまだまだね……"
+KEY_WAIT
+END 0
+LABEL 24
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2454
+MESSAGE "あそこでステップを"
+LINE_FEED
+MESSAGE "間違えさえしなければ……"
+LINE_FEED
+MESSAGE "悔しいわ……"
+KEY_WAIT
+END 0
+LABEL 25
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2455
+MESSAGE "やったぁ、勝っちゃった！"
+LINE_FEED
+MESSAGE "あはははははっ！"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "く、くやしぃ～っ！！"
+LINE_FEED
+MESSAGE "なんで、どうしてわたくしが"
+LINE_FEED
+MESSAGE "負けてしまうんですのっ！！"
+KEY_WAIT
+END 0
+LABEL 26
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2456
+MESSAGE "やった！"
+LINE_FEED
+MESSAGE "今回は私の勝ちだね、"
+LINE_FEED
+MESSAGE "クリスチーナっ！！"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あんなに頑張りましたのに、"
+LINE_FEED
+MESSAGE "どうしてわたくしが"
+LINE_FEED
+MESSAGE "敗北してしまうの㌍"
+KEY_WAIT
+MESSAGE "く、くぅ～っ！"
+LINE_FEED
+MESSAGE "悔しいですわ、"
+LINE_FEED
+MESSAGE "納得いかないですわっ！！"
+KEY_WAIT
+END 0
+LABEL 27
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2457
+MESSAGE "いい勝負だったけど……今回は"
+LINE_FEED
+MESSAGE "私の勝ちだね、クリスチーナ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "くっ……今回はわたくしの"
+LINE_FEED
+MESSAGE "完敗ですわ。"
+KEY_WAIT
+MESSAGE "ひとまずは「おめでとう」と"
+LINE_FEED
+MESSAGE "申し上げておきます。"
+KEY_WAIT
+MESSAGE "さすが[娘の名前]さん、"
+LINE_FEED
+MESSAGE "わたくしが見込んだライバルだけの"
+LINE_FEED
+MESSAGE "ことはありますわね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2458
+MESSAGE "うん、ありがとうクリスチーナ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "でも、次は雪辱を"
+LINE_FEED
+MESSAGE "果たしてみせますわ。"
+LINE_FEED
+MESSAGE "覚悟してらしてね！"
+KEY_WAIT
+END 0
+LABEL 28
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "[娘の名前]よ。"
+LINE_FEED
+MESSAGE "幼いながらも"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2459
+MESSAGE "ありがとうございます、王様っ！"
+LINE_FEED
+MESSAGE "次も負けないよう、頑張ります。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ、期待しておるぞ。"
+KEY_WAIT
+END 0
+LABEL 29
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "[娘の名前]よ。こたびの活躍、"
+LINE_FEED
+MESSAGE "見事であった。その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2460
+MESSAGE "ありがとうございます、王様。"
+LINE_FEED
+MESSAGE "次回も、皆さんのお目汚しに"
+LINE_FEED
+MESSAGE "ならないよう、努力します。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ、がんばったな。"
+LINE_FEED
+MESSAGE "これからも精進するのだぞ。"
+KEY_WAIT
+END 0
+LABEL 30
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "[娘の名前]よ。"
+LINE_FEED
+MESSAGE "こたびの活躍、まっこと見事。"
+KEY_WAIT
+MESSAGE "あれほどの舞を身につけた者は、"
+LINE_FEED
+MESSAGE "王国広しといえど"
+LINE_FEED
+MESSAGE "そうはおるまいて。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2461
+MESSAGE "お褒めにあずかり"
+LINE_FEED
+MESSAGE "光栄至極に存じます、陛下。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+END 0
+LABEL 31
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "クリスチーナよ、幼いながらも、"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ありがとうございます、王様！"
+LINE_FEED
+MESSAGE "これからも、頑張りますわ！"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ、がんばったな。"
+LINE_FEED
+MESSAGE "これからも精進するのだぞ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "はいっ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2462
+MESSAGE "クリスチーナちゃん、すごいなぁ…"
+LINE_FEED
+MESSAGE "私も頑張らなきゃ！"
+KEY_WAIT
+END 0
+LABEL 32
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "クリスチーナよ、"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "あれほどの舞を身につけた者は、"
+LINE_FEED
+MESSAGE "王国広しといえど"
+LINE_FEED
+MESSAGE "そうはおるまいて。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ありがとうございます王様。"
+LINE_FEED
+MESSAGE "この名誉に恥じないよう、"
+LINE_FEED
+MESSAGE "これからも励みますわ。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ。期待しておるぞ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "はいっ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2463
+MESSAGE "クリスチーナ、すごいな……"
+LINE_FEED
+MESSAGE "でも、次は私だって！"
+KEY_WAIT
+END 0
+LABEL 33
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "クリスチーナよ、"
+LINE_FEED
+MESSAGE "こたびの活躍、見事であった。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ありがとうございます王様。"
+LINE_FEED
+MESSAGE "この名誉に恥じないよう、"
+LINE_FEED
+MESSAGE "これからも励みますわ。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ。期待しておるぞ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "はいっ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2463
+MESSAGE "クリスチーナ、すごいな……"
+LINE_FEED
+MESSAGE "でも、次は私だって！"
+KEY_WAIT
+END 0
+LABEL 34
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "クリスチーナよ、"
+LINE_FEED
+MESSAGE "こたびの活躍、まっこと見事。"
+KEY_WAIT
+MESSAGE "その美しさ、気品……"
+LINE_FEED
+MESSAGE "全てにおいて"
+LINE_FEED
+MESSAGE "素晴らしいものであった。"
+KEY_WAIT
+MESSAGE "よいものを見せてくれた。"
+LINE_FEED
+MESSAGE "礼を言うぞ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ありがとうございます陛下。"
+KEY_WAIT
+MESSAGE "この身には過ぎた"
+LINE_FEED
+MESSAGE "お褒めの言葉をいただき、"
+LINE_FEED
+MESSAGE "光栄の極みでございます。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ。これからも"
+LINE_FEED
+MESSAGE "精進を続けるように。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "はいっ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2464
+MESSAGE "（すごいな、クリスチーナ。"
+LINE_FEED
+MESSAGE "次は、私も……！）"
+KEY_WAIT
+END 0
+LABEL 35
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "クリスチーナよ、"
+LINE_FEED
+MESSAGE "こたびの活躍、まっこと見事。"
+KEY_WAIT
+MESSAGE "その栄誉をたたえ、"
+LINE_FEED
+MESSAGE "ここに賞してつかわす。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ありがとうございます陛下。"
+KEY_WAIT
+MESSAGE "この身には過ぎた"
+LINE_FEED
+MESSAGE "お褒めの言葉をいただき、"
+LINE_FEED
+MESSAGE "光栄の極みでございます。"
+KEY_WAIT
+FACE 40
+MESSAGE_NAME "国王"
+MESSAGE "うむ。これからも"
+LINE_FEED
+MESSAGE "精進を続けるように。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "はいっ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2464
+MESSAGE "（すごいな、クリスチーナ。"
+LINE_FEED
+MESSAGE "次は、私も……！）"
+KEY_WAIT
+END 0
+LABEL 36
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "う～ん、今回は２人とも"
+LINE_FEED
+MESSAGE "ダメでしたわね。"
+LINE_FEED
+MESSAGE "残念ですわ。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2465
+MESSAGE "うん、そうだね"
+LINE_FEED
+MESSAGE "クリスチーナちゃん。"
+LINE_FEED
+MESSAGE "来年は、もっと頑張ろうね。"
+KEY_WAIT
+END 0
+LABEL 37
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "今回は、お互い残念でしたわね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2466
+MESSAGE "でも、また来年もあるよ。"
+LINE_FEED
+MESSAGE "だから、お互いもっと頑張ろう！"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "そうですわね。次こそは、あなたと"
+LINE_FEED
+MESSAGE "ちゃんと勝負をつけますわ！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2467
+MESSAGE "うん、私こそ！"
+KEY_WAIT
+END 0
+LABEL 38
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ハァ……"
+LINE_FEED
+MESSAGE "今回は今ひとつな結果に"
+LINE_FEED
+MESSAGE "なってしまいましたわね。"
+KEY_WAIT
+MESSAGE "あなたとの勝負も"
+LINE_FEED
+MESSAGE "お預けになってしまいましたし。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2468
+MESSAGE "うん、私も残念。"
+LINE_FEED
+MESSAGE "せっかく、気合い入れてたのにな。"
+KEY_WAIT
+END 0
+LABEL 39
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "みなさま、お待たせしました。"
+LINE_FEED
+MESSAGE "最初にダンスを披露してくれるのは"
+LINE_FEED
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 40
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "すばらしい演技でした。"
+LINE_FEED
+MESSAGE "さて、二人目の参加者は"
+LINE_FEED
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 41
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "盛り上がってきましたな。"
+LINE_FEED
+MESSAGE "三人目の参加者は"
+LINE_FEED
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 42
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "とうとう、"
+LINE_FEED
+MESSAGE "最後の参加者のダンスとなります。"
+LINE_FEED
+MESSAGE "[汎用文字列]"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 43
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2650
+MESSAGE "とうとう来たわ、"
+LINE_FEED
+MESSAGE "よ、よろしくおねがいします。"
+KEY_WAIT
+END 0
+LABEL 44
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2620
+MESSAGE "とうとう来たわ、"
+LINE_FEED
+MESSAGE "よ、よろしくおねがいします。"
+KEY_WAIT
+END 0
+LABEL 45
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2577
+MESSAGE "とうとう来たわ、"
+LINE_FEED
+MESSAGE "よ、よろしくおねがいします。"
+KEY_WAIT
+END 0
+LABEL 46
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ふっふっふ……"
+LINE_FEED
+MESSAGE "負けませんわよ！"
+KEY_WAIT
+END 0
+LABEL 47
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "フフフフフ……"
+LINE_FEED
+MESSAGE "勝利の女神はわたくしのそばに……"
+LINE_FEED
+MESSAGE "勝たせていただきますわ！"
+KEY_WAIT
+END 0
+LABEL 48
+FACE 85
+MESSAGE_NAME "ランジェ"
+MESSAGE "がんばらなくっちゃ。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 49
+FACE 84
+MESSAGE_NAME "ミーナ"
+MESSAGE "ふふっ、"
+LINE_FEED
+MESSAGE "私の演技で"
+LINE_FEED
+MESSAGE "観客を魅了して見せるわ。"
+KEY_WAIT
+END 0
+LABEL 50
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "かわいい子だったなぁ。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 51
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "ふむ、元気な娘ですな。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 52
+FACE 44
+MESSAGE_NAME "伯爵"
+MESSAGE "なかなか、情熱的な踊りだったな。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 53
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "もっともっと、"
+LINE_FEED
+MESSAGE "楽しませて欲しいわ。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 54
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "今の踊り手の名前は…。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 55
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "力強さが感じられるな。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 56
+FACE 44
+MESSAGE_NAME "伯爵"
+MESSAGE "ほう、これは、斬新な…"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 57
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "型にはめられてる踊りだけじゃ"
+LINE_FEED
+MESSAGE "ダメよね。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 58
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "良いものを見せてもらったよ。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 59
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "優雅な踊りもよいものだな。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 60
+FACE 44
+MESSAGE_NAME "伯爵"
+MESSAGE "心と動きが一体となっている。"
+LINE_FEED
+MESSAGE "身体表現とはつまり…"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 61
+FACE 80
+MESSAGE_NAME "王妃"
+MESSAGE "美しいだけじゃ、"
+LINE_FEED
+MESSAGE "退屈しちゃうわ。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+SE_WAIT
+END 0
+LABEL 62
+FACE 41
+MESSAGE_NAME "執政官"
+MESSAGE "ダンスで、これほど感動したのは"
+LINE_FEED
+MESSAGE "初めてでした。"
+LINE_FEED
+MESSAGE "おめでとう。"
+KEY_WAIT
+END 0

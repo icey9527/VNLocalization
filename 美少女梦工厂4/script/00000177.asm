@@ -1,0 +1,232 @@
+LABEL 0
+BG 123
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3500
+MESSAGE "うわぁ！　パパ、すごいね！"
+LINE_FEED
+MESSAGE "お花がこんなにいっぱい。"
+SELECT 3, 1, "いっしょに遊ぶ", 2, "手をにぎる", 3, "花を摘んであげる"
+LABEL 1
+FLAG 447, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3501
+MESSAGE "あはは！"
+LINE_FEED
+MESSAGE "パパ、こっちこっちー！"
+END 0
+LABEL 2
+FLAG 448, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3502
+MESSAGE "うふふ。"
+LINE_FEED
+MESSAGE "パパの手って大きくて"
+LINE_FEED
+MESSAGE "温かいね。"
+END 1
+LABEL 3
+FLAG 449, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 3503
+MESSAGE "わぁ、かわいいお花㍍"
+LINE_FEED
+MESSAGE "パパ、ありがとう。"
+END 2
+LABEL 4
+FLAG 450, 1
+BG 124
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3504
+MESSAGE "わぁ、すごーーーーい！"
+LINE_FEED
+MESSAGE "お空と水がつながってる……"
+LINE_FEED
+MESSAGE "これが海っていうんだね！"
+KEY_WAIT
+FACE 1
+VOICE 3505
+MESSAGE "きゃー！　冷たーい！"
+LINE_FEED
+MESSAGE "あはは……"
+KEY_WAIT
+VOICE 3506
+MESSAGE "パパ、こっち、こっち！"
+SELECT 3, 5, "水にさわる", 6, "いきなり水をかける", 7, "一緒に砂山を作る"
+LABEL 5
+FLAG 451, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3507
+MESSAGE "ねっ？　冷たいでしょ？"
+KEY_WAIT
+VOICE 3508
+MESSAGE "こんなにたくさんのお水、"
+LINE_FEED
+MESSAGE "どこから流れてるんだろ？"
+KEY_WAIT
+VOICE 3509
+MESSAGE "大きいよね～……"
+LINE_FEED
+MESSAGE "向こう岸も見えないよ……"
+END 0
+LABEL 6
+FLAG 452, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3510
+MESSAGE "きゃあ！　あう、しょっぱ～い！"
+LINE_FEED
+MESSAGE "もう、やったなぁ～！"
+KEY_WAIT
+FACE 0
+VOICE 3511
+MESSAGE "パパにもお返しよ！"
+LINE_FEED
+MESSAGE "えーい！"
+KEY_WAIT
+FACE 1
+VOICE 3512
+MESSAGE "あははは、楽し～い㍍"
+END 1
+LABEL 7
+FLAG 453, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3513
+MESSAGE "あれっ？"
+LINE_FEED
+MESSAGE "ねぇねぇ、パパ何してるの？"
+KEY_WAIT
+FACE 1
+VOICE 3514
+MESSAGE "うわーっ、お山作るの㌍"
+LINE_FEED
+MESSAGE "楽しそう。"
+LINE_FEED
+MESSAGE "ねぇねぇ、私もいっしょにやる㍍"
+END 2
+LABEL 8
+FLAG 454, 1
+BG 125
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3515
+MESSAGE "あはは……栗だ栗だー！"
+LINE_FEED
+MESSAGE "このちくちくしたのがたくさん"
+LINE_FEED
+MESSAGE "ついてるの、栗っていうんだよね！"
+KEY_WAIT
+VOICE 3516
+MESSAGE "ほらパパ、いっぱいあるよー！"
+LINE_FEED
+MESSAGE "うふふ……"
+KEY_WAIT
+FACE 1
+VOICE 3517
+MESSAGE "えいっ、パパ、くらえー！"
+SELECT 3, 9, "投げ返す", 10, "すばやく避ける", 11, "叱る"
+LABEL 9
+FLAG 455, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3518
+MESSAGE "きゃあ！　いたいいたい！"
+LINE_FEED
+MESSAGE "もう、パパぁ～！"
+LINE_FEED
+MESSAGE "そーれ、お返しよ～っ！"
+END 0
+LABEL 10
+FLAG 456, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3519
+MESSAGE "うわぁ、すごい！"
+LINE_FEED
+MESSAGE "やっぱり、パパは格好いいね㍍"
+KEY_WAIT
+FACE 1
+VOICE 3520
+MESSAGE "それっ！　それそれーっ！"
+END 1
+LABEL 11
+FLAG 457, 1
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 3521
+MESSAGE "あう……"
+LINE_FEED
+MESSAGE "ごめんなさい、パパ……"
+END 2
+LABEL 12
+FLAG 458, 1
+BG 126
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3522
+MESSAGE "うわーっ、パパ、見て見て！"
+LINE_FEED
+MESSAGE "白いのがいっぱい降ってる㍍"
+LINE_FEED
+MESSAGE "これが雪なんだね！"
+SELECT 3, 13, "感想を聞く", 14, "雪球を投げる", 15, "抱きしめる"
+LABEL 13
+FLAG 459, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3523
+MESSAGE "パパが冬なのに寒いところ行くって"
+LINE_FEED
+MESSAGE "言うからビックリしたけど……"
+KEY_WAIT
+VOICE 3524
+MESSAGE "雪を見るためだったんだね！"
+LINE_FEED
+MESSAGE "真っ白……すごくきれい……"
+KEY_WAIT
+FACE 1
+VOICE 3525
+MESSAGE "冷たいのに、なんだかぽかぽか"
+LINE_FEED
+MESSAGE "してくるよ……㍍"
+END 0
+LABEL 14
+FLAG 460, 1
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 3526
+MESSAGE "きゃっ㌍　あーん、つめたーい！"
+LINE_FEED
+MESSAGE "でも柔らか～い！"
+KEY_WAIT
+FACE 1
+VOICE 3527
+MESSAGE "よーし、こっちだって……"
+LINE_FEED
+MESSAGE "えいっ！　それっ！"
+LINE_FEED
+MESSAGE "ふふふ……楽しいね、パパ㍍"
+END 1
+LABEL 15
+FLAG 461, 1
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 3528
+MESSAGE "え？　な、何、パパ？"
+LINE_FEED
+MESSAGE "急にどうしたの㌍"
+KEY_WAIT
+FACE 0
+VOICE 3529
+MESSAGE "えっ？　うん。暖かいね。"
+LINE_FEED
+MESSAGE "そっか。寒い時の方が、"
+LINE_FEED
+MESSAGE "暖かいんだね……"
+END 2

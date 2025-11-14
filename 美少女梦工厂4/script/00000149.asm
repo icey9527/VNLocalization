@@ -1,0 +1,234 @@
+LABEL 0
+FLAG 410, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "あー！　あなたはこの前のっ！"
+LINE_FEED
+MESSAGE "やっぱり来てくれたのね！"
+LINE_FEED
+MESSAGE "レイ、うれしいな～っ！"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "ど、どうも……"
+LINE_FEED
+MESSAGE "[娘の名前]です。"
+LINE_FEED
+MESSAGE "よろしくお願いします。"
+KEY_WAIT
+MESSAGE "ところで、あのぅ……"
+KEY_WAIT
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "ああ、変わった格好だって"
+LINE_FEED
+MESSAGE "思ってる？"
+KEY_WAIT
+MESSAGE "そうよねえ、普通、街の酒場に"
+LINE_FEED
+MESSAGE "メイド服なんて考えないわよねぇ。"
+KEY_WAIT
+MESSAGE "でも、他にないからこそ、"
+LINE_FEED
+MESSAGE "売りになるの。オンリーワンは、"
+LINE_FEED
+MESSAGE "それだけで武器になるのよっ！"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "そ、そういうものなんですか……"
+KEY_WAIT
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "そうそう。そういうものなの。"
+KEY_WAIT
+MESSAGE "それにこの制服、"
+LINE_FEED
+MESSAGE "とってもかわいいでしょ～！"
+LINE_FEED
+MESSAGE "レイの特製なのよ。"
+KEY_WAIT
+MESSAGE "うふふふっ。"
+KEY_WAIT
+MESSAGE "実際、お客さんからの評判は"
+LINE_FEED
+MESSAGE "すっごくイイのよ？"
+LINE_FEED
+MESSAGE "王様にでもなった気分だ！ってね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はぁ……"
+KEY_WAIT
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "まあ、とにかく！"
+LINE_FEED
+MESSAGE "[娘の名前]ちゃんも"
+LINE_FEED
+MESSAGE "しっかり働いてね！"
+KEY_WAIT
+MESSAGE "期待してるから！"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "は、はい、がんばります！"
+KEY_WAIT
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "わからないことがあったら"
+LINE_FEED
+MESSAGE "何でも聞いてね。"
+LINE_FEED
+MESSAGE "私もフロアに出てるから。"
+KEY_WAIT
+MESSAGE "あ、お帰りなさいませ、"
+LINE_FEED
+MESSAGE "ご主人様っ！"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "（店長さん、自分で接客してる……"
+LINE_FEED
+MESSAGE "元気な人だなあ）"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 411, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "あら、よく来てくれたわ。"
+LINE_FEED
+MESSAGE "じゃあ、今週も"
+LINE_FEED
+MESSAGE "頑張ってちょうだいね！"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 412, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "う～ん、スゴイ。完璧じゃないの！"
+LINE_FEED
+MESSAGE "これならウチの評判アップ"
+LINE_FEED
+MESSAGE "間違いなしね！"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、ありがとうございます、"
+LINE_FEED
+MESSAGE "店長！　……えへへっ。"
+KEY_WAIT
+END 0
+LABEL 3
+FLAG 413, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "あらあらあら……"
+LINE_FEED
+MESSAGE "全っ然、ダメじゃないの！"
+KEY_WAIT
+MESSAGE "こんなことじゃ他の店に"
+LINE_FEED
+MESSAGE "また差をつけられちゃうわ……"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "す、すみません～…"
+KEY_WAIT
+END 0
+LABEL 4
+FLAG 414, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "は～い、お疲れ様っ。"
+LINE_FEED
+MESSAGE "次もよろしくお願いね。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "はい、レイさん。"
+LINE_FEED
+MESSAGE "こちらこそよろしくお願いします。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 415, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "仕事はすっかり覚えたようね。"
+LINE_FEED
+MESSAGE "来てもらうようになってから"
+LINE_FEED
+MESSAGE "結構たったし……"
+KEY_WAIT
+MESSAGE "そろそろお給料、"
+LINE_FEED
+MESSAGE "アップしちゃおうか？"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "わっ、本当ですか、店長㌍"
+LINE_FEED
+MESSAGE "ありがとうございますっ！"
+KEY_WAIT
+END 0
+LABEL 6
+FLAG 416, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "お疲れさまぁ～！"
+LINE_FEED
+MESSAGE "あなたが頑張ってくれてるおかげで"
+LINE_FEED
+MESSAGE "お店の評判も上々よ。"
+KEY_WAIT
+MESSAGE "いい機会だから、"
+LINE_FEED
+MESSAGE "お給料、アップしましょうか♪"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あはっ、ありがとうございます！"
+KEY_WAIT
+END 0
+LABEL 7
+FLAG 417, 1
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "うふふふっ、頑張ってるわね、"
+LINE_FEED
+MESSAGE "[娘の名前]ちゃん！"
+KEY_WAIT
+MESSAGE "あなたのおかげで、"
+LINE_FEED
+MESSAGE "すっご～く助かってるわ㍍"
+KEY_WAIT
+MESSAGE "だから、またお給料"
+LINE_FEED
+MESSAGE "アップしてあげるね！"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あはっ、ありがとうございます！"
+KEY_WAIT
+FACE 63
+MESSAGE_NAME "レイ"
+MESSAGE "ねえねえ、この際だから、"
+LINE_FEED
+MESSAGE "本格的にうちに就職してみない？"
+KEY_WAIT
+MESSAGE "[娘の名前]ちゃんならきっと"
+LINE_FEED
+MESSAGE "人気者になれると"
+LINE_FEED
+MESSAGE "思うんだけどな……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "あ、あははは……"
+LINE_FEED
+MESSAGE "考えておきます……"
+KEY_WAIT
+END 0

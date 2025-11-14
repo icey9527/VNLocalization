@@ -1,0 +1,150 @@
+LABEL 0
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "これ以上、家に荷物を置くことは"
+LINE_FEED
+MESSAGE "できません。"
+KEY_WAIT
+END 0
+LABEL 1
+FLAG 619, 1
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "ど、ど～モ……"
+LINE_FEED
+MESSAGE "また商品売りにきたネ……"
+END 0
+LABEL 2
+FLAG 620, 1
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "トホホホ、また商品盗まれたネェ。"
+LINE_FEED
+MESSAGE "ああ、この世に神も警察も"
+LINE_FEED
+MESSAGE "ないあるヨォォォォォ。"
+KEY_WAIT
+MESSAGE "神様、お客様、お願い、助けると"
+LINE_FEED
+MESSAGE "思って買ってあル。"
+END 0
+LABEL 3
+FLAG 621, 1
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "盗人ホイホイ仕掛けたあるヨ。"
+LINE_FEED
+MESSAGE "でも、悪賢くて掛からないネ。"
+LINE_FEED
+MESSAGE "どんな大悪党か顔がみたいヨ。"
+KEY_WAIT
+MESSAGE "なんか買ってくれないと"
+LINE_FEED
+MESSAGE "仕入れはおろか、家に帰ることすら"
+LINE_FEED
+MESSAGE "できないネ。お慈悲ヨ、だんナ。"
+END 0
+LABEL 4
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "ハァァ……もう、ダメある……"
+LINE_FEED
+MESSAGE "香典の先払い代わりになんでも"
+LINE_FEED
+MESSAGE "いいから買ってヨ。"
+END 0
+LABEL 5
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "あ、ありがとウ！"
+LINE_FEED
+MESSAGE "あなたは天使ネ！"
+LINE_FEED
+MESSAGE "神様ネ！"
+END 0
+LABEL 6
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "うう……"
+LINE_FEED
+MESSAGE "やっぱりいらなイ？"
+KEY_WAIT
+END 0
+LABEL 7
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "こ、こっちも貧乏ネ……"
+LINE_FEED
+MESSAGE "これ以上はまけられないヨ。"
+END 0
+LABEL 8
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "じゃあ……"
+LINE_FEED
+MESSAGE "また来る……かもネ……"
+KEY_WAIT
+END 0
+LABEL 9
+FLAG 622, 1
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "な、なんだこれ……"
+LINE_FEED
+MESSAGE "ガラクタばかりじゃないか㌍"
+KEY_WAIT
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "うむム……"
+LINE_FEED
+MESSAGE "で、でも、しかたがないのヨ……"
+KEY_WAIT
+MESSAGE "最近、仕入れて保管した在庫が"
+LINE_FEED
+MESSAGE "ドンドン盗まれてるネ……"
+LINE_FEED
+MESSAGE "こんなことは初めてヨ……"
+KEY_WAIT
+MESSAGE "我が家は絶対、"
+LINE_FEED
+MESSAGE "見つかるはずないのニ……"
+LINE_FEED
+MESSAGE "どうなってんのやラ……"
+KEY_WAIT
+MESSAGE "ああ……このままじゃ、ミーは"
+LINE_FEED
+MESSAGE "破産ネ！　無一文になるネ！"
+LINE_FEED
+MESSAGE "哀れと思って少しは買ってヨ！"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは模擬刀ヨ……"
+END 0
+LABEL 11
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは見習の杖ヨ……"
+END 0
+LABEL 12
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは皮の鎧ヨ……"
+END 0
+LABEL 13
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは油絵セットヨ……"
+END 0
+LABEL 14
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これはダンスシューズヨ……"
+END 0
+LABEL 15
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "このアイテムは既に持っています。"
+END 0

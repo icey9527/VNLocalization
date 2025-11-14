@@ -1,0 +1,287 @@
+LABEL 0
+SELECT 2, 1, "商品を見る", 2, "商品を見ない"
+LABEL 1
+END 0
+LABEL 2
+END 1
+LABEL 3
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "これは……確か持っていたな。"
+END 0
+LABEL 4
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "これ以上、家に荷物を置くことは"
+LINE_FEED
+MESSAGE "できません。"
+KEY_WAIT
+END 0
+LABEL 5
+FLAG 615, 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様、なにやら怪しい行商人が"
+LINE_FEED
+MESSAGE "商品を売りに来たと言っています。"
+KEY_WAIT
+MESSAGE "どうしましょう？"
+LINE_FEED
+MESSAGE "わたしはかかわりあいにならない"
+LINE_FEED
+MESSAGE "ほうがいいんじゃあと……"
+KEY_WAIT
+FACE 38
+MESSAGE_NAME "オーク"
+MESSAGE "どーモ！　どーモ！"
+LINE_FEED
+MESSAGE "あなた、この家の主人？"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "あ、こら！"
+LINE_FEED
+MESSAGE "勝手に入ってくるんじゃない！！"
+KEY_WAIT
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "お初にお目にかかるネ。"
+LINE_FEED
+MESSAGE "ミーはこの周辺で行商している"
+LINE_FEED
+MESSAGE "ダラタンいうネ！"
+KEY_WAIT
+MESSAGE_NAME "ダラタン"
+MESSAGE "ミーの扱う商品は簡単には"
+LINE_FEED
+MESSAGE "手に入らない品物ばかリ！"
+LINE_FEED
+MESSAGE "魔界の品もたくさんあるヨ！"
+KEY_WAIT
+MESSAGE "その効果は抜群ネ！"
+LINE_FEED
+MESSAGE "ぜひ、一度試してみることを"
+LINE_FEED
+MESSAGE "おすすめするネ！"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "もう、しかたないなぁ……"
+KEY_WAIT
+MESSAGE "旦那様。"
+LINE_FEED
+MESSAGE "どうなさいますか？"
+END 0
+LABEL 6
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様……"
+LINE_FEED
+MESSAGE "例のアヤシイ行商人がまた……"
+KEY_WAIT
+END 0
+LABEL 7
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "相変わらず、稼いでるみたいネ。"
+LINE_FEED
+MESSAGE "さて、今日もミーの自慢の"
+LINE_FEED
+MESSAGE "商品見ていくカ？"
+END 0
+LABEL 8
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "年が変わるのは早いネ～"
+LINE_FEED
+MESSAGE "さて、今日もミーの自慢の"
+LINE_FEED
+MESSAGE "商品見ていくカ？"
+END 0
+LABEL 9
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "商売繁盛はいいことネ！"
+LINE_FEED
+MESSAGE "さて、今日もミーの自慢の"
+LINE_FEED
+MESSAGE "商品見ていくカ？"
+END 0
+LABEL 10
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "またまた仕入れてきたヨ！"
+LINE_FEED
+MESSAGE "さて、今日もミーの自慢の"
+LINE_FEED
+MESSAGE "商品見ていくカ？"
+END 0
+LABEL 11
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "マネーは世界を駆け巡るネ。"
+LINE_FEED
+MESSAGE "さて、今日もミーの自慢の"
+LINE_FEED
+MESSAGE "商品見ていくカ？"
+END 0
+LABEL 12
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "どーモ！　また来たヨ！"
+LINE_FEED
+MESSAGE "さて、今日もミーの自慢の"
+LINE_FEED
+MESSAGE "商品見ていくカ？"
+END 0
+LABEL 13
+FLAG 616, 1
+FACE 25
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様はそんなものは無用と"
+LINE_FEED
+MESSAGE "おっしゃっています。"
+LINE_FEED
+MESSAGE "さあ、さっさと帰って帰って。"
+KEY_WAIT
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "おかしいネ……"
+LINE_FEED
+MESSAGE "ここはマネーの匂いがプンプン"
+LINE_FEED
+MESSAGE "なのニ……"
+KEY_WAIT
+END 0
+LABEL 14
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "残念ネ……"
+LINE_FEED
+MESSAGE "でも、また来るヨ！"
+KEY_WAIT
+END 0
+LABEL 15
+FLAG 617, 1
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "さすがお目が高イ！"
+LINE_FEED
+MESSAGE "さあ、ゆっくり見ていってネ。"
+END 0
+LABEL 16
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "さっすがネ！"
+LINE_FEED
+MESSAGE "さあ、ドンドン見るといいヨ！"
+END 0
+LABEL 17
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "まいどど～モ！"
+LINE_FEED
+MESSAGE "さて、他にないかナ？"
+END 0
+LABEL 18
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "おんヤ？"
+LINE_FEED
+MESSAGE "やめちゃうノ？"
+KEY_WAIT
+END 0
+LABEL 19
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "ダメダメ！"
+LINE_FEED
+MESSAGE "お金がなくちゃ売れないヨ！"
+LINE_FEED
+MESSAGE "こっちも商売だからネ。"
+LABEL 20
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "どーモ！"
+LINE_FEED
+MESSAGE "また来るヨ！"
+KEY_WAIT
+END 0
+LABEL 21
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは絶滅したといわれる"
+LINE_FEED
+MESSAGE "妖精の住む森の泉から取れた物ネ。"
+LINE_FEED
+MESSAGE "使うとリフレッシュできるヨ！"
+END 0
+LABEL 22
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは伝説の超神水ヨ！　あらゆる"
+LINE_FEED
+MESSAGE "能力を抑制する力があるヨ。"
+LINE_FEED
+MESSAGE "もちろんお嬢さんのパワーもネ。"
+END 0
+LABEL 23
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは魔界の源泉から汲んだ水ネ。"
+LINE_FEED
+MESSAGE "ストレス解消に役立つヨ。"
+LINE_FEED
+MESSAGE "ただし、魔界の水は危険もあるネ。"
+END 0
+LABEL 24
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは魔界でも貴重な禁断の実ヨ。"
+LINE_FEED
+MESSAGE "食べればすさまじい力を得るネ。"
+LINE_FEED
+MESSAGE "もちろん、副作用もあるけどネ。"
+END 0
+LABEL 25
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは……ミーにもよく"
+LINE_FEED
+MESSAGE "わからないネ。でもすごく"
+LINE_FEED
+MESSAGE "きれいでいい物ヨ。"
+END 0
+LABEL 26
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは大変貴重な古美術品ネ。"
+LINE_FEED
+MESSAGE "部屋中が魅惑の芳香で満たされ、"
+LINE_FEED
+MESSAGE "リラックスできるヨ。"
+END 0
+LABEL 27
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは西方の大陸から仕入れた"
+LINE_FEED
+MESSAGE "貴重な彫像ヨ。きっと神のご加護が"
+LINE_FEED
+MESSAGE "あるネ。いつまでか知らないけド。"
+END 0
+LABEL 28
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "これは東国の女が１年かけて"
+LINE_FEED
+MESSAGE "織り上げた物ヨ。これを着れば"
+LINE_FEED
+MESSAGE "どんな男もメロメロネ～㍍"
+END 0
+LABEL 29
+FACE 38
+MESSAGE_NAME "ダラタン"
+MESSAGE "それはもう品切れヨ。"
+KEY_WAIT
+END 0

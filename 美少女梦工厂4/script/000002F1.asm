@@ -1,0 +1,99 @@
+LABEL 0
+FLAG 599, 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "やあ、初めてのお客さんだね。"
+LINE_FEED
+MESSAGE "いらっしゃい。うちは最高の料理で"
+LINE_FEED
+MESSAGE "お客をもてなすレストランだ。"
+KEY_WAIT
+MESSAGE "軽食からフルコースまで"
+LINE_FEED
+MESSAGE "なんでもござれ。食後のデザートや"
+LINE_FEED
+MESSAGE "コーヒーも最高だよ。"
+KEY_WAIT
+MESSAGE "おっと、ごたくはもういいか。"
+LINE_FEED
+MESSAGE "まっ、とにかく１度食べてくれ。"
+LINE_FEED
+MESSAGE "舌がとろけちまうこと請け合いさ。"
+KEY_WAIT
+END 0
+LABEL 1
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おっ、いらっしゃい。"
+LINE_FEED
+MESSAGE "さて、今日のご注文は？"
+KEY_WAIT
+END 0
+LABEL 2
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "こちらは、コーヒーと"
+LINE_FEED
+MESSAGE "お菓子のセットでございます。"
+LINE_FEED
+MESSAGE "気分転換にお奨めです。"
+END 0
+LABEL 3
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "こちらは、当店お勧めのケーキで"
+LINE_FEED
+MESSAGE "ございます。甘いものは疲労回復に"
+LINE_FEED
+MESSAGE "最適です。"
+END 0
+LABEL 4
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "こちらは、当店自慢のフルコース"
+LINE_FEED
+MESSAGE "でございます。生きる力がわいて"
+LINE_FEED
+MESSAGE "くると大評判でございます。"
+END 0
+LABEL 5
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "ＯＫ。"
+LINE_FEED
+MESSAGE "味わって食べてくれよ。"
+END 0
+LABEL 6
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おっと、やめるのかい？"
+LINE_FEED
+MESSAGE "じゃあ、何にする？"
+KEY_WAIT
+END 0
+LABEL 7
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "おや？"
+LINE_FEED
+MESSAGE "お金がたりないな。"
+LINE_FEED
+MESSAGE "さすがに、ただ飯は無理だね。"
+KEY_WAIT
+LABEL 8
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "来てくれて、ありがとう。"
+LINE_FEED
+MESSAGE "今日は特別サービスだ。"
+LINE_FEED
+MESSAGE "私の感謝も込めてな。"
+END 0
+LABEL 9
+FACE 60
+MESSAGE_NAME "シラク"
+MESSAGE "ありがとう。"
+LINE_FEED
+MESSAGE "また、食いにきてくれよ。"
+KEY_WAIT
+END 0
