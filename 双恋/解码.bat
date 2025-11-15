@@ -1,0 +1,1 @@
+python diasm.py  decode -i output -o txt -t FA_JIS.tbl
