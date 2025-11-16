@@ -1,0 +1,4040 @@
+; ipb-disasm
+BG 0 "title"
+SETSTEP 16
+PAUSE
+BG 0 "white"
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+SE_PLAY "m1"
+TEXT "それまで、私は世界の仕組みなんか考えたことも無かった。"
+PAUSE
+NEWLINE
+TEXT "ただ毎日、朝おきて学校にいってみんなと遊んで、ご飯を食べて、寝て、その繰り返しだと思っていた。"
+PAUSE
+NEWLINE
+TEXT "でも……私が過していた日常はそれだけじゃないという事が、そのときは知らなかった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "あそこには何時の時代でも変わりなく、昔ながらの風景が広がっている。"
+PAUSE
+NEWLINE
+TEXT "もちろん私自身、写真や映像のなかでしか、その昔ながらの風景を知らなかった。"
+PAUSE
+NEWLINE
+TEXT "私が見たのは写真どおりの風景。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "違っていたのは、写真の中の人達がそっくりそのままロボットに置き換わっているという事……。"
+PAUSE
+NEWLINE
+TEXT "過疎化が進んだ田舎の村。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "あの夏……。"
+PAUSE
+NEWLINE
+TEXT "あの村での出会いは、いまも忘れない。"
+PAUSE
+NEWLINE
+SOUND_STOPALL
+CLEAR
+BG 0 "white"
+SETSTEP 16
+CLEAR
+SE_PLAY "m0"
+BG 0 "f2"
+SETSTEP 8
+TEXT "「うわー、暑い……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "駅のホームに降りると、むっとする熱気が体を包み、思わず顔をしかめた。"
+PAUSE
+NEWLINE
+TEXT "肩にかけた重いスポーツバッグ。"
+PAUSE
+NEWLINE
+TEXT "そのバッグのストラップを直して降り立った駅を見回す。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「誰もいないなぁ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "今日からしばらく厄介になる、この村の駅はあまりにも貧相で、前世代的な駅そのものといった風に感じられた。"
+PAUSE
+NEWLINE
+TEXT "完全にオートメーション化され、人の賑わう地元の駅と比べると、ちょっとさびしいかな、と思う。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「自動改札があるだけましかな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "遠目に見える古ぼけた駅舎の中にいつも使っているのと同じ自動改札が置かれていた。"
+PAUSE
+NEWLINE
+TEXT "ただ改札があるだけで、完全に無人な駅を想像していたけれど、鉄道会社の手はこんな田舎にもちゃんと届いているみたいだった。"
+PAUSE
+NEWLINE
+TEXT "小さな駅なので、すぐに駅舎の中に着く。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "取りだしたパスをかざすと「カシャ」という機械音とともにシャッターが開いた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f1"
+SETSTEP 8
+TEXT "「到着っと」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "改札を抜けて、スポーツバッグを放り出す。"
+PAUSE
+NEWLINE
+TEXT "うん、と伸びをして、くたびれた体をほぐす。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "長時間椅子に座りつづけたためにお尻と足にまだちょっと違和感がある。"
+PAUSE
+NEWLINE
+TEXT "全身に血液をめぐらせてリフレッシュすると、やっと着いたんだという実感がわいて、新鮮な気分になった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "初めて見る、本物の田舎の風景。"
+PAUSE
+NEWLINE
+TEXT "何の飾り気もない、木でできた小さな駅舎。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "それだけ新しい自動改札と、木を平たく切って組み合わせただけの小さなベンチ。"
+PAUSE
+NEWLINE
+TEXT "それ以外には、何もない。"
+PAUSE
+NEWLINE
+TEXT "自動販売機さえも。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "あっという間に駅舎の中を見終わり、私は外に出ることにした。"
+PAUSE
+NEWLINE
+TEXT "駅をぬけると、そこには一面の畑が広がっていた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f2"
+SETSTEP 8
+TEXT "「話には聞いてたけど……」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "目の前いっぱいに広がる畑と緑の景色にちょっと圧倒される。"
+PAUSE
+NEWLINE
+TEXT "アスファルトとコンクリートの世界で過ごしてきたので、この土と緑の世界になれるのはしばらく時間がかかりそうだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "エアコンディションがまったくされていない空間に長時間いるなんて、今までの人生のなかでほんの数回しかない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「すごいなぁ、何にもない」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "電車に乗る前の自分の街と比べると、そこはまったく別の、どこか遠い世界のように感じられた。"
+PAUSE
+NEWLINE
+TEXT "昔読んだ童話の主人公もこんな気分だったのかもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "私の目の前にあるのは玉手箱じゃなくて、重たいスポーツバッグだけど……。"
+PAUSE
+NEWLINE
+TEXT "もちろん、スポーツバッグからは煙はでてこない。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f2"
+SETSTEP 8
+TEXT "「取りあえず、休めるお店とかは…………なさそうね」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ため息をつきながら、日差しを避けるため駅舎の中に戻り、ベンチに腰かけて迎えを待った。"
+PAUSE
+NEWLINE
+TEXT "電車を下りてからずっと、耳にはセミの声がうるさいくらいに鳴りつづけている。"
+PAUSE
+NEWLINE
+TEXT "都会とは違った雑踏がそこにはあった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「田舎は静かだと思ったけどこっちはこっちでうるさいわね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "木々が切り倒され、地面はコンクリートに覆い尽くされてしまった都会に比べると、自然がそのまま残るこの村は、生き物達にとって最後の楽園なのかもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "住む場所を追いやられたセミたちに残された、わずかな空間。"
+PAUSE
+NEWLINE
+TEXT "羽化することなく、コンクリートに阻まれ、土のなかで一生を追えてしまう都会のセミたちは鳴くことなくその一生を終える。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "だからこそ、ここのセミは、そんな都会のセミたちの分まで盛大に鳴き続けているのかもしれない。"
+PAUSE
+NEWLINE
+TEXT "今は折角だからこの天然のオーケストラを楽しもう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ぼぅっとその音に耳を澄まそうと目を閉じたそのとき、不意に誰かに声をかけられた。"
+PAUSE
+NEWLINE
+TEXT "迎えに来た誰かの声だろうか、その声の主を探して辺りを伺った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「へいへい、ちょいとそこのお嬢さん。ちょいと、よござんすかねぇ」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 8
+TEXT "畑の中に立っている案山子が私に手を振っていた。"
+PAUSE
+NEWLINE
+TEXT "この村では案山子もロボットがやっているようだ。"
+PAUSE
+NEWLINE
+TEXT "案山子自体初めてみるけれど、どこか懐かしい感じがする。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「暑いからやだー。貴方がこっちに来てよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あっしは案山子なもんで、こっから動くことが出来ないんでやんすよ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その案山子は必死に上半身を動かしているけど、肝心な下半身は棒で、しっかりと地面に固定されていた。"
+PAUSE
+NEWLINE
+TEXT "でも頑張れば這ってこっちにこれそうなくらい、元気に上半身を動かしながら案山子は私を呼びつづけた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「でも喋るんだ。最近の案山子はかわってるね」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "暑いのは嫌だけれど良いひま潰しになりそうなので、荷物をベンチに置いたまま案山子のところに向かう。"
+PAUSE
+NEWLINE
+TEXT "昔、ここが足らない労働力をすべて機械とロボットでまかなっているって、兄から聞いたことがあった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "だからって案山子までロボットにする必要があったのかは私には分からない。"
+PAUSE
+NEWLINE
+TEXT "近くで見る案山子はボロをまとって、子供の落書きみたいな顔で私を見ていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「あっしは最新鋭の案山子でやんすから、この村のセキュリティを担う重要な機械でござい」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "最新鋭にしてはずいぶんとクラシカルなデザイン。"
+PAUSE
+NEWLINE
+TEXT "製作者の趣味にしては大分センスが変わってる。"
+PAUSE
+NEWLINE
+TEXT "私がそう言うと、案山子は照れくさそうに頭をかいた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「こういったデザインのほうが風景に同化してるっていうんですが……とうの案山子からしてみればもうちょっと格好のいいデザインにしてくれりゃよかったんですがねぇ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "彼がいう格好のいいデザインの案山子っていうのは想像できないけれど……、あたりには似たような案山子が畑ごとにいくつか置いてあるのが見える。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「いくつもいますが、管理してる大元はいっしょですんで、今こうして話している内容も他の案山子にも伝わっております、あっしにも他の案山子が見聞きしていることがわかるんでさぁ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "向こうの案山子は畑に張り付いたカラスを追い払おうと一生懸命に声を張り上げて、駆動できる頭や腕を懸命に動かしていた。"
+PAUSE
+NEWLINE
+TEXT "カラスのほうはというと、案山子が動かないことを知っているのか案山子の声に動じず、食事を楽しんでいた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「いいかげんにしやがれ！　こっちが案山子だと思ってなめ腐りやがって！　このカラス野郎！　上等じゃねかこっちにだって足さえありゃたかがカラスの一匹二匹、目じゃねぇってんだよ！　ゴラァ！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "こっちにまで聞こえるほど大きな叫び声をあげて、やっとカラスは撤退していった。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「二度と来るな！ コンチキショー」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "大声をだしていた案山子は、疲れたように肩で息をしている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「か、案山子も大変なんですね……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "案山子になったことも、案山子になろうと思ったことも一度もないけれど、彼らの苦労はなんとなく理解。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "でも……。"
+PAUSE
+NEWLINE
+TEXT "喋れるくらいなのに、なんで案山子に足を付けてあげなかったんだろう？"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「まぁ、あっしらは所詮、案山子ですから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "落書きみたいな表情が、どこかさびしそうにゆがんだ気がする。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「警報機付きの防犯カメラみたいなものかしら？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「そんなのと一緒にしないでくだせぇ、案山子には案山子のプライドってのがあるんでさぁ……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子はくるりと回転して後ろを向いてしまった。"
+PAUSE
+NEWLINE
+TEXT "回る機能も付いてるんだ……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子でも目をまわすことはあるのだろうかと気になったけれど、今それを聞くのはかわいそうだった。"
+PAUSE
+NEWLINE
+TEXT "次第に、嗚咽混じりの案山子の泣き声が聞こえはじめた。"
+PAUSE
+NEWLINE
+TEXT "それにつられてか、回りにいるほかの案山子たちも悲しそうにうなだれて目頭を抑えはじめる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "はぁ……。"
+PAUSE
+NEWLINE
+TEXT "あちらこちらで案山子の泣き声が反響して、重なり合うセミの鳴き声みたいに村中に響いた。"
+PAUSE
+NEWLINE
+TEXT "聞いているこっちもなんだか悲しくなってくる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "そんな案山子たちの様子をみてなのか、畑にはまたカラスが群れをなしてやってきていた。"
+PAUSE
+NEWLINE
+TEXT "でも今度は、案山子たちは悲しそうにうなだれているだけで、カラスを追い返そうとはしなかった。"
+PAUSE
+NEWLINE
+TEXT "涙でにじんで見えないわけではないだろうけれど、気が付かないほど泣くのに没頭していた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f2"
+SETSTEP 16
+TEXT "「ねぇカラスきてるよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ぞろぞろと畑に降り立つ黒い集団は我先にと作物に飛びかかっている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ねぇ、泣いてばっかりじゃだめじゃない！　案山子としてのプライドはどうしたのよ！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私がそう叫ぶと、カラスという単語に反応したのか、案山子達は泣くのを止めた。"
+PAUSE
+NEWLINE
+TEXT "案山子達は一斉に、カラスのほうへ向きなおる。"
+PAUSE
+NEWLINE
+TEXT "そして。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子達に、なにかのスイッチが入った。"
+PAUSE
+NEWLINE
+TEXT "ぐしゃぐしゃだった顔を険しくさせて彼らは叫ぶ。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 16
+TEXT "「えぇ！？　おいこら！　カラステメェ、性懲りもなくまた現われやがって。今度はただじゃおかないっていっただろうが！　聞いてんのか！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「テメェに食わすようなものは、ここにゃねぇんだよ。さっさとゴミタメの山にでも帰りやがれ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「でねぇとからあげにして食っちまうぞ、ゴラァ！　って、案山子の話を聞けぇ！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子の各個体が、様々に叫びながらカラスを威嚇している。"
+PAUSE
+NEWLINE
+TEXT "けれど、カラスは動じなかった。"
+PAUSE
+NEWLINE
+TEXT "案山子達は声を上げるだけで何もしてこない。"
+PAUSE
+NEWLINE
+TEXT "そう学習したカラス達は余裕とばかりに畑を荒らした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "まだ熟しきっていない果実をついばみ、植えたばかりの種をほじくる。"
+PAUSE
+NEWLINE
+TEXT "私はあっけにとられたように、ただ、カラスが畑を荒らすのを見ていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ふざけんな！　あーどいつもこいつも空飛びやがって案山子様をなめてんのかコノヤロー、下りてきて俺様と勝負しろってんでだ。あ、こらそっちじゃない畑に下りるな！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "案山子の叫びはカラスには届かずカラス達はどんどんとその数を増やしていく。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f3"
+SETSTEP 8
+TEXT "「こらー、畑を荒らしちゃだめでしょーー！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "見ていられなくなって、つい私は大声で叫んだ。"
+PAUSE
+NEWLINE
+TEXT "案山子達の声の中を突きぬけて、畑に私の声が響き渡る。"
+PAUSE
+NEWLINE
+TEXT "いつも聞きなれた案山子の罵声ではない私の声に、カラスも驚いたのか嘴を動かすのをやめてこちらを睨んだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ほら、貴方達もいっしょに！　案山子なんでしょ！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私がもう一度大きな声で叫ぶと、案山子達もつられてまた声をあげ始めた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一羽、二羽……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "聞きなれない新たな害敵の襲来に警戒したのか、カラスが少しずつ畑から離れていく。"
+PAUSE
+NEWLINE
+TEXT "そして、全てのカラス達はあっというまにどこかへ飛び去っていった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 8
+TEXT "「へへ、流石は嬢ちゃん。案山子も立場がねぇっす」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「立場って……ちゃんと立ってるじゃない……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「へへ、立ってるだけじゃただの案山子、でもあっしらは誇りをもったロボット案山子。架せられた役目は果たして見せましょう」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "目の前の案山子はそう言うと、少しの間黙り込んだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「編集完了。お嬢ちゃん、ありがとな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "やがて、そういうと案山子は大きく息を吸いこむように胸をそらせた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「なに？　ありがとうって」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私が案山子に聞いてみた瞬間。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『こらー、畑を荒らしちゃだめでしょーー！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "突然、さっきまでの案山子の声とは全く違う高い声が、すべての案山子から発せられた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f2"
+SETSTEP 8
+TEXT "「やだ……これ、私の声」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "『あっしの声じゃカラスどもは反応してくれねぇんで、お嬢ちゃんの声を借りさしてもらいました』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "と、私と全く同じ声で案山子は言う。"
+PAUSE
+NEWLINE
+TEXT "自分の声を外部から聞くと少し変わった感じがして、ものすごく恥ずかしい。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 8
+TEXT "『コラ、このカラス野郎ドモ、よくも畑を荒らしやがって。その食べた野菜の何倍も貴様等に拳をぶちかましてやるからな！　覚悟しやがれ！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ちょ、ちょっと私の声で何言うのよ。恥ずかしいじゃない！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "かぁっと顔が赤くなるのを感じながら、私は慌てて案山子に抗議する。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『なーに、あっしらとカラスとオテントウサマしか聞いてないですから大丈夫ですって』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f3"
+SETSTEP 8
+TEXT "「そう言う問題じゃなーい！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "パチーンと乾いた音を響かせて、私の平手打ちが案山子の顔に炸裂する。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『あ痛ー』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "クルクル回りながら私の声の案山子の悲鳴が村中に響いた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「もう、やめてってば！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「でも、ほら、お蔭様でカラスどもは山に帰りましたよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "やっと案山子の声が元に戻った。"
+PAUSE
+NEWLINE
+TEXT "私はほっとして、深くため息をつく。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 8
+TEXT "「結果オーライということで、いやはや終りよければすべてよしですな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「全然良くない。貴方、私の声かってに使わないで……って」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私の抗議の声を無視して、案山子があらぬ方を向く。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ねぇ、聞いてるの？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私がなおも言いつのろうとしたその時、遠くから車のエンジン音が聞こえてきた。"
+PAUSE
+NEWLINE
+TEXT "その音がする方を見ると、一台のトラックが砂埃をあげてこちらに近づいて来ているのが見えた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「お迎えが着たようですね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ああ……今の……聞こえてたら……どうしよう……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "絶対に笑われる。"
+PAUSE
+NEWLINE
+TEXT "からかわれるのは間違いないだろう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「これからしばらく滞在なさるんでしょう？　今後ともよろしくお願いしますよ、お嬢ちゃん」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "案山子が向き直って、私に声をかける。"
+PAUSE
+NEWLINE
+TEXT "私は抗議をあきらめて、また深いため息をついた。"
+PAUSE
+NEWLINE
+TEXT "なんだか、すごく疲れてしまった気がする。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f1"
+SETSTEP 8
+TEXT "「お嬢ちゃんじゃないよ…………私、ミドリ。よろしくね案山子」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "そういって手を差し伸べた。"
+PAUSE
+NEWLINE
+TEXT "案山子は照れ臭そうにその手を握る。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「こちらこそ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私の手を握って腕をぶんぶん振りながら、案山子は言った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ようこそ、楽園の村へ」"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "white"
+SETSTEP 8
+CLEAR
+BG 0 "ic"
+SETSTEP 8
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+SE_PLAY "m1"
+TEXT "少子化が進み、都市部以外の場所は過疎化がどんどん進んでいた。"
+PAUSE
+NEWLINE
+TEXT "一度人が離れた過疎地には再び人心が集まることはなく、そのまま朽ち果てていく村が後を絶たなかった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "すでに高度な文明を手に入れた都市部の人間は、人の手を離れ、放ったらかしになっている土地を有効に使おうと考えた。"
+PAUSE
+NEWLINE
+TEXT "その中の一部として、過疎地に労働力を送り込み、都市部ではもう珍しくなった天然の農作物を育てるという計画が生まれた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "だが、自らその労働力になろうという人間は絶対的に少なく、その計画は一部修正されることになった。"
+PAUSE
+NEWLINE
+TEXT "それは、労働力を人間に頼るのではなく、農作物を育てるようプログラムしたアンドロイドにそれを任せるという事。"
+PAUSE
+NEWLINE
+TEXT "そして、そのために様々な研究や実施試験が行われ――。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "今では、取り残された一部の人間と、アンドロイドが一緒に暮らしている村も存在している。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "c"
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+TEXT "俺がこの村に来たのは三年前。"
+PAUSE
+NEWLINE
+TEXT "勤務地の希望欄に全国どこでも可とした結果がこれだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "うちの製品を動かす若い技師が必要だった会社にとっては都合の良い人材だったのだろう。"
+PAUSE
+NEWLINE
+TEXT "それなりに手当てもつき、同年代に比べれば高給だが、まぁ、ここに居る限りは使う当てがない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "やることは肥えとオイルの匂いにまみれ、泥だらけのアンドロイド達を整備すること。"
+PAUSE
+NEWLINE
+TEXT "ここでは昔ながらの品種を作るためにほとんどがアンドロイドによる手作業で行なわれている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "アンドロイドが手作業ってのもなんだか変な話しだが……。"
+PAUSE
+NEWLINE
+TEXT "昔ながらといっても鍬や鋤を使うようなものでもなく、機械が入るところにはちゃんと機械が入る。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "もっとも、そのトラクターやコンバインを動かしているのはあくまでもアンドロイド達。"
+PAUSE
+NEWLINE
+TEXT "昔、村で人間が使っていた農機も彼等の手で有効利用されている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "野良作業と整備が一段落したところで俺は車に乗り込んだ。"
+PAUSE
+NEWLINE
+TEXT "免許がない俺の代わりに運転をするのはここのアンドロイドだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "人型に作られた作業用アンドロイド。"
+PAUSE
+NEWLINE
+TEXT "荷物の運搬を行なうために、彼等には車を運転するための思考プログラムも組み込まれている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "自動運転機能のある車を用意すりゃいいんだが、整備されてない土の道路じゃぁ普通の車を運転したほうが都合がいいらしい。"
+PAUSE
+NEWLINE
+TEXT "そのおかげかここで使われている車のほとんどが前世紀から使われているようなオンボロの車ばかりだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "まぁそれでも、こんな車でもアンドロイド達は器用に乗りこなす。"
+PAUSE
+NEWLINE
+TEXT "まったく、良く出来た連中だよ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺の住む居住区と駅までには結構な距離があり、歩きではとても行けない。"
+PAUSE
+NEWLINE
+TEXT "もともと人が極端に少ないこの村には公共の交通機関はあまり必要なく、電車の駅が一つだけぽつんと建っている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "しかし、ここに来る電車のほとんどが収穫した野菜を運搬するためのもので、一応、人が乗るための電車は走ってはいるが、それは一日に片手の指の数で足りる位のものだった。"
+PAUSE
+NEWLINE
+TEXT "俺がここにいるため、生活や仕事に必要な物資はその駅に届けられるが、俺自身出不精なために、最近その辺はアンドロイドに任せきりにしていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "そんな訳で、駅に行くこと自体が久しぶりだったりする。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "運転手がエンジンをかけ直すこと数回、けたたましい駆動音をたてて、アイドリングが安定した。"
+PAUSE
+NEWLINE
+TEXT "この手の車両の整備も俺の仕事だった。"
+PAUSE
+NEWLINE
+TEXT "こまめに整備してるんで、例えボロでもまだまだ現役で動いてくれる。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "c"
+SETSTEP 8
+BG 0 "e2"
+SETSTEP 8
+TEXT "「それでは、発車します。シートベルトの着用をお願いします」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺がシートベルトを着けると、アンドロイドが運転免許のマニュアル通り丁寧に発車手順を踏んで、やっと車が走り出した。"
+PAUSE
+NEWLINE
+TEXT "ボロトラックが、無駄の無い丁寧な走りで農道を駈ける。"
+PAUSE
+NEWLINE
+TEXT "広く開拓された農地の景色が、窓の外をゆっくりと流れていった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「なぁ、もっとスピード出せねえのかよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺はダッシュボードの上に足を乗せ、運転手にいった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「道路交通法ではこちらの道は３０キロ制限になっています。これ以上速度を上げることは出来ません」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "淡々と、アクセルを強めることも緩めることもなく運転手は返す。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「んな、どうせ、こんな田舎じゃ警察もなにもねぇじゃねぇか。もっと融通が利くようにそのうち書きかえてやる」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転を作業用アンドロイドに任せたのは失敗だったかもしれない、と思った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "迎えの約束の時間には、このペースで行くと遅刻は免れない。"
+PAUSE
+NEWLINE
+TEXT "だからといって他に交通手段といえば自転車とか、そういう話になるので他に選択肢は無いのだが。"
+PAUSE
+NEWLINE
+TEXT "こいつらは作業になりゃ、それこそ素直にいうことを聞いてくれて便利なんだがな。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「この車でこれ以上のスピードを出すと、あまり整備されていないこの道ではどのようなトラブルが発生するか分かりません」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転手は教習所の車のように丁寧に道を走っていく。"
+PAUSE
+NEWLINE
+TEXT "助手席座る俺は教官じゃないんで気まぐれに補助ブレーキを踏んでやることも出来ない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "まぁ、砂利や凸凹の激しいこの道では、丸坊主のタイヤをはいているこのトラックじゃ、スピードを出すのは確かに危ないかもしれないが……。"
+PAUSE
+NEWLINE
+TEXT "俺の体を気遣っての行動なのだろうが、こっちとしてはじれったくてしょうがねぇ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「お前それくらいの誤差、簡単に修正して走れるだろうがよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ここに配備されているアンドロイドの性能は、生半可なものじゃない。"
+PAUSE
+NEWLINE
+TEXT "人の手で行う作業をただ機械に頼るのではなく、その手作業を完全に再現することを目的として作られた連中だ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ここにいる昔ながらの農法を再現するアンドロイドには、単純作業を繰り返すしか能の無いロボット達とは違い、イレギュラーにすぐ対応できるだけの思考プログラムが組まれている。"
+PAUSE
+NEWLINE
+TEXT "日照や雨、湿気具合、土の加減や土の微生物の状態……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "野菜を扱うという予想外の出来事の連続の中では、マニュアル通りの動作では対応しきれない。"
+PAUSE
+NEWLINE
+TEXT "だが、彼等はここでコンスタントに生産を続けられるだけの能力がある。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "今では人の手で行なわれる事がなくなってしまった、土と生きる生産方法を担う彼等だからこそ、その潜在能力は計り知れない物がある。"
+PAUSE
+NEWLINE
+TEXT "それは整備をしている俺が一番良く知っている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「規則ですから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転免許を取っておきゃ良かったといまさらながらに後悔する。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "学生の頃に車以外の免許は学校である程度は取れたのだが、自動車の免許は教習所に通うのが面倒でとっていない。"
+PAUSE
+NEWLINE
+TEXT "…重機なら動かせるんだけどな。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「あー分かりましたよ。せいぜい安全運転で頼むわ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "帽子のツバを下げてまぶしい日差しを遮り、俺はふてくされながら瞼を閉じた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "寝ていれば時間も忘れられるだろう。"
+PAUSE
+NEWLINE
+TEXT "寝てる間に車の速度があがるとかそんなミラクルが起きればいいんだが、プログラム通りに動いているアンドロイドが気まぐれを起こすはずもない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「音楽でもかけましょうか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転手なりに気をつかってくれたらしい。"
+PAUSE
+NEWLINE
+TEXT "しかしすでに寝る気だった俺にはいらぬ気遣いだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「イラネェ……寝るから静かにしやがれ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「了解」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "急に車の振動が弱まった。"
+PAUSE
+NEWLINE
+TEXT "さっきまでけたたましく音を上げていたエンジンも、ボロトラックとは思えない安定した回転をし始める。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "止まったのかと思って辺りを見ると、きっちり制限速度を守りながら農道を変わりなく走っていた。"
+PAUSE
+NEWLINE
+TEXT "違うのは、どうやら運転手の真剣さで、こいつは余計なノイズをたてないよう、トラックの挙動制御にいそしんでいた。"
+PAUSE
+NEWLINE
+TEXT "静かにしろってそう言う意味じゃないんだがな。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「運転は普通でいいっての、こういうのはちょっとくらい揺れたほうが寝やすいんだよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "子供が寝るゆりかごのように、この手の振動は眠気を誘うのだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「了解」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "cm"
+SETSTEP 8
+TEXT "寂しそうに運転手が応えると、ガタンと車体が上下する。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "凸凹の路面がダイレクトに車体に振動を伝える。"
+PAUSE
+NEWLINE
+TEXT "俺は振動を楽しみながら眠りについた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺には歳の離れた妹が居る。"
+PAUSE
+NEWLINE
+TEXT "名前はミドリ。"
+PAUSE
+NEWLINE
+TEXT "俺がすでに物心ついてから、ミドリは生まれた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f0"
+SETSTEP 8
+TEXT "俺も両親も、ミドリを溺愛していたので、ミドリはかなり甘えん坊に育ってしまっていた。"
+PAUSE
+NEWLINE
+TEXT "この村にくる時、家を出る俺の足にしがみつき、放さなかったミドリを俺と両親で必死でなだめていた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f2"
+SETSTEP 8
+TEXT "自分もついて行くと言ってきかなかったミドリ。"
+PAUSE
+NEWLINE
+TEXT "もちろん、ミドリを連れていく訳にもいかない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「休みが取れたら帰ってくるし、ミドリも夏休みとか大きい休みがあれば遊びにおいで」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f4"
+SETSTEP 8
+TEXT "「絶対、絶対だよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ああ、約束だ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "泣きじゃくるミドリに、俺は小指を差し出す。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「うん、約束だよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺の小指にミドリの小指が絡む。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f3"
+SETSTEP 8
+TEXT "「指きりゲンマン、嘘ついたら針千本のーます」"
+PAUSE
+NEWLINE
+TEXT "「指きった！」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "c"
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+TEXT "指きりをしたあの日から三年が経って、ミドリがついにこっちに遊びに来ることになった。"
+PAUSE
+NEWLINE
+TEXT "一応、名目は収穫の手伝い。"
+PAUSE
+NEWLINE
+TEXT "もっともここでミドリに手伝ってもらうようなことはあまりないのだが。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "まぁそれでも、俺もミドリも夏の思い出を共有することができればそれで満足だろう。"
+PAUSE
+NEWLINE
+TEXT "あれから、三年間で彼女がどれだけ成長したのかは分からない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺が居なくなったことで彼女の中で自立が促されたかも知れない……。"
+PAUSE
+NEWLINE
+TEXT "兄離れが進んで昔みたいに甘えてこなくなっていたら、それはそれで兄としては寂しいものだが。"
+PAUSE
+NEWLINE
+TEXT "久し振りに見る妹の成長が良い方に進んでいれば幸いだ、と思う。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "目を閉じてから、何分が経過しただろう。"
+PAUSE
+NEWLINE
+TEXT "帽子のツバから片目だけだして周りを伺う。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "最後に見た景色とあまり変わらない農道が続いているが、時計の針は確実に進んでいる。"
+PAUSE
+NEWLINE
+TEXT "大きく伸びをして、全身に血液をめぐらせ意識を元に戻した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「後どれくらいだ？」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "e2"
+SETSTEP 8
+TEXT "「このペースでいくと１０分ほどで到着します」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「遅刻確定か…やれやれ」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "電車に乗るときにミドリが連絡をいれて来たので、時刻表通りならそろそろ到着している頃だろう。"
+PAUSE
+NEWLINE
+TEXT "久し振りの再会だというのに出鼻をくじかれた形になったが、俺の見積もりが甘かったのだから仕方がない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ミドリに会ったら謝っておこう。"
+PAUSE
+NEWLINE
+TEXT "気分転換に窓をあけると肥えの匂いが車内に進入してきたが、風が心地よいので気にしない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "もう、肥えの匂いに慣れきった鼻には、たいしたダメージは無かった。"
+PAUSE
+NEWLINE
+TEXT "都会からやって来るミドリにはちょっときついかも知れないかな。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "エアコンディションが完璧にコントロールされている都会じゃあ吸ってる空気さえ作りものだから。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 8
+TEXT "「いいかげんにしやがれ！　こっちが案山子だと思ってなめ腐りやがって！　このカラス野郎！　上等じゃねかこっちにだって足さえありゃたかがカラスの一匹二匹、目じゃねぇってんだよ！ ゴラァ！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "窓の外から案山子の叫び声が聞こえる。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "「カラスが畑を荒らしているようですね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「まぁ、いつものことだろ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "足が無くてもやつ等にはこの声がある。"
+PAUSE
+NEWLINE
+TEXT "畑を荒らそうとする大抵の動物は、案山子の声に驚いて逃げてくれる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "だが、カラスは恐ろしく頭のいい動物なため、他の動物が恐怖の対象とする人間の声さえも、様子を見ながらやがて克服してしまう。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e2"
+SETSTEP 8
+TEXT "「カラスも学習してきているようで、なかなか案山子だけじゃ追い払い切れなくなっていますね、直接私達が追い払うときもあるんですよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「へぇ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「最近は都会に下りたカラスがまた山に戻ってきているらしいんです」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "都市部でゴミを漁る事で餌をまかなっていたカラス達だったが、時代が変わり、食品事情とリサイクルシステムが確立した今となっては、人間以外の生物が街で生きることは難しくなった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "今では、過疎化が進み人の手を離れた山のほうが、彼等の餌となるものが豊富になってきている。"
+PAUSE
+NEWLINE
+TEXT "賢さを身に付けた都会のカラスが戻ってきたおかげで、こっちもまた新たにカラス対策をする必要がありそうだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ここのモットーは自然との調和だしな。それなりの対策は考えとくよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "一度、案山子に武装させてみようか、と考えた事がある。"
+PAUSE
+NEWLINE
+TEXT "凄いゴツイやつ。"
+PAUSE
+NEWLINE
+TEXT "それを付ければカラスどころか宇宙船だって落とせる代物だ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "やろうと思えば……。"
+PAUSE
+NEWLINE
+TEXT "一つたりともカラスに農作物を荒らさせない事もできる。"
+PAUSE
+NEWLINE
+TEXT "しかし、それでは天然の農作物とは言えなくなってしまう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "皮肉な話だが、カラスに畑を荒らされるという事が、天然の農作物の証明になるのだ。"
+PAUSE
+NEWLINE
+TEXT "一番いいのは、カラスと適度な共存……なのだが、そろそろカラスの勢力ほうが強くなってきているようだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "どうしたものか、と窓の外を見ながら考える。"
+PAUSE
+NEWLINE
+TEXT "運転席の作業用アンドロイドがやったように、歩行する案山子を作るのが上策かもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e1"
+SETSTEP 8
+TEXT "でも足は付けない。"
+PAUSE
+NEWLINE
+TEXT "案山子だから。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「えぇ！？　おいこら！　カラステメェ、性懲りもなくまた現われやがって。今度はただじゃおかないっていっただろうが！　聞いてんのか！」"
+PAUSE
+NEWLINE
+TEXT "「テメェに食わすようなものは、ここにゃねぇんだよ。さっさとゴミタメの山にでも帰りやがれ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「でねぇとからあげにして食っちまうぞ、ゴラァ！　って、案山子の話を聞けぇ！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子が、また叫び声を上げている。"
+PAUSE
+NEWLINE
+TEXT "頭の固い作業用の連中と違い、どこか抜けている案山子は俺のいい話し相手でもあるが……。"
+PAUSE
+NEWLINE
+TEXT "ここまで激しく怒鳴り声を上げられると、ちょっと辟易する。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "「収穫そろそろなんだなぁ。勘弁しろよな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "一定距離に配置されている案山子達が連動して叫んでいるということは結構な数が来襲しているのかもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "作業用アンドロイドは広大な畑をすべてカバー出来るほど数がいるわけではないし。"
+PAUSE
+NEWLINE
+TEXT "そのために案山子がこうして立っているのだが、その案山子がまるで意味をなさないのでは話しにならない。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b2"
+SETSTEP 8
+TEXT "『こらー、畑を荒らしちゃだめでしょーー！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "聞き憶えのある声が案山子から聞こえた。"
+PAUSE
+NEWLINE
+TEXT "数時間前に電話で聞いた声。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b3"
+SETSTEP 8
+TEXT "『コラ、このカラス野郎ドモ、よくも畑を荒らしやがって。その食べた野菜の何倍も貴様等に拳をぶちかましてやるからな！　覚悟しやがれ！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "間違い無い、ミドリの声だ。"
+PAUSE
+NEWLINE
+TEXT "そのミドリの声で案山子がけたたましく叫ぶ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その声に反応してか、さきほどまで暴れていたカラス達は驚いて逃げていってしまった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e2"
+SETSTEP 8
+TEXT "「おいおい、こりゃどう言うことだよ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「なにかあったようですね……急ぎましょう」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ガッと運転手はアクセルを踏み込んだ。"
+PAUSE
+NEWLINE
+TEXT "急にスピードが上がったおかげで俺は重力でシートに釘付けになった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「イテテ……なんだよ、いきなり……法定速度以上でスピード出すと危ないんじゃなかったのかよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「今は、ミドリ様の状態と原因の究明が再優先であると判断しました」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "さっきまで融通の聞かないアンドロイドだったが、こう言うときは意外に物分かりがいいらしい。"
+PAUSE
+NEWLINE
+TEXT "加速する車はガタガタと揺れて、土埃を上げながら農道を駈けぬける。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「おいおい、ちょっと速度上げすぎじゃねぇか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "シートを後ろ手に掴みながら、大きな振動に耐える。"
+PAUSE
+NEWLINE
+TEXT "ここまで速度を出すと、さすがに危険な気がする。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「貴方が整備したアンドロイドと車体を信用出来ないんですか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "すっと微笑みを浮べて運転手は言った。"
+PAUSE
+NEWLINE
+TEXT "そう言われ、一瞬、俺は言葉を失った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「……だったら最初から飛ばせよな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺は悪態をついて、フロントガラスの向こうを睨んだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「仕上がりは完璧だよ、ガンガン飛ばしていけ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「了解しました。しっかり捕まってください」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "予定していた時刻には遅れたものの、運転手とカラスのおかげで大幅な遅刻は免れそうだ。"
+PAUSE
+NEWLINE
+TEXT "これなら多少は兄としての面目も保てるかもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「駅が見えてきました」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b1"
+SETSTEP 8
+TEXT "駅から少し離れた所に一人の少女と案山子がなにやら話しているのが見えた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "なんとなく、二人の間にどんなやり取りがあったかが想像できた。"
+PAUSE
+NEWLINE
+TEXT "突然自分の声をトレースされてさぞかし慌てたに違いない。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e2"
+SETSTEP 8
+TEXT "「ありがとな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "改めて俺は運転手に礼をいう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「大丈夫そうですね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転手はそう言うと車の速度を落とし、再び法定速度に戻った。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "white"
+SETSTEP 8
+BG 0 "ic"
+SETSTEP 16
+PAUSE
+BG 0 "white"
+SETSTEP 8
+BG 0 "e1"
+SETSTEP 8
+SE_PLAY "m1"
+TEXT "今年の村の夏は、いつもと同じで大して変化はなかった。"
+PAUSE
+NEWLINE
+TEXT "ただ暑くて、眩しい。"
+PAUSE
+NEWLINE
+TEXT "俺のいる村は収穫期の真っ最中で畑は緑の葉と、色とりどりの野菜や果物でいっぱいだった。"
+PAUSE
+NEWLINE
+TEXT "なかでも、丸々とした緑と黒のストライプ、大玉のスイカが、日の光りに反射してつややかに畑を彩っている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "毎年変わらない、焼けるような暑さと緑色の風景。"
+PAUSE
+NEWLINE
+TEXT "何も変わらない……いつも通りの夏。"
+PAUSE
+NEWLINE
+TEXT "だが、今年の夏は、例年と変わった事が一つだけあった。"
+PAUSE
+NEWLINE
+TEXT "妹のミドリがわざわざ遊びに来たのだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「朝ー朝ー、あったらしい朝がキター！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "日の出とともに、畑中に案山子の声が木霊する。"
+PAUSE
+NEWLINE
+TEXT "寝坊したい日にはうざったくてたまらない、ここの目覚ましの代わり。"
+PAUSE
+NEWLINE
+TEXT "飼っている鶏達よりも早く、うるさく、案山子は声を高らかにあげた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「毎朝、毎朝うるせーんだよ！　ちっとは静かにしやがれ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "窓を力任せにぶち開け、外に向かって叫び返す。"
+PAUSE
+NEWLINE
+TEXT "寝起きで不機嫌な俺は、やりきれない怒りをそのまま案山子にぶつけた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「相変わらず、ダンナは寝起きが悪いっすねぇ、オテントウサマはとっくの昔に顔をだしてるってのに、希望の朝でやんすよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "一番近くにいた案山子が、体操をするように腕を動かしながら、溌剌とした声で言った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子の声には、もういい加減慣れたとはいえ、元来の寝起きの悪さは治るものでもなく俺は腹立ちまぎれに窓をピシャリと閉めた。"
+PAUSE
+NEWLINE
+TEXT "再びカーテンを閉めて布団にもぐりこみ、頭の芯に残っている眠気に身を任せる。"
+PAUSE
+NEWLINE
+TEXT "すぐに睡魔が襲ってきて、次々とスイッチが切れるように、意識が闇に沈んでいく。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "だが、"
+PAUSE
+NEWLINE
+TEXT "外から聞こえる音は止むことなく次々と大きくなっていった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『静かな湖畔の森の影から～♪　もう起きちゃいかがとカコがなく～♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "村中の案山子が輪唱を始めた。"
+PAUSE
+NEWLINE
+TEXT "個々で違うパートをエンドレスで歌い始めた案山子のそれは、もはや歌というよりはノイズでしかなかった。　"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+TEXT "『しっずかな湖畔の♪』"
+PAUSE
+NEWLINE
+TEXT "『カコー♪カコー♪カコ♪カコ♪カコ～♪』"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「勘弁しろよ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "今日も目覚めは最悪だ。"
+PAUSE
+NEWLINE
+TEXT "耳せん代わりにならかった布団を押しのけて、俺は嫌々支度を開始した。"
+PAUSE
+NEWLINE
+TEXT "換気のために窓を開けると、殺人光線的な日光がサンサンと降り注いでくる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "むわっと熱気が窓から入ってきて肌にまとわりつく。"
+PAUSE
+NEWLINE
+TEXT "野良作業が人の手を離れた理由が身に染みて実感。"
+PAUSE
+NEWLINE
+TEXT "やっぱりエアコンは人類至上に残る偉大な発明だよな。"
+PAUSE
+NEWLINE
+TEXT "エアコンを作った名も知らぬ過去の偉人に、心の中で敬礼して俺は部屋を出た。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "すぐ隣の部屋には、妹のミドリが寝ている。"
+PAUSE
+NEWLINE
+TEXT "様子を見ようと思い引き戸の前まで行き、ノックをしようとして、俺はその手を止めた。"
+PAUSE
+NEWLINE
+TEXT "ま、いいか……。"
+PAUSE
+NEWLINE
+TEXT "そっと、"
+PAUSE
+NEWLINE
+TEXT "引き戸を開けて中の様子を見た。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "部屋の中央に布団が敷かれ、ミドリはそこで寝ていた。"
+PAUSE
+NEWLINE
+TEXT "寝相が悪いのか、掛け布団が蹴飛ばされている。"
+PAUSE
+NEWLINE
+TEXT "そして敷布団の上では、ミドリが大の字になって静かに寝息を立てていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ミドリには案山子の輪唱音波攻撃が効かないのだろうか……。"
+PAUSE
+NEWLINE
+TEXT "起きる気配もなく、ミドリはそこで無防備な寝顔を覗かせていた。"
+PAUSE
+NEWLINE
+TEXT "まぁ長旅の疲れもあるんだろう。"
+PAUSE
+NEWLINE
+TEXT "そもそも、こことミドリがいる都市（まち）とは時間の流れが違うのだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "学校が始まる時間に合わされているミドリの体内時計は、夏休みということもあり、さらに数時間ずれている。"
+PAUSE
+NEWLINE
+TEXT "何事もなければ、少なくともあと三時間はぐっすりだろう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「うらやましいなぁ、おい……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "田舎生活が日常になった自分にとっては、太陽とともに過ごす生活が当たり前になっている。"
+PAUSE
+NEWLINE
+TEXT "平和そうな寝顔を見ながら、俺は静かに部屋の中に入った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "冷房の温度を若干あげて、ずれた布団をかけなおす。"
+PAUSE
+NEWLINE
+TEXT "せっかくこっちに来ているのに風邪ひいちまったら可哀相だ。"
+PAUSE
+NEWLINE
+TEXT "ミドリを起こさないように、静かに、俺はミドリが寝てる部屋を抜けた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "朝食を取り終えると、着ていた寝巻きを洗濯機に放り込み、洗顔を済ませ、いつもの作業衣に着替えた。"
+PAUSE
+NEWLINE
+TEXT "暑苦しい作業衣だがこれを着てないと仕事をしてる気にならない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その他必要な機材が詰まったバッグを装着し、俺の目覚めの儀式は終了する。"
+PAUSE
+NEWLINE
+TEXT "これらの工程を経て、はじめて俺の意識は覚醒する。"
+PAUSE
+NEWLINE
+TEXT "何時間寝ようが寝まいが、スイッチが入らないと、いつまでも頭が寝っぱなしでろくに作業も出来ない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "仕事まではまだ時間はあるもののこの格好じゃないと調子がでないのだ。"
+PAUSE
+NEWLINE
+TEXT "身支度を整え、俺は外に出る。"
+PAUSE
+NEWLINE
+TEXT "あれほど憎らしかった太陽や、暑苦しい気温も、起きてしまえば何ということもない。"
+PAUSE
+NEWLINE
+TEXT "一度大きく伸びをして、足取り軽く、俺は職場であるラボに向かった。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "e3b"
+SETSTEP 8
+SE_PLAY "m2"
+TEXT "職場にはすでに、アシスタントのアンドロイドが数体、せわしなく作業を進めていた。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「おはよう、今日もよろしく」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "手を掲げて挨拶すると、それに合わせてアンドロイド達はご丁寧に頭を下げて応える。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「おはようございますシゲル様。昨日はよくお休みになられましたか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "いつものお決まりの挨拶。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ここのラボの連中は、比較的、表で作業している連中より物分かりが良い。"
+PAUSE
+NEWLINE
+TEXT "土をいじることを目的とした連中と違い、人間と共同で作業することが多いこいつらは、いろんな所で融通が利く。"
+PAUSE
+NEWLINE
+TEXT "会話に関しては若干の硬さはあるものの、ほとんど人と話している感覚と変わらない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「今朝も案山子の雑音に無理やり起こされたよ。いいかげんなんとかならないもんか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "今でもちょっと頭の中で案山子の歌がリフレインしている。"
+PAUSE
+NEWLINE
+TEXT "気を抜いたら俺も輪唱のなかに混じってしまいそうだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「そうはいっても、動作チェックを兼ねてやっているものですので止めさせるわけにはいきません」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「だったら俺の下宿に完全防音付けてほしいね。それに、今日は俺の妹が来てるんで、起こしちゃ悪い」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "幸い今日はぐっすり寝ていたのでいいが、滞在日数はまだしばらくある。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "家事の関係で時間を合わせてくれると楽ではあるが、あの寝顔を見せられたら起こしちゃ悪いなと思う。"
+PAUSE
+NEWLINE
+TEXT "昔と同じで甘やかしているような気もするが、まぁ、それが兄心というものだろう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「分かりました。ミドリ様が滞在している間はボリュームのほうを調節しておきます」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「すまねぇな。よろしく頼むよ」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e3f"
+SETSTEP 8
+TEXT "一通り、挨拶が終わると各々の仕事に没頭した。"
+PAUSE
+NEWLINE
+TEXT "俺が担当しているのは、壊れたり破損したりしたアンドロイドを、整備、修理すること。"
+PAUSE
+NEWLINE
+TEXT "ラボの中ではそれが仕事だが、それ以外にも、外にある農機や車両の整備なども俺の仕事に含まれている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "システム面は、ここにいる専門のアンドロイド達が行なっている。"
+PAUSE
+NEWLINE
+TEXT "指とキーボードを使ってしかプログラムが組めない人間に比べて、直接データを改竄できるアンドロイド達のほうがここでは効率がいいからだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "もし、システム全体に影響を及ぼすようなトラブルが発生した場合は、俺が本部に伝えることになっているが、ここへ来てから一度もそんな事態になったことはなかった。"
+PAUSE
+NEWLINE
+TEXT "そのため現場で俺がすることは、今のところ基盤の交換などのハード面だけだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "農作物の生産について俺が口を出すような事もなく、万が一のトラブルも起きず、俺はただ機械をいじる。"
+PAUSE
+NEWLINE
+TEXT "そんな平和そのものの村の生活が俺は気に入っていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺の今日の作業は、農作業用アンドロイド数体の整備と修理だ。"
+PAUSE
+NEWLINE
+TEXT "折角妹が来ているので、いつもに比べりゃ全然数を少なくしてもらった。"
+PAUSE
+NEWLINE
+TEXT "これならミドリが起きてくる頃にはある程度はカタが付くだろう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "作業台に運ばれたアンドロイドの破損個所をチェックしながら短念に汚れを落としていく。"
+PAUSE
+NEWLINE
+TEXT "ここでのトラブルの原因は土や埃によるトラブルか磨耗によるトラブルのどっちかだ。"
+PAUSE
+NEWLINE
+TEXT "汚れは丁寧に落とし、磨耗した個所は新しく取り替えてやる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "アンドロイドの整備を続けていると、なんか医者になったようなそんな気分になる。"
+PAUSE
+NEWLINE
+TEXT "ガキの頃、オモチャを修理するボランティアの人がオモチャのお医者さんとかいって、子供が壊してしまったオモチャを簡単に直していたのを思いだす。"
+PAUSE
+NEWLINE
+TEXT "オモチャだろうがアンドロイドだろうが人間だろうが、だれかが直してやらないと壊れてしまう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺は人の体は直せないが、アンドロイド達にとってみれば医者みたいなもんだろう。"
+PAUSE
+NEWLINE
+TEXT "部品交換で済む分、人間の怪我や病気よりは、はるかに直しやすいけどな。"
+PAUSE
+NEWLINE
+TEXT "一日に出来る作業量が少ないのでメンテが終わったアンドロイド達がまた故障しないように丁寧に作業を進めた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "中途半端な仕事で二度手間になるのはごめんだ。"
+PAUSE
+NEWLINE
+TEXT "破損個所を取り替えて動作確認のために再起動させる。"
+PAUSE
+NEWLINE
+TEXT "システムが立ちあがるとアンドロイドの各所から駆動音が流れ始めた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e3b"
+SETSTEP 8
+TEXT "「よ、調子はどうだい？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ええ……お蔭様で良好なようです」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "丁寧に一つ一つのパーツの動きを確かめてから、アンドロイドは応えた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「良し、そりゃ何よりだ。今後とも故障に気を付けて村のことをよろしく頼むぞ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺はぽんっと背中を叩いて活をいれた。"
+PAUSE
+NEWLINE
+TEXT "軽く前のめりになりながらもアンドロイドは機敏に姿勢を元に戻した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「はい、今日は整備ありがとうございました」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ペコリとお辞儀をすると、軽快に歩いてラボを出ていった。"
+PAUSE
+NEWLINE
+TEXT "経過は良好。"
+PAUSE
+NEWLINE
+TEXT "今日もいい仕事が出来たようだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「お大事に」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "なんとなく、俺はそう言ってアンドロイドを見送った。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "cm"
+SETSTEP 8
+TEXT "作業も一段落し、一度下宿に戻ることにした。"
+PAUSE
+NEWLINE
+TEXT "さすがにこの時間になれば、うちの寝ボスケも起きているだろう。"
+PAUSE
+NEWLINE
+TEXT "昼までまだ少し時間はあるが、早めの昼食も悪くはない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺は、急いで帰りの支度を始め、ミドリのことを思い浮かべた。"
+PAUSE
+NEWLINE
+TEXT "昨日駅まで迎えにいき、三年ぶりの再会となった俺の妹。"
+PAUSE
+NEWLINE
+TEXT "あの時の驚きは、今までで一番大きいものだったかも知れない。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "m0"
+BG 0 "white"
+SETSTEP 8
+BG 0 "e1"
+SETSTEP 8
+TEXT "「よ、……久し振り」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "トラックを適当なところで止めさせて、俺はミドリと案山子の方に歩いていった。"
+PAUSE
+NEWLINE
+TEXT "やはり少し大人になったのか、ミドリは昔のように抱きついてはこなかった。"
+PAUSE
+NEWLINE
+TEXT "少し残念に思いながら、俺はミドリに近づいていった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b1"
+SETSTEP 8
+TEXT "「お兄ちゃん……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "白い涼しそうな服を着て、ミドリははにかんだ笑顔を見せる。"
+PAUSE
+NEWLINE
+TEXT "そんなミドリを見て、俺は心底驚いた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "面立ちは確かにミドリなのだが、あの頃のミドリとは別人と思えるくらい大人びた雰囲気を纏っている。"
+PAUSE
+NEWLINE
+TEXT "すぐ近くにいないと多少の変化でもずいぶん変わったと思うものだが、成長期の女の子の三年間というのは、予想以上のものだったらしい。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b0"
+SETSTEP 8
+TEXT "「お兄……ちゃん？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "驚きが大きくて何も言えなかった俺に、ミドリは声をかけてくる。"
+PAUSE
+NEWLINE
+TEXT "何でもない、ただの呼びかけ。"
+PAUSE
+NEWLINE
+TEXT "だが、なぜか、その声は少し震えていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺は驚きから立ち直り、ミドリを見つめた。"
+PAUSE
+NEWLINE
+TEXT "ミドリは表情を固くして、少し震えているようだった。"
+PAUSE
+NEWLINE
+TEXT "どうしたんだ、と聞こうとした次の瞬間には、ミドリの目からは涙が溢れて頬を伝っていた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b4"
+SETSTEP 8
+TEXT "「う……うぅ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「お、おい……ミドリ？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "突然泣き出したミドリに、俺はうろたえる。"
+PAUSE
+NEWLINE
+TEXT "一体、ミドリがどうしたのか、何で泣いているのか、さっぱり解らなかった。"
+PAUSE
+NEWLINE
+TEXT "大粒の涙を流して、ミドリは、ただ泣き続けている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺は……対処に困っていた。"
+PAUSE
+NEWLINE
+TEXT "三年間アンドロイドばかり相手にしていたので、目の前で人に泣かれるなんて事は、本当に久しぶりだったのだ。"
+PAUSE
+NEWLINE
+TEXT "それに、久しぶりに会ったミドリは随分大人になっていて、こんな泣くなんて事は…………。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ただ呆然とミドリを見つめている自分に気づいて、俺は何やってやがる、と自分を叱咤した。"
+PAUSE
+NEWLINE
+TEXT "泣いているミドリを前に、ただ呆と突っ立っているだけなんて、どうかしている。"
+PAUSE
+NEWLINE
+TEXT "俺は昔ミドリにそうしていたように、泣きじゃくるミドリを胸元に引き寄せて抱きしめた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f4"
+SETSTEP 8
+TEXT "「うぅっ……お兄……ちゃん」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "抱きしめてやると、ミドリは俺の背中に手を回し、しがみつくようにして一層強く泣きじゃくった。"
+PAUSE
+NEWLINE
+TEXT "俺の胸に顔を押し付けて、お兄ちゃんと繰り返しながら、ミドリは肩を震わせている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「どう……したんだ？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "優しく声をかけると、ミドリは回した手に強く力を込めた。"
+PAUSE
+NEWLINE
+TEXT "よっぽど、何かを溜め込んでいたんだろう。"
+PAUSE
+NEWLINE
+TEXT "理由はわからないけれど、その思いの強さは、俺によく伝わってきた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "俺はミドリが落ち着くまでこうしていようと、無言でミドリの肩を抱いていた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b0"
+SETSTEP 8
+TEXT "「ありがと、もういいよ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "やがて、ミドリは俺の胸を押し、静かに離れた。"
+PAUSE
+NEWLINE
+TEXT "ウサギみたいな真っ赤な目をして声はぐずついていたけれど、涙は止まっていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "理由を聞いてみようかと思ったがミドリが話さなかったのだから、聞かないほうがいいだろう。"
+PAUSE
+NEWLINE
+TEXT "俺が実家にいる頃、ミドリが俺に泣きついて来る時には、無くし物をしただの、母親に怒られただのその理由を必ず言っていたものだったが……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "三年という月日の中で、確実にミドリは大人への階段を一歩登ったようだった。"
+PAUSE
+NEWLINE
+TEXT "それなら、俺もミドリをあまり子ども扱いするのはやめにしよう。"
+PAUSE
+NEWLINE
+TEXT "ミドリはポケットから可愛らしいハンカチを一枚取りだすと、涙で濡れた頬を丹念に拭いて笑った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b1"
+SETSTEP 8
+TEXT "「はぁー、泣いてすっきりした」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "笑うミドリを見て、俺はまた驚いていた。"
+PAUSE
+NEWLINE
+TEXT "こういった気持ちの切り替えの早さは、昔のミドリにはなかった。"
+PAUSE
+NEWLINE
+TEXT "本当に、三年という歳月は長いものだったらしい。"
+PAUSE
+NEWLINE
+TEXT "俺は少しだけ、今まで実家に帰らなかった事を後悔した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ここまで来て疲れただろ、そろそろ日も暮れてきたし、行こう」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺がそう言うと、ミドリはうん、と嬉しそうに頷いた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b0"
+SETSTEP 8
+TEXT "「じゃ、またね、案山子」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「お気を付けて、でやんす」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "どうやらミドリは、案山子とすっかり打ち解けたらしい。"
+PAUSE
+NEWLINE
+TEXT "ミドリがさっそく村の連中と仲良くなっているのが分かり、俺は口元を緩めた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ミドリがこの村の生活を楽しんでくれればいい、と思う。"
+PAUSE
+NEWLINE
+TEXT "そして、ここに何があるのか、見ていって欲しいと思う。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "二人でトラックの所までくると、俺はエスコートするようにドアを開けた。"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "f1"
+SETSTEP 8
+TEXT "「なんかお姫様みたい」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "照れ笑いしながら、ミドリはトラックに乗り込んだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ミドリの後に俺が続くと、トラックはぎしっと音を立てて揺れた。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「はは、姫君が乗る車にしては、ずいぶんボロだがな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "俺が苦笑すると、ミドリは強く首を振って、楽しそうに言った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「そんなことないよ！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「……そうか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「うん！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ミドリの笑顔は、"
+PAUSE
+NEWLINE
+TEXT "本当に、嬉しそうだった。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "ic"
+SETSTEP 16
+PAUSE
+BG 0 "cm"
+SETSTEP 8
+SE_PLAY "m0"
+TEXT "窓の外を流れる畑の景色が、夕日に照らされて一面のオレンジに染まっていた。"
+PAUSE
+NEWLINE
+TEXT "トラックの窓から差し込む光で、私も兄も同じようにオレンジ色になる。"
+PAUSE
+NEWLINE
+TEXT "遠くに見える山の影。"
+PAUSE
+NEWLINE
+TEXT "その上にオレンジよりも赤く輝いている太陽。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "綺麗な、夕焼けだった。"
+PAUSE
+NEWLINE
+TEXT "ここには背の高い建物が無いため私はその綺麗な夕日を、いつまでも見つづける事ができた。"
+PAUSE
+NEWLINE
+TEXT "写真や映像でこういった景色を見たことはあるけど、実際に見る本物の景色は、それよりもずっと胸に響くものがあった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「そういえば……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私がずっと窓の外の夕日を見ていると、出し抜けに兄が言った。"
+PAUSE
+NEWLINE
+TEXT "兄のほうを見ると、兄は私を見ていたずらっぽい笑みを浮かべた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「さっき、案山子からミドリの声が聞こえてきたぞ」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "b2"
+SETSTEP 8
+TEXT "「あっ、あれは……その……」"
+PAUSE
+NEWLINE
+NEWLINE
+CLEAR
+TEXT "私はさっきの恥ずかしさが蘇ってきて、顔が熱くなった。"
+PAUSE
+NEWLINE
+TEXT "あれは、兄には聞かれたくなかった。"
+PAUSE
+NEWLINE
+TEXT "ぜったい言われると思ったから……。"
+PAUSE
+NEWLINE
+TEXT "そうなって欲しくないと思っていることは、なぜかそうなってしまう法則、が今回も働いたようで、私は頭を抱えた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "カラスを追い払った、私の怒鳴った声。"
+PAUSE
+NEWLINE
+TEXT "それだけならまだしも……。"
+PAUSE
+NEWLINE
+TEXT "案山子が私の声で、あの変な案山子言葉を叫んだやつ。"
+PAUSE
+NEWLINE
+TEXT "あれだけは、絶対に聞かれていませんように……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「なんか……凄い事言ってたな、拳をたたきこんでやる、とか」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "やっぱり聞かれてた……。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あ、あれは、案山子が私の声で勝手に……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私は、兄に一応そう言った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "それは、もちろん本当の事なんだけど……。"
+PAUSE
+NEWLINE
+TEXT "だけど、兄もそれが解っていながら言っている。"
+PAUSE
+NEWLINE
+TEXT "私があんな言葉で話さないことをちゃんと解っていて……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ほんとかぁ……？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "分かっていて、こんな意地悪を言う。"
+PAUSE
+NEWLINE
+TEXT "昔から兄がこういう口調をするときは、私をからかっているときの癖だった。"
+PAUSE
+NEWLINE
+TEXT "そして、からかわれている、と解っていながら私はムキになってしまっていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "でも、それは……。"
+PAUSE
+NEWLINE
+TEXT "からかわれていると解っていたからこそ、子ども扱いされるのが嫌でムキになっていたのかもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ほんとだもん」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "あんまりムキにならないよう、私はぷいっと窓に顔を向けて、外に視線を移した。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "相変わらず綺麗な夕焼けが広がっていた。"
+PAUSE
+NEWLINE
+TEXT "だけど、さっき感じたような、胸に響くような景色ではなくなってしまっていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "兄は、それ以上私をからかう言葉がなかったのか、そこから口を開かなかった。"
+PAUSE
+NEWLINE
+TEXT "私は私で、拗ねてしまった態度をどう戻していいのか悩んでいて、車の中には奇妙な沈黙が降りてしまった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "うーん、私から謝るのも変だよね……。"
+PAUSE
+NEWLINE
+TEXT "ガタガタと揺れる、トラックの振動音がさっきよりも大きく聞こえるような気がした。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e2"
+SETSTEP 8
+TEXT "「ミドリ様のおっしゃっている事は、本当だと思います」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "突然、トラックを運転していたアンドロイドがそう喋った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "今までずっと静かに運転しているだけだったので、私は最初、どこから声が聞こえたのか解らないくらいだった。"
+PAUSE
+NEWLINE
+TEXT "兄も驚いているようで、目をまるくして運転しているアンドロイドを見ていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「何だよ、お前……ミドリの味方なのか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「はい、シゲル様とミドリ様、どちらかと言われれば」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ふん、いつも俺が整備してるってのに……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "恩知らずめ、と呟きながら、兄は笑っていた。"
+PAUSE
+NEWLINE
+TEXT "何か面白いことがあったときの笑い方だった。"
+PAUSE
+NEWLINE
+TEXT "何で兄が面白がっていたのかは解らないけど、私はたぶん初めて、兄をやっつける事ができて嬉しくなった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f1"
+SETSTEP 8
+TEXT "「ありがとう」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私がお礼を言うと、アンドロイドは運転したままおじぎして、言った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e2"
+SETSTEP 8
+TEXT "「差し出がましいことを申しました」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "アンドロイドはそう言って、また静かに運転するだけの位置に戻っていった。"
+PAUSE
+NEWLINE
+TEXT "私はもう一度心の中で、ありがとと呟いた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "それから、私と兄はまた普通に話をした。"
+PAUSE
+NEWLINE
+TEXT "これから家に着いたら、私の歓迎会をしてくれること。"
+PAUSE
+NEWLINE
+TEXT "近所には元気なおばあちゃんが住んでいて、お料理を作って私を待っていてくれてること。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "都会では食べられないご馳走があること、など。"
+PAUSE
+NEWLINE
+TEXT "私はその、どの話も嬉しくて、ここに来て良かった、と心から思った。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "white"
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+SE_PLAY "m1"
+TEXT "車の中で兄の話を聞いているうちに、いつのまにか兄の下宿している家に着いていた。"
+PAUSE
+NEWLINE
+TEXT "太陽はもう山の向こうに沈んで見えなくなり、山の輪郭あたりにまだ明るさは残っているけれど、辺りは大分暗くなっていた。"
+PAUSE
+NEWLINE
+TEXT "荷物を下ろし、車を戻しに行く運転していたアンドロイドに挨拶する。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b1"
+SETSTEP 8
+TEXT "「さっきは、ありがとう」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "色々なお礼の言葉が浮かんだけれど、私はシンプルに一番伝えたい事を言った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e2"
+SETSTEP 8
+TEXT "「いえ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転席に座ったアンドロイドはすこし照れたように頭を下げると、エンジンをかけて、静かにトラックを発進させた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "本当はもっと色々話をしたかったけど、村の生活はまだまだこれからなので、それはまた今度にとっておくことにした。"
+PAUSE
+NEWLINE
+TEXT "遠ざかるトラックを、兄と一緒にしばらく見送って、私は兄を見上げた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「よし、じゃぁ行こうか」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄がひょいと私の重いバッグを持ち上げて、肩にストラップをかけ直す。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f0"
+SETSTEP 8
+TEXT "「いいよ、私、自分で持っていくから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "あわてて荷物を奪おうとしたけれど、兄は口元に笑みを浮かべて私を遮った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「長旅で疲れてるだろ、気にすることはねぇよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "そう言って、兄は家のほうに向かって歩き始めた。"
+PAUSE
+NEWLINE
+TEXT "私は兄の後を追いながら、兄の下宿する家を眺めた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "兄の家は以前この村に住んでいた人の家をそのまま再利用しているみたいだった。"
+PAUSE
+NEWLINE
+TEXT "ビルばかりの地元では見たことのない、低く古い家。"
+PAUSE
+NEWLINE
+TEXT "集合住宅になれた私には、それはすごく新鮮に見えた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "引き戸の玄関をカラカラと開け、中に入ると、ひんやりとした風が流れてきた。"
+PAUSE
+NEWLINE
+TEXT "冷房あるんだ、と私は少し意外に思った。"
+PAUSE
+NEWLINE
+TEXT "せっかく田舎に来たのだから、エアコンディションの効いていない空気を楽しもうと思っていたんだけど。"
+PAUSE
+NEWLINE
+TEXT "まぁいいや、外でいっぱい吸えば……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「バッチャン、ただいまー」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄が玄関から家に上がり、大きな声でそう言うと、奥のほうからパタパタと足音が聞こえてきた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その足音はすぐに近づいてきて、廊下の向こうに着物に割烹着姿のおばあちゃんが現れた。"
+PAUSE
+NEWLINE
+TEXT "そのおばあちゃんは、にこにこしながらやってきて、兄と私の両方に交互に視線を移した。"
+PAUSE
+NEWLINE
+TEXT "随分と元気そうなおばあちゃんだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「おかえりなさい、シゲさん、それから……ミドリちゃんね？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "おばあちゃんは、少ししわがれた声でそう言うと、私の手を両手で握った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "b0"
+SETSTEP 8
+TEXT "「ミドリです、はじめまして……えっと、兄がお世話に……あ、あああの、お、お世話になります」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "手を握られて緊張してしまって、私は変な挨拶をしてしまった。"
+PAUSE
+NEWLINE
+TEXT "それでも、おばあちゃんはにこにこしたまま、うんうんと頷いていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「はじめまして、お会いできて嬉しいわ。シゲさんといい、なんだか孫が増えたみたいねぇ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "おばあちゃんは\t握った手を上下に振って嬉しそうにそう言った。"
+PAUSE
+NEWLINE
+TEXT "しわくちゃで細い手だったけど、暖かくてどこか懐かしい感じがした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「さあさ、疲れたでしょうからねお風呂沸いてるから先に入ってらっしゃいな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "言うが早いか、おばあちゃんは私の背中をぐいぐい押して、お風呂場へ連れて行こうとする。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f1"
+SETSTEP 8
+TEXT "「わ、えっと……お兄ちゃん？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "背中を押されながら、私は顔だけ兄に振り向く。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「先入ってこいよ、俺はまだちょっとすることがあるから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「わ、わかったー」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄の言葉に頷いて、私はおばあちゃんに背中を押されながら、そのままお風呂場へ向かった。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "b0"
+SETSTEP 8
+TEXT "お風呂場の脱衣所に着くと、おばあちゃんは、ゆっくり入っておいで、と言ってどこかに行ってしまった。"
+PAUSE
+NEWLINE
+TEXT "私は脱衣所でぽつんと立って、考えた。"
+PAUSE
+NEWLINE
+TEXT "着替え……どうすればいいんだろう。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ざっと見回してみたけど、脱衣所の中には着替えは用意されてないようだった。"
+PAUSE
+NEWLINE
+TEXT "私が持ってきた着替えは兄が持っていったスポーツバッグの中に入っている。"
+PAUSE
+NEWLINE
+TEXT "このままお風呂に入って、あがった時……。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "今着ている、汗で汚れた服をもう一度着るのは嫌だし……。"
+PAUSE
+NEWLINE
+TEXT "まさか、裸で出て行くわけにもいかない。"
+PAUSE
+NEWLINE
+TEXT "…………ま、いいや。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "どうしよう、と考えている間に、どうでもよくなってきた。"
+PAUSE
+NEWLINE
+TEXT "お風呂場からの熱気で、脱衣所の中は汗だくになるくらい熱くなっている。"
+PAUSE
+NEWLINE
+TEXT "こんな状態で、また着替えを取りに行くのも面倒だし……。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "私はおばあちゃんが着替えを用意してくれるのを期待して、このままお風呂に入ることにした。"
+PAUSE
+NEWLINE
+TEXT "お風呂に入ろうと決めた私は、ぱぱっと服を脱衣籠に脱ぎ捨てて、浴室に続く引き戸を開けた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "white"
+SETSTEP 8
+TEXT "むわっと白い湯気がたちこめて、一瞬視界が遮られる。"
+PAUSE
+NEWLINE
+BG 0 "cm"
+SETSTEP 8
+SE_PLAY "m1"
+TEXT "目が慣れたのか、すぐにお風呂場の景色が見え、私は驚きの声をあげた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「すごい」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "お風呂場は全部木でできていた。"
+PAUSE
+NEWLINE
+TEXT "足元も、壁も、天井も、浴槽まで全部。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "あ、水道の蛇口だけは木じゃなかった。"
+PAUSE
+NEWLINE
+TEXT "ほとんどが木でできたお風呂場を眺めて、私はすごく贅沢な気分になった。"
+PAUSE
+NEWLINE
+TEXT "こんなお風呂、私の住んでいる都会では絶対に入れない。"
+PAUSE
+NEWLINE
+TEXT "木の香りが私の体を包み込み、いい雰囲気を醸し出している。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "こんな中でお湯に浸かったら、すごくリラックスできそう……。"
+PAUSE
+NEWLINE
+TEXT "私は、うっとりしながら、体を洗うため、手桶を探した。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "m0"
+BG 0 "white"
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+TEXT "着替えは荷物の中なので取りに行かないと、と思いながらお風呂からあがると、脱衣所には一着の浴衣が丁寧に畳んで置いてあった。"
+PAUSE
+NEWLINE
+TEXT "私はそれを見て、また感激した。"
+PAUSE
+NEWLINE
+TEXT "もう地元では、浴衣とか着物は行事やお祭りでも、最近はめっきり着なくなっている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "最後に着たのは七五三のときだったかな、と思うくらいだった。"
+PAUSE
+NEWLINE
+TEXT "めったに着れないお洒落ができるのが嬉しかった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "浴衣を着た私を見て、兄は誉めてくれるだろうか。"
+PAUSE
+NEWLINE
+TEXT "…………。"
+PAUSE
+NEWLINE
+TEXT "きっと誉めてくれる。"
+PAUSE
+NEWLINE
+TEXT "そう私は決めて、浴衣に袖を通した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "浴衣を着て、適当に部屋をのぞいて回っていると、おばあちゃんがいる部屋に当たった。"
+PAUSE
+NEWLINE
+TEXT "おばあちゃんは、ちゃぶだいの上にせっせと料理を運んでいた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb0"
+SETSTEP 8
+TEXT "「あの、良いお湯でした、おかげでさっぱりしました」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私がおばあちゃんに声をかけるとおばあちゃんは私のほうを振り向いた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「まぁ、浴衣、良く似あってるわねぇ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あの、これ……お借りしちゃって、いいんですか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "満足げに頷いているおばあちゃんに、私はそう聞いた。"
+PAUSE
+NEWLINE
+TEXT "いくら私がこっちに来るといっても、兄が浴衣を用意してくれるとは思わない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "兄は優しいけれど、そういった気遣いはほとんど出来ないのを私は知っている。"
+PAUSE
+NEWLINE
+TEXT "きっとおばあちゃんが用意してくれたのだろうと、私は思ったのだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「それは、昔、孫に買ってあげたやつなんだけど、色々あって着る事がなくてねぇ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "おばあちゃんはそう言って、一瞬寂しそうな顔をしたあと、私の浴衣のずれを直してくれた。"
+PAUSE
+NEWLINE
+TEXT "私は何となく、何も言えなくて、ただおばあちゃんに浴衣を直してもらっていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ちょうど良い位の大きさだわ。なんでも取っておくもんだわね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "おばあちゃんは、また満足げに頷いて、笑みをこぼした。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb2"
+SETSTEP 8
+TEXT "「似あいますか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私はちょっと恥ずかしくなって照れながら聞くと、おばあちゃんは大きく頷いた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「よく似合ってる、シゲさんもきっとびっくりするよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「そう……かなぁ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "照れて、人差し指で頭を掻いていると、玄関の引き戸が開く音がした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ただいまー」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄の声が聞こえた。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あら、帰ってきたね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "おばあちゃんは、いたずらっぽく笑いかけて、私の腕をぽんぽんと二回叩いた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "私とおばあちゃんは、黙って兄が入ってくるのを待っていた。"
+PAUSE
+NEWLINE
+TEXT "兄の反応が楽しみで、心臓がドキドキした。"
+PAUSE
+NEWLINE
+TEXT "やがて、足音が部屋に近づいてきて、ガラっと引き戸が開き、兄が入ってくる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「あ……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私の姿を見るなり、兄は驚いて固まっていた。"
+PAUSE
+NEWLINE
+TEXT "私のほうもちょっと恥ずかしくてうつむいていたけれど。"
+PAUSE
+NEWLINE
+TEXT "ほら、と、おばあちゃんが私をつっつく。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf0"
+SETSTEP 8
+TEXT "「驚いた？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "と、聞いてみた。"
+PAUSE
+NEWLINE
+TEXT "兄は一度無言で頷いて、照れたように鼻の頭を掻き、"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「驚いた、でも似あってる」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "と言った。"
+PAUSE
+NEWLINE
+BG 0 "yf1"
+SETSTEP 8
+TEXT "私とおばあちゃんは、顔を見合わせてにっこり笑った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "それから、兄がお風呂に入ってさっぱりした後、私の歓迎会が開かれた。"
+PAUSE
+NEWLINE
+TEXT "おばあちゃんが作ってくれたという、この村で取れた野菜の料理が両手でも数え切れないくらい、たくさん並んでいた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "兄は、私がお風呂に入っている間に、すぐに食べられる野菜を取ってきてくれたらしく、まさしく取れたての野菜を生で食べさせてくれた。"
+PAUSE
+NEWLINE
+TEXT "天然の野菜自体、あまり食べる機会がなかった私は、ここに来て、はじめて本物の野菜は甘いという事実を知った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "食事が終わると、おばあちゃんはせっかくの兄妹水入らずを邪魔しちゃ悪いと言って、私と兄が引き止める中、一人で帰っていった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb0"
+SETSTEP 8
+TEXT "「良い人だね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ああ、ここにはもう人が全然いないけど、残ってる人はみんな凄く良い人達さ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私達はおばあちゃんの背中が見えなくなるまで、ずっと玄関からおばあちゃんを見つめていた。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+CLEAR
+BG 0 "ic"
+SETSTEP 8
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+SE_PLAY "m1"
+BG 0 "yb0"
+SETSTEP 8
+TEXT "おばあちゃんが帰ったあと、しばらく私達は居間でごろごろしていた。"
+PAUSE
+NEWLINE
+TEXT "お互いの近況を話しながらゆったりと二人の時間を共有していく。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "学校でのこと、勉強や部活動のこと、今こっちではなにが流行っているとかそんなくだらない世間話でも今はものすごく楽しい。"
+PAUSE
+NEWLINE
+TEXT "兄のほうも仕事の話とかこの村の話、ここで働くアンドロイドたちの話をいっぱいしてくれた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "あんまり変わっていないと思っていた兄も、ここでの生活のなかでいろいろと変わっていた。"
+PAUSE
+NEWLINE
+TEXT "思春期の真っ只中にいる私は、精神的にも肉体的にも発展途上にあるけど、兄のほうは都会にいたときよりもがっしりとしていて性格も丸くなったというか、どこか落ち着いた感じ。"
+PAUSE
+NEWLINE
+TEXT "でもどこか抜けてて、やさしいところはあのころのまんまだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "大きなのっぽの古時計が、すこし間の抜けた鐘を９回ならして九時の合図を告げた。"
+PAUSE
+NEWLINE
+TEXT "まだまだ寝るには全然早いけど、布団にはいればすぐ眠れる自信はある。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf0"
+SETSTEP 8
+TEXT "「お兄ちゃん、そろそろ部屋もどるね」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "居間でゆっくりしている兄に話しかけると、なにか思いついたように立ちあがり"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「そうだ、折角だから花火しないか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "と言ってきた。"
+PAUSE
+NEWLINE
+TEXT "眠いけど、今寝るのは凄くもったいない。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf1"
+SETSTEP 8
+TEXT "「いいよ、やろうやろう！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "少し待っていると、兄はどこからかファミリー用の花火セットを持ってきた。"
+PAUSE
+NEWLINE
+TEXT "二人でやるにはちょっと量が多いかもしれないけど、それだけいっぱい楽しめそうだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「こんなこともあろうかと買っておいたんだけど、なかなか使う機会なくて、すっかり忘れてたけどな」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "確かに一人で花火やってもつまらない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「よし、じゃあ準備すっから、先に外で待ってな」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+BG 0 "yb0"
+SETSTEP 8
+TEXT "玄関には、おばあちゃんが用意してくれた下駄が、キチンと整理されて置かれていた。"
+PAUSE
+NEWLINE
+TEXT "浴衣着てるのに、靴もあれだろうとわざわざ下駄も用意してくれたみたいだ。"
+PAUSE
+NEWLINE
+TEXT "ちょっと私には、大きめだったけど長く歩くわけじゃないから気にしない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "外に出ると昼間の暑さがすっかりなくなり、風が吹くたびに心地の良い気分になれる。"
+PAUSE
+NEWLINE
+TEXT "外灯が全然無い道を月と星が照らしていた。"
+PAUSE
+NEWLINE
+TEXT "下からの明かりが無いから、月も星も都会では見えないくらいほどキラキラと輝いていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "こんなに明るいなら外灯はいらないかもしれない。"
+PAUSE
+NEWLINE
+TEXT "鈴虫やコオロギの音色と蛙の鳴き声が昼間のカカシの叫び声以上に辺りに木霊していた。"
+PAUSE
+NEWLINE
+TEXT "夜は夜で別の顔を村は私に見せてくれた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "水をたっぷり汲んだバケツと火の付いた蝋燭を片手に兄がこっちにやってきた。"
+PAUSE
+NEWLINE
+TEXT "わくわくしながら封を開くと火薬の匂いが辺りに広がり色とりどりの花火が顔を出した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "花火もここ数年やっていない。"
+PAUSE
+NEWLINE
+TEXT "大きい花火大会をベランダからみることはあるけれど、家庭用の花火をだれかとやるのは何時以来だろう？"
+PAUSE
+NEWLINE
+TEXT "どれにしようかと悩んでいると、兄が真っ先に線香花火に手を付けた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf0"
+SETSTEP 8
+TEXT "「ちょっと待って、なんでいきなり線香花火から始めるの？」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "普通は最後の締めでやるものだろう、と突っ込むがすでに線香花火はぱちぱちと切なげな火を放っている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「俺は線香花火が花火で一番好きだから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私だって線香花火は花火のなかで一番好きだ。"
+PAUSE
+NEWLINE
+TEXT "でもそれは最後にやるから意味があっていきなりやったのでは面白くもなんとも無い。"
+PAUSE
+NEWLINE
+TEXT "そうこう言ってる間に線香花火は第二段階に移り赤い球になって紐に必死にしがみついていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「いいじゃん、こう言うのは楽しんだもん勝ちだって」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「私はそれじゃ楽しくないの」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「おいおい揺らすなって……せっかくの大粒の球が落ちるじゃねえか」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "止めさせようと兄の腕を引っ張るが、兄は落ちそうになっている火の球を一秒でも長くそのままにしようと必死だった。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あっ…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ぽとり……と、火の球が地面に落ちる。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "同時にどこからとも無く沸きあがる哀愁が全身を包んだ。"
+PAUSE
+NEWLINE
+TEXT "だから線香花火は最初にやるものじゃない。"
+PAUSE
+NEWLINE
+TEXT "最初は派手なやつでムードを盛り上げないと。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf1"
+SETSTEP 8
+TEXT "「全部終わったら返してあげる」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "袋に入っている線香花火を全部没収して、花火の続きを始めた。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あーあ、俺の楽しみが…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ツベコベ言わずに、はいこれ持って」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "袋からなるべく派手で大きいのを手渡した。"
+PAUSE
+NEWLINE
+TEXT "導火線に火を付けるとシューと音をあげて色鮮やかな光りの束が辺りを照らした。"
+PAUSE
+NEWLINE
+TEXT "線香花火を取り上げられた兄は、やる気なく花火をもっているせいか、心なしかその花火の火も元気が無いように見える。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ほら、こういうのは楽しんだもん勝ちなんでしょ？　楽しまないと」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "燃え尽きた花火をバケツにいれて消火すると、ハイっと新しい花火を手渡した。"
+PAUSE
+NEWLINE
+TEXT "ファミリー向けの大きいタイプの花火なので無くなるまでにはまだまだ余裕がある。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「分かったよ、楽しんでやりゃいいんだろう、ほれ！」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "yf2"
+SETSTEP 8
+TEXT "「ちょ、ちょっと止めてよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄は、花火をブンブンふって火の子を辺りに飛ばした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「や、や、やめてよ、危ないじゃない」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "花火を人に向けて行なうのは大変危険ですのでやめましょうとパッケージにもでかでか書いてある。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「さぁ、線香花火を返してもらおうか」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄がフェンシングの剣みたいにピュンピュン花火を振り、その軌跡にそって淡い光の残像が残る。"
+PAUSE
+NEWLINE
+TEXT "危ないっていってるのに全然反省しない兄に腹立てた私も反撃にでることにし、花火の先を兄のほうへ向けた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「お前、言ってることとやってることが違うぞ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私は束から筒状の長い花火をとりだした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "これは閃光が遠くに向かってパシュっと飛んでいくタイプ。"
+PAUSE
+NEWLINE
+TEXT "本当は地面に設置して打ち上げて遊ぶタイプの花火だけど、私はそれを両手で持って照準を兄に合わせた。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb1"
+SETSTEP 8
+TEXT "「さきに手を出してきたのはそっちだからね！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "花火セットは私の手元にあった、兄が持ってる花火は今にも消えそうな手持ちの一本だけ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "後ろを振りかえることなく全力でかけだす兄に向けて私は容赦無く閃光を浴びせた。"
+PAUSE
+NEWLINE
+TEXT "テレビアニメのロボットが使うビームみたいに凄い速さで閃光は兄を襲った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb0"
+SETSTEP 8
+TEXT "その後二人で仲直りして普通に花火を再開した。"
+PAUSE
+NEWLINE
+TEXT "幸いなことにお互いにやけどはひとつも無かった。"
+PAUSE
+NEWLINE
+TEXT "私もちょっとやりすぎたと反省した。"
+PAUSE
+NEWLINE
+TEXT "やっぱり花火は人に向けて遊ぶ物じゃない。こうして綺麗な火をみて楽しむ物だ。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf0"
+SETSTEP 8
+TEXT "「はい。お待たせしました」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "最後に取っておいた線香花火を取り出して、半分に分けた。"
+PAUSE
+NEWLINE
+TEXT "やっぱり線香花火をやるなら最後じゃないと。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「まったく、待ちくたびれたよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "やれやれと頭を掻きながら、線香花火を受け取った。"
+PAUSE
+NEWLINE
+TEXT "二人で前に屈んで、大分背の低くなった蝋燭の炎に線香花火をくぐらせた。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_PLAY_TOGGLE "m0"
+BG 0 "e5"
+SETSTEP 8
+TEXT "パチ　パチ　パチ"
+PAUSE
+NEWLINE
+TEXT "ジ　ジ　ジ　ジ　ジ　ジ　ジ　ジ"
+PAUSE
+NEWLINE
+TEXT "チリ　チリ　チリ　チリ"
+PAUSE
+NEWLINE
+TEXT "ジュ…"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "引火すると同時に小さい火の粉が身を震わせながら煌めき消えた。"
+PAUSE
+NEWLINE
+TEXT "二人並んでその煌めきが消えるまでの時間を競った。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf2"
+SETSTEP 8
+TEXT "「あー、もうなんでかなぁ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "数秒の差で私の線香花火の火は地面に先に落ちた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「それは、俺とお前じゃ線香花火にたいする愛が違うからな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「線香花火に愛があるなら最初になんて絶対やらないよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "多分、きっと兄はご飯のときも最初に一番好きなものを食べて、最後に残った嫌いな食べ物は残して捨てるタイプの人だと思う。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf1"
+SETSTEP 8
+TEXT "「もう一回！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "はいはいと、兄はやる気なさそうに、また蝋燭に線香花火をくぐらせる。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e5"
+SETSTEP 8
+TEXT "パチ　パチ　パチ"
+PAUSE
+NEWLINE
+TEXT "ジ　ジ　ジ　ジ　ジ　ジ　ジ　ジ"
+PAUSE
+NEWLINE
+TEXT "チリ　チリ　チリ　チリ"
+PAUSE
+NEWLINE
+TEXT "ジュ…"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "二つの火の玉はほぼ同時に力尽きて地面に落ちた。"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "yf0"
+SETSTEP 8
+TEXT "「うーん…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "気持ち私のほうが遅く落ちたとは思う。判定の結果私の勝利だ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "残った線香花火はお互いに一本ずつ。"
+PAUSE
+NEWLINE
+TEXT "勝負は最後の一本へと持ち越された。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「これで最後だからね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私は気合をいれて紐を握った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「線香花火で勝負してもしょうがないだろ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "と兄は私の線香花火に自分の線香花火を絡めた。"
+PAUSE
+NEWLINE
+TEXT "二つの線香花火が太い一本の線香花火になる。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「二人で楽しむ。だろ？」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ほら、と二股に伸びた取っ手の片方を私に差し出した。"
+PAUSE
+NEWLINE
+TEXT "二人で花火が解けないように慎重に持ちながら蝋燭にくぐらせた。"
+PAUSE
+NEWLINE
+TEXT "普通よりずっと大きい火の玉が私達の手のなかで誕生した。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "e5"
+SETSTEP 8
+TEXT "パチ　パチ　パチ"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「綺麗…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "絡めた花火は無事にひとつの火の玉として形をなして、力強い火をあげた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ジ　ジ　ジ　ジ　ジ　ジ　ジ　ジ"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "やがて勢いは衰えてゆっくりと姿を変えていく。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "チリ　チリ　チリ　チリ"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "火花を上げることは無くなった火の玉は火薬を燃やし尽くしては紙の部分をゆっくりと上へと登ってくる。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ジュ…"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+TEXT "ポトリとその火は地面に落ちて消えてなくなった。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「これで、勝負は引き分けだな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "笑みを浮べて、兄は得意げに言った。"
+PAUSE
+NEWLINE
+TEXT "本当は勝ち負けなんてどうでもよくて、こうして一緒になにか出来るだけで嬉しかったのに、私は何をむきになっていたんだろう。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf2"
+SETSTEP 8
+TEXT "「ううん…やっぱりお兄ちゃんにはかなわないよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「そうでもないさ」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb0"
+SETSTEP 8
+TEXT "兄はゴミを片付けに一旦家に戻った。"
+PAUSE
+NEWLINE
+TEXT "この後もう少しだけ時間があるので、二人どこか出かけることにした。"
+PAUSE
+NEWLINE
+TEXT "出かけるといっても単なる散歩だけれど。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "m1"
+TEXT "「お待たせ、んじゃ、歩ける範囲で案内するかな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「歩ける範囲って…あんまり遠くに連れて行かないでよね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「はいはい、分かってますって」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "二人で手をつないでカランコロンと下駄を鳴らしながら、だれもいない夜の道を二人で歩いた。"
+PAUSE
+NEWLINE
+TEXT "その音に連なるように虫たちと蛙の合唱が加わり、歩道の劇場に深みを与えた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「おや、コンバンワ！　こんな時間いかがしました？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "私たちに気がついた案山子が話しかけてきた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「よう、今日もご苦労さん。なにただの散歩だよ、ちょっと風に当たりたくてな」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「お散歩でございますか、いいですねぇ。兄妹、仲睦まじくというか」"
+PAUSE
+NEWLINE
+TEXT "案山子は腕を組みながら首をうんうんと揺らして、何やら考えている。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「お嬢ちゃんもお元気そうで。昼間はおかげで助かりましたよ」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "yb2"
+SETSTEP 8
+TEXT "「次は私に頼らなくてもカラスくらい自分で何とかしなさいよ。まったくもう」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「ええ、今度カラスどもが畑を荒らしに着やがったなら這ってでも近寄ってぶん殴ってやりまさぁ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "多分這った所でカラスには手も足も出ないだろうけど、その映像は結構ショッキングだと思う。"
+PAUSE
+NEWLINE
+TEXT "一回でも見たカラスは寄り付かなくなるかも。昔流行したホラー映画みたいに大群で這ってやって来る案山子軍団。"
+PAUSE
+NEWLINE
+TEXT "カラスじゃなくても絶対に嫌だ。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb0"
+SETSTEP 8
+TEXT "「やめときなさいよ、それすごく怖いから…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "忠告だけはしておいたけど案山子のほうは結構乗り気だ。"
+PAUSE
+NEWLINE
+TEXT "せめて私がいる間はそんな案山子には出会わないように祈った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その時私たちの頭上に一筋の光が横切った。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あれ。今のなに？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "ここのなにかの防犯装置かなにかかな？"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ああ、都会じゃあれは見れねぇからなぁ、じゃぁ散歩のついでに見に行くかね」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「そうですねぇ、あれは今じゃここの名物みたいなもんですから、見ておいて損はないでしょ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「それじゃ、ちょっと行って来るわ。夜はまだまだ長いがお前も頑張れよ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子と別れると、兄に案内されて近くの川辺までやってきた。"
+PAUSE
+NEWLINE
+NEWLINE
+SOUND_STOPALL
+BG 0 "yf1"
+SETSTEP 8
+SE_PLAY "m0"
+TEXT "「うわぁ、綺麗…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "光の正体は蛍だった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "さらさらという川のせせらぎを背に、無数の光が一面を明るい光で染め上げていた。"
+PAUSE
+NEWLINE
+TEXT "もちろん、実物を見たのははじめて。"
+PAUSE
+NEWLINE
+TEXT "本やテレビでちょっと見たことがある程度だ。"
+PAUSE
+NEWLINE
+TEXT "ここに来てから本当にいろいろと驚きの連続だった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ここじゃ、この国で絶滅しかかっている蛍が生息しやすい環境を整えて繁殖させてんだってさ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "蛍が生息しやすい川辺や湿地帯は今ではもうあまり残っていない。"
+PAUSE
+NEWLINE
+TEXT "残っていたとしても、そこがデリケートな蛍が生息できるだけの環境が保たれているとは限らなかった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "人口的に作られている空間とはいえここでは、視界いっぱいにキラキラときらめく蛍がひしめいている。"
+PAUSE
+NEWLINE
+TEXT "よく都市部の夜景をいくらの夜景と勘定したりするけどきっとここの夜景には私は恐れ多くて値段の付けようが無かった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "二人で適当なところに腰を下ろして、その光りの舞をずっと眺めていた。"
+PAUSE
+NEWLINE
+TEXT "一匹一匹がそれぞれのペースで瞬くのでネオンのように光には動きがあった。"
+PAUSE
+NEWLINE
+TEXT "月明かりと星明かりもそれに合わさってこの一体だけどこか違う星みたいだ。"
+PAUSE
+NEWLINE
+TEXT "宇宙旅行するよりもずっと神秘的で経済的。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yf0"
+SETSTEP 8
+TEXT "「ねぇ、お兄ちゃん……やっぱりまだ当分こっちに帰ってこないの？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「んー、まぁ仕事だし、帰ったとしても休みの間の二、三日だけかな」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「行く前はあんなに嫌がってたじゃない。人事の人に騙されたとかって…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「確かにここは人がいなくて、いろいろと不便な所もあるけど…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "兄は少しどこか遠くを見つめながら語りかけてきた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「でも、時代が進む中で犠牲にしてきた物達がここではまだ息づいている」"
+PAUSE
+NEWLINE
+TEXT "「これからも人類ってやつは貪欲に発展を続けていくだろうけど、だからといってなんでも新しい物ばかりでは駄目な部分もある」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「だからこそ、ここのことは何時までも忘れないでほしい」"
+PAUSE
+NEWLINE
+TEXT "「お前がもっと大きくなったらここの場所の意味するものがきっともっと分かるはずさ」"
+PAUSE
+NEWLINE
+TEXT "「ただ、自然が多くて何も無い村ってだけじゃないんだってことがね」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「うーん、よく、分からない」"
+PAUSE
+NEWLINE
+TEXT "「分からなくてもいいよ、でも感じることはできたろ？」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "yb0"
+SETSTEP 8
+TEXT "そっと、兄は眼を閉じた。"
+PAUSE
+NEWLINE
+TEXT "私もそれに習って目を閉じる。"
+PAUSE
+NEWLINE
+TEXT "川辺の水気を帯びた冷たい風が私の頬を掠めていく。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "木々の揺れと夏の虫たちの音色が鼓膜をゆらし、蛍と月明かりが私の目に飛び込んでくる。"
+PAUSE
+NEWLINE
+TEXT "村全体で、私をやさしく迎えてくれているみたいだった。"
+PAUSE
+NEWLINE
+TEXT "兄がいるこの村。"
+PAUSE
+NEWLINE
+TEXT "私は夏休みの間だけ、ここで生活する。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その間、きっと、特別なことはなにもないだろうけど、私はそれでいいと思った。"
+PAUSE
+NEWLINE
+TEXT "こうして、兄の隣に立って、一緒の時を過ごせれば……。"
+PAUSE
+NEWLINE
+TEXT "私は、"
+PAUSE
+NEWLINE
+TEXT "そのために来たんだから……。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "cm"
+SETSTEP 8
+TEXT "それから数日間、私は兄とこの村で過ごした。"
+PAUSE
+NEWLINE
+TEXT "畑の仕事は私の手伝えるようなことは全然なかったけど、昼は兄が帰ってくるまでは基本的に暇なので、いい機会だからと兄もアンドロイドたちも、私がやりたいと思うことは反対せずにやらせてくれた。"
+PAUSE
+NEWLINE
+TEXT "兄の仕事が終わると二人で何をするわけでもなく日常を過ごした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ご飯を食べて、居間でゆっくりして、いろいろなことを話して、散歩して、案山子をからかって遊んだり…。"
+PAUSE
+NEWLINE
+TEXT "そうやって私の楽園での生活はあっという間に過ぎて、私は都会に帰ることになった。"
+PAUSE
+NEWLINE
+TEXT "いつもの運転手さんにトラックで駅まで送ってもらい、電車がくるまでの時間、兄にお別れをした。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "もっとも私は寂しくて辛くて、泣いて、ぐしゃぐしゃになってしまい、最後まで兄に迷惑をかけてしまった。"
+PAUSE
+NEWLINE
+TEXT "結局ろくに挨拶もできなまま。私は電車に乗り込んだ。"
+PAUSE
+NEWLINE
+TEXT "ドアが閉まり電車が動き出してから兄の姿が遠く霞んでいくまでほんの数秒しかかからなかった。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "c"
+SETSTEP 8
+SETSTEP 8
+BG 0 "cm"
+SETSTEP 8
+TEXT "「行っちまったか…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "今思えば、この数日間はあっというまだった。"
+PAUSE
+NEWLINE
+TEXT "久しぶりの家族との再会はもちろん楽しかったし、家に帰ると自分の帰りを待ってくれている人がいるのは、うれしかった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "でもこれから暫くは昔と変わらない機械と畑だけの世界に取り残されてしまう。"
+PAUSE
+NEWLINE
+TEXT "だが、ここには俺を必要としている連中がいて、俺はそれに応えられるだけのことが出来る。"
+PAUSE
+NEWLINE
+TEXT "でも、本当に俺を必要としているのは、もっと身近でたった一人の妹なのかもしれない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "その思いに応えてやれない自分をふがいなく思う。"
+PAUSE
+NEWLINE
+TEXT "今俺に出来ることは、こうして電車が見えなくなっても、駅のホームで妹を見送り続けることだけだった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「そろそろ戻るか…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転手が車のエンジンをかける。"
+PAUSE
+NEWLINE
+TEXT "灰色の排気ガスが抜けるとがくがくと振動をしながら車が動き出した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「ダンナ！　ダンナ！　ちょっと待ってくだせぇ！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "案山子が遠くから俺のことを呼んでいる。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「なんだよ、下らない用事なら後にしてくれないか。今ちょっとそういう気分じゃないんだ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "車の窓を開けて案山子に返した。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「いいからちょっと来て下さいって。悪いようにはしませんから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "しょうがなく運転手に車を止めさせて案山子の所に向かった。"
+PAUSE
+NEWLINE
+TEXT "案山子はどこかそわそわしながら俺を待っていた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「どうしたんだよ……またカラスか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「いやいや、カラスなんかよりずっと大事なことですよ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "何だ……西瓜泥棒でも侵入したのか？"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「お嬢ちゃんから伝言を預かっております」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "案山子にそう言われて、俺は驚いた。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「伝言？　なんでまたお前に」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「当日、いざお別れになるときになったらきっと自分はいいたいことが言えないままお別れをしてしまうだろうと、先日あっしに伝言を頼んできたんですわ」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "さっきまでの妹の姿を思い出す。"
+PAUSE
+NEWLINE
+TEXT "泣きじゃくってばかりでこっちまで泣きそうだった。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「あっしは自分の声をいろいろと弄れますんで、こないだみたいにお嬢ちゃんとまったく同じ声で話すことができますから」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "こんなことしなくても直接言ってくれれば良いものを…。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「分かってあげてくださいな、女心ってやつは複雑なんでさぁ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「お前が女心を語るなっての」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "手を振り落としてカツンとまるっこい顔に一発いれた。"
+PAUSE
+NEWLINE
+TEXT "案山子の表情がゆがんだが気にしない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「んで、ダンナ。どうしますか」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「どうって？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「再生してもよろしいでやんすか？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「そんなの、分かってんだろ。さっさと再生してくれ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「合点承知！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子がなにやらロードし始める……と、ふっとその肩から力が抜けた。"
+PAUSE
+NEWLINE
+TEXT "その案山子からミドリの声が聞こえ始めた時、そのまるっこい表情にどこか妹の面影が重なって見えた。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "m0"
+BG 0 "f0"
+SETSTEP 8
+TEXT "『ええと、こういうときになんていうんだっけ…あ、そうそう親愛なるお兄ちゃんへ』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "それは紛れもなく妹の声だった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『きっとお別れの時には多分ないちゃって何も出来ないと思うからこうして案山子に頼んでメッセージを伝えてもらいます』"
+PAUSE
+NEWLINE
+TEXT "『ええと、お兄ちゃんは仕事中だっていうのに、遊びに行ってごめんなさい。でも久しぶりに会えて本当に良かった』"
+PAUSE
+NEWLINE
+TEXT "『ほんの少しの間だけど、すごく充実した時間が過ごせました』"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『迎えに来てもらったのに泣いちゃっててごめんなさい。お兄ちゃんに会えたら、なんだか涙が止まらなくなっちゃって…』"
+PAUSE
+NEWLINE
+TEXT "『あ、おばあちゃんが作ってくれた料理もとってもおいしかった。浴衣も貸してくれてありがとうって言っておいて』"
+PAUSE
+NEWLINE
+TEXT "『花火も楽しかったね、でも線香花火はやっぱり最後にやるものだと思う』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f2"
+SETSTEP 8
+TEXT "『あー…やっぱり自分だけこう話すのっ寂しいよ…』"
+PAUSE
+NEWLINE
+TEXT "『帰りたくないよ…』"
+PAUSE
+NEWLINE
+TEXT "『でも、いつかまた絶対に遊びに来るから。お兄ちゃんもたまにはこっちに帰ってきてね…』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "f4"
+SETSTEP 8
+TEXT "『それじゃぁ、またね』"
+PAUSE
+NEWLINE
+TEXT "『私の大好きなお兄ちゃん』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "cm"
+SETSTEP 8
+TEXT "「以上がお預かりしたメッセージです」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "案山子が元の状態に戻ると、妹の面影は消えてもとのひょうきんな顔に戻っていた。"
+PAUSE
+NEWLINE
+TEXT "俺は、妹からのメッセージを心の中で繰り返し、心に刻んだ。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "最後は泣きながら妹が伝えてくれたメッセージ。"
+PAUSE
+NEWLINE
+TEXT "去り際に俺に言ったら、きっと俺を困らせるから口にはしなかった妹の本音。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「あれ、ダンナ？　どうしたんですか？　お体の具合でも悪いんで？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「え？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「もしかしてダンナ泣いてるんですか？」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "案山子に言われて、はじめて、俺は泣いていることに気が付いた。"
+PAUSE
+NEWLINE
+TEXT "俺は案山子の視界に顔が映らないように背けた。"
+PAUSE
+NEWLINE
+TEXT "こんな顔、誰にも見せたくなかった。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "顔を直してトラックに乗り込む。"
+PAUSE
+NEWLINE
+TEXT "運転手がこちらの表情をちらっと見たがいつもと変わらない様子で俺の命令を待った。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「なぁ、適当に走ってくれないか……？　まっすぐ家に帰る気分じゃないんだ」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "運転手はいつもと変わらない表情で俺に答えた。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「了解しました」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "のろのろと法廷速度をきっちりと守りながらおんぼろトラックが動き出す。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "きっとここの時間のながれもこのトラックみたいにゆっくりとだけれど波の激しいものなのかもしれない。"
+PAUSE
+NEWLINE
+TEXT "いつの時代にだって変わらないものがある。"
+PAUSE
+NEWLINE
+TEXT "それが人であったりアンドロイドであったって関係ない。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "ただ、俺らは生きていて、太陽と月がいったりきたりして、下らない馬鹿話して、泣いて笑って喧嘩して。"
+PAUSE
+NEWLINE
+TEXT "また、変わらない日常が始まるのだ。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "この楽園の村で。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "white"
+SETSTEP 8

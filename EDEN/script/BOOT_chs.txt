@@ -1,0 +1,4040 @@
+; ipb-disasm
+BG 0 "bg/title"
+SETSTEP 16
+PAUSE
+BG 0 "bg/white"
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+SE_PLAY "bgm/m1"
+TEXT "在♪那之前，我从未思考过世界的运作方式。"
+PAUSE
+NEWLINE
+TEXT "以为每天不过是晨起上学，和大家一起玩耍，吃饭睡觉，这样日复一日地循环罢了。"
+PAUSE
+NEWLINE
+TEXT "但是……那时我并不知道，我所经历的日常并非只有这些。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "无论时代如何变迁，那里始终保持着昔日的风景。"
+PAUSE
+NEWLINE
+TEXT "当然，我自己也只在照片和影像中见过那昔日的风景。"
+PAUSE
+NEWLINE
+TEXT "我所见到的风景与照片中一模一样。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "不同的是，照片中的人竟都被原封不动地替换成了机器人……"
+PAUSE
+NEWLINE
+TEXT "人口流失严重的乡村。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "那个夏天……"
+PAUSE
+NEWLINE
+TEXT "与那座村庄的邂逅，我至今也难以忘记。"
+PAUSE
+NEWLINE
+SOUND_STOPALL
+CLEAR
+BG 0 "bg/white"
+SETSTEP 16
+CLEAR
+SE_PLAY "bgm/m0"
+BG 0 "bg/f2"
+SETSTEP 8
+TEXT "「哇，好热……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一下车站，闷热的空气便席卷而来，我不禁皱起眉头。"
+PAUSE
+NEWLINE
+TEXT "肩上挎着沉重的运动包。"
+PAUSE
+NEWLINE
+TEXT "我调整了一下背带，环顾四周。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「一个人都没有啊……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "从今天起要在这里暂住一段时间了，这座村子的车站实在过于简陋，仿佛还停留在上个时代。"
+PAUSE
+NEWLINE
+TEXT "感觉与完全自动化的、热闹的家乡车站相比，有些略显凄凉呢。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「幸好还有个自动检票口呢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "远远望去，那座老旧的车站中，摆放着与日常使用别无二致的自动检票机。"
+PAUSE
+NEWLINE
+TEXT "我本以为这里是只有人工检票的萧条车站，但看来铁路公司的服务早已延伸到了这样的乡下。"
+PAUSE
+NEWLINE
+TEXT "因为是座小站，很快便到了站内。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "刚刷过抽出的通行证，闸门便在「咔嚓」的机械声中应声弹开。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f1"
+SETSTEP 8
+TEXT "「到了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "冲出检票口，随手甩下运动包。"
+PAUSE
+NEWLINE
+TEXT "「嗯——」，我大大地伸了个懒腰，舒展着疲惫的身体。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "由于长时间坐在椅子上，臀部和腿脚仍有些许不适感。"
+PAUSE
+NEWLINE
+TEXT "让全身的血液循环起来，整个人焕然一新的同时，终于抵达的真实感油然而生，心情也变得格外舒畅。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "初次见到真正的乡村风景。"
+PAUSE
+NEWLINE
+TEXT "一座由木头建造，没有多余装饰的小车站。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "只有崭新的自动检票机，和用削平的木板简单拼成的小长凳。"
+PAUSE
+NEWLINE
+TEXT "除此之外，什么都没有。"
+PAUSE
+NEWLINE
+TEXT "甚至连自动贩卖机也是。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "转眼间就看完了车站内部，我决定去外面转转。"
+PAUSE
+NEWLINE
+TEXT "走出车站，眼前便出现一片广阔的田地。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f2"
+SETSTEP 8
+TEXT "「虽然早有耳闻，但……」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "映入眼帘的无际农田与碧绿的景色令人不禁为之震撼。"
+PAUSE
+NEWLINE
+TEXT "因为长久以来都生活在柏油与混凝土构筑的世界里，要想适应这乡土与葱郁填充的世界，暂时还需要一段时间。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在我迄今为止的人生中，只有寥寥几次长时间待在完全没有空调的环境里。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好厉害啊，居然什么也没有」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "与乘坐电车前自己所在的城镇相比，那里仿佛是一个截然不同的遥远世界。"
+PAUSE
+NEWLINE
+TEXT "或许从前读过的童话故事中的主人公也曾有过这样的感受。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然在我眼前的不是玉手箱，而是一个沉重的运动包……（译注：玉手箱是日本民间传说《浦岛太郎》中的神秘宝盒，打开后会释放令人变老的白烟）"
+PAUSE
+NEWLINE
+TEXT "当然，运动包里不会冒出烟来。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f2"
+SETSTEP 8
+TEXT "「目前看来，能够歇息的店铺……似乎没有呢」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我叹了口气，为了躲避阳光而回到站内，坐在长椅上等待迎接的人。"
+PAUSE
+NEWLINE
+TEXT "自从下了电车，耳边就不断传来聒噪的蝉鸣声。"
+PAUSE
+NEWLINE
+TEXT "那里有着不同于城市的喧嚣。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「本以为乡下会很安静，但这边也有这边的喧闹呢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "与那些树木被砍伐殆尽、地面被混凝土彻底覆盖的城市相比，这座保留着原始自然风貌的村庄，或许正是生物们最后的乐园。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "被驱离栖息之地的蝉群仅剩的方寸之地。"
+PAUSE
+NEWLINE
+TEXT "都市中的蝉儿们，困于混凝土之下，无法羽化蜕变，终其一生挣扎于硬壤之中，至死也未能发出鸣响。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "或许正因如此，这里的蝉才会代替那些城市的同类们，持续热烈地鸣叫至今。"
+PAUSE
+NEWLINE
+TEXT "现在机会难得，就好好享受这天然的交响乐吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "当我闭目凝神，正欲侧耳倾听时，突然有人从背后叫住了我。"
+PAUSE
+NEWLINE
+TEXT "是来接我的人的声音吗？我环顾四周，寻找那声音的主人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「喂喂，那边的小姑娘。可以打扰一下吗？」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "伫立在田间的稻草人正向我挥手。"
+PAUSE
+NEWLINE
+TEXT "这个村子里，似乎连稻草人都是由机器人来担任的。"
+PAUSE
+NEWLINE
+TEXT "虽然是初次见到稻草人本身，却莫名有种怀念的感觉。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「太热了不想动～。你过来这边嘛」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「咱是稻草人嘛，没法离开这里呀」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "那个稻草人虽然拼命地晃动着上半身，但关键的下半身是根棍子，被牢牢地固定在地面上。"
+PAUSE
+NEWLINE
+TEXT "但它一边呼唤着我，一边精神奕奕地晃动上半身，仿佛再努把力就能爬到我这边。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「不过居然会说话啊。现在的稻草人变化真大呢」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然讨厌酷热的天气，但感觉这会是个不错的消遣方式，于是我把行李留在长椅上，朝着稻草人的方向走去。"
+PAUSE
+NEWLINE
+TEXT "以前听哥哥说过，这里短缺的劳动力已经完全由机械和机器人来填补了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "可为什么连稻草人都必须做成机器人不可呢？我想不通。"
+PAUSE
+NEWLINE
+TEXT "近看那稻草人，裹着褴褛的衣衫，用孩童涂鸦般的脸望着我。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「咱是最先进的稻草人，乃是肩负着本村安保重任的重要设备」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "既先进又不失传统韵味的设计。"
+PAUSE
+NEWLINE
+TEXT "虽说是制作者的个人趣味，审美风格却异乎寻常地别致。"
+PAUSE
+NEWLINE
+TEXT "听到我这么说，稻草人不好意思地挠了挠头。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这样的设计确实更能融入周边风景……但要是以咱稻草人的角度来看，能设计得更酷些就完美了啊」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我有些无法想象它说的那种造型很酷的稻草人究竟是什么样子……不过放眼望去，附近的每片田间都立着几个与之相似的稻草人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「就算稻草人看上去有很多个，在管理上也是完全统一的，咱们现在说话的内容会一并传到其它稻草人那里，同时呢，咱也能感知到其它稻草人的所见所闻」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "那边的稻草人为了驱离赖在田里的乌鸦，拼命地大声喊叫，并用力挥动着可以活动的头部和手臂。"
+PAUSE
+NEWLINE
+TEXT "至于乌鸦这边，或许是早已识破稻草人无法移动的真相，它们对稻草人发出的声响无动于衷，依旧悠然自得地享用着美餐。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「给我适可而止！以为老子是稻草人就好欺负是不是！你这逼鸟！少嚣张了！要是老子有脚，区区一两只乌鸦根本不放在眼里！滚开！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "直到稻草人发出的叫声震耳欲聋，乌鸦才终于肯撤退了。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「别再来了！妈的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "方才还在大声喊叫的稻草人，此刻却精疲力尽般剧烈喘息着。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「稻、稻草人也不容易啊……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "虽然我不是稻草人，也从未想要变成稻草人，但它们的辛劳我多少能够体会。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "但是……"
+PAUSE
+NEWLINE
+TEXT "明明都能说话了，为什么没给稻草人装上腿呢？"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「唉，咱们毕竟只是稻草人嘛」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "那张涂鸦般的脸，不知为何显得有些寂寞。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「类似带警报器的监控吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「别把咱和那种东西混为一谈，稻草人也有稻草人的尊严好不好……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "稻草人骨碌一下转过去，背对着我。"
+PAUSE
+NEWLINE
+TEXT "还有旋转的功能呢……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然有些好奇稻草人是否也会晕头转向，但此刻去询问又有些于心不忍。"
+PAUSE
+NEWLINE
+TEXT "稻草人夹杂着呜咽的哭泣声渐渐响了起来。"
+PAUSE
+NEWLINE
+TEXT "或许是被这氛围感染，周围的稻草人们也纷纷垂下头，用手轻拭眼角。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "唉……"
+PAUSE
+NEWLINE
+TEXT "稻草人的悲鸣在四处回荡，宛如重叠交织的蝉鸣声般笼罩着整个村落。"
+PAUSE
+NEWLINE
+TEXT "听着听着，我也不由得悲从中来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "或许是看到了那些稻草人的模样，田地里又有乌鸦成群结队地飞来了。"
+PAUSE
+NEWLINE
+TEXT "可是这次，那些稻草人只是悲伤地垂着头，并未试图驱赶乌鸦。"
+PAUSE
+NEWLINE
+TEXT "并非泪眼朦胧而视线不清，只因沉溺哭泣才无暇他顾。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f2"
+SETSTEP 16
+TEXT "「啊，乌鸦又来了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "成群结队的黑色群体降落在田中里，争先恐后地扑向农作物。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「喂，光哭有什么用！你们身为稻草人的尊严到哪里去了！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我这么一喊，稻草人们似乎对乌鸦一词产生了反应，纷纷止住了哭泣。"
+PAUSE
+NEWLINE
+TEXT "稻草人们齐刷刷转向了乌鸦的方向。"
+PAUSE
+NEWLINE
+TEXT "然后。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "稻草人们的某种开关似乎触发了。"
+PAUSE
+NEWLINE
+TEXT "它们绷紧原本扭曲的脸，大声叫喊。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 16
+TEXT "「欸！？喂！死乌鸦，死性不改还敢回来！老子说过这次绝不放过你吧！耳朵聋了吗！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这儿可没有能喂你这逼鸟的东西。赶紧滚回你的垃圾山去」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「不然就把你做成炸鸡吃掉啊，混蛋！给我好好听稻草人的话！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "稻草人们各自发出不同的叫喊声，威吓着乌鸦。"
+PAUSE
+NEWLINE
+TEXT "然而，乌鸦不为所动。"
+PAUSE
+NEWLINE
+TEXT "稻草人们只会发出声响，无法行动。"
+PAUSE
+NEWLINE
+TEXT "识破这一点的乌鸦们肆无忌惮地糟蹋起农田来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "啄食尚未成熟的果实，翻掘刚播下的种子。"
+PAUSE
+NEWLINE
+TEXT "我愣在原地，呆呆地看着乌鸦在田中肆意破坏。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「开什么玩笑！啊——你们这群混蛋一个个都在天上飞来飞去，竟然小瞧本稻草人大人，给老子滚下来决斗啊混账！喂喂！不是那边，别往田里冲啊！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人的怒吼根本无法传到乌鸦耳中，鸦群的数量仍在不断增加。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f3"
+SETSTEP 8
+TEXT "「喂——，别糟蹋田地啊——！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我实在看不下去了，忍不住高声叫喊起来。"
+PAUSE
+NEWLINE
+TEXT "我的声音穿透稻草人们声音，在田间回响。"
+PAUSE
+NEWLINE
+TEXT "我的声音不同于稻草人平素的骂声，乌鸦们似乎吃了一惊，停下嘴怒视着我。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「喂，你们也一起来！你们不是稻草人嘛！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我又大喊了一声，稻草人们也跟着喊了起来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一只，两只……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "也许是出于对新敌人的警惕，乌鸦们开始逐渐撤离那片田地。"
+PAUSE
+NEWLINE
+TEXT "于是转眼间，所有的乌鸦就都飞走了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "「嘿嘿，不愧是小姑娘。稻草人连用武之地都没了啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「用武之地……不是就在脚下嘛……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「嘿嘿，光是站着也不过是普通的稻草人，可咱们是骄傲的机器稻草人。就让咱来展示下如何完成被赋予的使命吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "眼前的稻草人说完，沉默了片刻。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「编辑完毕。谢谢你，小姑娘」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "说罢，稻草人如同深吸一口气般挺起了胸膛。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「谢谢……什么？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "在我问稻草人的瞬间——"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『喂——，别糟蹋田地啊——！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "突然，所有稻草人一齐发出了与之前截然不同的高亢声音。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f2"
+SETSTEP 8
+TEXT "「讨厌……这是，我的声音」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "『咱的声音那些乌鸦根本不理会，所以只好借用一下小姑娘你的声音了』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人用与我完全相同的声音说道。"
+PAUSE
+NEWLINE
+TEXT "听前自己的声音从外部传来，总感觉怪怪的，我不禁有些难为情。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "『喂，你们这群逼鸟，竟敢糟蹋田地。我要用比你们吃掉的蔬菜还多几倍的拳头狠狠揍你们！ 给我做好觉悟吧！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「等、等一下，用我的声音在说什么呀。太羞耻了！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我的脸唰的一下涨得通红，慌忙向稻草人抗议道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『没事啦，除了咱们、乌鸦和老天爷外谁也没听见，所以不用担心啦』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f3"
+SETSTEP 8
+TEXT "「不是那个问题啦！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "随着啪的一声脆响，我的巴掌重重地扇在了稻草人脸上。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『啊，好痛——』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "滴溜溜旋转的稻草人发出与我声音相同的悲鸣，在村中回荡。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「都说了让你住口啦！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「不过托你的福，你看，那些乌鸦都回到山里去了哦」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人的声音终于恢复了。"
+PAUSE
+NEWLINE
+TEXT "我如释重负，深深地叹了口气。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "「哎，正所谓结局好一切都好，结果好就万事大吉啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「一点都不好。请你不要擅自用我的声音……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人无视我的抗议声，转到了另一边。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「喂，有在听吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我正欲继续纠缠，这时远处传来了汽车的引擎声。"
+PAUSE
+NEWLINE
+TEXT "我向发出声音的方向望去，只见一辆卡车正卷着沙尘朝这边驶来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「看来是有人来接您喽」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「啊啊……刚才的话……要是被听到……怎么办……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "绝对会被笑话的。"
+PAUSE
+NEWLINE
+TEXT "一定会被调侃的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「接下来要在这里住上一段时间吧？今后还请多多关照喽，小姑娘」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人转过身来，对我说。"
+PAUSE
+NEWLINE
+TEXT "我放弃了抗议，再次深深叹了口气。"
+PAUSE
+NEWLINE
+TEXT "总觉得，自己好像已经精疲力尽了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f1"
+SETSTEP 8
+TEXT "「不要再叫小姑娘啦…………我叫翠。请多指教了，稻草人」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "说着，我伸出了手。"
+PAUSE
+NEWLINE
+TEXT "稻草人不好意思地握着那只手。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「彼此彼此」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人握着我的手，用力甩着胳膊说道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「欢迎来到，乐园之村」"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/white"
+SETSTEP 8
+CLEAR
+BG 0 "bg/ic"
+SETSTEP 8
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+SE_PLAY "bgm/m1"
+TEXT "随着生育率的下降，城市外的人口也在不断减少。"
+PAUSE
+NEWLINE
+TEXT "人口一旦流失的偏远地区便再无人问津，任其衰败破落的村庄屡见不鲜。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "早已步入高度文明的城市居民们，开始思索如何有效利用那些脱离人类管理、长期闲置的土地。"
+PAUSE
+NEWLINE
+TEXT "其中一项对策是计划向过疏地派遣劳动力，专门种植城市中已难得一见的自然农作物。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "然而，愿意参与劳动的人少之又少，因此该计划被迫进行了部分调整。"
+PAUSE
+NEWLINE
+TEXT "改为不再依赖人力劳动，而是交给设有专门程序的智能机器人。"
+PAUSE
+NEWLINE
+TEXT "为此，人类开展了各种研究与实验基地。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "如今，也有一些遗留下来的人类与机器人共同生活的村庄。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/c"
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "我来到这个村子时，是三年前。"
+PAUSE
+NEWLINE
+TEXT "这就是工作志愿地填「全国均可」的后果。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我们公司的产品必须要年轻的技师来操作，对公司来说，当时的我大概是个合适的人选吧。"
+PAUSE
+NEWLINE
+TEXT "虽然有相应的津贴，而且相比同龄人也算是高薪，不过嘛，呆在这里，根本没什么机会用钱。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "要做的事情就是维护那些浑身沾满泥泞、散发着肥料与机油味道的机器人。"
+PAUSE
+NEWLINE
+TEXT "这里为了培育传统品种，几乎所有的工序都依靠机器人手工作业。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽说让机器人手工作业听上去有些奇怪……"
+PAUSE
+NEWLINE
+TEXT "说是沿袭传统，但并非真的在用锄头铁锹这些原始农具，在适合机械化作业的环节都妥善采用了机械。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "不过，驾驶那些拖拉机和联合收割机的终究还是机器人。"
+PAUSE
+NEWLINE
+TEXT "过去村民们使用的农机，也在它们手中得到了有效利用。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "田间作业和维修工作告一段落后，我坐上了车。"
+PAUSE
+NEWLINE
+TEXT "代替无驾照的我开车的，是这里的智能机器人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "被设计为人形的作业机器人。"
+PAUSE
+NEWLINE
+TEXT "为了运输货物，它们还搭载了驾驶车辆的思维程序。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "如果能准备一辆带自动驾驶功能的车当然更好，不过在未经修整的土路上，似乎还是普通车更为稳妥。"
+PAUSE
+NEWLINE
+TEXT "也许正因为如此，这里用的大部分都是上世纪的老旧破车。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "不过，即便是这样的车，机器人们也能灵巧地驾驭。"
+PAUSE
+NEWLINE
+TEXT "真是一群能干的家伙。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我所在的居住区离车站有相当一段距离，步行根本无法到达。"
+PAUSE
+NEWLINE
+TEXT "这个原本人口就极其稀少的村子并不太需要公共交通工具，只有一个电车站孤零零矗立在那里。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "不过，来这里的电车大多都是运输收获的蔬菜的。虽然也有载人的电车在运行，但数量少得可怜，一天之内屈指可数。"
+PAUSE
+NEWLINE
+TEXT "由于我生活和工作所需的物资都会直接配送到那个车站，加上我自己实在懒得出门，最近那片区域的日常事务已经全权交由机器人处理了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "因此，我已经很久没去车站了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "司机反复重新启动引擎，伴随着刺耳的驱动声，怠速终于稳定了下来。"
+PAUSE
+NEWLINE
+TEXT "维修这类车辆也是我的工作。"
+PAUSE
+NEWLINE
+TEXT "虽然外表破旧，但由于勤加保养，它依然能够正常行驶。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/c"
+SETSTEP 8
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「那么，接下来就要发车了。请系好安全带」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我系好安全带后，智能机器人严格地按照驾考手册的流程操作启动程序，车子终于缓缓驶动了。"
+PAUSE
+NEWLINE
+TEXT "破旧的卡车以平稳高效的行驶方式疾驰在农道上。"
+PAUSE
+NEWLINE
+TEXT "广阔的田园景色在窗外缓缓流过。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「喂，不能再快点儿么」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我把脚搭在仪表盘上，对司机说。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「根据交规，这条路限速30公里，不能再加速了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机既未加速也未减速，只是淡淡地回应道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「嘁，反正这种乡下地方连警察都没有吧。回头我就把规矩改改，让你们更灵活变通些」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "让作业机器人开车也许是个错误，我想。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "照现在的速度，约定的接人时间肯定是要迟到了。"
+PAUSE
+NEWLINE
+TEXT "不过说到其它可供选择的交通工具，也就只有自行车之类的了。"
+PAUSE
+NEWLINE
+TEXT "这些家伙一旦干起活来，倒是老老实实听话得很，用起来十分方便。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「当前路段维护不佳，若本车继续提速，无法预测将发生何种事故」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机像是在开驾校的车一样小心翼翼地行驶在道路上。"
+PAUSE
+NEWLINE
+TEXT "坐在副驾驶的我毕竟不是教官，不能随心所欲地踩副刹车。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "嘛，这条路上都是碎石又坑坑洼洼的，如果这台轮胎磨得差不多的卡车开太快的话，确实很危险……"
+PAUSE
+NEWLINE
+TEXT "不过虽说是为了我的安全着想，但我这边已经急不可耐了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这种程度的问题，你很容易就能解决的吧？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "部署在此的机器人，性能上都绝非等闲之辈。"
+PAUSE
+NEWLINE
+TEXT "它们绝非简单替代人力的机器，而是为完美复刻人类手工作业而诞生的造物。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "这里用于复现传统耕作的智能机器人，与那些只能重复简单作业的普通机器人不同，其内部搭载了能够即时应对突发状况的思维程序。"
+PAUSE
+NEWLINE
+TEXT "像是光照、雨水、湿度、土壤墒情及其中微生物的状态……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在培育蔬菜时，面对各种突发状况，仅靠操作手册的标准流程是无法完全应对的。"
+PAUSE
+NEWLINE
+TEXT "不过，他们却具备在此持续稳定生产的能力。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "正因为它们维系着如今已不再由人工完成的、与土地共生的生产方式，其潜力才显得不可估量。"
+PAUSE
+NEWLINE
+TEXT "这一点，负责维护的我最为清楚。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这是规定」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "事到如今，我后悔没去考驾照了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "学生时代，我在学校考了除汽车外的大部分驾照，而汽车驾照要去驾校，我嫌麻烦，便一直没考。"
+PAUSE
+NEWLINE
+TEXT "……如果是起重机的话我倒是能开吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「啊，我知道了。那注意安全驾驶啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我拉低帽檐挡住刺眼的阳光，不悦地闭上了眼睛。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "睡着的话就能忘却时间的流逝了吧。"
+PAUSE
+NEWLINE
+TEXT "虽然很希望能在睡觉时发生车速自动提升之类的奇迹，但按程序行事的智能机器人是不可能突发奇想的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「要放首音乐听吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机以自己的方式关心了我。"
+PAUSE
+NEWLINE
+TEXT "可惜对于打算睡觉的我来说，这关心有些多余。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「不用了……让我安静睡觉」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「明白」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "车子的晃动突然减弱了。"
+PAUSE
+NEWLINE
+TEXT "刚才还发出刺耳轰鸣的引擎，此刻竟以难以置信的稳定转速运转起来，完全不像是破卡车该有的状态。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "本以为车停了下来，但我环顾四周，发现它依然在严格遵守限速规定，平稳地驶在农道上。"
+PAUSE
+NEWLINE
+TEXT "不同的是，司机正聚精会神地努力控制卡车，以免产生任何不必要的噪音。"
+PAUSE
+NEWLINE
+TEXT "我的意思不是让你这样安静啦。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「正常驾驶就好，稍微颠簸一点我反而会更容易入睡呢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "这种振动如同婴儿安睡的摇篮般，催人入睡。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「明白」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "司机落寞地答到，随后车身开始起伏。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "凹凸不平的地面将振动直接传到车身。"
+PAUSE
+NEWLINE
+TEXT "我享受着这股振动入眠了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我有一个小我很多的妹妹。"
+PAUSE
+NEWLINE
+TEXT "名字叫做翠。"
+PAUSE
+NEWLINE
+TEXT "翠在我已经懂事后才出生。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f0"
+SETSTEP 8
+TEXT "我和父母都对翠百般溺爱，结果把她宠得相当娇气。"
+PAUSE
+NEWLINE
+TEXT "动身来这个村子时，翠紧紧抱住正要踏出家门的我的脚不放，我和父母费了九牛二虎之力才把她安抚下来。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f2"
+SETSTEP 8
+TEXT "翠坚持说自己也要跟着去。"
+PAUSE
+NEWLINE
+TEXT "当然，我怎么可能带着翠一起去。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「如果能休假我就会回来，翠也可以趁着暑假之类的长假过来玩呀」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f4"
+SETSTEP 8
+TEXT "「一定、一定要回来啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「嗯，我和你约好了」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我向着抽抽搭搭哭泣的翠伸出了小指。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「嗯，约好了哦」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我的小指与翠的小指勾在了一起。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f3"
+SETSTEP 8
+TEXT "「拉勾约定，说谎的人要吞一千根针喔」（译注：日本民间谚语，如果违反了约定就要被切小指、揍一万拳，再加上吞一千根针。类似于\"拉钩上吊，一百年不许变\"）"
+PAUSE
+NEWLINE
+TEXT "「拉钩钩！」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/c"
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "自拉钩约定起那天已经三年了，翠终于要来这里玩了。"
+PAUSE
+NEWLINE
+TEXT "虽然名义上是来帮忙收获的。"
+PAUSE
+NEWLINE
+TEXT "不过这里也没什么需要翠帮忙干的活就是了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "嗯，即便是这样，我也会满足于能够与翠共有一段夏日回忆吧。"
+PAUSE
+NEWLINE
+TEXT "我不知道自那之后，这三年间她成长了多少。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "说不定我的离开也促进了她的自立……"
+PAUSE
+NEWLINE
+TEXT "要是她不像兄妹分别时那样向我撒娇，作为兄长的我会很寂寞吧。"
+PAUSE
+NEWLINE
+TEXT "不过若是看到久违的妹妹正一步步往好的方向发展，我想必会十分欣慰吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "闭上眼睛后，不知过了多久。"
+PAUSE
+NEWLINE
+TEXT "我掀开帽檐的边角，用一只眼睛四下打量。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "延绵的农道与之前所见的景色并无二致，然而时间却已悄然流逝。"
+PAUSE
+NEWLINE
+TEXT "我大大地伸了个懒腰，促使血液循环全身，意识渐渐清醒。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「还要多久？」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「照这个速度的话，大概十分钟就能到了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「肯定是要迟到了……呀嘞呀嘞」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "翠在电车上联系过我，按照时刻表，她差不多快到了吧。"
+PAUSE
+NEWLINE
+TEXT "本该是久别重逢，奈何还没见面就给她泼了冷水，只能怪我自己估算失误。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "见到翠后向她道歉吧。"
+PAUSE
+NEWLINE
+TEXT "为了转换心情，我打开了车窗，肥料的气味随之飘进车内，但因为风吹得很清爽，我也就不在意了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我的鼻子早已习惯了肥料的气味，所以无碍。"
+PAUSE
+NEWLINE
+TEXT "但对于从城市里来的翠来说，或许会有些吃不消吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在空气环境被完全控制的城市里，连呼吸的空气都是人造的。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "「给我适可而止！以为老子是稻草人就好欺负是不是！你这逼鸟！少嚣张了！要是老子有脚，区区一两只乌鸦根本不放在眼里！滚开！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "窗外传来了稻草人的叫声。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "「看来乌鸦在糟蹋田地啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「啊，常有的事吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "即使它们没有脚，也有着这般的嗓音。"
+PAUSE
+NEWLINE
+TEXT "大多数来破坏田野的动物，都会被稻草人的声音吓跑。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "不过，乌鸦是种聪明到令人畏惧的动物，即使是其它动物都恐惧的人类声音，它们也能通过观察逐渐适应并克服。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「乌鸦似乎已经能习惯它们的声音了，光靠稻草人已经很难彻底赶走它们了，有时必须得我们亲自上才行呀」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「哦……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「最近那些迁居城市的乌鸦似乎又回到山里了」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "乌鸦们过去依靠翻捡都市垃圾为生，但随着时代的变化，食品供应体系与垃圾分类回收系统日趋完善，如今除人类外的生物想要在城市中生存已变得愈发艰难。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "如今，随着人口过疏化加剧，脱离人类管理的山林反而食物丰富，成了它们的粮仓。"
+PAUSE
+NEWLINE
+TEXT "那些学精的城市乌鸦又回来了，看来我们这边也得采取新的防鸦措施了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这里的宗旨是与自然和谐共处。我会事先考虑相应对策的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我也曾想过把稻草人全幅武装。"
+PAUSE
+NEWLINE
+TEXT "变成那种超猛的大块头。"
+PAUSE
+NEWLINE
+TEXT "只要装上它，别说乌鸦了，连宇宙飞船都能击落。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "要是敢去做的彻底……"
+PAUSE
+NEWLINE
+TEXT "甚至可以保证让任何乌鸦祸害不到哪怕是一株农作物。"
+PAUSE
+NEWLINE
+TEXT "但那样就不能算作天然农作物了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "说来讽刺，乌鸦祸害农田这事倒成了天然农作物的证明。"
+PAUSE
+NEWLINE
+TEXT "最好的选择是能与乌鸦适度共存……但，乌鸦的势力似乎正在日益强大。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我望着窗外，思索如何是好。"
+PAUSE
+NEWLINE
+TEXT "也许最好的办法是制作像驾驶座上的作业机器人那样能够行走的稻草人。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "但不会为其安装脚部。"
+PAUSE
+NEWLINE
+TEXT "因为毕竟是稻草人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「欸！？喂！死乌鸦，死性不改还敢回来！老子说过这次绝不放过你吧！耳朵聋了吗！」"
+PAUSE
+NEWLINE
+TEXT "「这儿可没有能喂你这逼鸟的东西。赶紧滚回你的垃圾山去」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「不然就把你做成炸鸡吃掉啊，混蛋！给我好好听稻草人的话！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "稻草人又叫了起来。"
+PAUSE
+NEWLINE
+TEXT "与那些死板的作业用家伙不同，稻草人虽然呆头呆脑的，却是个不错的聊天对象……"
+PAUSE
+NEWLINE
+TEXT "不过听到这么激烈地怒吼，我有点受不了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "「快到收获的时候了啊。饶了我吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "以一定间隔摆放的稻草人们同时叫喊着，似乎来袭的乌鸦数量相当多呢。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "作业机器人的数量并未多到能完全覆盖这片广阔的田地。"
+PAUSE
+NEWLINE
+TEXT "因此稻草人才会立在这里，要是这些稻草人不起作用，那也太说不过去了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b2"
+SETSTEP 8
+TEXT "『喂——，别糟蹋田地啊——！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "一个熟悉的声音从稻草人那边传了过来。"
+PAUSE
+NEWLINE
+TEXT "是几小时前，在电话里听到的声音。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b3"
+SETSTEP 8
+TEXT "『喂，你们这群逼鸟，竟敢糟蹋田地。我要用比你们吃掉的蔬菜还多几倍的拳头狠狠揍你们！ 给我做好觉悟吧！』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "是翠的声音无疑。"
+PAUSE
+NEWLINE
+TEXT "稻草人用翠的声音发出刺耳的尖叫。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "或许是被那声音吓到了，刚才还在肆意翻飞的乌鸦们惊慌地四散而逃。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「喂喂，这算什么事啊……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「好像发生了什么……我们快过去」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "司机一脚踩满了油门。"
+PAUSE
+NEWLINE
+TEXT "速度骤然提升的瞬间，强烈的重力将我牢牢钉在了座位上。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好、好痛……突然这么加速做什么……超速行驶不是很危险的吗」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「现在要优先查看翠小姐的状态并查明原因」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "直到刚才还毫不通融的智能机器人，这时却意外地好说话。"
+PAUSE
+NEWLINE
+TEXT "加速的汽车嘎吱嘎吱地颠簸着，急驰在农道上，引得尘土飞扬。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「喂喂，这个速度提得太过了吧？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我用手反扣住座椅，忍受着剧烈的颠簸。"
+PAUSE
+NEWLINE
+TEXT "开得这么快，再怎么说也太危险了吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「您不相信自己维护过的机器人与车身吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机微微一笑道。"
+PAUSE
+NEWLINE
+TEXT "被这么一问，我一时语塞。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「……那你一开始就开快点啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我小声咒骂着，瞪向挡风玻璃的另一侧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「变脸得挺快啊，那就尽快开过去吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「明白了。请抓紧」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然比预定时间晚了些，但托司机和乌鸦的福，总算没有迟到太久。"
+PAUSE
+NEWLINE
+TEXT "这样或许还能保住些作为兄长的面子。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「快到车站了」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b1"
+SETSTEP 8
+TEXT "离车站稍远的地方，一名少女正和稻草人说着什么。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "隐约能猜到二人之间的对话。"
+PAUSE
+NEWLINE
+TEXT "自己的声音突然被模仿，想必十分惊慌吧。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「谢啦」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我再次向司机道谢。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好像不要紧的样子啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机说着放慢车速，重新回到了法定速度。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/white"
+SETSTEP 8
+BG 0 "bg/ic"
+SETSTEP 16
+PAUSE
+BG 0 "bg/white"
+SETSTEP 8
+BG 0 "bg/e1"
+SETSTEP 8
+SE_PLAY "bgm/m1"
+TEXT "今年村中的夏天与往年一样，并没有太大变化。"
+PAUSE
+NEWLINE
+TEXT "只是太阳，热得刺眼。"
+PAUSE
+NEWLINE
+TEXT "我所在的村庄正值收获的旺季，田中到处是翠绿的叶子和色彩缤纷的蔬菜水果。"
+PAUSE
+NEWLINE
+TEXT "尤其是那些圆滚滚的绿底黑纹大西瓜，在阳光的照耀下熠熠生辉，将整片田地都装点得色彩斑斓。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一成不变的是那灼人的酷暑和翠绿的景色。"
+PAUSE
+NEWLINE
+TEXT "依然如故……一如往年的夏日。"
+PAUSE
+NEWLINE
+TEXT "不过，今年夏天与往年有一点不同。"
+PAUSE
+NEWLINE
+TEXT "我的妹妹翠专程来玩了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「早晨～早晨～，传说中的早晨终于来啦～！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "随着日出，稻草人的声音在田间回荡。"
+PAUSE
+NEWLINE
+TEXT "在那些想要睡懒觉的日子里，这里用来代替闹钟的稻草人实在吵得烦人。"
+PAUSE
+NEWLINE
+TEXT "比起饲养的鸡群，稻草人更早更烦人地高声地叫起来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「天天早上都这么吵！你他妈就不能消停点儿吗」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我用力打开窗户，朝外面喊道。"
+PAUSE
+NEWLINE
+TEXT "有起床气的我，把无处宣泄的怒火一股脑儿撒向了稻草人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「主人还是一如既往地赖床啊，明明太阳公公早就露脸了，这可是充满希望的早上啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "离得最近的稻草人一边像做体操般挥着手臂，一边用朝气蓬勃的声音说道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "尽管早已习惯了稻草人的声音，但赖床的毛病没有丝毫好转，于是我烦躁地关上了窗户。"
+PAUSE
+NEWLINE
+TEXT "我再次拉上窗帘，钻进被窝，任凭脑中残存的睡意漫遍全身。"
+PAUSE
+NEWLINE
+TEXT "睡魔骤然来袭，我的意识如同被接连掐灭的烛火般，逐渐沉入混沌的深渊。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "可是，"
+PAUSE
+NEWLINE
+TEXT "外面的声音越来越大，完全没有要停止的意思。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『静谧湖畔中森林的阴影下～♪ 快点起床吧，布谷鸟在啼叫～♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "村中的稻草人开始了轮唱。"
+PAUSE
+NEWLINE
+TEXT "稻草人各自无休止地唱起了不同的部分，它们的轮唱与其说是歌声，倒不如说是噪音。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+TEXT "『静谧湖畔中♪』"
+PAUSE
+NEWLINE
+TEXT "『布谷——♪布谷——♪布谷♪布谷♪布谷♪』"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「饶了我吧……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "今天的起床也是糟透了。"
+PAUSE
+NEWLINE
+TEXT "推开没能成为耳塞的被子，我不情愿地开始准备。"
+PAUSE
+NEWLINE
+TEXT "开窗换气后，炫目的日光便火辣辣地倾泻了进来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一股闷热的空气从窗外涌入，黏糊糊地缠在皮肤上。"
+PAUSE
+NEWLINE
+TEXT "切身地感受到了人类不愿做农活的原因。"
+PAUSE
+NEWLINE
+TEXT "果然空调是人类史上最伟大的发明呢。"
+PAUSE
+NEWLINE
+TEXT "我在心里向那位发明空调的无名伟人默默致敬，随后走出了房间。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "隔壁的房间里，妹妹翠正在熟睡。"
+PAUSE
+NEWLINE
+TEXT "我走到门前想看看情况，正欲敲门，却停住了手。"
+PAUSE
+NEWLINE
+TEXT "嘛，算了……"
+PAUSE
+NEWLINE
+TEXT "悄悄地，"
+PAUSE
+NEWLINE
+TEXT "我拉开了门，窥视着里面。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "房间中央铺着被褥，翠就睡在那里。"
+PAUSE
+NEWLINE
+TEXT "也许是因为睡相不好，被子被踢开了。"
+PAUSE
+NEWLINE
+TEXT "铺好的被褥上，翠正呈「大」字形静静酣睡。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "难道稻草人的轮唱音波攻击对翠不起作用吗……"
+PAUSE
+NEWLINE
+TEXT "翠毫无要醒来的迹象，依然露着毫无防备的睡颜。"
+PAUSE
+NEWLINE
+TEXT "出这么远的门肯定累坏了吧。"
+PAUSE
+NEWLINE
+TEXT "说起来，这里与翠生活城市的时间流速本就不同。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "由于正值暑假，翠那原本为上学而调整的生物钟，又出现了几个小时的偏差。"
+PAUSE
+NEWLINE
+TEXT "不出意外的话，至少还要再睡上三个小时吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「真羡慕啊，唉……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "对于习惯了田园生活的我来说，日出而作、日落而息是理所当然的。"
+PAUSE
+NEWLINE
+TEXT "看着那张平静的睡颜，我悄悄走进了房间。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "把冷气温度稍微调高些，将被子为她重新盖好。"
+PAUSE
+NEWLINE
+TEXT "难得来一次，万一感冒了多可惜啊。"
+PAUSE
+NEWLINE
+TEXT "为了不惊醒翠，我蹑手蹑脚地离开了她正在熟睡的房间。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "吃完早饭，我把身上穿的睡衣扔进洗衣机，然后洗了把脸，换上平时的工作服。"
+PAUSE
+NEWLINE
+TEXT "虽然工作服又闷又热，但不穿上就提不起劲来工作。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "装上塞满其它必要器材的背包后，我的起床仪式就此结束。"
+PAUSE
+NEWLINE
+TEXT "经过这些步骤后，我的意识才彻底觉醒。"
+PAUSE
+NEWLINE
+TEXT "无论睡多少个小时，只要状态切换不过来，脑袋就始终昏昏沉沉的，根本没法好好干活。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然离工作还有段时间，但不穿上这身就提不起精神。"
+PAUSE
+NEWLINE
+TEXT "穿戴整齐后，我出了门。"
+PAUSE
+NEWLINE
+TEXT "不管是令人烦闷的烈日、还是燥热难耐的高温，一旦真正起身面对时，也不过如此。"
+PAUSE
+NEWLINE
+TEXT "大大地伸了个懒腰，我迈着轻快的步伐走向实验室。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/e3b"
+SETSTEP 8
+SE_PLAY "bgm/m2"
+TEXT "车间中已经有好几台助理型智能机器人在忙碌工作着。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「早啊，今天也请多多关照」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我抬起手来打招呼，机器人们也纷纷恭敬地低头回礼。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「早上好茂先生。昨晚睡得还好吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "一如既往的问候。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "这座实验室里的机器人，相对来说比外面一线作业的家伙更加通情达理。"
+PAUSE
+NEWLINE
+TEXT "与那些摆弄泥土的家伙不同，这些经常与人类协作的家伙在许多方面都很灵活。"
+PAUSE
+NEWLINE
+TEXT "虽然对话略显生硬，但整体感觉几乎与真人交谈无异。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「今早上我又被稻草人弄的噪音给吵醒了。能不能想办法解决一下啊？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "到现在脑袋里都还响着稻草人唱的歌。"
+PAUSE
+NEWLINE
+TEXT "感觉自己稍不留神就会跟着一起唱起来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「话是这么说，但这同时也是在检查设备运行状况，实在没法叫停啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「那就给我住的地方装个全隔音吧。而且今天我妹妹来了，吵醒她可不太好」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "幸好今天她睡得很香，但往后的日子还长着呢。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然一起做家务会更轻松些，但看到她那副睡颜，我实在不忍叫醒。"
+PAUSE
+NEWLINE
+TEXT "感觉自己还是和以前一样宠溺她，哎，这或许就是所谓的兄长之心吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「明白了。在翠小姐入住期间，我会控制好音量」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「不好意思啊。那就麻烦你了」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e3f"
+SETSTEP 8
+TEXT "一阵寒暄过后，大家便各自埋头工作了。"
+PAUSE
+NEWLINE
+TEXT "在实验室里，我负责对那些损坏或故障的机器人进行维护和修理。"
+PAUSE
+NEWLINE
+TEXT "除此之外，还包括维护外面的农机和车辆等设备。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "系统方面的话，则是由这里的专业智能机器人们负责进行处理。"
+PAUSE
+NEWLINE
+TEXT "因为与只能通过手指和键盘编写程序的人类相比，能够直接修改数据的智能机器人们在这里效率更高。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "如果发生了影响整个系统的故障，按规定，我得向总部汇报，但从我来到这里至今，还从未发生过此类情况。"
+PAUSE
+NEWLINE
+TEXT "因此，目前我在现场所能做的只有更换基板等硬件方面的内容。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "关于农作物的生产我说不上话，也没有任何发生意外情况，我只是负责摆弄机器。"
+PAUSE
+NEWLINE
+TEXT "我很喜欢这样和平的乡村生活。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我今天的工作是，维护和修理几台农用机器人。"
+PAUSE
+NEWLINE
+TEXT "难得妹妹来了，工作量与平时相比却轻松了许多。"
+PAUSE
+NEWLINE
+TEXT "这样等翠醒来的时候，应该就能基本完成了吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我一边检查被搬上工作台的机器人的破损部位，一边利落地清理表面的污垢。"
+PAUSE
+NEWLINE
+TEXT "这里发生故障的原因要么是泥土或灰尘引起的，要么就是磨损引起的。"
+PAUSE
+NEWLINE
+TEXT "污垢的话要小心地去除，磨损的地方就换新的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "进行机器人的维护时间久了，不知为何总有种成为医生的感觉。"
+PAUSE
+NEWLINE
+TEXT "我记得小时候，有修理玩具的志愿者被称为玩具医生，他们能够轻松地修复孩子们弄坏的玩具。"
+PAUSE
+NEWLINE
+TEXT "玩具也好机器人也罢，亦或是人类，如果没有人来修理，都是迟早会坏掉的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我虽然不能治好人的身体，但是对机器人来说就像是它们的医生一样吧。"
+PAUSE
+NEWLINE
+TEXT "因为只需要更换零件就可以了，和人类的伤病相比，这要容易得多。"
+PAUSE
+NEWLINE
+TEXT "每天能完成的作业量有限，所以我认真地进行工作，以确保维修好的机器人不会再次出现故障。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我可不想因为工作做得不彻底而需要进行返工。"
+PAUSE
+NEWLINE
+TEXT "先更换破损部位，然后重新启动来进行功能检查。"
+PAUSE
+NEWLINE
+TEXT "当系统启动的同时，机器人各个部位都开始发出驱动声。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e3b"
+SETSTEP 8
+TEXT "「哟，情况怎么样？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「嗯……托您的福，状况良好」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "仔细检查各部件的运作之后，机器人回答道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好，那就再好不过了。今后也请多加注意保养，村里的工作就继续拜托你了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我拍拍它的后背以示鼓励。"
+PAUSE
+NEWLINE
+TEXT "虽然被拍得微微前倾，但智能机器人还是敏捷地恢复了原本的姿势。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好的，感谢您今天的维护」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "它恭敬地鞠了一躬，便轻快地走出了实验室。"
+PAUSE
+NEWLINE
+TEXT "进展顺利。"
+PAUSE
+NEWLINE
+TEXT "今天的工作也完成得很好呢。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「请多保重」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "目送着机器人离去，我下意识这样说。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "工作暂时告一段落，我决定先回一趟住处。"
+PAUSE
+NEWLINE
+TEXT "都这个时间点了，家里的瞌睡虫也该起床了吧。"
+PAUSE
+NEWLINE
+TEXT "虽然距离中午还有一点时间，但早点吃午饭也不错。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我急忙开始收拾回家的行囊，脑海中浮现出翠的身影。"
+PAUSE
+NEWLINE
+TEXT "昨天我去车站迎接的，时隔三年再次相见的妹妹。"
+PAUSE
+NEWLINE
+TEXT "那一刻的惊讶，也许是我至今为止感受过最强烈的一次。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "bgm/m0"
+BG 0 "bg/white"
+SETSTEP 8
+BG 0 "bg/e1"
+SETSTEP 8
+TEXT "「哟……好久不见」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我让卡车停在合适的位置，然后向翠和稻草人的方向走去。"
+PAUSE
+NEWLINE
+TEXT "或许是因为她长大了一些吧，翠没有像以前一样扑过来抱住我。"
+PAUSE
+NEWLINE
+TEXT "我带着一丝遗憾的心情，慢慢靠近了翠。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b1"
+SETSTEP 8
+TEXT "「哥哥……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "翠穿着一身看起来很凉爽的白色衣服，脸上露出了羞涩的微笑。"
+PAUSE
+NEWLINE
+TEXT "看着这样的翠，我从心底感到惊讶。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "从面庞来看无疑是翠没错，但她却散发着一种与当年的翠判若两人的成熟气质。"
+PAUSE
+NEWLINE
+TEXT "通常不在身边的人即使有些轻微的变化也会让人觉得变化很大，但青春期女孩这三年间的变化程度，还是超乎了我的想象。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b0"
+SETSTEP 8
+TEXT "「哥……哥？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我惊讶得说不出话来，于是翠主动开口了。"
+PAUSE
+NEWLINE
+TEXT "明明只是一声普通的呼唤。"
+PAUSE
+NEWLINE
+TEXT "但不知为何，她的声音有些颤抖。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我从惊讶中回过神来，注视着翠。"
+PAUSE
+NEWLINE
+TEXT "她表情僵硬，似乎有些发抖。"
+PAUSE
+NEWLINE
+TEXT "就在我想问她怎么了的下一刻，翠的眼中已经涌出泪水，顺着脸颊流了下来。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b4"
+SETSTEP 8
+TEXT "「呜……呜呜……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「喂、喂……翠？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "面对突然哭起来的翠，我顿时手足无措。"
+PAUSE
+NEWLINE
+TEXT "我完全不知道翠到底怎么了，为什么哭。"
+PAUSE
+NEWLINE
+TEXT "翠的泪珠如雨般大颗落下，只是不断地哭泣着。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我……完全不知道该怎么应对。"
+PAUSE
+NEWLINE
+TEXT "这三年来我一直只跟机器人打交道，所以真的很久没有看到有人在我面前哭泣了。"
+PAUSE
+NEWLINE
+TEXT "而且，久别重逢的翠看明明起来成熟了许多，居然还会这样哭泣……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "意识到自己只是呆呆地望着翠时，我不禁在心底痛骂：你他妈到底在干什么啊？"
+PAUSE
+NEWLINE
+TEXT "面对正在哭泣的翠，就这么傻站着也太不像话了。"
+PAUSE
+NEWLINE
+TEXT "像过去一样，我将抽泣着的翠拉进怀里，紧紧抱住了她。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f4"
+SETSTEP 8
+TEXT "「呜呜……哥……哥」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "在我抱着翠时，翠也环抱住我的背，像是要紧紧抓住一般哭得更加厉害了。"
+PAUSE
+NEWLINE
+TEXT "她把脸埋进我的胸口，一边不停地重复着「哥哥」，一边肩膀颤抖着抽泣。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「怎么……了？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我温柔地问道，翠便在环抱着我的手上加重了力道。"
+PAUSE
+NEWLINE
+TEXT "想必她一定是积压了很多情绪吧。"
+PAUSE
+NEWLINE
+TEXT "虽然不知道原因，但她那强烈的情感，我能够清晰地感受到。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我默默地搂着翠的肩膀，打算就这样陪着她直到她平静下来。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b0"
+SETSTEP 8
+TEXT "「谢谢，已经可以了……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "过了一会儿，翠推开了我的胸口，静静离开了我的怀抱。"
+PAUSE
+NEWLINE
+TEXT "她的眼睛红得像兔子一样，声音虽然还有些哽咽，但眼泪已经止住了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我本想问问哭泣的原因，但既然翠没有主动说，那还是不问为好吧。"
+PAUSE
+NEWLINE
+TEXT "记得我还住在老家那会儿，每当翠跑来向我哭诉时，总是会明确地告诉我原因，比如丢了东西啦，或者被妈妈骂了之类的……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在这三年的时光中，翠确实像是登上了通往成人世界的一级台阶。"
+PAUSE
+NEWLINE
+TEXT "既然如此，我也不应该把她再当小孩子看待了。"
+PAUSE
+NEWLINE
+TEXT "翠从口袋里拿出一块可爱的手帕，用它仔细擦拭着被泪水打湿的脸颊，然后笑了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b1"
+SETSTEP 8
+TEXT "「啊～，哭完感觉舒畅多了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "看着这样笑着的翠，我再次感到惊讶。"
+PAUSE
+NEWLINE
+TEXT "这种快速转换心情的能力，在以前的翠身上是没有的。"
+PAUSE
+NEWLINE
+TEXT "看来这三年的岁月真的很漫长。"
+PAUSE
+NEWLINE
+TEXT "我稍微有些后悔一直以来都没有回老家一次了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「到这里你一定很累了吧，太阳也快落山了，我们走吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我这么说道，翠高兴地点了点头，说了声「嗯」。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b0"
+SETSTEP 8
+TEXT "「那，再见了，稻草人」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「您嘞路上当心」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "看来，翠和稻草人已经完全打成一片了。"
+PAUSE
+NEWLINE
+TEXT "看到翠和村里的家伙们关系这么快就变好了，我的嘴角不禁流露出微笑。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我想，翠如果能享受这个村子的生活就好了。"
+PAUSE
+NEWLINE
+TEXT "而且，我也希望她能亲眼去看看，这里究竟有些什么。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我们二人走到车旁时，我如同护花使者般为她打开了车门。"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/f1"
+SETSTEP 8
+TEXT "「感觉像是公主一样」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "翠害羞地笑了笑，然后登上了卡车。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我紧跟在翠之后，车身随即嘎吱摇晃起来。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「哈哈，作为公主的座驾，这也太破了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我苦笑着，翠使劲摇了摇头，开心地说道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「才没有那回事呢！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「……是吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「嗯！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "翠的笑容，"
+PAUSE
+NEWLINE
+TEXT "看起来真的，非常开心。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/ic"
+SETSTEP 16
+PAUSE
+BG 0 "bg/cm"
+SETSTEP 8
+SE_PLAY "bgm/m0"
+TEXT "窗外流动着的田园景色，在夕阳的余晖衬映下染成了一片橙色。"
+PAUSE
+NEWLINE
+TEXT "透过车窗照射进来的光线，将我和哥哥一同染上橙黄色。"
+PAUSE
+NEWLINE
+TEXT "远远望见的山影。"
+PAUSE
+NEWLINE
+TEXT "在那之上是闪耀着比橙色更红的太阳。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "真是，美丽的晚霞啊。"
+PAUSE
+NEWLINE
+TEXT "这里并无高楼遮蔽视线，所以我得以全神贯注地去凝望那绮丽的落日景象。"
+PAUSE
+NEWLINE
+TEXT "虽然曾在照片中见过类似景致，但亲眼所见的真实景色，却比任何影像中的画面都更直击心灵。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「说起来……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "在我盯着窗外的夕阳时，哥哥突然说道。"
+PAUSE
+NEWLINE
+TEXT "我朝着哥哥的方向看去，哥哥正对着我露出调皮的坏笑。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「刚才，从稻草人那里传来了翠的声音啊」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/b2"
+SETSTEP 8
+TEXT "「啊，那个是……那个……」"
+PAUSE
+NEWLINE
+NEWLINE
+CLEAR
+TEXT "刚才的羞耻感又涌上心头，我的脸变得热了起来。"
+PAUSE
+NEWLINE
+TEXT "那个，我不想被哥哥听到。"
+PAUSE
+NEWLINE
+TEXT "因为就知道会被他这么说……"
+PAUSE
+NEWLINE
+TEXT "偏偏越是不希望发生的事，就越逃不过墨菲定律的魔咒——这次似乎又应验了，我只得抱头苦恼。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "赶走乌鸦的，是我那声嘶力竭的怒吼声。"
+PAUSE
+NEWLINE
+TEXT "光是那样倒还好说……"
+PAUSE
+NEWLINE
+TEXT "稻草人用我的声音喊出的那句稻草人怪话。"
+PAUSE
+NEWLINE
+TEXT "求求了，千万不要被听到……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「翠似乎……说的很厉害的话呢，好像是『用拳头狠狠揍你』之类的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "果然被听到了……"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「那、那是稻草人擅自用我的声音」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我暂且对哥哥这样解释。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽然，这是毋庸置疑的事实……"
+PAUSE
+NEWLINE
+TEXT "但是，哥哥明知如此却还是说了出来。"
+PAUSE
+NEWLINE
+TEXT "明知道我是不会用那种方式说话的，却还……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「真的吗～……？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "你明明都知道，还问这种气人的话。"
+PAUSE
+NEWLINE
+TEXT "过去，每当哥哥用这种语气说话时，我就知道他是在戏弄我了。"
+PAUSE
+NEWLINE
+TEXT "明明知道自己被戏弄了，我却还是忍不住较真起来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "但是，那是……"
+PAUSE
+NEWLINE
+TEXT "也许正是因为知道被戏弄了，讨厌被当做孩子对待，才会变得较真起来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「是真的啦！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "为了不显得太过较真，我故意把脸转向窗户，将视线移向了外面。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "美丽的晚霞依旧在天边铺展。"
+PAUSE
+NEWLINE
+TEXT "但是，景色已经不再像方才那般扣人心弦了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "哥哥，也许是没有继续戏弄我的意思，便没有再开口了。"
+PAUSE
+NEWLINE
+TEXT "而我因为不知道该如何调整烦闷的心情，车内陷入了奇妙的沉默氛围。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "嗯……如果我先道歉的话会不会很奇怪啊……"
+PAUSE
+NEWLINE
+TEXT "卡车哐当哐当地颠簸着，总感觉振动声比刚才更响了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「我认为翠小姐说的，是真的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "突然间，开着卡车的智能机器人说道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "因为它之前只是一直安静地开着车，所以一开始，我甚至没反应过来声音是从哪里传出来的。"
+PAUSE
+NEWLINE
+TEXT "哥哥似乎也很吃惊，睁大眼睛看着正在驾驶的智能机器人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「什么啊，你……是站在翠那边的吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「是的，茂先生和翠小姐之间如果一定要选择的话」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「哼，明明一直以来都是我在维护……」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「忘恩负义的家伙」，哥哥一边这样低声说着，同时也笑了。"
+PAUSE
+NEWLINE
+TEXT "那是发生什么有趣事情时的笑法。"
+PAUSE
+NEWLINE
+TEXT "虽然不明白为什么哥哥会觉得有趣，但这是第一次能够击败哥哥，我感到很高兴。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f1"
+SETSTEP 8
+TEXT "「谢谢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我道谢后，智能机器人边开车边欠身道。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「非常抱歉，说了些冒昧的话」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "智能机器人这样说完后，又回到了安静开车的状态。"
+PAUSE
+NEWLINE
+TEXT "我在心中再次默念了声谢谢。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "在那之后，我和哥哥又像平常一样聊起了天。"
+PAUSE
+NEWLINE
+TEXT "哥哥说，等到家后，要为我举办一场欢迎会。"
+PAUSE
+NEWLINE
+TEXT "附近住着一位精神矍铄的婆婆，已经在做着饭菜等我了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "还会有城市里吃不到的稀奇佳肴等等。"
+PAUSE
+NEWLINE
+TEXT "我从心底觉得，每一句话都令人开心，能来这里真是太好了。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/white"
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+SE_PLAY "bgm/m1"
+TEXT "在车里听着哥哥说话，不知不觉就到了哥哥所寄宿的家。"
+PAUSE
+NEWLINE
+TEXT "太阳沉入山后，消失不见，尽管山的轮廓附近还残存着微弱的光亮，但周围已经变得相当昏暗了。"
+PAUSE
+NEWLINE
+TEXT "放下行李，我回头向正准备开车回去的智能机器人打招呼。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b1"
+SETSTEP 8
+TEXT "「刚才的事，再次谢谢了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "虽然脑海中浮现出各种感谢的话语，但我最终还是用最简单的方式说出了心底的谢意。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e2"
+SETSTEP 8
+TEXT "「没什么……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "坐在驾驶座上的机器人有些不好意思地低下头，随即发动引擎，静静地启动了卡车。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "虽然还有很多话想聊，不过考虑到在村里的生活才刚刚开始，还是留到以后再说吧。"
+PAUSE
+NEWLINE
+TEXT "和哥哥一起目送卡车渐渐远去后，我抬头望向哥哥。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好嘞，那我们走吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥突然一把提起我那沉甸甸的包，并在肩膀上重新调整了肩带的位置。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f0"
+SETSTEP 8
+TEXT "「不用啦，我自己可以拿」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我慌忙想要夺回行李，但哥哥却嘴角含笑阻止了我。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「出远门很累了吧，不用在意，我来拿就行」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "这样说着，哥哥开始朝家的方向走去。"
+PAUSE
+NEWLINE
+TEXT "我一边跟在哥哥后面，一边望着哥哥寄宿的房子。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "哥哥的家似乎是直接沿用了以前村子里某户人家的旧宅。"
+PAUSE
+NEWLINE
+TEXT "是在高楼林立的家乡从未见过的、低矮的旧房子。"
+PAUSE
+NEWLINE
+TEXT "对于住惯了公寓楼的我而言，这一切都显得格外新奇。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我哗啦一声拉开了玄关的拉门，一进去，一股凉飕飕的风便迎面吹来。"
+PAUSE
+NEWLINE
+TEXT "原来这里有空调啊，我有些意外地想。"
+PAUSE
+NEWLINE
+TEXT "本来想着既然难得来到乡下，就好好享受一下没有空调的空气，但是……"
+PAUSE
+NEWLINE
+TEXT "算了，到外面多吸点新鲜空气就是了……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「婆婆，我回来了——」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥从玄关走进屋里，大声这样喊着，紧接着可以听到从里面传来啪嗒啪嗒的脚步声。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "脚步声越来越近，很快走廊另一头出现了一位身着和服、外罩烹饪围裙的老婆婆。"
+PAUSE
+NEWLINE
+TEXT "那位婆婆笑眯眯地走过来，目光在我们兄妹之间来回移动。"
+PAUSE
+NEWLINE
+TEXT "真是一位看上去精气十足的老婆婆。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「欢迎回来，小茂啊，跟……小翠对吧？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "婆婆用略带沙哑的声音说完，双手同时握住了我的手。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/b0"
+SETSTEP 8
+TEXT "「我是翠，初次见面……嗯，那个，我哥哥承蒙您照顾……那、那那那个，今、今后请多多关照」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "手被突然握住，我不由得紧张起来，结果不小心打了个奇怪的招呼。"
+PAUSE
+NEWLINE
+TEXT "尽管如此，婆婆依旧笑咪咪地点着头。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「初次见面，真高兴能见到你。跟小茂一样称呼我婆婆就好，感觉就像是多了个孙女一样呢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "婆婆握着我的手上下摇晃，开心地这样说道。"
+PAUSE
+NEWLINE
+TEXT "虽然那只手满是皱纹且非常纤细，但很温暖，给人一种莫名怀念的感觉。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好啦，好啦。累了吧？洗澡水已经烧好了，赶快先去洗个澡吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "话音刚落，婆婆就使劲推着我的背，想带我到浴室里去。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f1"
+SETSTEP 8
+TEXT "「哇，那个……哥哥？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "虽然被推着背，但我还是转过头看向哥哥。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「你先去洗吧，我还有点事情要做」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「哇，我知道了——」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我点头回应哥哥的话，被婆婆推着背，就这么走向了浴室。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/b0"
+SETSTEP 8
+TEXT "到达浴室的更衣室后，婆婆说了句「慢慢洗啊」，随后便不知去了哪里。"
+PAUSE
+NEWLINE
+TEXT "我独自站在更衣室里，陷入了沉思。"
+PAUSE
+NEWLINE
+TEXT "替换的衣物……该怎么办呢。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "粗略地扫了一眼，更衣室里似乎并没有准备替换的衣服。"
+PAUSE
+NEWLINE
+TEXT "我带来的换洗衣物在哥哥拿走的运动包里。"
+PAUSE
+NEWLINE
+TEXT "就这样直接去泡澡，等出来的时候……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "现在这身被汗弄脏的衣服，我可不想再穿上……"
+PAUSE
+NEWLINE
+TEXT "总不能，光着身子走出去吧。"
+PAUSE
+NEWLINE
+TEXT "…………嘛，算了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我正纠结着，突然又觉得无所谓了。"
+PAUSE
+NEWLINE
+TEXT "由于浴室里不断冒出热气，更衣室内十分闷热，让人满身大汗。"
+PAUSE
+NEWLINE
+TEXT "现在这样子，再去拿换洗衣物也太麻烦了……"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "我期待婆婆会为我准备替换的衣服，于是决定直接去泡澡。"
+PAUSE
+NEWLINE
+TEXT "下定决心后，我快速地把衣服脱下扔进脏衣篓，拉开了通往浴室的门。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/white"
+SETSTEP 8
+TEXT "白色的蒸汽弥漫开来，瞬间遮住了视线。"
+PAUSE
+NEWLINE
+BG 0 "bg/cm"
+SETSTEP 8
+SE_PLAY "bgm/m1"
+TEXT "待眼睛适应后，浴室的景象便映入眼帘，我不由得惊叫出声。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好厉害」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "整个浴室竟然全是用木头打造的。"
+PAUSE
+NEWLINE
+TEXT "地板、墙壁、天花板，甚至连浴缸都是。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "啊，只有水龙头不是木制的。"
+PAUSE
+NEWLINE
+TEXT "看着几乎全部是由木材制成浴室，我感到非常奢华。"
+PAUSE
+NEWLINE
+TEXT "这样的浴室，在我居住的城市里绝对无法体验到的。"
+PAUSE
+NEWLINE
+TEXT "木料的馨香温柔地包裹着我的全身，萦绕出令人沉醉的美好氛围。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在这样的浴池里泡澡的话，身心都会变得舒畅吧……"
+PAUSE
+NEWLINE
+TEXT "我就这样在陶醉中，为了清洗身体找到了提桶。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "bgm/m0"
+BG 0 "bg/white"
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "洗完澡从浴室出来，我正想着必须去取行李中的换洗衣物，却发现更衣室里正整整齐齐地叠放着一套浴衣。"
+PAUSE
+NEWLINE
+TEXT "看到那个，我再一次感动了。"
+PAUSE
+NEWLINE
+TEXT "在家乡，即便是传统节日和祭典活动，现在也很少有人穿浴衣或和服了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "最后一次穿还是七五三节的时候吧。（译注：日本传统节日。节如其名是为祝七岁、五岁、三岁的孩子健康成长举行的仪式，每年11月15日举行，主体一般为五岁的男孩，三岁和七岁的女孩）"
+PAUSE
+NEWLINE
+TEXT "我很高兴能穿上这种很少有机会穿的漂亮衣服。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "要是看到我穿着浴衣，哥哥会称赞我吗？"
+PAUSE
+NEWLINE
+TEXT "…………"
+PAUSE
+NEWLINE
+TEXT "一定会夸我的。"
+PAUSE
+NEWLINE
+TEXT "于是我做出决定，穿上了浴衣。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我穿好浴衣四处乱转时，恰好来到了婆婆所在的房间。"
+PAUSE
+NEWLINE
+TEXT "婆婆正往矮桌上不停地上着菜。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "「那个，洗得很舒服，托您的福变得清爽了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我向婆婆搭了话，她转过身来看向我。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「嗯，这件浴衣很适合你呢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「那个，这件衣服借给我穿，没关系吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我向满足地点着头的婆婆这样问道。"
+PAUSE
+NEWLINE
+TEXT "虽然说了我要过来，但没想到哥哥居然会为我准备好浴衣。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "哥哥虽然很温柔，但我实在不认为他会连这种小细节都能注意到。"
+PAUSE
+NEWLINE
+TEXT "我心想，一定是婆婆为我特地准备好的吧。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「那些是，很久以前，我给孙子们买的，不过因为各种各样的原因啊，他们没能穿得上」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "婆婆这样说着，脸上扫过一丝落寞的神情，随后开始帮我整理起了浴衣。"
+PAUSE
+NEWLINE
+TEXT "我不知为何说不出话来，只是配合着让婆婆帮我理好浴衣。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「大小正合适呢。真是无论什么东西都是留着才好啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "婆婆又满意地点了点头，露出了笑容。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb2"
+SETSTEP 8
+TEXT "「适合我吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我有点不好意思，害羞地问了一句，婆婆用力地点了点头。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「非常适合你，小茂也准会大吃一惊的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「是……是吗」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我害羞地用食指挠了挠头，这时听到玄关的推拉门被打开的声音。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「我回来了——」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "是哥哥的声音。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「哎呀，你回来了啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "婆婆笑了笑，轻轻对着我的胳膊调皮地拍了两下。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我和婆婆一起默默地，等着哥哥进来。"
+PAUSE
+NEWLINE
+TEXT "我很期待哥哥会有什么样的反应，不知不觉间就心跳都开始加速了起来。"
+PAUSE
+NEWLINE
+TEXT "不久，随着脚步声靠近房间，哗啦一声推拉门被打开，哥哥走了进来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「啊……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "一看到我的样子，哥哥就惊讶得在原地愣住了。"
+PAUSE
+NEWLINE
+TEXT "我也有点害羞地低下了头。"
+PAUSE
+NEWLINE
+TEXT "「看吧」，婆婆说着，轻轻戳了戳我。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf0"
+SETSTEP 8
+TEXT "「吃惊吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我试着问到。"
+PAUSE
+NEWLINE
+TEXT "哥哥沉默着点点头，然后有些难为情地挠了挠鼻尖。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「很吃惊，但是真的很合适」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "他说。"
+PAUSE
+NEWLINE
+BG 0 "bg/yf1"
+SETSTEP 8
+TEXT "我与婆婆相视一笑。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "那之后，哥哥清爽地洗完了澡，然后为我举行的欢迎会就开始了。"
+PAUSE
+NEWLINE
+TEXT "桌上摆满了菜肴，数量多到双手都数不过来，据说这是婆婆用村中收获的蔬菜为我特地做的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "哥哥似乎在我洗澡的期间，去摘了些可直接生吃的蔬菜，真的让我品尝到了现摘蔬菜的新鲜口感。"
+PAUSE
+NEWLINE
+TEXT "过去我很少有机会吃到天然蔬菜，来到这里后，才第一次知道真正的蔬菜原来是甜的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "吃完饭后，婆婆说「难得让你们兄妹俩独处，我就不打扰了」，尽管我和哥哥再三挽留，她还是独自一人回去了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "「真是个很好的人啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「是啊，虽然这里已经没什么人了，但留下来的都是非常好的人」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我们一直从玄关目送着婆婆，直到她的背影消失在视线中。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+CLEAR
+BG 0 "bg/ic"
+SETSTEP 8
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+SE_PLAY "bgm/m1"
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "婆婆回去之后，我们躺在客厅里无所事事了一阵子。"
+PAUSE
+NEWLINE
+TEXT "我们一边聊着彼此的近况，一边悠闲地共享着二人时光。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在学校的日常、学习和社团活动的事情，现在这边流行什么等等，虽是些无聊闲谈，我却感到非常开心。"
+PAUSE
+NEWLINE
+TEXT "哥哥也一口气说了许多，关于他的工作、这个村子的事，以及在这里工作的机器人的事。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "本以为哥哥没什么变化，但村里的生活似乎也在无形中影响着他。"
+PAUSE
+NEWLINE
+TEXT "正处于青春期的我，无论是精神还是身体都尚未成熟，但哥哥却比在城里时更加健壮，性格也变得温和，透着一股沉稳的气质。"
+PAUSE
+NEWLINE
+TEXT "虽然有些地方还是那么马虎，但温柔的一面却与当年一模一样。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "又高又大的旧时钟响了九下有些不太合拍的钟声，宣告了九点的到来。"
+PAUSE
+NEWLINE
+TEXT "虽然现在睡觉还太早，但我有自信一钻进被窝就能睡着。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf0"
+SETSTEP 8
+TEXT "「哥哥，差不多该回房间喽」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "坐在起居室的哥哥听到我的话，像是突然想到什么似的站起身。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「对了，机会难得要不要放焰火？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥这样说道。"
+PAUSE
+NEWLINE
+TEXT "虽然很困，但现在睡觉就太可惜了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf1"
+SETSTEP 8
+TEXT "「好啊，放吧放吧！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "片刻后 ，哥哥不知从哪里拿过来一捧家用焰火。"
+PAUSE
+NEWLINE
+TEXT "份量对两个人来说稍微多了点，但相应的，绝对能玩得很尽兴。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「就想着也许会有这种时候所以买回来放着，但怎么也没机会用上，完全给忘干净了」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一个人放焰火确实会很无聊。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好了，我来准备一下，翠你先去外面等我」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "玄关处，婆婆准备的木屐正整齐地摆放着。"
+PAUSE
+NEWLINE
+TEXT "「都穿浴衣了，鞋当然也要搭配」，婆婆特意连木屐也一起准备了，大概是觉得普通鞋子不合适吧。"
+PAUSE
+NEWLINE
+TEXT "虽然对我来说稍微大了一些，不过反正也不用走太远，也就无所谓啦。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "到了外面，白天的炎热已经完全消散了，每当晚风拂过，都令人心情愉悦。"
+PAUSE
+NEWLINE
+TEXT "月光与星光照亮了没有街灯的小路。"
+PAUSE
+NEWLINE
+TEXT "因为没有下方的光亮，月亮和星星都闪烁着城市中无缘得见的光芒。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "这么亮的话也就不需要路灯了吧。"
+PAUSE
+NEWLINE
+TEXT "铃虫与蟋蟀的清音、青蛙的鸣叫，比白日里稻草人的嘶喊更清亮地回荡在四周。"
+PAUSE
+NEWLINE
+TEXT "夜晚的村庄向我展示了另一番模样。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "哥哥一手提着装满水的水桶，另一手举着点燃的蜡烛，朝我这边走了过来。"
+PAUSE
+NEWLINE
+TEXT "怀揣雀跃的心情开封，五颜六色的焰火随着扩散开来的火药气味显露在眼前。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "已经几年没有放过焰火了。"
+PAUSE
+NEWLINE
+TEXT "虽然有在阳台看过烟花大会，但上次与人一起放焰火玩是什么时候的事情了呢？"
+PAUSE
+NEWLINE
+TEXT "正当我纠结先放哪个好时，哥哥已经抢先拿起了线香花火。（译注：一种缠绕、包绕在细竹棒儿上的小型焰火。一头儿手持然后点燃另一头，可以挥舞。燃放到最后会有一滴液体掉下来）"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf0"
+SETSTEP 8
+TEXT "「等等，为什么是从线香花火开始啊？」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "一般不是都是最后才放的吗，虽然我很想这样吐槽，但线香花火已经在噼里啪啦地发出令人惆怅的火花了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「因为我啊，焰火里面最喜欢的就是线香花火了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我自己也是一样，焰火中最喜欢的就是线香花火。"
+PAUSE
+NEWLINE
+TEXT "但那要留到最后放才有意义，要是一开始就先放了，不就没意思了嘛。"
+PAUSE
+NEWLINE
+TEXT "正这么想着，线香花火已经燃到了第二阶段，化作一团赤色的球，紧紧缠在细线上。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这不挺好吗，享受当下不就开心了嘛」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「可那样我开心不起来」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「喂喂——别晃我啊……好不容易才攒的大球就要掉下来了啊」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我试图拉住哥哥的手臂让他停下来，但哥哥却拼命想让摇摇欲坠的火球再多维持哪怕一秒。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「啊…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "啪嗒……火球掉到了地上。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "与此同时，一股莫名的哀伤漫遍了我的全身。"
+PAUSE
+NEWLINE
+TEXT "所以线香花火就不该最先放。"
+PAUSE
+NEWLINE
+TEXT "一开始就得放些华丽的家伙来炒热气氛才行。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf1"
+SETSTEP 8
+TEXT "「等一会放完了再还给你」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我把袋子里的线香花火全部没收后，继续开始放焰火。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「啊啊——我正玩得开心呢……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「少啰嗦啦，快点拿着这个」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我从袋子里挑了一个尽可能大到显眼的家伙递了过去。"
+PAUSE
+NEWLINE
+TEXT "点燃导火索后，伴随着咻的一声，一道绚丽的光芒瞬间照亮了四周。"
+PAUSE
+NEWLINE
+TEXT "被没收线香花火的哥哥无精打采地拿着焰火，或许是因为这样，连放出的烟花都显得有些无精打采。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「你刚才不是说，这种事情就是要享受当下吗？现在也得好好享受啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我将燃尽的焰火丢进水桶里熄灭掉，然后又递上了新的焰火。"
+PAUSE
+NEWLINE
+TEXT "由于这是家用的大型焰火，所以剩余量还很充足，足够玩到尽兴了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「啊呀明白啦，享受当下就行了是吧，看招！」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/yf2"
+SETSTEP 8
+TEXT "「喂，等等，快停下」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥用力挥舞着焰火，令火星四处飞溅。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「别、别、别这样啊，太危险了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "包装上还用醒目的字体写着：将焰火对准他人燃放非常危险，请勿如此操作。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好了，把线香花火还给我吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥把焰火像击剑一样挥动着，舞动的轨迹上留下了淡淡的光影残像。"
+PAUSE
+NEWLINE
+TEXT "尽管我一再提醒危险，但哥哥丝毫没有悔改的意思，这让我很生气，于是愤怒的我决定反击，把焰火的尖端对准了哥哥的方向。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「你这家伙，说和做的完全是两码事啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我从一捆焰火中抽出一支长筒状的。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "这是那种会「咻——」地朝着远方发射出闪光的类型。"
+PAUSE
+NEWLINE
+TEXT "原本这种焰火是放地上发射的玩法，但我双手举起它并瞄向了哥哥。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb1"
+SETSTEP 8
+TEXT "「刚才可是你先动手的！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "此时焰火套装就在我手边，而哥哥手中只剩下一根快要熄灭的手持焰火。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我毫不留情地向头也不回、全力奔跑的哥哥发射了闪光攻击。"
+PAUSE
+NEWLINE
+TEXT "如同电视动画中机器人发射的光束那样，闪光以惊人的速度袭向了哥哥。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "之后两人和好如初，开始正常地放焰火。"
+PAUSE
+NEWLINE
+TEXT "所幸双方都没被烧伤。"
+PAUSE
+NEWLINE
+TEXT "我也反省自己做过头了。"
+PAUSE
+NEWLINE
+TEXT "果然焰火不是对人玩的，还是像这样欣赏瑰丽的火焰才对。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf0"
+SETSTEP 8
+TEXT "「好。久等喽」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥取出最后剩下的线香花火，分了一半给我。"
+PAUSE
+NEWLINE
+TEXT "果然线香花火就该放最后放。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「真的是，我都等不及了」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我无可奈何的挠了挠头，并接过线香花火。"
+PAUSE
+NEWLINE
+TEXT "我们一起蹲下来，用燃了半截的蜡烛点燃了线香花火。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_PLAY_TOGGLE "bgm/m0"
+BG 0 "bg/e5"
+SETSTEP 8
+TEXT "啪叽 啪叽 啪叽"
+PAUSE
+NEWLINE
+TEXT "呲 呲 呲 呲 呲 呲 呲 呲"
+PAUSE
+NEWLINE
+TEXT "噼哩 噼哩 噼哩 噼哩"
+PAUSE
+NEWLINE
+TEXT "咻…"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "引燃的瞬间，细小的火星颤抖着闪烁了几下，随即消失不见。"
+PAUSE
+NEWLINE
+TEXT "我们并肩而坐，比试谁能让那闪烁的光芒坚持得更久。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf2"
+SETSTEP 8
+TEXT "「啊，真是的，为什么啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我的线香烟花火星因几秒之差先一步落到了地面。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「那当然是因为，我对线香花火的爱和你的完全不同啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「如果对线香花火有爱的话绝对不会第一个开始就放它的吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥大概是那种，吃饭的时候会先吃掉最喜欢的食物，最后剩下不喜欢吃的东西全都丢掉的类型吧。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf1"
+SETSTEP 8
+TEXT "「再来！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「好好」，哥哥百无聊赖地敷衍回应，再次用蜡烛点燃了线香花火。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e5"
+SETSTEP 8
+TEXT "啪叽 啪叽 啪叽"
+PAUSE
+NEWLINE
+TEXT "呲 呲 呲 呲 呲 呲 呲 呲"
+PAUSE
+NEWLINE
+TEXT "噼哩 噼哩 噼哩 噼哩"
+PAUSE
+NEWLINE
+TEXT "咻…"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "两颗小火团几乎同时落到地面。"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/yf0"
+SETSTEP 8
+TEXT "「嗯…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "感觉上是我的落地比较晚，所以判定结果是我赢了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "彼此的线香花火都只剩下一根。"
+PAUSE
+NEWLINE
+TEXT "胜负被推迟到了这最后一根上。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「这样就到最后了呢」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我提起精神，握紧了绳子。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「用线香花火来决胜负也没什么意义啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥将他的线香花火和我的缠绕在一起。"
+PAUSE
+NEWLINE
+TEXT "两根线香花火变成了一根粗大的线香花火。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「两个人一起，会更开心吧？」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「给」，他说着，把分叉把手的其中一端递给了我。"
+PAUSE
+NEWLINE
+TEXT "我们小心翼翼地拿着焰火，以免其散开，同时用蜡烛点燃了它。"
+PAUSE
+NEWLINE
+TEXT "一个比一般大得多的火球在我们手中诞生了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/e5"
+SETSTEP 8
+TEXT "啪叽 啪叽 啪叽"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「好漂亮…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "交织的焰火顺利凝聚成一个火球，迸发出旺盛的火焰。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "呲 呲 呲 呲 呲 呲 呲 呲"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "但是不久，火的势头慢慢地发生了变化，逐渐减弱了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "噼哩 噼哩 噼哩 噼哩"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "不再迸发火花的火球在燃尽火药后，慢慢沿着纸制部分向上攀升。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "咻…"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+TEXT "啪嗒一声，那团火终究还是掉到地上，熄灭了。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「这样就算平局了吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥露出了笑容，得意地说道。"
+PAUSE
+NEWLINE
+TEXT "其实胜负并不重要，能够这样一起做些什么我就很开心了，为什么我要如此执着呢？"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf2"
+SETSTEP 8
+TEXT "「唔…果然还是比不过哥哥」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「没那回事啦」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "哥哥为了扔垃圾，暂时回了趟家。"
+PAUSE
+NEWLINE
+TEXT "这之后的时间还有些充裕，于是我们决定一起出门。"
+PAUSE
+NEWLINE
+TEXT "说是出门其实也只是单纯的散步罢了。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "bgm/m1"
+TEXT "「久等了，走吧，带你熟悉一下周围的环境吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「周围的环境…不要带我去太远的地方喔」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「好好好，我知道啦」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我们牵着手，听着木屐咔哒咔哒的声音，一起走在无人的夜路上。"
+PAUSE
+NEWLINE
+TEXT "伴随这声音，虫与蛙的合唱也相继加入，为步道的剧场增添了层次感。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「哎呀，晚上好！这么晚了有什么事吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "注意到我们的稻草人主动搭起话来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「哟，今天也辛苦啦。没什么，只是散个步而已，想稍微吹吹风啦」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「是在散步吗，真不错呢。兄妹俩真是和睦，或者说…」"
+PAUSE
+NEWLINE
+TEXT "稻草人交叉双臂，一边频频点头一边若有所思地想着什么。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「小姑娘看起来气色不错嘛。白天多亏你帮忙了」"
+PAUSE
+NEWLINE
+NEWLINE
+BG 0 "bg/yb2"
+SETSTEP 8
+TEXT "「至少乌鸦这种小事下次你自己搞定啦！真是的——」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「哼，要是那些乌鸦再敢来糟蹋田地，就算用爬的咱也要过去狠狠教训它们一顿」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "就算真的那样爬过去应该也对乌鸦无可奈何吧，但那个画面肯定会相当惊悚。"
+PAUSE
+NEWLINE
+TEXT "爬行袭来的稻草人大军，怕是乌鸦只要见过一次就再也不敢靠近了。简直就像早年恐怖片里才会出现的画面。"
+PAUSE
+NEWLINE
+TEXT "别说乌鸦了，就算是人也绝对不想碰上啊。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "「还是不要那样做吧，真的会很吓人……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "虽然已经提醒过了，但稻草人依然一副跃跃欲试的样子。"
+PAUSE
+NEWLINE
+TEXT "我在心里祈祷着至少我在的时候不要碰到稻草人那样做。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "就在那时，一道光掠过我们头顶。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「咦，刚才的那是？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "是这里的某种防盗装置吗？"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「啊，在城里可见不到那个，那就趁散步顺便去看看吧」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「是呢，那个现今似乎是具有当地特色的名物，去看看也不亏」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「那我就去看看了。夜还挺长的，你也要加油哦」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "和稻草人告别后，哥哥带我来到了附近的河边。"
+PAUSE
+NEWLINE
+NEWLINE
+SOUND_STOPALL
+BG 0 "bg/yf1"
+SETSTEP 8
+SE_PLAY "bgm/m0"
+TEXT "「哇，好漂亮……」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "那光芒的真面目原来是萤火虫。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "潺潺流淌的河畔上，无数光点以明亮的光芒点缀天地。"
+PAUSE
+NEWLINE
+TEXT "当然，我也是第一次见到真的萤火虫。"
+PAUSE
+NEWLINE
+TEXT "以前也只是在书上和电视里见到过。"
+PAUSE
+NEWLINE
+TEXT "自从来到这里，接连不断的惊喜令我应接不暇。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「这里啊，据说是为了让国内濒临灭绝的萤火虫有一个能够赖以生存、繁衍生息的环境，而特意创造的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "如今已经没有多少适合萤火虫栖息的河畔或者湿地了。"
+PAUSE
+NEWLINE
+TEXT "仅剩的几处，也不一定能保证它的环境适合萤火虫的繁衍生息。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "虽说是人工打造的空间，但此刻视野所及之处，尽是闪烁不定的萤火簇拥成海。"
+PAUSE
+NEWLINE
+TEXT "人们常常给都市的夜景标上价格，但这里的夜景美得仿佛无价之宝，让我不敢妄加估量。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我们随意找了个地方坐下，久久凝望着那光芒之舞的跃动。"
+PAUSE
+NEWLINE
+TEXT "每一只都按自己的节奏明灭闪烁，那光芒便如同霓虹般流转跃动。"
+PAUSE
+NEWLINE
+TEXT "月光与星光交相辉映，仿佛置身于另一个星球。"
+PAUSE
+NEWLINE
+TEXT "这比宇宙旅行都要神秘、实惠多了。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yf0"
+SETSTEP 8
+TEXT "「呐，哥哥……果然短时间内还是不打算回来吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「嗯～毕竟是工作嘛，就算回来也只能在休假期间待两三天吧」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「你出发前不是很不情愿吗。还说什么被人事部的人骗了之类的…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「这里的确人烟稀少，还有很多不方便的地方…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "哥哥注视着远方，缓缓向我道来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「但，许多在时移世换中失去的事物，在这里仍旧充满生机地存在着」"
+PAUSE
+NEWLINE
+TEXT "「今后人类这种生物大概会由于贪婪驱动，继续不断发展下去，但这并不能说明一味追求新事物就是对的，这其中也有不妥的部分」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「正因如此，我希望你永远不要忘记这个地方」"
+PAUSE
+NEWLINE
+TEXT "「等你再长大一些，一定会理解这地方的意义所在」"
+PAUSE
+NEWLINE
+TEXT "「这里不仅仅，只是一个自然丰富的村子表面看上去那样简单」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「嗯～，我还是不太明白」"
+PAUSE
+NEWLINE
+TEXT "「不明白也没关系，但你能感受到一些东西吧？」"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/yb0"
+SETSTEP 8
+TEXT "哥哥轻轻地闭上了眼睛。"
+PAUSE
+NEWLINE
+TEXT "我也跟着照做闭上了眼。"
+PAUSE
+NEWLINE
+TEXT "河边那带着湿意的凉风轻轻拂过脸颊。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "林木的摇曳声与夏虫的鸣叫轻摇耳膜，萤火虫与月光一同跃入眼帘。"
+PAUSE
+NEWLINE
+TEXT "整个村子似乎都在温柔地欢迎我。"
+PAUSE
+NEWLINE
+TEXT "这个有哥哥在的村子。"
+PAUSE
+NEWLINE
+TEXT "我只在暑假期间在这里生活。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "在这期间，大概不会发生什么特别的事情，但我觉得这样就够了。"
+PAUSE
+NEWLINE
+TEXT "只要能像现在这样，站在哥哥身边，和他一起度过这段时光就好……"
+PAUSE
+NEWLINE
+TEXT "我，"
+PAUSE
+NEWLINE
+TEXT "就是为了这个才来的……"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "在那之后的几天，我和哥哥都在这个村子度过。"
+PAUSE
+NEWLINE
+TEXT "因为田里的农活不用我帮忙，所以白天在哥哥回来之前，我总有大把空闲，哥哥和机器人也都任由我去做那些想做的事。"
+PAUSE
+NEWLINE
+TEXT "哥哥的工作结束后，我们俩也没有什么特别的事要做，只是一起度过平凡的日常。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "吃饭，在客厅里悠闲地待着，聊各种各样的事情，散步，逗弄稻草人玩耍…"
+PAUSE
+NEWLINE
+TEXT "就这样，我在乐园中的生活转瞬即逝，我也不得不回到都市去了。"
+PAUSE
+NEWLINE
+TEXT "我坐着平常的司机开的卡车被送到车站，在等待电车的这段时间，我和哥哥告别。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "然而，我因为感到寂寞和难过哭得一塌糊涂，到最后还是给哥哥添了麻烦。"
+PAUSE
+NEWLINE
+TEXT "最后连像样的告别都没有说出口，就上了电车。"
+PAUSE
+NEWLINE
+TEXT "从车门关闭，电车启动到哥哥的身影渐渐模糊不过短短数秒。"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/c"
+SETSTEP 8
+SETSTEP 8
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "「走了啊…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "现在想来，这几天过得真是飞快。"
+PAUSE
+NEWLINE
+TEXT "与久违的家人重逢当然很开心，而回到家后发现有等待自己归来之人，更是令我感到幸福。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "但从现在开始，我又要被留在这个一成不变、只有机械与农田的世界里。"
+PAUSE
+NEWLINE
+TEXT "不过，这里有需要我的伙伴们，而我能尽我所能来回应他们。"
+PAUSE
+NEWLINE
+TEXT "但或许真正需要我的，是近在咫尺而又唯一的妹妹。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "无法回应她的心意的我感受到了自己的无能。"
+PAUSE
+NEWLINE
+TEXT "现在我唯一能做的事，只剩下继续在车站的站台上，凝望那不断延伸，早已空荡荡的电车轨道。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「差不多该回去了吧…」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机发动了卡车的引擎。"
+PAUSE
+NEWLINE
+TEXT "随着灰色的尾气排出，车身发出嘎吱嘎吱的震动声缓缓启动了。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「主人！ 主人！ 先等一下啊！」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人正从远处呼唤我。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「搞什么啊，要是无聊的事就待会儿再说吧。现在我没那个心情」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我摇下车窗，回应稻草人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「好啦，就请先过来一下吧。咱不会为难您的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "无奈之下我叫司机停下车，自己向着稻草人那边走去。"
+PAUSE
+NEWLINE
+TEXT "稻草人似乎心神不定地一直等着我。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「搞什么啊……又是乌鸦在捣乱吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「不不，和乌鸦比起来，这可是重要得多的事情哦」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "怎么……难道是偷瓜贼闯进来了？"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「小姐有留言需要我转达给您」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "听稻草人这么说，我不由得吃了一惊。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「留言？怎么又是让你来？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「她怕到了真正分别时，自己会话在嘴边却难以启齿，所以早在前些天就托咱传话了呢」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "回想起妹妹刚才的模样。"
+PAUSE
+NEWLINE
+TEXT "光是听她抽泣不止，连我都快要哭出来了。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「咱能随意调整自己的声音，所以像之前那样用小姐的声音说话也完全没问题啦」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "直接告诉我不就好了，也不用这么做吧……"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「请你理解下，女人心是可很复杂的」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「就你还说什么女人心啊」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "我大手一挥，朝它圆润的脸上来了一拳。"
+PAUSE
+NEWLINE
+TEXT "无视了稻草人的嘻皮笑脸。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「所以，主人。怎么办」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「什么怎么办？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「要播放吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「废话。赶紧给我放」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「咱知道喽！」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "稻草人似乎开始加载什么……然后它的肩膀突然松弛下来。"
+PAUSE
+NEWLINE
+TEXT "当翠的声音从稻草人身上传来时，它那圆乎乎的面庞竟不知为何仿佛与妹妹的容颜重叠在一起。"
+PAUSE
+NEWLINE
+CLEAR
+SE_PLAY "bgm/m0"
+BG 0 "bg/f0"
+SETSTEP 8
+TEXT "『嗯，这种时候该说什么才好呢…啊，对了对了，致亲爱的哥哥』"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "那无疑是妹妹的声音。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『我想分别的时候，自己大概会哭得不成样子，什么都说不出来，所以才像这样拜托稻草人帮忙传达』"
+PAUSE
+NEWLINE
+TEXT "『那个……明明哥哥正在工作，我却跑来找你玩，真的很抱歉。不过能再次见到你真是太好了』"
+PAUSE
+NEWLINE
+TEXT "『虽然短暂，但我度过了一段非常充实的时光』"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "『明明你是来接我的，我却哭了起来，真的很抱歉。见到哥哥后，不知为何眼泪就止不住了…』"
+PAUSE
+NEWLINE
+TEXT "『啊，还有，婆婆做的菜也特别好吃。请代我感谢她借给我的浴衣』"
+PAUSE
+NEWLINE
+TEXT "『放焰火也很有趣呢，但我还是觉得线香花火要最后放才对』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f2"
+SETSTEP 8
+TEXT "『啊～…果然只有自己一个人这样说话好寂寞…』"
+PAUSE
+NEWLINE
+TEXT "『真不想回去啊…』"
+PAUSE
+NEWLINE
+TEXT "『但是，以后绝对会再来玩的。哥哥偶尔也要回家看看呀…』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/f4"
+SETSTEP 8
+TEXT "『那，再见了』"
+PAUSE
+NEWLINE
+TEXT "『我最爱的哥哥』"
+PAUSE
+NEWLINE
+CLEAR
+BG 0 "bg/cm"
+SETSTEP 8
+TEXT "「以上是为您保存的消息」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "稻草人恢复了原来的状态，妹妹的面容消散后又变回了那张滑稽的脸。"
+PAUSE
+NEWLINE
+TEXT "我反复默念着妹妹的消息，将它刻在心底。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "这份妹妹一边哭泣一边传达的消息。"
+PAUSE
+NEWLINE
+TEXT "一定是怕这些真心话会让我为难，所以妹妹才没有说出口。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「哎哟，主人？您怎么了？身体不舒服吗？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「诶？」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「主人，您是在哭吗？」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "被稻草人这么一说，我这才发现自己正在流泪。"
+PAUSE
+NEWLINE
+TEXT "我别过身去，避免稻草人看见我的脸。"
+PAUSE
+NEWLINE
+TEXT "这副模样，我不想让任何人见到。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我努力控制好表情后，登上了卡车。"
+PAUSE
+NEWLINE
+TEXT "司机瞥了一眼，似乎是觉察到了我不对劲的表情，但依然如往常一样等待着我的命令。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "「嗯，就随意开一段吧……？  我现在实在没心情直接回家」"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "司机用一如往常的表情回应我。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "「明白了」"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "破旧的卡车缓缓启动了，严格遵守着法定速度行驶起来。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "我想这里的时间可能就像这辆卡车一样，虽然缓慢但轰鸣的引擎却不曾停歇。"
+PAUSE
+NEWLINE
+TEXT "无论时代如何变迁，有些东西永远不会改变。"
+PAUSE
+NEWLINE
+TEXT "无论是人类还是机器人。"
+PAUSE
+NEWLINE
+CLEAR
+TEXT "仅仅只是我们活着，\n看那日月轮转不息，\n聊不着边际的傻话，\n时而哭泣时而欢笑，\n偶尔也会争吵打闹。"
+PAUSE
+NEWLINE
+TEXT "一成不变的日常生活又开始了。"
+PAUSE
+NEWLINE
+NEWLINE
+TEXT "于此乐园之村。"
+PAUSE
+NEWLINE
+CLEAR
+SOUND_STOPALL
+BG 0 "bg/white"
+SETSTEP 8
