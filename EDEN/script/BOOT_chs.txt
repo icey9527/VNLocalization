@@ -7,7 +7,7 @@ SETSTEP 8
 BG 0 "bg/cm"
 SETSTEP 8
 SE_PLAY "bgm/m1"
-TEXT "在♪那之前，我从未思考过世界的运作方式。"
+TEXT "在那之前，我从未思考过世界的运作方式。"
 PAUSE
 NEWLINE
 TEXT "以为每天不过是晨起上学，和大家一起玩耍，吃饭睡觉，这样日复一日地循环罢了。"
