@@ -7,12 +7,13 @@ font 22x22 4bpp
 Unpacking code from [PS2-Visual-Novel-Tool](https://github.com/punk7890/PS2-Visual-Novel-Tool)
 
   Unpack: pac U <input.pac> <output_folder>
+  
   Pack:   pac P <input_folder> <output.pac>
 
 
 TAK SCRIPT
 
-  Extract: python tak.py e <input_folder> <output_folder>
+  Extract: python tak.py e <input_folder> <output_folder> <-t <ELF> <name table address>>
     
   Repack: python tak.py w <original_bin_folder> <csv_folder> <output_folder> 
 
