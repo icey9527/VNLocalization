@@ -13,7 +13,7 @@ Unpacking code from [PS2-Visual-Novel-Tool](https://github.com/punk7890/PS2-Visu
 
 TAK SCRIPT
 
-  Extract: python tak.py e <input_folder> <output_folder> <-t <ELF> <name table address>>
+  Extract: python tak.py e <input_folder> <output_folder> <-t ELF NameTableAddress>
   
            python tak.py e tak csv -t slpm_669.80 0x18c718
     
