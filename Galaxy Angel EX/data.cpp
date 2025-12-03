@@ -399,33 +399,45 @@ Block read_block(std::ifstream& f, size_t offset) {
 
     f.seekg(offset);
     uint8_t header[12];
-    if (!f.read((char*)header, 12)) {
+    if (!f.read(reinterpret_cast<char*>(header), sizeof(header))) {
         return block;
     }
 
-    uint32_t uncomp = (*(uint32_t*)&header[0]) ^ XOR_UNCOMP;
-    uint32_t comp = (*(uint32_t*)&header[4]) ^ XOR_COMP;
-    uint32_t checksum = *(uint32_t*)&header[8];
+    uint32_t uncomp   = *reinterpret_cast<uint32_t*>(&header[0]) ^ XOR_UNCOMP;
+    uint32_t f_size   = *reinterpret_cast<uint32_t*>(&header[4]) ^ XOR_COMP;
+    uint32_t checksum = *reinterpret_cast<uint32_t*>(&header[8]);
 
-    if (comp != 0) {
-        std::vector<uint8_t> encrypted(comp);
-        if (!f.read((char*)encrypted.data(), comp)) {
+    bool is_enc = (checksum != 0);  // 这里的判断参考自https://github.com/punk7890/PS2-Visual-Novel-Tool/blob/main/src/scenes/headlock.gd
+
+    if (f_size > 0) {
+        std::vector<uint8_t> buf(f_size);
+        if (!f.read(reinterpret_cast<char*>(buf.data()), f_size)) {
             return block;
         }
 
-        uint8_t xor_key = calc_xor_key(checksum);
-        xor_bytes(encrypted.data(), comp, xor_key);
+        if (is_enc) {
+            uint8_t xor_key = calc_xor_key(checksum);
+            xor_bytes(buf.data(), f_size, xor_key);
+        }
 
         block.data.resize(uncomp);
-        if (!lzss_decompress(encrypted.data(), comp, block.data.data(), uncomp)) {
-            std::cerr << "Warning: Decompression mismatch at offset " << offset << std::endl;
+        if (!lzss_decompress(buf.data(), f_size, block.data.data(), uncomp)) {
+            std::cerr << "Warning: Decompression mismatch at offset "
+                      << offset << std::endl;
         }
-        block.block_size = 12 + comp;
+
+        block.block_size = 12 + f_size;
     } else {
         block.data.resize(uncomp);
-        if (!f.read((char*)block.data.data(), uncomp)) {
+        if (!f.read(reinterpret_cast<char*>(block.data.data()), uncomp)) {
             return block;
         }
+
+        if (is_enc) { 
+            uint8_t xor_key = calc_xor_key(checksum);
+            xor_bytes(block.data.data(), block.data.size(), xor_key);
+        }
+
         block.block_size = 12 + uncomp;
     }
 
