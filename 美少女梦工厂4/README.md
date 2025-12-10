@@ -1,2 +1,1 @@
-注意：data.bin中的文件大小必须是四的倍数
-
+I:\研究\nds\pack>pm4_data p output arm9.bin I:\研究\nds\dump2\pack_data\arm9.bin I:\研究\nds\dump2\pack_data\data\data.bin 0x9143C
