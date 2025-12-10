@@ -168,180 +168,83 @@ bool lzss_decompress(const uint8_t* src, size_t src_len,
 
 // ======================== LZSS Compression (BST) ========================
 class LZSSCompressor {
-private:
-    uint8_t ring[RING_SIZE + MAX_MATCH - 1];
-    int parent[RING_SIZE + 1];
-    int left_child[RING_SIZE + 257];
-    int right_child[RING_SIZE + 257];
-    int match_pos;
-    int match_len;
-
-    void insert_node(int r) {
-        left_child[r] = NIL;
-        right_child[r] = NIL;
-        match_len = 0;
-
-        int key = ring[r];
-        int p = RING_SIZE + 1 + key;
-        int cmp = 1;
-
-        while (true) {
-            if (cmp >= 0) {
-                if (right_child[p] != NIL) {
-                    p = right_child[p];
-                } else {
-                    right_child[p] = r;
-                    parent[r] = p;
-                    return;
-                }
-            } else {
-                if (left_child[p] != NIL) {
-                    p = left_child[p];
-                } else {
-                    left_child[p] = r;
-                    parent[r] = p;
-                    return;
-                }
-            }
-
-            int i;
-            for (i = 1; i < MAX_MATCH; i++) {
-                cmp = ring[r + i] - ring[p + i];
-                if (cmp != 0) break;
-            }
-
-            if (i > match_len) {
-                match_pos = p;
-                match_len = i;
-                if (i >= MAX_MATCH) break;
-            }
-        }
-
-        parent[r] = parent[p];
-        left_child[r] = left_child[p];
-        right_child[r] = right_child[p];
-        parent[left_child[p]] = r;
-        parent[right_child[p]] = r;
-
-        if (right_child[parent[p]] == p) {
-            right_child[parent[p]] = r;
-        } else {
-            left_child[parent[p]] = r;
-        }
-        parent[p] = NIL;
-    }
-
-    void delete_node(int p) {
-        if (parent[p] == NIL) return;
-
-        int q;
-        if (right_child[p] == NIL) {
-            q = left_child[p];
-        } else if (left_child[p] == NIL) {
-            q = right_child[p];
-        } else {
-            q = left_child[p];
-            if (right_child[q] != NIL) {
-                do {
-                    q = right_child[q];
-                } while (right_child[q] != NIL);
-                right_child[parent[q]] = left_child[q];
-                parent[left_child[q]] = parent[q];
-                left_child[q] = left_child[p];
-                parent[left_child[p]] = q;
-            }
-            right_child[q] = right_child[p];
-            parent[right_child[p]] = q;
-        }
-
-        parent[q] = parent[p];
-        if (right_child[parent[p]] == p) {
-            right_child[parent[p]] = q;
-        } else {
-            left_child[parent[p]] = q;
-        }
-        parent[p] = NIL;
-    }
-
 public:
-    bool compress(const uint8_t* src, size_t src_len, 
-                  std::vector<uint8_t>& dst) {
-        if (src_len <= 16) return false;
+    bool compress(const uint8_t* src, size_t src_len, std::vector<uint8_t>& dst) {
+        if (src_len <= 16) {
+            dst.clear();
+            return false;
+        }
 
-        // Initialize
-        std::fill(std::begin(right_child), std::end(right_child), NIL);
-        std::fill(std::begin(parent), std::end(parent), NIL);
-        std::memset(ring, 0, sizeof(ring));
+        const int n = static_cast<int>(src_len);
+        std::vector<int> head(1 << 16, -1);
+        std::vector<int> chain(RING_SIZE, -1);
 
         dst.clear();
-        dst.reserve(src_len);
+        dst.reserve(n + (n >> 3) + 16);
 
-        size_t src_pos = 0;
-        int ring_pos = RING_INIT;
+        int sp = 0;
 
-        // Fill lookahead buffer
-        int lookahead = std::min((size_t)MAX_MATCH, src_len);
-        for (int i = 0; i < lookahead; i++) {
-            ring[ring_pos + i] = src[i];
-        }
-        src_pos = lookahead;
+        while (sp < n) {
+            size_t fp = dst.size();
+            dst.push_back(0);
+            uint8_t flags = 0;
 
-        // Insert initial strings into tree
-        for (int i = 1; i <= MAX_MATCH; i++) {
-            insert_node(ring_pos - i);
-        }
+            for (int bit = 0; bit < 8 && sp < n; ++bit) {
+                int best = 0;
+                int off  = 0;
 
-        while (lookahead > 0) {
-            std::vector<uint8_t> code_buf;
-            code_buf.push_back(0);
-            uint8_t mask = 1;
+                if (sp + 1 < n) {
+                    int h = (static_cast<int>(src[sp]) << 8) | src[sp + 1];
+                    int c = 128;
 
-            for (int bit = 0; bit < 8 && lookahead > 0; bit++) {
-                insert_node(ring_pos);
+                    for (int p = head[h];
+                         p >= 0 && sp - p <= RING_SIZE && c-- > 0;
+                         p = chain[p & RING_MASK]) {
 
-                int len = std::min(match_len, lookahead);
+                        int len = 0;
+                        while (len < MAX_MATCH &&
+                               sp + len < n &&
+                               src[p + len] == src[sp + len]) {
+                            ++len;
+                        }
 
-                if (len >= MIN_MATCH) {
-                    // Match
-                    code_buf.push_back(match_pos & 0xFF);
-                    code_buf.push_back(((match_pos >> 4) & 0xF0) | ((len - 3) & 0x0F));
-                } else {
-                    // Literal
-                    len = 1;
-                    code_buf[0] |= mask;
-                    code_buf.push_back(ring[ring_pos]);
+                        if (len > best) {
+                            best = len;
+                            off = (RING_INIT + p) & RING_MASK;
+                            if (len == MAX_MATCH) break;
+                        }
+                    }
                 }
 
-                mask <<= 1;
+                if (best >= MIN_MATCH) {
+                    dst.push_back(static_cast<uint8_t>(off));
+                    dst.push_back(static_cast<uint8_t>(((off >> 4) & 0xF0) | (best - 3)));
 
-                // Advance window
-                for (int i = 0; i < len; i++) {
-                    if (src_pos < src_len) {
-                        // 计算写入位置（这才是真正的环形缓冲区尾部）
-                        int del_pos = (ring_pos - RING_INIT) & RING_MASK;
-                        
-                        delete_node(del_pos);
-
-                        uint8_t c = src[src_pos++];
-                        
-                        // 【修复】写入到 del_pos，而不是 ring_pos
-                        ring[del_pos] = c;
-                        
-                        // 【修复】更新镜像缓冲区（这是关键，为了让 lookahead 能看到新数据）
-                        if (del_pos < MAX_MATCH - 1) {
-                            ring[del_pos + RING_SIZE] = c;
-                        }
-                    } else {
-                        lookahead--;
+                    int limit = std::min(best, n - sp - 1);
+                    for (int i = 0; i < limit; ++i) {
+                        int hh = (static_cast<int>(src[sp + i]) << 8) | src[sp + i + 1];
+                        int idx = (sp + i) & RING_MASK;
+                        chain[idx] = head[hh];
+                        head[hh] = sp + i;
                     }
 
-                    ring_pos = (ring_pos + 1) & RING_MASK;
+                    sp += best;
+                } else {
+                    flags |= static_cast<uint8_t>(1u << bit);
 
-                    if (lookahead <= 0) break;
+                    if (sp + 1 < n) {
+                        int h = (static_cast<int>(src[sp]) << 8) | src[sp + 1];
+                        int idx = sp & RING_MASK;
+                        chain[idx] = head[h];
+                        head[h] = sp;
+                    }
+
+                    dst.push_back(src[sp]);
+                    ++sp;
                 }
             }
 
-            dst.insert(dst.end(), code_buf.begin(), code_buf.end());
+            dst[fp] = flags;
         }
 
         return dst.size() < src_len;
