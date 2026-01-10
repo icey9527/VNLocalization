@@ -1,14 +1,29 @@
 from __future__ import annotations
 
+import argparse
 import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Literal, Optional, Union
+from typing import Any, Literal, Optional, Union
 
 
 class SCNFormatError(ValueError):
     pass
+
+
+def _decode_bytes(data: bytes, encoding: str) -> str:
+    try:
+        return data.decode(encoding, errors="ignore")
+    except LookupError:
+        return data.decode("cp932", errors="ignore")
+
+
+def _encode_text(text: str, encoding: str) -> bytes:
+    try:
+        return text.encode(encoding, errors="ignore")
+    except LookupError:
+        return text.encode("cp932", errors="ignore")
 
 
 def crc32_reflected(data: bytes) -> int:
@@ -81,12 +96,12 @@ class ParamString:
     raw: bytes = b""
     offset: Optional[int] = None
 
-    def text(self, encoding: str = "cp932", errors: str = "replace") -> str:
-        return self.raw.decode(encoding, errors=errors)
+    def text(self, encoding: str = "cp932") -> str:
+        return _decode_bytes(self.raw, encoding)
 
     @staticmethod
     def from_text(text: str, encoding: str = "cp932") -> "ParamString":
-        return ParamString(raw=text.encode(encoding))
+        return ParamString(raw=_encode_text(text, encoding))
 
 
 @dataclass(slots=True)
@@ -440,7 +455,7 @@ def dump_txt(
         for p in blk.params:
             if isinstance(p, ParamString):
                 rendered_params.append(
-                    p.text(encoding=encoding, errors="replace")
+                    p.text(encoding=encoding)
                     .replace("\r", "\\r")
                     .replace("\n", "\\n")
                     .__repr__()
@@ -614,7 +629,6 @@ def dump_txt(
 
     return "\n".join(lines).rstrip() + "\n"
 
-
 def dump_dialogue(
     scn: SCNFile,
     *,
@@ -733,53 +747,68 @@ def dump_dialogue(
             p = blk.params[0]
             if p.offset is None:
                 continue
-            txt = p.text(encoding=encoding, errors="replace")
+            txt = p.text(encoding=encoding)
             if not _contains_jp(txt):
                 continue
             emit_entry(addr=int(p.offset) + 1, raw_len=len(p.raw), kind="block", speaker="", original=txt)
-    for seg in segs:
-        seg_bytes = data[base + seg.rel_start : base + seg.rel_end]
-        bc = decode_remainder_bytecode(seg_bytes, max_items=2000)
-        if not bc:
-            continue
-        stop_at = bc[-1].rel_off + bc[-1].size
-        text_candidates = scan_strings_loose(seg_bytes, encoding=encoding, min_chars=4)
-        if not text_candidates:
-            continue
-        first_text_off = min(off for off, _ in text_candidates)
-        if not (first_text_off >= stop_at and first_text_off - stop_at <= 0x40):
-            continue
-        ts = parse_text_stream(seg_bytes, first_text_off)
-        # Name-id applies to exactly one subsequent emitted text entry (then is cleared).
-        pending_speaker: str = ""
 
-        for toff, raw in ts:
-            # Update speaker context when encountering name-id control.
-            if with_names and len(raw) == 6 and raw[:4] == b"\x0f\x33\x01\x10" and raw[5] == 0x01:
-                nid = raw[4]
+    # Remainder: do not try to parse opcodes. Scan sequentially.
+    # Rules (heuristic, but matches the project needs):
+    # - speaker opcode: 0F 33 01 10 <id> 01, applies to exactly one subsequent text entry.
+    # - text entry: NUL-terminated byte string that starts with certain SJIS markers.
+    # - some scripts may prefix the text with extra bytes; list those prefixes here.
+    #
+    # NOTE: Keep these as hex strings (no b"\\x.." literals) so you can edit them easily.
+    TEXT_START_MARKERS_HEX = ["8140", "8175", "8169"]
+    EXTERNAL_PREFIXES_HEX = [
+        "00011005", "00011004"
+    ]
+    text_start_markers = tuple(bytes.fromhex(x) for x in TEXT_START_MARKERS_HEX)
+    external_prefixes = tuple(bytes.fromhex(x) for x in EXTERNAL_PREFIXES_HEX)
+    if scn.parsed_end is not None:
+        scan_base = int(scn.code_end) if scn.code_end is not None else int(base)
+        rem = data[scan_base:]
+        pending_speaker: str = ""
+        i = 0
+        while i < len(rem):
+            if with_names and i + 6 <= len(rem) and rem[i : i + 4] == b"\x0f\x33\x01\x10" and rem[i + 5] == 0x01:
+                nid = rem[i + 4]
                 mapped = ""
                 if nid < len(obj_table) and obj_table[nid][0] == "str":
                     cand = str(obj_table[nid][1])
                     if _is_name_like(cand):
                         mapped = cand
                 pending_speaker = mapped or f"ID_0x{nid:02X}"
+                i += 6
                 continue
-            if keep_controls:
-                s = decode_text_with_controls(raw, encoding=encoding)
-            else:
-                s = raw.decode(encoding, errors="replace").replace("\r", "\\r").replace("\n", "\\n")
-                s = s.replace("\x7f", "")  # common line marker
-            if vn_format:
-                if not _contains_jp(s):
-                    continue
-            else:
-                if not looks_like_dialogue(s):
-                    continue
-            abs_off = base + seg.rel_start + toff
-            speaker_for_this = pending_speaker if with_names else ""
-            if speaker_for_this:
-                pending_speaker = ""
-            emit_entry(addr=abs_off, raw_len=len(raw), kind="text", speaker=speaker_for_this, original=s)
+
+            if (
+                (i + 2 <= len(rem) and rem[i:i+2] in text_start_markers)
+                or (i + 4 <= len(rem) and rem[i:i+4] in external_prefixes)
+            ):
+                end = rem.find(b"\x00", i + (4 if (i + 4 <= len(rem) and rem[i:i+4] in external_prefixes) else 1))
+                if end >= 0:
+                    raw = rem[i:end]
+                    prefix_len = 4 if (i + 4 <= len(rem) and rem[i:i+4] in external_prefixes) else 0
+                    raw_text = raw[prefix_len:]
+                    if keep_controls:
+                        s = decode_text_with_controls(raw_text, encoding=encoding)
+                    else:
+                        s = _decode_bytes(raw_text, encoding).replace("\r", "\\r").replace("\n", "\\n")
+                        s = s.replace("\x7f", "")
+                    if vn_format:
+                        ok = _contains_jp(s)
+                    else:
+                        ok = looks_like_dialogue(s)
+                    if ok:
+                        abs_off = scan_base + i + prefix_len
+                        speaker_for_this = pending_speaker if with_names else ""
+                        if speaker_for_this:
+                            pending_speaker = ""
+                        emit_entry(addr=abs_off, raw_len=len(raw_text), kind="text", speaker=speaker_for_this, original=s)
+                        i = end + 1
+                        continue
+            i += 1
     return "\n".join(out).rstrip() + ("\n" if out else "")
 
 
@@ -889,7 +918,7 @@ def decode_script_escapes_to_bytes(
             out.append(0x80)
             out.append(o)
         else:
-            out += ch.encode(encoding, errors="replace")
+            out += _encode_text(ch, encoding)
         i += 1
     return bytes(out)
 
@@ -914,6 +943,13 @@ def apply_translation_to_scn(
 ) -> bytes:
     entries = parse_extract_txt(txt)
 
+    # Keep these as hex strings so you can edit them easily.
+    EXTERNAL_PREFIXES_HEX = [
+        # Example:
+        # "00011005",
+    ]
+    external_prefixes = tuple(bytes.fromhex(x) for x in EXTERNAL_PREFIXES_HEX)
+
     # Splice-based patching:
     # - Replace the original bytes at [addr, addr+raw_len) with the new bytes.
     # - This allows the file size to change (insert/delete).
@@ -933,6 +969,12 @@ def apply_translation_to_scn(
             continue
         if end > len(buf):
             end = len(buf)
+        if e.kind == "text" and external_prefixes:
+            old_raw = bytes(buf[start:end])
+            for pfx in external_prefixes:
+                if old_raw.startswith(pfx):
+                    new_raw = pfx + new_raw
+                    break
         buf[start:end] = new_raw
         delta += len(new_raw) - (end - start)
     return bytes(buf)
@@ -952,10 +994,7 @@ def scan_c_strings(data: bytes, *, encoding: str = "cp932", min_len: int = 2) ->
         if j < n:
             raw = data[i:j]
             if len(raw) >= min_len:
-                try:
-                    s = raw.decode(encoding, errors="strict")
-                except Exception:
-                    s = raw.decode(encoding, errors="replace")
+                s = _decode_bytes(raw, encoding)
                 # 过滤掉明显不是文本的垃圾：太多控制字符
                 if any(ord(ch) < 0x20 and ch not in "\t" for ch in s):
                     pass
@@ -991,7 +1030,7 @@ def scan_strings_loose(
         # 过滤控制字节，让“夹杂控制码的文本”也能还原出来
         cleaned = bytes(b for b in chunk if b >= 0x20 or b in (0x09,))
         if len(cleaned) >= 1:
-            decoded = cleaned.decode(encoding, errors="replace")
+            decoded = _decode_bytes(cleaned, encoding)
             decoded = decoded.replace("\r", "\\r").replace("\n", "\\n")
             if len(decoded) >= min_chars:
                 repl = decoded.count("\uFFFD")
@@ -1132,7 +1171,7 @@ def decode_remainder_bytecode(
         cleaned = bytes(b for b in raw if b >= 0x20 or b in (0x09,))
         if not cleaned:
             return False
-        decoded = cleaned.decode("cp932", errors="replace")
+        decoded = _decode_bytes(cleaned, "cp932")
         if len(decoded) < 2:
             return False
         repl = decoded.count("\uFFFD")
@@ -1500,15 +1539,14 @@ def decode_text_with_controls(raw: bytes, *, encoding: str = "cp932") -> str:
             i += 1
             continue
         if 0xA1 <= b <= 0xDF:
-            out.append(bytes([b]).decode(encoding, errors="replace"))
+            dec = _decode_bytes(bytes([b]), encoding)
+            out.append(dec if dec else f"\\{b:02X}")
             i += 1
             continue
         if _is_sjis_lead(b) and i + 1 < n:
             chunk = raw[i : i + 2]
-            try:
-                out.append(chunk.decode(encoding, errors="strict"))
-            except Exception:
-                out.append(chunk.decode(encoding, errors="replace"))
+            dec = _decode_bytes(chunk, encoding)
+            out.append(dec if dec else f"\\{chunk[0]:02X}\\{chunk[1]:02X}")
             i += 2
             continue
         out.append(f"\\{b:02X}")
@@ -1569,7 +1607,10 @@ def _build_name_id_map_from_blocks(
         p = blk.params[0]
         if not isinstance(p, ParamString):
             continue
-        s = p.text(encoding=encoding, errors="replace")
+        try:
+            s = p.text(encoding=encoding)
+        except Exception:
+            continue
         if _is_name_like(s):
             out.append(s)
     return out
@@ -1589,7 +1630,10 @@ def _build_object_table_from_blocks(
         t = OPCODE_NAMES.get(blk.type, "")
         if t == "VNString2":
             if blk.params and isinstance(blk.params[0], ParamString):
-                out.append(("str", blk.params[0].text(encoding=encoding, errors="replace")))
+                try:
+                    out.append(("str", blk.params[0].text(encoding=encoding)))
+                except Exception:
+                    pass
         elif t == "VNInteger":
             if blk.params and isinstance(blk.params[0], ParamInt):
                 out.append(("int", int(blk.params[0].value) & 0xFFFFFFFF))
@@ -1682,20 +1726,59 @@ def annotate_text_refs(items: list[BytecodeItem], seg_bytes: bytes, *, encoding:
 
 
 def main(argv: Optional[list[str]] = None) -> int:
-    args = sys.argv[1:] if argv is None else argv
-    if not args:
-        raise SystemExit(
-            "usage:\n"
-            "  scn.py d <in_scn_dir> <out_txt_dir> [encoding]\n"
-            "  scn.py e <in_scn_dir> <in_txt_dir> <out_scn_dir> [encoding]\n"
-        )
-    cmd = args[0].lower()
-    if cmd == "d":
-        if len(args) not in (3, 4):
-            raise SystemExit("usage: scn.py d <in_scn_dir> <out_txt_dir> [encoding]")
-        in_dir = Path(args[1])
-        out_dir = Path(args[2])
-        enc = args[3] if len(args) == 4 else "cp932"
+    parser = argparse.ArgumentParser(prog="scn.py")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    p_d = sub.add_parser("d", help="extract SCN -> TXT")
+    p_d.add_argument("in_scn_dir", type=Path)
+    p_d.add_argument("out_txt_dir", type=Path)
+    p_d.add_argument("encoding", nargs="?", default="cp932")
+    p_d.add_argument(
+        "--scan-unextracted",
+        action="store_true",
+        help="启用兜底扫描并输出 _unextracted.txt（默认关闭）",
+    )
+
+    p_e = sub.add_parser("e", help="apply TXT -> SCN")
+    p_e.add_argument("in_scn_dir", type=Path)
+    p_e.add_argument("in_txt_dir", type=Path)
+    p_e.add_argument("out_scn_dir", type=Path)
+    p_e.add_argument("encoding", nargs="?", default="cp932")
+
+    ns = parser.parse_args(sys.argv[1:] if argv is None else argv)
+
+    if ns.cmd == "d":
+        in_dir: Path = ns.in_scn_dir
+        out_dir: Path = ns.out_txt_dir
+        enc: str = ns.encoding
+        scan_unextracted: bool = bool(ns.scan_unextracted)
+
+        MIN_FALLBACK_BYTES = 4
+
+        def scan_nul_terminated_candidates(
+            buf: bytes, *, base_addr: int, encoding: str
+        ) -> list[tuple[int, bytes, str]]:
+            out: list[tuple[int, bytes, str]] = []
+            i = 0
+            n = len(buf)
+            while i < n:
+                if buf[i] == 0:
+                    i += 1
+                    continue
+                end = buf.find(b"\x00", i)
+                if end < 0:
+                    break
+                raw = buf[i:end]
+                if len(raw) >= MIN_FALLBACK_BYTES:
+                    s = _decode_bytes(raw, encoding)
+                    if s and _contains_jp(s):
+                        out.append((base_addr + i, raw, s.replace("\r", "\\r").replace("\n", "\\n")))
+                        i = end + 1
+                        continue
+                i += 1
+            return out
+
+        unextracted_lines: list[str] = []
         for scn_path in sorted(in_dir.rglob("*.scn")):
             rel = scn_path.relative_to(in_dir)
             out_path = out_dir / rel.with_suffix(".txt")
@@ -1714,14 +1797,81 @@ def main(argv: Optional[list[str]] = None) -> int:
             )
             if s.strip():
                 out_path.write_text(s, encoding="utf-8")
+
+            if scan_unextracted and scn.tail_parsed and scn.parsed_end is not None:
+                extracted_addrs: set[int] = set()
+                extracted_ranges: list[tuple[int, int]] = []
+                if s.strip():
+                    try:
+                        extracted_entries = [e for e in parse_extract_txt(s) if e.kind == "text"]
+                        extracted_addrs = {e.addr for e in extracted_entries}
+                        extracted_ranges = sorted((e.addr, e.addr + e.raw_len) for e in extracted_entries)
+                    except Exception:
+                        extracted_addrs = set()
+                        extracted_ranges = []
+                base = int(scn.parsed_end)
+                rem = data[base:]
+                candidates = scan_nul_terminated_candidates(rem, base_addr=base, encoding=enc)
+                candidate_addrs = {a for a, _, _ in candidates}
+
+                # Pass condition: if the "normal" extractor output (dump_dialogue -> extracted_addrs)
+                # and the fallback scanner share any address, treat this file as OK even if the
+                # fallback scan is incomplete/noisy.
+                if extracted_addrs and (extracted_addrs & candidate_addrs):
+                    continue
+
+                if extracted_ranges:
+                    merged: list[tuple[int, int]] = []
+                    for a0, b0 in extracted_ranges:
+                        if not merged or a0 > merged[-1][1]:
+                            merged.append((a0, b0))
+                        else:
+                            merged[-1] = (merged[-1][0], max(merged[-1][1], b0))
+                    extracted_ranges = merged
+
+                def _overlaps_extracted(a0: int, b0: int) -> bool:
+                    # Skip candidates that fall inside (or overlap) already-extracted text ranges,
+                    # even if their starting address differs.
+                    if not extracted_ranges:
+                        return False
+                    lo = 0
+                    hi = len(extracted_ranges)
+                    while lo < hi:
+                        mid = (lo + hi) // 2
+                        if extracted_ranges[mid][0] <= a0:
+                            lo = mid + 1
+                        else:
+                            hi = mid
+                    for j in (lo - 1, lo):
+                        if 0 <= j < len(extracted_ranges):
+                            a1, b1 = extracted_ranges[j]
+                            if a0 < b1 and b0 > a1:
+                                return True
+                    return False
+
+                leftover: list[tuple[int, bytes, str]] = []
+                for a, raw, txt in candidates:
+                    if a in extracted_addrs:
+                        continue
+                    if _overlaps_extracted(a, a + len(raw)):
+                        continue
+                    leftover.append((a, raw, txt))
+                if leftover:
+                    unextracted_lines.append(f"== {rel.as_posix()} ==")
+                    for a, raw, txt in leftover:
+                        unextracted_lines.append(f"#{a:X}#{len(raw):X} ◇{txt}")
+                        unextracted_lines.append(f"<{raw.hex().upper()}>")
+                    unextracted_lines.append("")
+
+        if scan_unextracted and unextracted_lines:
+            (out_dir / "_unextracted.txt").write_text("\n".join(unextracted_lines).rstrip() + "\n", encoding="utf-8")
         return 0
-    if cmd == "e":
-        if len(args) not in (4, 5):
-            raise SystemExit("usage: scn.py e <in_scn_dir> <in_txt_dir> <out_scn_dir> [encoding]")
-        in_scn_dir = Path(args[1])
-        in_txt_dir = Path(args[2])
-        out_scn_dir = Path(args[3])
-        enc = args[4] if len(args) == 5 else "cp932"
+
+    if ns.cmd == "e":
+        in_scn_dir: Path = ns.in_scn_dir
+        in_txt_dir: Path = ns.in_txt_dir
+        out_scn_dir: Path = ns.out_scn_dir
+        enc: str = ns.encoding
         for scn_path in sorted(in_scn_dir.rglob("*.scn")):
             rel = scn_path.relative_to(in_scn_dir)
             txt_path = in_txt_dir / rel.with_suffix(".txt")
@@ -1734,7 +1884,8 @@ def main(argv: Optional[list[str]] = None) -> int:
             rebuilt = apply_translation_to_scn(src, txt, encoding=enc)
             out_path.write_bytes(rebuilt)
         return 0
-    raise SystemExit(f"unknown cmd: {cmd!r}")
+
+    raise SystemExit(f"unknown cmd: {ns.cmd!r}")
 
 
 if __name__ == "__main__":
