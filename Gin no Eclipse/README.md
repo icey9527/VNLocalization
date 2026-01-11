@@ -1,3 +1,6 @@
+銀のエクリプス/きると ~貴方と紡ぐ夢と恋のドレス~
+
+
 font 22x22 4bpp
 
   Decompress: lzs U font22.lz font22.bin
