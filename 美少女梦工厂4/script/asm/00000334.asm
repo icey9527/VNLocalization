@@ -1,0 +1,122 @@
+LABEL 0
+FLAG 729, 1
+LABEL 1
+FLAG 730, 1
+BGM_STOP 30
+BGM_PLAY 31
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2644
+MESSAGE "いってきます。"
+KEY_WAIT
+SE_PLAY 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様ぁ～\nあれ…お出かけしましたか…"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 176
+BG 1
+BG 68
+SE_PLAY 17
+FACE 22
+MESSAGE_NAME "白馬の青年"
+MESSAGE "どう！　どう！"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 579
+MESSAGE "きゃあああ！　な、なに㌍"
+KEY_WAIT
+FACE 20
+MESSAGE_NAME "白馬の青年"
+MESSAGE "おっと、失礼。\n驚かせてしまって申し訳ない。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 580
+MESSAGE "は、はぁ……"
+KEY_WAIT
+FACE 20
+MESSAGE_NAME "白馬の青年"
+MESSAGE "探しているお宅があるのですが\nご存知ありませんか？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 581
+MESSAGE "えっ？　お父さんの\n知り合いの方ですか？"
+KEY_WAIT
+FACE 20
+MESSAGE_NAME "白馬の青年"
+MESSAGE "お父さん？\nということは……あなたは？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 582
+MESSAGE "は、はい……\n娘の[娘の名前]です。"
+KEY_WAIT
+FACE 21
+MESSAGE_NAME "白馬の青年"
+MESSAGE "そうですか。\nあなたが[娘の名前]さん……"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 583
+MESSAGE "あの、よろしければ\n家までご案内しますけど……"
+KEY_WAIT
+FACE 20
+MESSAGE_NAME "白馬の青年"
+MESSAGE "いえ、もういいんです。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 584
+MESSAGE "はぁ……㌍"
+KEY_WAIT
+FACE 0
+VOICE 585
+MESSAGE "でも、お父さ……\n父に会いに来て\nくださったんじゃあ……"
+KEY_WAIT
+FACE 21
+MESSAGE_NAME "白馬の青年"
+MESSAGE "ハハハ、まぁその……\nそれより、ちょっとお話を\nしたいのですが……"
+KEY_WAIT
+SE_PLAY 19
+SE_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 586
+MESSAGE "あら？　あの音……"
+KEY_WAIT
+FACE 20
+MESSAGE_NAME "白馬の青年"
+MESSAGE "くっ……もう来たのか……\n優秀過ぎるのも善し悪しだな。"
+KEY_WAIT
+MESSAGE "[娘の名前]さん、\n申し訳ありませんが、\nこれにて失礼します。やぁっ！"
+KEY_WAIT
+BG 160
+SE_PLAY 18
+SE_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 587
+MESSAGE "…………な、何だったんだろう、\nあの人。"
+KEY_WAIT
+VOICE 588
+MESSAGE "追いかけられてて怪しかったけど、"
+LINE_FEED
+CHAR 0, 7
+FACE 6
+MESSAGE "ちょっと……格好よかったな㍍"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 0
+END 0

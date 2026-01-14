@@ -1,0 +1,299 @@
+LABEL 0
+FLAG 783, 1
+LABEL 1
+FLAG 784, 1
+BGM_STOP 30
+BGM_PLAY 17
+SE_PLAY 1
+BG 0
+SE_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 843
+MESSAGE "お父様！\nお父様ッ！！"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "わわ、お嬢様㌍\nどうなさったんですか、\nそんな血相変えて……"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 844
+MESSAGE "どいて、キューブ！\n私はお父様に話があるの！"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+VOICE 845
+MESSAGE "私……私……"
+KEY_WAIT
+CHAR 2, 9
+FACE 8
+VOICE 846
+MESSAGE "お父様の……本当の\n子供じゃないって……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+VOICE 847
+MESSAGE "本当の両親は別にいて……"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+VOICE 848
+MESSAGE "しかも……父親は……\n魔族だって！"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "お、お嬢様㌍\nどうしてそれを……"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 849
+MESSAGE "……！！"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+CHAR 2, 4
+MESSAGE "あ……"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 850
+MESSAGE "キューブ……\nそれじゃやっぱり……"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+CHAR 2, 6
+MESSAGE "……………………"
+KEY_WAIT
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+BG 92
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 851
+MESSAGE "お父様……\nどうして黙ってたの……"
+KEY_WAIT
+FACE 2
+VOICE 852
+MESSAGE "ねえ、どうして……？"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "あ、あの。お嬢様……"
+KEY_WAIT
+MESSAGE "旦那様がそのことをお話しに\nならなかったのは、それを\n知るにはまだ時期が早いからで……"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 853
+MESSAGE "……いい"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "えっ㌍"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 854
+MESSAGE "いい。……もういい！"
+KEY_WAIT
+FACE 8
+VOICE 855
+MESSAGE "私……\n自分で確かめてくるから……！"
+KEY_WAIT
+SE_PLAY 7
+SE_WAIT
+SE_PLAY 1
+SE_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+SE_PLAY 3
+MESSAGE "お、お嬢様㌍"
+LINE_FEED
+SE_PLAY 7
+MESSAGE "確かめるって……まさか㌍"
+KEY_WAIT
+MESSAGE_NAME "キューブ"
+MESSAGE "……あっ㌍　お嬢様！\nお嬢様ーっ！"
+KEY_WAIT
+BGM_STOP 30
+OFF_FACE_WINDOW
+FACE 65535
+LABEL 2
+FLAG 785, 1
+BG 2
+LABEL 3
+FLAG 786, 1
+BGM_PLAY 38
+BG 169
+CHAR 2, 9
+FACE 82
+MESSAGE_NAME "ドリアドル"
+MESSAGE "おお、これはこれは[娘の名前]様\nいらっしゃいませ……"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 856
+MESSAGE "どいて。"
+KEY_WAIT
+FACE 82
+MESSAGE_NAME "ドリアドル"
+CHAR 2, 9
+MESSAGE "は？"
+KEY_WAIT
+MESSAGE "いえ、しかし……"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 857
+MESSAGE "お願い、どいて！\n魔王に用事があるの！"
+KEY_WAIT
+FACE 82
+MESSAGE_NAME "ドリアドル"
+CHAR 2, 6
+MESSAGE "では、お取次ぎを……"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 858
+MESSAGE "自分で行くからいいわ！"
+KEY_WAIT
+SE_PLAY 7
+OFF_CHAR 2
+FACE 82
+MESSAGE_NAME "ドリアドル"
+MESSAGE "あっ、お待ちを……"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 93
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "む……誰かと思えば\n[娘の名前]ではないか。"
+KEY_WAIT
+MESSAGE "突然の訪問とは驚いたが……\n我に何用か、娘よ。"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 859
+MESSAGE "あなたに……\n聞きたいことがあります。"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "……………………"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 860
+MESSAGE "あなたが私の……\n本当の父親だというのは、\n真実なのですか？"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "……………………"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 861
+MESSAGE "答えて……ください……"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "娘……"
+KEY_WAIT
+MESSAGE "どこで聞いたかは知らぬが、\nそのような戯れ言を\nみだりに口にするものでは……"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 862
+MESSAGE "お願いです！\n答えてください……っ！"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "むぅ…………"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "確かに……それは真実だ。"
+KEY_WAIT
+MESSAGE "お前は我が血を分けし\n娘に相違ない……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 863
+MESSAGE "（やっぱり……\n私の体には魔族の血が……）"
+KEY_WAIT
+FACE 8
+VOICE 864
+MESSAGE "では……私の母は……\nお母さんは、\nどこにいるんですか……？"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "それは……\nまだ語るべき時ではない。"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 865
+MESSAGE "そんな……どうして㌍"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "お前の母は……"
+KEY_WAIT
+MESSAGE "お前を深く愛しているがゆえに、\n人間の親に……人界にお前を\n託したのだ。"
+KEY_WAIT
+MESSAGE "それだけは、\n心に留めておいてほしい。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "機が熟せば、その時こそ\n全てを話そう。"
+KEY_WAIT
+MESSAGE "だから、今日はここまでに、\nしてはもらえぬだろうか……"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 866
+MESSAGE "……わかりました。\n話してくれて、\nありがとうございます。"
+KEY_WAIT
+FACE 7
+VOICE 867
+MESSAGE "あと、色々と失礼なことを\nしてしまって、\n申し訳ありませんでした。"
+KEY_WAIT
+FACE 0
+VOICE 868
+MESSAGE "その……まだ、お父さんとは\n呼べませんけれど……"
+KEY_WAIT
+FACE 37
+MESSAGE_NAME "魔王"
+MESSAGE "よい……\n今はまだ、人の子として\n暮らすがお前の勤め。"
+KEY_WAIT
+MESSAGE "気をつけて……\n『帰る』がいい。"
+KEY_WAIT
+MESSAGE "人間の……父のもとへ……"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 869
+MESSAGE "はい……"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0

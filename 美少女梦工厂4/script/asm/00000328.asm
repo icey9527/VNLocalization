@@ -1,0 +1,1971 @@
+LABEL 0
+FLAG 1012, 1
+LABEL 1
+FLAG 1013, 1
+BGM_PLAY 32
+BG 158
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1967
+MESSAGE "ねえ、カレンちゃん？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+MESSAGE "…………うん？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1968
+MESSAGE "また、その……\n『オトモダチ』と、お話してるの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1969
+MESSAGE "楽しい？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1970
+MESSAGE "あの……私には、その、\n『オトモダチ』って何なのか、\nよくわからないけど……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 1971
+MESSAGE "たまには……\nほかのみんなとも遊ぼうよ。"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 1972
+MESSAGE "これからね、あっちで\n隠れんぼするの。\nだから、カレンちゃんも一緒に……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……しない。\n……動くと疲れるし……\nここでお話してる……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1973
+MESSAGE "でも、いつも１人でいたら、\n寂しいよ……？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 1974
+MESSAGE "お友達だって、\nいっぱいいたほうが……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "別に……\n……別に寂しくなんか……ない……"
+KEY_WAIT
+MESSAGE "それに……"
+KEY_WAIT
+MESSAGE "この子たち以外に……\n友だちがほしいとも\n思ってない……から……"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1975
+MESSAGE "そんな……\nカレンちゃぁん……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……帰る。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1976
+MESSAGE "ああっ㌍"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1977
+MESSAGE "カレンちゃん……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+VOICE 1978
+MESSAGE "私は……カレンちゃんにも\nみんなと仲良くして\nほしいのになぁ……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 1979
+MESSAGE "（それに、私は……\nカレンちゃんのお友だちじゃ\n……ないのかなぁ……？）"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 2
+FLAG 1010, 1
+LABEL 3
+FLAG 1011, 1
+BGM_PLAY 31
+BG 161
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………\nこんにちは……？"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1956
+MESSAGE "あ、カレンちゃん……\nこんにちは。今日はお出かけ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………お出かけ？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1957
+MESSAGE "えっと……違った？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………たぶん、あってる……\n友だちも、そう言ってるし。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1958
+MESSAGE "そ、そっかぁ……\nあははは……"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+VOICE 1959
+MESSAGE "（あうう……話が通じてるんだか\n通じてないんだか、\nよくわかんないよー……）"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1960
+MESSAGE "ええと……なぁに？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あなたも……\nお友だち、いっぱいいるね……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1961
+MESSAGE "え？　お友だち？\nうん、いっぱいいるよ！"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 1962
+MESSAGE "リーゼちゃんに、\nクリスチーナちゃんに……\nもちろん、カレンちゃんも……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……そうじゃない。\nもっと……そばにいて、\nいつも一緒にいる……お友だち。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1963
+MESSAGE "ええっ㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "そのうち……\n気がつく……よ……"
+KEY_WAIT
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1964
+MESSAGE "気がつくって……\nカレンちゃん……？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 1965
+MESSAGE "あ……\nまた、いつの間にか\nいなくなっちゃった……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+VOICE 1966
+MESSAGE "（いったい何のことなのかなぁ？\nキューブとか、クマさんのこと？\nうーん……よくわかんない……）"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 4
+FLAG 1008, 1
+LABEL 5
+FLAG 1009, 1
+BGM_PLAY 32
+BG 158
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1942
+MESSAGE "あれ？　噴水のほうに\n人がいっぱいいるけど……\n何かあったのかな？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………♪"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1943
+MESSAGE "あ……カレンちゃん㌍"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 1944
+MESSAGE "ふ、噴水の\n像の上に座ってるぅー㌍"
+KEY_WAIT
+OFF_CHAR 3
+BG 110
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "あ………………"
+KEY_WAIT
+MESSAGE "………………こんにちは。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1945
+MESSAGE "うん、こんにちは……\nじゃなくって！"
+KEY_WAIT
+FACE 2
+VOICE 1946
+MESSAGE "ね、ねえ、カレンちゃん！\nそんなところにいたら危ないよ？\n降りておいでよ～"
+KEY_WAIT
+FACE 6
+VOICE 1947
+MESSAGE "（それに、みんなも見てるし、\n恥ずかしいよ……）"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……こえる、から……"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1948
+MESSAGE "え、なぁに？\n何か言った？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ここだと……\nよく聞こえるの。"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1949
+MESSAGE "ええ？\n聞こえるぅ？"
+KEY_WAIT
+VOICE 1950
+MESSAGE "（聞こえるって、\n何が聞こえるんだろう……？）"
+KEY_WAIT
+VOICE 1951
+MESSAGE "（遠くで吹いてる風の音かな？\nそれとも、鐘突き堂の鐘の音？\nそれとも……）"
+KEY_WAIT
+BG 158
+CHAR 0, 6
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "あなたには、聞こえない？\n小さなお友だちの声……"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1952
+MESSAGE "わわッ㌍\nカ、カレンちゃん㌍"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 1953
+MESSAGE "（い、いつの間に降りてきたの？\nそれに、お友だちって……）"
+KEY_WAIT
+FACE 71
+MESSAGE_NAME "オールドマン"
+MESSAGE "お嬢ちゃん、\nあの子ならもう行っちまったよ？"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1954
+MESSAGE "え、あれ……？\n本当だ、もういない……"
+KEY_WAIT
+FACE 71
+MESSAGE_NAME "オールドマン"
+MESSAGE "なんだか変わった感じの\n娘さんだったねぇ……\nお嬢ちゃんの友だちかい？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1955
+MESSAGE "うーん……\n私にも、よくわかんない……"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 6
+FLAG 1024, 1
+LABEL 7
+FLAG 1025, 1
+BGM_PLAY 32
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2025
+MESSAGE "ねえ、カレン？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+MESSAGE "…………うん？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2026
+MESSAGE "また、『オトモダチ』とお話？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2027
+MESSAGE "相変わらずねぇ……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2028
+MESSAGE "うーん……結局、私には\nわからないままだったけど、\n『オトモダチ』って……何なの？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2029
+MESSAGE "今のあなたなら、\n説明できるんじゃない？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………\n………………"
+KEY_WAIT
+MESSAGE "じゃあ、手……つないで？"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2030
+MESSAGE "えっと……私、と？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。\n右手……出して。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2031
+MESSAGE "いいけど……はい。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……っ！"
+KEY_WAIT
+OFF_CHAR 3
+BG 177
+BGM_STOP 30
+BGM_PLAY 18
+BG 111
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2032
+MESSAGE "…………えっ㌍\nな、なに、これっ㌍"
+KEY_WAIT
+FACE 6
+VOICE 2033
+MESSAGE "（妖精……みたいな何かが\n私たちの周りに……ううん、\n大気中……世界中に満ちてる？）"
+KEY_WAIT
+VOICE 2034
+MESSAGE "これ……が……\nカレン、あなたの……\n『オトモダチ』？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ふふふ……\nやっぱり、見えたね……\nカレンと、同じもの……"
+KEY_WAIT
+MESSAGE "[娘の名前]なら、\n見えると思ってた……"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 2035
+MESSAGE "これが……\nカレンの見ている世界……\nすごい……"
+KEY_WAIT
+FACE 0
+VOICE 2036
+MESSAGE "確かにすごいけど……\nでも……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………でも……？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2037
+MESSAGE "それでも、カレンには……\nほかのみんなと、\n仲良くなってほしいな……"
+KEY_WAIT
+FACE 7
+VOICE 2038
+MESSAGE "この世界があるから……\n『オトモダチ』がいるから、\n他には誰も要らないなんて……"
+KEY_WAIT
+FACE 3
+VOICE 2039
+MESSAGE "やっぱり寂しいよ……悲しいよ……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……[娘の名前]……"
+KEY_WAIT
+MESSAGE "……あのね……\n……カレン、\n今はそうでもない……よ？"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2040
+MESSAGE "えっ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "今は……\n友だち要らないとか……\n思って……ない。"
+KEY_WAIT
+MESSAGE "だって、[娘の名前]にも……\n友だちに……\nなってほしい……し……"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 2041
+MESSAGE "……カレン……"
+KEY_WAIT
+FACE 2
+VOICE 2042
+MESSAGE "ば……バカね！\n私とカレンは、\nもうとっくに友だちでしょ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あれ……？\nそう……だった？"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2043
+MESSAGE "そ・う・な・の！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+MESSAGE "そっか……カレンが……\n見えてなかった……"
+KEY_WAIT
+MESSAGE "見ようとしてなかっただけ……\n……だったのね……"
+KEY_WAIT
+MESSAGE "…………ありがと。"
+KEY_WAIT
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 2044
+MESSAGE "……うん！\nえへへへっ♪"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 1
+LABEL 8
+FLAG 1022, 1
+LABEL 9
+FLAG 1023, 1
+BGM_PLAY 32
+BG 158
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2016
+MESSAGE "へぇ、珍しい。\nカレン、機嫌よさそうね。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……そう？"
+KEY_WAIT
+MESSAGE "あなたがそう言うなら……\nそうなの……かも？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2017
+MESSAGE "それで、ご機嫌の理由はなぁに？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "術……新しいの、できたの。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2018
+MESSAGE "え、本当に㌍\nすごいじゃない！\nカイ師範にはもう知らせたの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ううん……実験、まだだし……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2019
+MESSAGE "あら、そうなの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "実験台……ほしいな。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2020
+MESSAGE "ほしいなって……\nなんだか物騒ねぇ。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……せっかくだし、\n魔族にでも試してみようか……な。"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2021
+MESSAGE "ええーっ㌍\nカ、カレン、正気？\n冗談だよ……ねえ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "うん、たぶん……冗談？\n言ってみただけ……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2022
+MESSAGE "ほ、本当？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "大丈夫、行かない……\n…………怖いし。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2023
+MESSAGE "はぁ……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2024
+MESSAGE "（もう……カレンの冗談って、\nいろんな意味で洒落に\nならないわよぉ～……）"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 10
+FLAG 1020, 1
+LABEL 11
+FLAG 1021, 1
+BGM_PLAY 31
+BG 161
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2007
+MESSAGE "あら、カレン……\nって、どうしたの、その大荷物？\nまさか……引越しとか？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ううん……\n教室に……持っていくの……\nテスト、近いし……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2008
+MESSAGE "教室にって……\nもしかして、これ……魔術書？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "あと……錬金術用具に、触媒に、\n羊皮紙に……それから……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2009
+MESSAGE "そ、そのまま工房が開けそうね……\nだけど、道具なら教室にだって……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "テストのときは……\n自分のじゃないと……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2010
+MESSAGE "そっか……\n確かに、使い慣れた道具のほうが\n調子よくなりそうな気もするわね。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 2011
+MESSAGE "でも……\nさすがにこの量は……重くない？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………実は……\n………………\n……さすがに、限界……かも……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2012
+MESSAGE "……しかたないなぁ。\nほら、私も持ってあげる。\n２人で運べば、だいぶマシでしょ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あ……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2013
+MESSAGE "なあに？\n自分の道具、\n他の人には持たせたくない？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あの……\n…………ありがとう……？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2014
+MESSAGE "……！"
+KEY_WAIT
+CHAR 0, 7
+FACE 6
+VOICE 2015
+MESSAGE "ふふふっ、どういたしまして。\nさあ、行きましょ♪"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 12
+FLAG 1018, 1
+LABEL 13
+FLAG 1019, 1
+SE_PLAY 14
+BGM_PLAY 31
+BG 159
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2000
+MESSAGE "あら、カレン。\n今日はお買い物なの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "あ……\n[娘の名前]……"
+KEY_WAIT
+MESSAGE_NAME "カレン"
+MESSAGE "カレン、お買い物……なの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………\nうん、そうみたい……"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2001
+MESSAGE "ア、アハハハ……\nそうなんだ……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2002
+MESSAGE "ええっと……\nあら、魔法石が売ってるのね。\nもしかして、これを見てたの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "うん、多分……\nでも、手持ちじゃ……\nちょっと、無理……かな。"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2003
+MESSAGE "まあ、安い買い物じゃないものね。\nちょっと、私たちのお小遣いじゃ\n手が出ないわよ。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……掘ってこようかな……"
+KEY_WAIT
+MESSAGE "……魔界で。"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2004
+MESSAGE "えっ㌍\nカレン、今何か……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……なんでも、ない……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2005
+MESSAGE "そ、そう……？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2006
+MESSAGE "（……いくらカレンでも、\nまさか……ねえ？）"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 1
+LABEL 14
+FLAG 1016, 1
+LABEL 15
+FLAG 1017, 1
+BGM_PLAY 32
+BG 160
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 1991
+MESSAGE "あ、おーい、カレ～ン！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あ……\n[娘の名前]……？"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1992
+MESSAGE "わわっ、どうしたの？\nフラフラ歩いてたら危ないわよ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うう……\n…………眠い。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1993
+MESSAGE "え？\n眠いって……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ちょっと……\n寝ないで……実験……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1994
+MESSAGE "じゃあ、昨日から寝てないの？\nそれじゃ眠くなるのも当たり前よ。\n早く家に帰って……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ううん……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1995
+MESSAGE "どうしたの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "今、数えてみたら……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1996
+MESSAGE "うん？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "寝てないの……３日だった……"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 1997
+MESSAGE "ええーっ㌍\nみ、３日も寝てないなんて……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あ……\nもう……限界……\n……おやすみ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1998
+MESSAGE "えっ㌍　ちょ、ちょっと、カレン！\nこんな所で寝ちゃダメよ！\nカレン㌍　ね、ねえってばッ㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……くう……"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1999
+MESSAGE "カ～レ～ン～！\nねえ、起きてよぉ～……！！"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 16
+FLAG 1014, 1
+LABEL 17
+FLAG 1015, 1
+BGM_PLAY 32
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1980
+MESSAGE "ふふっ、魔法って楽しいなぁ\n早く一人前になって、\nいろんな魔法を……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1981
+MESSAGE "あれ？\n誰かの視線を感じる……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1982
+MESSAGE "（えっと……\n確か、前にもこんなこと、\nあったような……）"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1983
+MESSAGE "（もしかして……）"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1984
+MESSAGE "……あ～っ㌍\nやっぱり、カレン！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あ……\n……[娘の名前]、偶然……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1985
+MESSAGE "もう、カレンったら。\n偶然じゃないでしょ、\nさっきからずっと見てたクセに……"
+KEY_WAIT
+VOICE 1986
+MESSAGE "今日はどうしたの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……残念。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1987
+MESSAGE "え、残念って……何が？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "お友だちに伝言……\n頼んだけど……\n伝わらなかったみたい……"
+KEY_WAIT
+MESSAGE "次は……頑張る。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1988
+MESSAGE "あ、ちょっと、カレン㌍"
+KEY_WAIT
+VOICE 1989
+MESSAGE "んもう……\nすぐにいなくなっちゃうのは\n相変わらずね。"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+VOICE 1990
+MESSAGE "（それに、言いたい事があるなら\n言葉にしてもらわないと\nわからないよ……）"
+KEY_WAIT
+BGM_STOP 30
+END 1
+LABEL 18
+FLAG 1166, 1
+BGM_PLAY 30
+BG 174
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2225
+MESSAGE "あら、今日は誰もいないのかしら。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2226
+MESSAGE "せっかく来たのになぁ……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2227
+MESSAGE "それじゃ、バエナバコタさんの\nお店に行ってみようかしら。\nそれともネコさんの……"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2228
+MESSAGE "……って、カレン㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……こんにちは。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2229
+MESSAGE "うん、こんにちは"
+LINE_FEED
+CHAR 0, 3
+FACE 2
+MESSAGE "……じゃなくて。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2230
+MESSAGE "どうして、\nあなたがここにいるの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あなたがこっちにいるって\n聞いたから。"
+KEY_WAIT
+MESSAGE_NAME "カレン"
+MESSAGE "……ダメ？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2231
+MESSAGE "ダメじゃないけど、\nそれより、どうやってきたの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ふつうに……\n門を使って……"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2232
+MESSAGE "ふつうにって……\nそんな簡単に門が使える\nわけじゃ……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ううん……そうでもない。\nお友だちが……教えてくれた。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2233
+MESSAGE "お友だちって……あの妖精さん？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2234
+MESSAGE "そうなんだ。\nでもね、カレン。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2235
+MESSAGE "この辺って恐い人とか\nいるから、一人できちゃダメだよ。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "そう……なの？"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2236
+MESSAGE "そうなの。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "でも、あなたは……？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2237
+MESSAGE "私はこっちに知り合いがいるから\nひとりってわけじゃないし……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+MESSAGE_NAME "カレン"
+MESSAGE "じゃあ……いっしょに……"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2238
+MESSAGE "え？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ダメ？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2239
+MESSAGE "う～ん……。\nじゃあ、カレンが来るときは\n一緒に来ましょうね。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2240
+MESSAGE "カレン？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "いっしょに、おでかけ……\n……楽しみ。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2241
+MESSAGE "……カレン。"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2242
+MESSAGE "ええ、そうね。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 1
+LABEL 19
+FLAG 1168, 1
+BGM_PLAY 30
+BG 174
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……よいしょ、よいしょ。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2257
+MESSAGE "あ、あった。\nこれで７個めね。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2258
+MESSAGE "カレン、そろそろいいんじゃない？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。\nおわりに……しよう。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2259
+MESSAGE "……ねえ、カレン。\n勝手に魔法石をほっちゃって\n本当に大丈夫なの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。\nばれなきゃ……大丈夫。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2260
+MESSAGE "そ、それって\n大丈夫っていわないわよ！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……冗談。あなたの知り合いの\n黒くて白い人が……\nいいっていってたから……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2261
+MESSAGE "私の知り合いの黒くて白い人……？"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2262
+MESSAGE "（もしかして……ヴァロア？）"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2263
+MESSAGE "（でも、いつの間に\n　知り合ったのかしら）"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ねえ。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2264
+MESSAGE "え、な、なにっ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……おふろ入りたい？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2265
+MESSAGE "え、ええ、できれば入りたいわね。\n魔法石探して汚れちゃったし、\n汗もかいたし。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2266
+MESSAGE "でも、ここじゃ無理だから\n早く家に帰ろう。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……こっちに、来て。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2267
+MESSAGE "え？　ちょっとどこ行くの？"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+BG 174
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2268
+MESSAGE "あ、綺麗な泉。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……魔法石探してて、見つけた。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2269
+MESSAGE "ふ～ん、あ、もしかして\nここで水浴びするつもり？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ちがう。\nちょっと……下がってて。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2270
+MESSAGE "え、カレン？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+OFF_CHAR 3
+BG 177
+CHAR 0, 1
+BG 174
+SE_PLAY 61
+QUAKE
+SE_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2271
+MESSAGE "きゃぁぁぁぁっ㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "温泉……できた。\n入ろう。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2272
+MESSAGE "カ、カレン。\n無茶しないで～"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 1
+LABEL 20
+FLAG 1167, 1
+BGM_PLAY 30
+BG 170
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2243
+MESSAGE "こんにちは、ネコさん。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "いらっしゃい、娘さん。\nおや、今日はかわいいお嬢さんも。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2244
+MESSAGE "私の友達で、カレンっていうの。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "僕は猫妖精のケットシー。\nよろしくお願いしますね。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ネコさん。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2245
+MESSAGE "カレン、ちゃんと挨拶しないと。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん、\n……こんにち、わ。"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2246
+MESSAGE "はい、よくできました。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "あははは。娘さん、なんかお姉さん\nみたいですねえ。"
+KEY_WAIT
+CHAR 0, 7
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 2247
+MESSAGE "え？　そ、そうかしら。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "はい。\nところで、今日は何の御用ですか？"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2248
+MESSAGE "あ、とくに何か必要って\nいうんじゃないの。カレンにここを\n教えてあげようと思って……"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "そうですか。\nそれではごゆっくり\nご覧になってください。"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 170
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2249
+MESSAGE "う～ん、この薬草って魔術の触媒に\nよさそうね。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2250
+MESSAGE "ねえ、カレン。どう思う？"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "……………………"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2251
+MESSAGE "あら……カレン？"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "うにゃっ！"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2252
+MESSAGE "え？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ネコさん、かわいい。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "うにゃん！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……フリフリ。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "か、身体が！　勝手に！"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2253
+MESSAGE "……カレン、何やってるの？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ネコじゃらし……"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "うにゃ～！"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2254
+MESSAGE "か……\nかわいい～♪"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2255
+MESSAGE "ねえねえ、カレン、\n私にもやらせて！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "いい、よ……"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2256
+MESSAGE "きゃ～♪\nは～い、ネコさ～ん。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "うにゃにゃにゃ～"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……フリフリ。"
+KEY_WAIT
+FACE 39
+MESSAGE_NAME "ケットシー"
+MESSAGE "うなぁ～！"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 1
+LABEL 21
+FLAG 1169, 1
+BGM_PLAY 30
+BG 173
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2273
+MESSAGE "カレ～ン。\nどこにいるの～！"
+KEY_WAIT
+SE_PLAY 39
+SE_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2274
+MESSAGE "……どうしよう。\nどこにもいないわ。"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2275
+MESSAGE "もしかして魔獣に……\nううん、カレンのことだもの、\nきっと大丈夫よ。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2276
+MESSAGE "でも、どこに……"
+KEY_WAIT
+SE_PLAY 20
+SE_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2277
+MESSAGE "キャッ㌍\n今のって、もしかして……"
+KEY_WAIT
+SE_PLAY 24
+SE_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2278
+MESSAGE "キャァァァァッ㌍\nやっぱりぃぃぃ。"
+KEY_WAIT
+SE_PLAY 22
+SE_WAIT
+OFF_CHAR 3
+BG 121
+SE_PLAY 21
+SE_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "やっと……見つけた。"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2279
+MESSAGE "……えっ？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "たくさん……探したよ……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2280
+MESSAGE "…………………………"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………？"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2281
+MESSAGE "…………………………"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ドラゴン"
+MESSAGE "………………？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……どう、したの？"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2282
+MESSAGE "カ、カレンー㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "なに……？"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2283
+MESSAGE "カレンッ！　何してるの㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "あなたを……探してた。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2284
+MESSAGE "そ、そうじゃなくて！\nどうしてドラゴンに乗ってるのよ！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……あなたを探すの、\n手伝ってくれるっていったから……"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2285
+MESSAGE "そ、そうなの……？"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ドラゴン"
+MESSAGE "……………………"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2286
+MESSAGE "え、えっと、\nど、どうもありがとうございます。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2287
+MESSAGE "じゃなくて、えーと……\nほ、ほらカレンもいつまでも\nドラゴンさんに乗ってないで。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん、わかった。"
+KEY_WAIT
+BG 173
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2288
+MESSAGE "ほ、本当にすみませんでした。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "ありがと……"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ドラゴン"
+MESSAGE "……………………"
+KEY_WAIT
+SE_PLAY 21
+SE_WAIT
+SE_PLAY 24
+SE_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2289
+MESSAGE "きゃあっ㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……またね。"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 173
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2290
+MESSAGE "カ、カレンって、\nほんと大物だわ……"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 1
+LABEL 22
+FLAG 1170, 1
+BGM_PLAY 30
+BG 171
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2291
+MESSAGE "こんにちは。"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "よう、お嬢ちゃん。\nいらっしゃい！"
+KEY_WAIT
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "おっ、そっちの嬢ちゃんは\n新顔だな。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……こんにちは。"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "おう、よろしくな。\nで、何か飲むかい？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2292
+MESSAGE "えっと……\nじゃあ、ミルクを２つ。"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "あいよ、ちょっと待ってくれな。"
+KEY_WAIT
+FACE 92
+MESSAGE_NAME "赤い魔族"
+MESSAGE "なんだぁ、こんなところに\n人間の格好したやつがいるぞぉ。"
+KEY_WAIT
+FACE 93
+MESSAGE_NAME "緑の魔族"
+MESSAGE "あんだと～"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2293
+MESSAGE "えっ……"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "おい、お前ら。酔っ払うのは\nかまわねえが、他のお客さんに\nからむんじゃねえよ。"
+KEY_WAIT
+FACE 93
+MESSAGE_NAME "緑の魔族"
+MESSAGE "こんなご時世に人間の格好なんか\nしやがって……何考えてんだ、\nこのやろう～……ひっく。"
+KEY_WAIT
+MESSAGE_NAME "緑の魔族"
+MESSAGE "人間なんざ俺たち魔族の\n敵だろうが～"
+KEY_WAIT
+FACE 92
+MESSAGE_NAME "赤い魔族"
+MESSAGE "そうだ、そうだ～！\nおら、座ってねえでこっちこいや。"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2294
+MESSAGE "痛っ……"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "てめえら、いい加減にしねえと……\nうおっ㌍"
+KEY_WAIT
+OFF_CHAR 3
+BG 122
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………………………"
+KEY_WAIT
+FACE 92
+MESSAGE_NAME "赤い魔族"
+MESSAGE "ひぃぃぃぃぃぃぃぃっ㌍"
+KEY_WAIT
+FACE 93
+MESSAGE_NAME "緑の魔族"
+MESSAGE "うひゃぁぁぁぁぁぁぁぁっ㌍"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2295
+MESSAGE "ちょ、ちょっと、カレン㌍"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……[娘の名前]傷つけた。\n許さない……。"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "じょ、嬢ちゃん！\nそいつはマズイって、\n店が壊れちまう！！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "…………………………"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2296
+MESSAGE "カ、カレン、私は大丈夫だから！"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………そう？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2297
+MESSAGE "うん、だから、ね。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……わかった。"
+KEY_WAIT
+FACE 92
+MESSAGE_NAME "赤い魔族"
+MESSAGE "ひえぇぇぇ……え？"
+KEY_WAIT
+FACE 93
+MESSAGE_NAME "緑の魔族"
+MESSAGE "た、助かったぁ……のか？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "じゃあ、かるいおしおき……"
+KEY_WAIT
+FACE 92
+MESSAGE_NAME "赤い魔族"
+MESSAGE "……へ？"
+KEY_WAIT
+SE_PLAY 61
+QUAKE
+SE_WAIT
+FACE 93
+MESSAGE_NAME "緑の魔族"
+MESSAGE "ぎゃーす！"
+KEY_WAIT
+FACE 92
+MESSAGE_NAME "赤い魔族"
+MESSAGE "ふんげぇぇぇ㌍"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 171
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "は～、\nこりゃ片づけが大変だな、おい。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2298
+MESSAGE "ご、ごめんなさい。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……ごめん、なさい。"
+KEY_WAIT
+FACE 73
+MESSAGE_NAME "バエナバコタ"
+MESSAGE "まあ、しゃーねえか。\n今回はいいが、次はこんなことが\nないようにしてくれよ。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2299
+MESSAGE "はい。本当にすいませんでした。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2300
+MESSAGE "ねえ、カレン、\nあれはちょっとやりすぎよ。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "………………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2301
+MESSAGE "……でも。"
+KEY_WAIT
+CHAR 0, 7
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 2302
+MESSAGE "助けてくれてうれしかった。\n……ありがとね。"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "カレン"
+MESSAGE "……うん。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 1
+LABEL 23
+FLAG 1006, 1
+LABEL 24
+FLAG 1007, 1
+BGM_PLAY 32
+BG 160
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1927
+MESSAGE "うーん、やっぱり\n魔法って難しいなぁ……"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 1928
+MESSAGE "でも、いつかは私も\n立派な魔法使いになるんだ！"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1929
+MESSAGE "ん？"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1930
+MESSAGE "なんだろう、\n誰かに見られてるような……\n気のせいかな？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1931
+MESSAGE "……あっ㌍"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 1932
+MESSAGE "（あの子、私のこと見てる…\nもしかして、さっきから\n気になってたのって……）"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 1933
+MESSAGE "ねえ、あなただあれ？\n私に何かご用？"
+KEY_WAIT
+OFF_CHAR 3
+BG 110
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1934
+MESSAGE "カイ師範の魔法教室で、\n会ったことあるよね？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1935
+MESSAGE "（……聞こえてないのかな？\nもっと大きな声で……）"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "ねえ、あなた……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1936
+MESSAGE "……㌍\nな、なぁに？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "魔法……好き？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1937
+MESSAGE "う、うん……好きだよ。\nまだ、うまく使えないけど……"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "…………"
+KEY_WAIT
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1938
+MESSAGE "あのー……？"
+KEY_WAIT
+FACE 83
+MESSAGE_NAME "？？？"
+MESSAGE "私……カレン……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1939
+MESSAGE "え？\n……あっ、ええと、\n私は[娘の名前]っていうの……"
+KEY_WAIT
+BG 160
+CHAR 0, 4
+FACE 3
+VOICE 1940
+MESSAGE "あ……もういない……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 1941
+MESSAGE "（カレンちゃん、かぁ…\nなんの用だったんだろう……？）"
+KEY_WAIT
+BGM_STOP 30
+END 0

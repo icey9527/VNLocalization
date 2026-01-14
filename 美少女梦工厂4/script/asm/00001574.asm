@@ -1,0 +1,174 @@
+LABEL 0
+FLAG 1720, 1
+BG 0
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2838
+MESSAGE "おてつだいも終わったし～\nなにしてあそぼっかな～♪"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+VOICE 2839
+MESSAGE "え？　今日のおべんきょうは\nしないのかって……？"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+VOICE 2840
+MESSAGE "えっと、おべんきょう見てくれる\nキューブがいないし……\n今日はおやすみじゃダメ？"
+KEY_WAIT
+CHAR 0, 4
+FACE 3
+VOICE 2841
+MESSAGE "あぅ～、ダメかぁ。"
+KEY_WAIT
+VOICE 2842
+MESSAGE "は～い、おべんきょうしま～す。"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 270
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2843
+MESSAGE "え～とぉ、リンゴが５コあって、\n３コ食べちゃったから\nのこりはぁ……"
+KEY_WAIT
+FACE 5
+VOICE 2844
+MESSAGE "２コ……だよね。"
+KEY_WAIT
+FACE 1
+VOICE 2845
+MESSAGE "……あってる？\nやったぁ♪"
+KEY_WAIT
+FACE 7
+VOICE 2846
+MESSAGE "パパぁ、さんすうって\nむずかしいね。"
+KEY_WAIT
+VOICE 2847
+MESSAGE "あたまがぐるぐるに\nなっちゃうよ。"
+KEY_WAIT
+VOICE 2848
+MESSAGE "ねぇ、つぎの問題終わったら\nおしまいにしていい？"
+KEY_WAIT
+FACE 0
+VOICE 2849
+MESSAGE "いいの？　よかったぁ。\nじゃあ、がんばるね。"
+KEY_WAIT
+FACE 5
+VOICE 2850
+MESSAGE "えっと「お父さんがみかんを\n１４コ買ってきました。\nそこに……」"
+KEY_WAIT
+MESSAGE "……………………"
+KEY_WAIT
+FACE 0
+VOICE 2851
+MESSAGE "う～ん、１４コから６コひいて、\nそれに７コたすんでしょ……"
+KEY_WAIT
+FACE 5
+VOICE 2852
+MESSAGE "だから、１４から６ひくと\nのこりが……"
+KEY_WAIT
+VOICE 2853
+MESSAGE "いち、にい、さん、しい……"
+KEY_WAIT
+FACE 7
+VOICE 2854
+MESSAGE "あ～ん、\nわかんないよう、パパぁ～"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+END 0
+LABEL 1
+BG 0
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2855
+MESSAGE "はう～、やっと終わったよぉ。\nつかれた～"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2856
+MESSAGE "ん？　なぁに、パパ。"
+KEY_WAIT
+END 0
+LABEL 2
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2857
+MESSAGE "もう、ばんごはんできてるの？"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2858
+MESSAGE "うん、食べる！"
+KEY_WAIT
+VOICE 2859
+MESSAGE "いっしょうけんめい、\nおべんきょうしたから\nおなかすいちゃった♪"
+KEY_WAIT
+OFF_CHAR 3
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+BG 0
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………………"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2860
+MESSAGE "ごちそうさまでした。"
+KEY_WAIT
+CHAR 0, 7
+FACE 6
+VOICE 2861
+MESSAGE "えへへ、おいしかったから\nたべすぎちゃった♪"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2862
+MESSAGE "あ、パパ、パパ！\nおふろもう入れるんでしょ？"
+KEY_WAIT
+VOICE 2863
+MESSAGE "だったらいっしょに入ろ。\nね、いいでしょ？"
+SELECT 2, 3, "いいよ", 4, "ひとりで入りなさい"
+LABEL 3
+VOICE 2864
+MESSAGE "いいの？　やったぁ♪"
+KEY_WAIT
+VOICE 2865
+MESSAGE "ね、ね、早く行こうよ！"
+KEY_WAIT
+OFF_CHAR 3
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+BGM_STOP 30
+END 0
+LABEL 4
+CHAR 0, 6
+FACE 5
+VOICE 2866
+MESSAGE "む～、ダメなんだぁ。\n……じゃあ、はいってくるね。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2867
+MESSAGE "あっ、パジャマもってこないと。"
+KEY_WAIT
+OFF_CHAR 3
+FACE 65535
+OFF_FACE_WINDOW
+SE_PLAY 7
+SE_WAIT
+BGM_STOP 30
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+END 1

@@ -1,0 +1,218 @@
+LABEL 0
+FLAG 1159, 1
+BGM_PLAY 12
+BG 0
+SE_PLAY 6
+SE_WAIT
+CHAR 1, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2144
+MESSAGE "はーい。"
+KEY_WAIT
+SE_PLAY 1
+SE_WAIT
+SE_PLAY 3
+SE_WAIT
+CHAR 2, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ごきげんよう、"
+MESSAGE "[娘の名前]さん。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2145
+MESSAGE "あら、クリスチーナ。\nどうしたの？"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "実は先日、お父様が別荘を\n購入しましたの。"
+KEY_WAIT
+CHAR 1, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2146
+MESSAGE "別荘？"
+KEY_WAIT
+CHAR 2, 16
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ええ、それで皆さんを\nご招待しようと思いまして。"
+KEY_WAIT
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "すぐ近くにとってもきれいな海が\nありますの。きっと気に入って\nいただけると思いますわ。"
+KEY_WAIT
+CHAR 1, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2147
+MESSAGE "海かぁ……いいなぁ。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2148
+MESSAGE "ねえ、お父様。\nいってもいいかしら？"
+SELECT 2, 1, "いいよ", 2, "ダメだ"
+LABEL 1
+CHAR 1, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2149
+MESSAGE "本当？　ありがとう！"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2150
+MESSAGE "じゃあ、クリスチーナ。\nすぐ準備するから\nちょっと待っててね。"
+KEY_WAIT
+BGM_STOP 30
+BG 176
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+BG 118
+SE_PLAY 60
+SE_WAIT
+BGM_PLAY 36
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "う～ん、風が気持ちいいなぁ。"
+KEY_WAIT
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "うん、きてよかったね。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……………………"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "さてと、それじゃあワタシは\n向こうの島まで泳いでみようかな。"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "む、向こうの島って、\nちょっと遠すぎない？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……………………"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうか？\nたかだか１０キロくらいだし、\n大丈夫だと思うんだが。"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "……わ、私には無理だわ。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……………………"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2151
+MESSAGE "ねえ、クリスチーナ？\nさっきからふたりのこと見てるけど\nどうかしたの？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……何ですのアレは。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2152
+MESSAGE "え？"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2153
+MESSAGE "クリスチーナ、\nいったい何のこ……"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "そう思いません㌍\n[娘の名前]さん！"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2154
+MESSAGE "え、えっと……\nとりあえずちょっと落ち着いて。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "落ち着いてる暇なんて\nありませんわ！"
+KEY_WAIT
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あのふたりをご覧なさい！"
+KEY_WAIT
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "普段はそうでもないのに\n脱いだら凄いなんて……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2155
+MESSAGE "え？　え？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ゼッタイに認められませんわ！"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2156
+MESSAGE "う、いわれてみれば確かに……"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "む～～～"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん？　どうかしたのか？"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2157
+MESSAGE "む～～～～～～"
+KEY_WAIT
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "え？　なに？"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ふたり"
+MESSAGE "む～～～～～～～～～～"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0
+LABEL 2
+CHAR 1, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "……そう、残念だわ。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2158
+MESSAGE "ごめんね、クリスチーナ。\nまた次の機会に誘ってね。"
+KEY_WAIT
+CHAR 2, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……しょうがないですわね。\nそれでは失礼いたしますわ。"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2159
+MESSAGE "……はあ、行きたかったなぁ。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+END 1

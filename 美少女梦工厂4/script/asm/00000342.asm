@@ -1,0 +1,264 @@
+LABEL 0
+FLAG 1158, 1
+BGM_PLAY 12
+BG 0
+CHAR 1, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2128
+MESSAGE "さてと、今日はお休みだし、\n何をしようかな。"
+KEY_WAIT
+SE_PLAY 6
+SE_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2129
+MESSAGE "ん？　誰だろ。"
+KEY_WAIT
+SE_PLAY 6
+SE_WAIT
+SE_PLAY 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2130
+MESSAGE "はーい、ってクリスチーナ？"
+KEY_WAIT
+CHAR 2, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "こんにちは、[娘の名前]さん。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2131
+MESSAGE "うん、こんにちは。\nどうしたの？　うちに来るなんて\nめずらしいね。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ええ、今日は仮装パーティの\nお誘いに来ましたの。"
+KEY_WAIT
+CHAR 1, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2132
+MESSAGE "仮装パーティ？"
+KEY_WAIT
+CHAR 2, 16
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "はい、普段は着ないような\nちょっと変わった衣装を着て\nみんなで楽しむんですわ。"
+KEY_WAIT
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "リーゼさんとマリーさんも\n参加してくださるんですのよ。"
+KEY_WAIT
+CHAR 1, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2133
+MESSAGE "ふーん。\n……うん、面白そうだし、\n私も参加するね！"
+KEY_WAIT
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 157
+CHAR 2, 1
+CHAR 1, 18
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2134
+MESSAGE "あ、マリー！"
+KEY_WAIT
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "あ、[娘の名前]ちゃん、\nこんにちは。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2135
+MESSAGE "うん、こんにちは。"
+KEY_WAIT
+OFF_CHAR 2
+OFF_CHAR 1
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "こんなの着れるか！"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あらあら、逃げるんですの？"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "なにっ！"
+KEY_WAIT
+CHAR 2, 6
+CHAR 1, 20
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2136
+MESSAGE "えっと……どうしたの？"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "リーゼちゃん、\nさっき着るお洋服を見たから……"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2137
+MESSAGE "どんなの？"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "お姫さまが着るような\nふりふりのドレス……"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2138
+MESSAGE "あー"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "それで、リーゼちゃん\n怒っちゃって……"
+KEY_WAIT
+MESSAGE_NAME "マリー"
+MESSAGE "クリスチーナちゃんが\n説得しにいってるの。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2139
+MESSAGE "逆効果じゃない？"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "そうかも……"
+KEY_WAIT
+OFF_CHAR 2
+OFF_CHAR 1
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "自信がないのなら、最初から\nそうおっしゃればいいのに。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "むっ！"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "リーゼさんのようながさつな方では\nせっかくのドレスも\n似合わないかもしれませんし。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "むむむむ……"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "まあ、わたくしも鬼では\nありませんから、リーゼさんが\nそこまでいうのでしたら……"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "でも、リーゼさんが約束も\n守れないような方だったなんて……"
+KEY_WAIT
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "パーティに参加してくれると聞いて\nとても楽しみにしていましたのに。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……がっかりですわ。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "う～～～"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "着る！"
+KEY_WAIT
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あら、なにかおっしゃいました？"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "着るといったんだ！\nそれを着ればいいんだろ！！"
+KEY_WAIT
+CHAR 2, 1
+CHAR 1, 18
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2140
+MESSAGE "ありゃりゃ、いっちゃったね。"
+KEY_WAIT
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "うん、いっちゃったね。"
+KEY_WAIT
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+BG 117
+MESSAGE_NAME "ふたり"
+MESSAGE "きゃー！"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2141
+MESSAGE "うわぁー！　きれーい！！"
+KEY_WAIT
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "ほんと、すごくステキ！"
+KEY_WAIT
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "オーホホホ！\nお似合いですわよ、リーゼさん。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "うぅ……"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2142
+MESSAGE "ねえねえ、リーゼ。\nこっち向いて！"
+KEY_WAIT
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "あ～ん、スケッチブック\nもってくればよかった～"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "うううううぅぅぅぅぅ……"
+KEY_WAIT
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "オーッホッホッホ。\nわたくしの見立ては\nバッチリでしたわね。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "……ぜ。"
+KEY_WAIT
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2143
+MESSAGE "ぜ？"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "ぜぇ～ったいにもうこんな格好は\nしないからなぁ！"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "ぜったいだからなぁ！！"
+KEY_WAIT
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "オーッホッホッホッホッホッホ。"
+KEY_WAIT
+BGM_STOP 30
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0

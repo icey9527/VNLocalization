@@ -1,0 +1,140 @@
+LABEL 0
+FLAG 1718, 1
+FLAG 1734, 1
+BG 0
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2783
+MESSAGE "ごちそーさまでした。"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2784
+MESSAGE "はふー\nおなかいっぱいだよ。"
+KEY_WAIT
+VOICE 2785
+MESSAGE "パパってお料理じょうずなんだね。\n知らなかったぁ……"
+KEY_WAIT
+VOICE 2786
+MESSAGE "そういえばキューブのお料理も\nおいしいし……"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 2787
+MESSAGE "わたしもお料理の練習したほうが\nいいのかなぁ。"
+KEY_WAIT
+END 0
+LABEL 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2788
+MESSAGE "あれぇ、パパどこ行くの？\nお洗濯？　じゃあ、わたしも"
+LINE_FEED
+CHAR 0, 2
+FACE 1
+MESSAGE "お手伝いするー！"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 268
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2789
+MESSAGE "わー、パパのパンツおっきーい♪\nすごいなぁ。"
+KEY_WAIT
+VOICE 2790
+MESSAGE "え？　あそんじゃダメ？"
+LINE_FEED
+FACE 3
+MESSAGE "あぅ、ごめんなさーい。"
+KEY_WAIT
+FACE 5
+VOICE 2791
+MESSAGE "えっと……\nそれじゃあ、これは向こうに\n干して……"
+KEY_WAIT
+VOICE 2792
+MESSAGE "それで、こっちは……"
+KEY_WAIT
+FACE 0
+VOICE 2793
+MESSAGE "ねえねえ、パパ。\n今日はお日さまがぽっかぽかで\nよかったねぇ。"
+KEY_WAIT
+FACE 1
+VOICE 2794
+MESSAGE "これならお洗濯物もすぐに\nかわいちゃうよね。"
+KEY_WAIT
+VOICE 2795
+MESSAGE "あ、そうだ。\nおふとんも干そうか？"
+KEY_WAIT
+VOICE 2796
+MESSAGE "そうすれば今日はふっかふかの\nおふとんでねられるよ。"
+KEY_WAIT
+VOICE 2797
+MESSAGE "ね、いいでしょ？"
+KEY_WAIT
+SE_PLAY 62
+SE_WAIT
+FACE 4
+VOICE 2798
+MESSAGE "きゃっ㌍"
+KEY_WAIT
+VOICE 2799
+MESSAGE "あ、洗濯物が飛ばされて……"
+KEY_WAIT
+FACE 2
+VOICE 2800
+MESSAGE "わたしとってくる！"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+SE_PLAY 7
+SE_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2801
+MESSAGE "あぅー\n土がついちゃったよぉ……"
+KEY_WAIT
+VOICE 2802
+MESSAGE "パパぁ、ごめんなさぁい。\nわたしがちゃんととめて\nおけば……"
+KEY_WAIT
+FACE 5
+VOICE 2803
+MESSAGE "え？　風のせいだから\nしょうがない？"
+KEY_WAIT
+FACE 3
+VOICE 2804
+MESSAGE "でもぉ……\nうん、今度から気をつけるね。"
+KEY_WAIT
+MESSAGE "………………"
+KEY_WAIT
+FACE 6
+VOICE 2805
+MESSAGE "……えへへ\nパパってやさしいから大好き。"
+KEY_WAIT
+VOICE 2806
+MESSAGE "ううん、なんでもないよ。"
+KEY_WAIT
+FACE 0
+VOICE 2807
+MESSAGE "それより、\nこれでおしまいだよね。"
+KEY_WAIT
+VOICE 2808
+MESSAGE "だったらぁ、このあといっしょに\nあそんで。お願い。"
+KEY_WAIT
+VOICE 2809
+MESSAGE "いい？"
+LINE_FEED
+FACE 1
+MESSAGE "わーい、やったぁ♪"
+KEY_WAIT
+VOICE 2810
+MESSAGE "それじゃあ準備するから\nちょっとまっててね。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+BGM_STOP 30
+END 0

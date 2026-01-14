@@ -1,0 +1,114 @@
+LABEL 0
+FLAG 1173, 1
+BGM_PLAY 32
+BG 157
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2291
+MESSAGE "こんにちは。"
+KEY_WAIT
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "わしは、忙しいんじゃ！\nせっかくの訪問じゃが、\n今日は引き取ってくれ。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2331
+MESSAGE "そ、そうですか…"
+KEY_WAIT
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "では、失礼。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2332
+MESSAGE "うーん、\nなんかいそいそしてるわねー"
+SELECT 2, 1, "追いかける", 2, "帰る"
+LABEL 1
+FLAG 1711, 1
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2334
+MESSAGE "どうも気になるわねー\n追いかけてみよっと。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+BG 157
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2335
+MESSAGE "あれ、この部屋？\n……だれかいるみたい。\n見つかったら怒られちゃうわ。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2336
+MESSAGE "大臣、とあのひとは……"
+KEY_WAIT
+BGM_PLAY 16
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "戦禍が拡大してきたな…"
+KEY_WAIT
+FACE 89
+MESSAGE_NAME "クライス"
+MESSAGE "大臣、ここで一番いけないのは、\n弱気になることですよ。"
+KEY_WAIT
+MESSAGE_NAME "クライス"
+MESSAGE "今度こそ、王国の繁栄と魔法石の\n力を確実に手にしなくては、\nここまでやってきた意味が無い。"
+KEY_WAIT
+FACE 43
+MESSAGE_NAME "大臣"
+MESSAGE "分かっておる……\nむっ！\nだれじゃ！"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2337
+MESSAGE "きゃっ！"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 156
+CHAR 0, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 2338
+MESSAGE "はぁはぁ、\n何とかばれずに逃げ切れたわ。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2339
+MESSAGE "大臣といたのは、\n確かにクライスさんだったわ。"
+KEY_WAIT
+VOICE 2340
+MESSAGE "大臣とクライスさんのうわさは、\n本当かもしれないわね。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2341
+MESSAGE "なんだか、とっても怪しい\nお話してたもの……"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 2
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2333
+MESSAGE "まぁ、いっか。\n帰りましょ。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 0

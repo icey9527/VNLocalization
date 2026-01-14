@@ -1,0 +1,203 @@
+LABEL 0
+FLAG 1148, 1
+BGM_PLAY 12
+BG 0
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2053
+MESSAGE "ねえ、パパ。"
+KEY_WAIT
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2054
+MESSAGE "あのね。\n去年行ったあったかいお湯の……\nえ～と、温泉だっけ？"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2055
+MESSAGE "あそこにね。\nまた行きたいんだけど……"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2056
+MESSAGE "できれば、リーゼちゃんたちも\n誘って……"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2057
+MESSAGE "だめかなぁ。"
+SELECT 2, 1, "いいよ", 2, "また今度にしよう"
+LABEL 1
+CHAR 0, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2058
+MESSAGE "ほんと？　やったぁ！"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2059
+MESSAGE "それじゃあ、\nみんなを誘ってくるね。"
+KEY_WAIT
+OFF_CHAR 3
+FACE 65535
+OFF_FACE_WINDOW
+SE_PLAY 7
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+SE_WAIT
+BGM_STOP 30
+BG 116
+SE_PLAY 44
+SE_WAIT
+BGM_PLAY 36
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "[娘の名前]ちゃん、\nすごくいい湯だね。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2060
+MESSAGE "うん、さいこーだね。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2061
+MESSAGE "あんまり気持ちいいんで、\nとけちゃいそうだよ"
+LINE_FEED
+FACE 4
+MESSAGE "……って、ひゃあ㌍"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "あっ！\nあ、すまん、[娘の名前]。\nこら、クリスチーナ、よけるな！"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あらあら、リーゼさんが勝手に\n外しただけじゃないですの。\nそれよりも、えい！"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "わぷっ㌍"
+KEY_WAIT
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "おーほっほっほ、\n油断大敵ですわ。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "う～、よくもやったな！\nこれでもくらえ！！"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 15
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "手おけシールド！　ですわ。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんだ、それ！\nずるいぞ。"
+KEY_WAIT
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あら、ずるい、ひきょうは\n敗者のたわごとですわよ。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "ぬぬぬぬ……\nなら、ワタシだって…"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "きゃあっ㌍\nみ、みずでっぽうなんて\nひきょうですわっ！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ふっ、ずるい、ひきょうは\n敗者のたわごとだぞ。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "むむむむむ～"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "ぬぬぬぬ……\nおい、[娘の名前]、\n手伝ってくれ！"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2062
+MESSAGE "え？　え？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "それでしたら、マリーさんは\nこちらに！"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "えぇ㌍　私も？"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "とりゃー！"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "えーい！"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2063
+MESSAGE "きゃあっ㌍"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "ふえぇん、\nお湯が目に入ったぁ……"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2064
+MESSAGE "あぅぅ……\nやったなぁ！"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2065
+MESSAGE "お返しよ！　えーい！"
+KEY_WAIT
+SE_PLAY 44
+SE_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2066
+MESSAGE "あうぅぅ、温泉で騒いだら\nダメって怒られちゃった。"
+KEY_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 2067
+MESSAGE "パパ、ごめんなさーい。"
+KEY_WAIT
+BGM_STOP 30
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0
+LABEL 2
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2068
+MESSAGE "……うん、わかった。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2069
+MESSAGE "でも、行きたかったなぁ……"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 0

@@ -1,0 +1,58 @@
+LABEL 0
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "おこづかいをあげますか？\n８０Ｇかかります。"
+SELECT 2, 3, "おこづかいをあげる", 11, "あげない"
+LABEL 1
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "おこづかいをあげますか？\n１００Ｇかかります。"
+SELECT 2, 3, "おこづかいをあげる", 11, "あげない"
+LABEL 2
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "おこづかいをあげますか？\n１２０Ｇかかります。"
+SELECT 2, 3, "おこづかいをあげる", 11, "あげない"
+LABEL 3
+END 0
+LABEL 4
+MESSAGE "お金が足りないようだ……"
+KEY_WAIT
+GOTO 11
+LABEL 5
+MESSAGE "おこづかいを８０Ｇあげた。"
+KEY_WAIT
+END 0
+LABEL 6
+MESSAGE "おこづかいを１００Ｇあげた。"
+KEY_WAIT
+END 0
+LABEL 7
+MESSAGE "おこづかいを１２０Ｇあげた。"
+KEY_WAIT
+END 0
+LABEL 8
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2651
+MESSAGE "あはっ、そう来なくっちゃ！"
+KEY_WAIT
+END 0
+LABEL 9
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2621
+MESSAGE "そう来なくっちゃ！！"
+KEY_WAIT
+END 0
+LABEL 10
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2578
+MESSAGE "そう来なくっちゃ……ね！！"
+KEY_WAIT
+END 0
+LABEL 11
+MESSAGE "おこづかいをあげなかった。"
+KEY_WAIT
+END 1

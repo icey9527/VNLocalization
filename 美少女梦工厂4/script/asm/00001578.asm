@@ -1,0 +1,89 @@
+LABEL 0
+FLAG 1724, 1
+BGM_PLAY 12
+BG 0
+CHAR 0, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2935
+MESSAGE "ふぁ～ぁ、パパ、おはよう。"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+VOICE 2936
+MESSAGE "あれ？　なにしてるの？\n……ばんごはんの準備？"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2937
+MESSAGE "……あ、そうだ！\nねえねえ、パパ。ホットケーキ\n作ってくれるんだよね。"
+KEY_WAIT
+VOICE 2938
+MESSAGE "えへへ、やったぁ。"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2939
+MESSAGE "ねえ、パパもホットケーキに\nするの？"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 2940
+MESSAGE "じゃがいものパンケーキと\nオニオンスープ？"
+KEY_WAIT
+VOICE 2941
+MESSAGE "ふ～ん……"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2942
+MESSAGE "あ、パパ。\nわたしも手伝ってあげよっか。"
+KEY_WAIT
+VOICE 2943
+MESSAGE "うん、それじゃあ、\nこれを切ればいいのね？"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2944
+MESSAGE "うん、大丈夫。\nこの前、キューブのお手伝いで\nやったことあるから。"
+KEY_WAIT
+VOICE 2945
+MESSAGE "よ～し！"
+KEY_WAIT
+OFF_CHAR 3
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE "……………………"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 274
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 2946
+MESSAGE "あう～、目がいたいよぉ。"
+KEY_WAIT
+FACE 0
+VOICE 2947
+MESSAGE "パパぁ……\nなみだが止まらないよぉ……"
+KEY_WAIT
+VOICE 2948
+MESSAGE "タマネギって切ると\n目がいたくなるのぉ？"
+KEY_WAIT
+FACE 3
+VOICE 2949
+MESSAGE "だからこの前、キューブが\nタマネギだけは\nやらせてくれなかったんだぁ。"
+KEY_WAIT
+VOICE 2950
+MESSAGE "あ～ん、もうタマネギなんて\nきらい。"
+KEY_WAIT
+VOICE 2951
+MESSAGE "ねえ、パパ、かわってぇ。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+OFF_CHAR 3
+END 0

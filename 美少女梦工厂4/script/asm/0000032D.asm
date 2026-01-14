@@ -1,0 +1,83 @@
+LABEL 0
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2575
+MESSAGE "持って帰っても、\n置く場所に困るわね……。\nまた今度にしましょ。"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2576
+MESSAGE "あんまり出入りしてると、\nばれちゃうかもしれないわね……。\n今回はこれぐらいにしときましょ。"
+KEY_WAIT
+END 0
+LABEL 2
+FLAG 688, 1
+BGM_PLAY 13
+BG 90
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 818
+MESSAGE "きゃああああああ！\nすごいすごいすごい！"
+KEY_WAIT
+FACE 1
+VOICE 819
+MESSAGE "黄金！　金貨！　宝物！\n見渡すかぎりの財宝よーーー！"
+KEY_WAIT
+FACE 8
+VOICE 820
+MESSAGE "ハァハァハァ。これだけあれば……\n１つくらい持って行っても\nバレないわよね、うん㍍"
+END 0
+LABEL 3
+BGM_STOP 30
+BGM_PLAY 13
+SE_PLAY 1
+BG 90
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 823
+MESSAGE "こんにちは～㍍\n誰もいませんね……っと。"
+KEY_WAIT
+FACE 6
+VOICE 824
+MESSAGE "う～ん、目移りしちゃうわ。\n今日はどれにしようかしら……"
+END 0
+LABEL 4
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 821
+MESSAGE "あまり欲張らずに一つだけ……\nさて、戻りましょうか。"
+KEY_WAIT
+LABEL 5
+FLAG 690, 1
+FACE 6
+VOICE 822
+MESSAGE "ふふ、せいぜい、またお宝を\nため込んでおいてね㍍\nウフフフフ……"
+KEY_WAIT
+SE_PLAY 3
+SE_WAIT
+SE_PLAY 7
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 6
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 825
+MESSAGE "ウフフ㍍\nまた来ようっと㍍"
+KEY_WAIT
+SE_PLAY 3
+SE_WAIT
+SE_PLAY 7
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 0

@@ -1,0 +1,132 @@
+LABEL 0
+FLAG 1731, 1
+BGM_PLAY 14
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 281
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 3060
+MESSAGE "えっとぉ、わたしがママで、\nクマさんが赤ちゃん！"
+KEY_WAIT
+FACE 0
+VOICE 3061
+MESSAGE "それでぇ、\nパパはパパの役ね♪"
+KEY_WAIT
+VOICE 3062
+MESSAGE "じゃあ、パパがおしごとから\n帰ってくるところからね。"
+KEY_WAIT
+FACE 1
+VOICE 3063
+MESSAGE "おかえりなさーい。"
+KEY_WAIT
+VOICE 3064
+MESSAGE "今日も一日ご苦労様。\n疲れたでしょ？"
+KEY_WAIT
+VOICE 3065
+MESSAGE "それじゃあ、ごはんにします？\nおふろにします？"
+KEY_WAIT
+FACE 6
+VOICE 3066
+MESSAGE "それとも……あ・た・し㍍"
+KEY_WAIT
+FACE 4
+VOICE 3067
+MESSAGE "……あれ？"
+KEY_WAIT
+VOICE 3068
+MESSAGE "……パパ、かたまっちゃった。\nどうしたのかなぁ？"
+KEY_WAIT
+FACE 0
+VOICE 3069
+MESSAGE "え？　今のはなんだって？"
+KEY_WAIT
+FACE 5
+VOICE 3070
+MESSAGE "んーと、おともだちに\nおしえてもらったんだよ。"
+KEY_WAIT
+VOICE 3071
+MESSAGE "この前、男の人ってせくしーな\n女の人が好きだっておしえて\nくれた子。"
+KEY_WAIT
+VOICE 3072
+MESSAGE "新婚さんはこうするのが\n決まりなんだって。"
+KEY_WAIT
+FACE 1
+VOICE 3073
+MESSAGE "ものしりだよねぇ。"
+KEY_WAIT
+FACE 4
+VOICE 3074
+MESSAGE "……ふぇ？　違うの？"
+KEY_WAIT
+VOICE 3075
+MESSAGE "ふ～ん。そうなんだ。"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 281
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3076
+MESSAGE "は～い、\nごはんができました～"
+KEY_WAIT
+FACE 1
+VOICE 3077
+MESSAGE "どうぞ召し上がれ♪"
+KEY_WAIT
+FACE 6
+VOICE 3078
+MESSAGE "おいしい？　えへへ。"
+KEY_WAIT
+VOICE 3079
+MESSAGE "たくさんあるから\nいっぱい食べてね。"
+KEY_WAIT
+FACE 0
+VOICE 3080
+MESSAGE "あ、赤ちゃんはミルクに\nしましょうね。"
+KEY_WAIT
+FACE 1
+VOICE 3081
+MESSAGE "おいしいでちゅかぁ？"
+KEY_WAIT
+FACE 0
+VOICE 3082
+MESSAGE "……ん？\nなぁに、パパ？"
+KEY_WAIT
+VOICE 3083
+MESSAGE "もうおしまい？"
+LINE_FEED
+FACE 0
+MESSAGE "……う～ん、もうちょっと\nあそびたいなぁ。"
+KEY_WAIT
+FACE 0
+VOICE 3084
+MESSAGE "でも、いっぱいあそんだから\nいっか。"
+KEY_WAIT
+VOICE 3085
+MESSAGE "じゃあ、今日はおしまい！"
+KEY_WAIT
+FACE 1
+VOICE 3086
+MESSAGE "パパ、いっぱいあそんでくれて\nありがとう。またいっしょに\nあそんでね。"
+KEY_WAIT
+VOICE 3087
+MESSAGE "えへへ㍍"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BGM_STOP 30
+BG 176
+END 0

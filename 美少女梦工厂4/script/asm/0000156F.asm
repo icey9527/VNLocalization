@@ -1,0 +1,99 @@
+LABEL 0
+FLAG 1714, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2713
+MESSAGE "パパ、パジャマぬがしてぇ。"
+KEY_WAIT
+FACE 1
+VOICE 2714
+MESSAGE "はい、ばんざーい♪"
+KEY_WAIT
+END 0
+LABEL 1
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 264
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2715
+MESSAGE "ん～……ぷはぁっ。\nえへへ、ぬげたぁ。"
+KEY_WAIT
+VOICE 2716
+MESSAGE "ありがと、パパ。"
+KEY_WAIT
+FACE 0
+VOICE 2717
+MESSAGE "あ！\nねえねえ。"
+KEY_WAIT
+FACE 6
+VOICE 2718
+MESSAGE "ほらほら、せくしーでしょ㍍\nえへへ♪"
+KEY_WAIT
+FACE 5
+VOICE 2719
+MESSAGE "あれ？\nどうしたの、パパ。"
+KEY_WAIT
+FACE 0
+VOICE 2720
+MESSAGE "どこでそんなことを\n覚えたのかって？"
+KEY_WAIT
+FACE 7
+VOICE 2721
+MESSAGE "んーとねぇ、この前、\nおともだちから聞いたの。"
+KEY_WAIT
+VOICE 2722
+MESSAGE "男の人って、せくしーな女の人が\n好きなんでしょ？"
+KEY_WAIT
+FACE 4
+VOICE 2723
+MESSAGE "え、ちがうの？"
+KEY_WAIT
+FACE 3
+VOICE 2724
+MESSAGE "うー、ざんねん。"
+KEY_WAIT
+VOICE 2725
+MESSAGE "パパにわたしのこともっともっと\n好きになって欲しかったのになぁ。"
+KEY_WAIT
+FACE 0
+VOICE 2726
+MESSAGE "そんなことしなくても好き？\nほんと？"
+KEY_WAIT
+FACE 6
+VOICE 2727
+MESSAGE "えへへ、うれしいなぁ♪"
+KEY_WAIT
+VOICE 2728
+MESSAGE "わたしもパパのこと\nだーい好きだよ㍍"
+KEY_WAIT
+FACE 6
+VOICE 2729
+MESSAGE "……はくちゅ！\nあう、くしゃみしちゃった。"
+KEY_WAIT
+FACE 0
+VOICE 2730
+MESSAGE "早くおきがえしなきゃ。"
+KEY_WAIT
+VOICE 2731
+MESSAGE "んしょ、んしょ……"
+KEY_WAIT
+FACE 1
+VOICE 2732
+MESSAGE "よし、おきがえかんりょー！"
+KEY_WAIT
+FACE 0
+VOICE 2733
+MESSAGE "じゃあ、朝ごはんにしようよ、\nパパ。"
+KEY_WAIT
+FACE 1
+VOICE 2734
+MESSAGE "今日のごはんは、\nパパが作ってくれるんでしょ？\nえへへ、楽しみ☆"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+END 0

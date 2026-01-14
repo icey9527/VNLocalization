@@ -1,0 +1,555 @@
+LABEL 0
+FLAG 1026, 1
+LABEL 1
+FLAG 1027, 1
+BG 0
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1570
+MESSAGE "今日は何をしようかなぁ……"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "女の子の声"
+MESSAGE "たのもーう！"
+KEY_WAIT
+CHAR 0, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1571
+MESSAGE "あれ？\nお客さんかな？\nキューブは……いないのか……"
+KEY_WAIT
+SE_PLAY 7
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+OFF_CHAR 3
+SE_WAIT
+SE_PLAY 1
+SE_WAIT
+SE_PLAY 3
+SE_WAIT
+SE_STOP
+BGM_STOP 30
+BG 176
+BGM_PLAY 32
+BG 160
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1572
+MESSAGE "はーい。どなた？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "強気な女の子"
+MESSAGE "お！\nオマエ、この家の者か？"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1573
+MESSAGE "うん、そうだけど……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "強気な女の子"
+MESSAGE "じゃあ、お前のお父上を\n呼んでくれ。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "騎士トルバーズの娘、\nリーゼが父に代わって\n勝負を申し込みにきた！"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1574
+MESSAGE "しょ、勝負って……\nうちのパパと㌍　あなたが？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうだ！"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1575
+MESSAGE "でも……パパは\n今いなくて……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんだ、いないのか。\nワタシに臆して隠れたか！\nなんてな、はははは！"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1576
+MESSAGE "（別に……そういうわけじゃ\nないんだけど……）"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "では……そうすると\nオマエがその娘という事だな。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1577
+MESSAGE "うん、[娘の名前]っていうの。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうか、[娘の名前]か……\nじゃあ、オマエも強いのか？"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1578
+MESSAGE "ええっ㌍\n私は……別に……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうだな、確かにあんまり\n強そうじゃないよな……"
+KEY_WAIT
+CHAR 2, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1579
+MESSAGE "う……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "よし！\nじゃあ、オマエのこと、\nワタシが鍛えてやろう！"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1580
+MESSAGE "えっ㌍"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "なあに、気にするな。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "強いヤツが弱いヤツを\n鍛えてやるのは\n当然のことだからな。"
+KEY_WAIT
+MESSAGE "父さんもそう言ってたし！"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1581
+MESSAGE "え、え、えええ㌍"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "じゃあ、今日は帰るけど\nまた来るからな！"
+KEY_WAIT
+SE_PLAY 7
+OFF_FACE_WINDOW
+FACE 65535
+OFF_CHAR 1
+SE_STOP
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1582
+MESSAGE "あ、ねえ、ちょっと㌍"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+VOICE 1583
+MESSAGE "ああ……行っちゃった。\nなんだったんだろう、あの子。"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0
+LABEL 2
+FLAG 950, 1
+LABEL 3
+FLAG 951, 1
+OFF_CHAR 3
+BGM_STOP 30
+BGM_PLAY 32
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2683
+MESSAGE "いってきまーっす。"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "お、お嬢様どちらに！\nあー、行ってしまった…"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "私にくらいどこに行くか\n教えてくれてもいいのに…"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "心配だなぁ…"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+BG 158
+SE_PLAY 14
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1696
+MESSAGE "ええと……\nみんなどこに\n隠れてるのかなぁ……"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+VOICE 1697
+MESSAGE "（早く見つけないと\nオニを交代してもらえないよー）"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "可愛い女の子"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1698
+MESSAGE "（わ、きれいな女の子だなー\n同い年くらいかな……）"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+VOICE 1699
+MESSAGE "（あ！　あの子、\nハンカチ落とした）"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "可愛い女の子"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1700
+MESSAGE "（気づかないで行っちゃう……）"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+VOICE 1701
+MESSAGE "ねえねえ！"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "可愛い女の子"
+MESSAGE "あら、何ですの、あなた。\nわたくしに何かご用？"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1702
+MESSAGE "あのね、ハンカチ落としたよ。\nほら、これ。"
+KEY_WAIT
+CHAR 1, 16
+FACE 15
+MESSAGE_NAME "可愛い女の子"
+MESSAGE "あら、本当。\nご親切にどうも。"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE "でも、いりませんわ。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1703
+MESSAGE "ええ、なんで？\nあなたのハンカチでしょ？"
+KEY_WAIT
+CHAR 1, 17
+FACE 16
+MESSAGE_NAME "可愛い女の子"
+MESSAGE "ノーザリー家の人間たるもの、\n一度地面に落ちてしまった\nハンカチなんて使えませんわ。"
+KEY_WAIT
+CHAR 1, 16
+FACE 15
+MESSAGE "よろしければ、差し上げましてよ。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1704
+MESSAGE "えっと、じゃあ……\nもらっちゃうね。\nありがとう！"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+VOICE 1705
+MESSAGE "ええと……"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "クリスチーナですわ。\nクリスチーナ・オハラ・ノーザリー"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1706
+MESSAGE "じゃあ、クリスチーナちゃんだね！\n私は[娘の名前]っていうの。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1707
+MESSAGE "そうだ！\nクリスチーナちゃんも\n向こうで一緒に遊ぼうよ。"
+KEY_WAIT
+CHAR 1, 17
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "えっ、わ、わたくしも㌍"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1708
+MESSAGE "今、みんなで隠れんぼしてるの。\n私がオニなんだけど。\nえへへへっ。"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あなた……わたくしが\nノーザリー家の娘だと知っても、\n何も感じませんの？"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1709
+MESSAGE "どうして？\nどこの家の子だって、\n隠れんぼには関係ないよー"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1710
+MESSAGE "そんなことより、ほら、\nクリスチーナちゃんも行こうよ！"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……あなた、\n変わった人ですわねえ。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1711
+MESSAGE "ええ？\nそうかなぁ？"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ええ、とっても。\nでも……気に入りましたわ。"
+KEY_WAIT
+CHAR 1, 17
+FACE 16
+MESSAGE "あなた……わたくしの、その……\nお、お友だちにして\nさし上げてもよくってよ？"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1712
+MESSAGE "ええっと……うん！\nそれじゃあ、友だち！\nよろしくね、クリスチーナちゃん！"
+KEY_WAIT
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "まあ、本来ならわたくしが\n庶民の遊びに混ざるようなことは\nございませんが、"
+KEY_WAIT
+CHAR 1, 16
+FACE 15
+MESSAGE "今日はあなたに免じて特別に……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1713
+MESSAGE "ほらほら、行こっ！"
+KEY_WAIT
+SE_PLAY 7
+OFF_CHAR 2
+SE_STOP
+CHAR 1, 15
+FACE 14
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "あ、ちょっと、[娘の名前]さん㌍\nお待ちになって～㌍"
+KEY_WAIT
+SE_PLAY 7
+OFF_CHAR 1
+SE_STOP
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0
+LABEL 4
+FLAG 1081, 1
+LABEL 5
+FLAG 1082, 1
+OFF_CHAR 3
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2683
+MESSAGE "いってきまーっす。"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様ぁ～\nあれ…お出かけしましたか…"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BG 176
+BGM_PLAY 32
+BG 158
+SE_PLAY 14
+CHAR 2, 1
+FACE 65535
+MESSAGE_NAME "？？？"
+MESSAGE "あ、あのー……"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1813
+MESSAGE "……えっ？"
+KEY_WAIT
+CHAR 1, 20
+FACE 17
+MESSAGE_NAME "？？？"
+MESSAGE "こ、こんにちは……"
+KEY_WAIT
+CHAR 2, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1814
+MESSAGE "は、はい……\nこんにちは……"
+KEY_WAIT
+CHAR 1, 18
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "あの……私、マリー……\nマリー・ストールマンといいます。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1815
+MESSAGE "そうなんだ……\nあっ、で、マリーちゃん。\n私に何か用？"
+KEY_WAIT
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "はい……\nあの……いきなり、\nなんですけど……"
+KEY_WAIT
+CHAR 1, 20
+FACE 19
+MESSAGE "わ、私とお友だちになって\nもらえませんか㌍"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1816
+MESSAGE "えっ？"
+KEY_WAIT
+CHAR 1, 18
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "私……その、人見知りなせいで\nあ、あまりお友だちが\nいなくて……"
+KEY_WAIT
+CHAR 1, 20
+FACE 19
+MESSAGE "でも……自分でもこのままじゃ\nいけないって……"
+KEY_WAIT
+MESSAGE "それで、お友だち、もっと\nいっぱい欲しいなって……\n思ったの。"
+KEY_WAIT
+CHAR 1, 18
+FACE 17
+MESSAGE "[娘の名前]ちゃんて、\nいつもここで、お友だち\nみんなと遊んでるでしょ？"
+KEY_WAIT
+MESSAGE "だから、その……私とも\n仲良くしてくれるかな……\nって……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1817
+MESSAGE "そうだったんだ……"
+KEY_WAIT
+CHAR 2, 7
+FACE 6
+VOICE 1818
+MESSAGE "……うん、いいよ！\n私とマリーちゃんは、\n今日からお友だちね！"
+KEY_WAIT
+CHAR 1, 19
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "ほ、ほんとに？\nあ、ありがとう……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1819
+MESSAGE "マリーちゃんて、\nどこに住んでるの？"
+KEY_WAIT
+CHAR 1, 18
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "私、道具屋の娘なんです。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1820
+MESSAGE "あっ、あの道具屋さんの？"
+KEY_WAIT
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "ええ。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1821
+MESSAGE "わあ……いろんなものがあって\nいいよねえ。"
+KEY_WAIT
+CHAR 1, 19
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "ふふ……"
+KEY_WAIT
+MESSAGE "でも私、本当はそういうのより、\n本を読んだり絵を描いたりする方が\n好き……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1822
+MESSAGE "へぇ～、そうなんだ。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1823
+MESSAGE "じゃあね、じゃあね。\n今度一緒にお絵かきしよう㍍"
+KEY_WAIT
+VOICE 1824
+MESSAGE "よろしくね、マリーちゃん！"
+KEY_WAIT
+CHAR 1, 19
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "うん！　よろしくね。"
+KEY_WAIT
+MESSAGE "思い切って話しかけて\n本当によかったぁ……㍍"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0

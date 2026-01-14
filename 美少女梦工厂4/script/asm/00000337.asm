@@ -1,0 +1,112 @@
+LABEL 0
+FLAG 808, 1
+LABEL 1
+FLAG 809, 1
+BGM_STOP 30
+BGM_PLAY 19
+BG 0
+SE_PLAY 6
+FACE 0
+SE_WAIT
+MESSAGE_NAME "[娘の名前]"
+VOICE 1003
+MESSAGE "お父様……\n入ってもいい？"
+KEY_WAIT
+SE_PLAY 1
+CHAR 2, 8
+SE_WAIT
+FACE 7
+VOICE 1004
+MESSAGE "……あ、あの……\nたまには肩ぐらい揉んで\nあげようかなって……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1005
+MESSAGE "ほら、後ろ向いて……"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_CHAR 2
+BG 103
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1006
+MESSAGE "うわぁ……\nやっぱりこってる……\nお父様も色々と大変ね……"
+KEY_WAIT
+FACE 0
+VOICE 1007
+MESSAGE "……ねぇ、お父様……"
+KEY_WAIT
+FACE 3
+VOICE 1008
+MESSAGE "私がお嫁にいったりしたら、\nこの家、さみしくなるわよね？"
+KEY_WAIT
+FACE 0
+VOICE 1009
+MESSAGE "私、ずっとこのままがいいなぁ。"
+KEY_WAIT
+SELECT 2, 2, "うなづく", 3, "否定する"
+LABEL 2
+FLAG 810, 1
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 1010
+MESSAGE "私……ずっとここに\nいたいな……"
+KEY_WAIT
+FACE 7
+VOICE 1011
+MESSAGE "お父様とずーっと暮らしたい……\nそういうのって変なのかしら？"
+KEY_WAIT
+FACE 3
+VOICE 1012
+MESSAGE "みんな、そんなにお嫁に\nいきたいのかしら……"
+KEY_WAIT
+FACE 0
+VOICE 1013
+MESSAGE "……アハハ、ごめんなさい、\n変なこと言って。"
+KEY_WAIT
+GOTO 4
+LABEL 3
+FLAG 811, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1014
+MESSAGE "そっか……\n私がお嫁に行けばお父様も\n一安心だものね。"
+KEY_WAIT
+FACE 1
+VOICE 1015
+MESSAGE "早く孫の顔が見たいんでしょ？\nウフフ、私、お父様に似た男の子が\nいいな。そうしたら名前付けてね？"
+KEY_WAIT
+GOTO 4
+LABEL 4
+FLAG 812, 1
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1016
+MESSAGE "よいしょ……。\nどう？　肩は楽になったかしら？"
+KEY_WAIT
+FACE 3
+VOICE 1017
+MESSAGE "私がふらふらしてたら……\nまだ、肩の荷は降りないかな。"
+KEY_WAIT
+FACE 4
+VOICE 1018
+MESSAGE "え？　な、なんでもないわ。"
+KEY_WAIT
+FACE 0
+VOICE 1019
+MESSAGE "ほら、そこにうつぶせになって。\n今度は腰を揉んであげる。"
+KEY_WAIT
+FACE 1
+VOICE 1020
+MESSAGE "ふふ、そんな遠慮しないで、\nやりたいんだから。\nキューブよりうまいわよ、私？"
+KEY_WAIT
+VOICE 1021
+MESSAGE "ふふふ……"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0

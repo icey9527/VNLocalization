@@ -1,0 +1,258 @@
+LABEL 0
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "今のお嬢様の体形では、\n少々きついようです……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2673
+MESSAGE "えー、きつくないもん。\n頑張ればきられるもん…\nパパわたし太ってるの？"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 1
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "今のお嬢様の体形では、\n少々きついようです……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2637
+MESSAGE "あーん。\n私ってそんなに太っちゃったの！\nどうしよう…"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 2
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "今のお嬢様の体形では、\n少々きついようです……"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2606
+MESSAGE "ああっ…\n私ったらいつのまに太っちゃった\nのかしら…"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 3
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "今着ている服ですよ。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 4
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様には\nまだサイズが合わないようですね。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 5
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、\nこの服にお着替えください。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2684
+MESSAGE "えー、私そんな服着たくないもん…"
+KEY_WAIT
+FACE 26
+MESSAGE_NAME "キューブ"
+MESSAGE "まぁ、まぁ\nお嬢様なら\nなんだって似合うんですから。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2685
+MESSAGE "いやなものは、いやなの！"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+KEY_WAIT
+LINE_FEED
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 6
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、\nこの服にお着替えください。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2645
+MESSAGE "そんな、\nそんなダサい服着られないわ。"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "まぁ、まぁ\nお嬢様なら\nなんだって似合うんですから。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2646
+MESSAGE "自分で着る服くらい\n私の好きにしたっていいじゃない。"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "お、お嬢様ぁ～。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 7
+FACE 23
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、\nこの服にお着替えください。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2616
+MESSAGE "いやよ、\n私が着る服は、自分で選ぶわ。"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "まぁ、まぁ\nお嬢様なら\nなんだって似合うんですから。"
+KEY_WAIT
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 2617
+MESSAGE "この服は私のポリシーなの！\n勝手に人の趣味を押し付けないで。"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様ぁ\nお嬢様の服はぽりしー\nとか言うものらしいです…"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 8
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様、\nお嬢様は病気ですので、安静に\nできる服がよろしいかと思います。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2686
+MESSAGE "コホッコホッ、\nうう、パパ苦しいよぅ"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 9
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様、\nお嬢様は病気ですので、安静に\nできる服がよろしいかと思います。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2647
+MESSAGE "ごめんなさい、お父さん。\n今は、ほかの服を着るなんて\nしたくないの。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 10
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "旦那様、\nお嬢様は病気ですので、安静に\nできる服がよろしいかと思います。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2618
+MESSAGE "私もいろいろな服に着替えてみたい\nけど、今はじっとしていないと\nいけないの。ごめんなさいお父様…"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+END 0
+LABEL 11
+MESSAGE "妖精の蜜を使用しました。"
+KEY_WAIT
+END 0
+LABEL 12
+MESSAGE "知恵の実を使用しました。"
+KEY_WAIT
+END 0
+LABEL 13
+MESSAGE "栄光の果実を使用しました。"
+KEY_WAIT
+END 0
+LABEL 14
+MESSAGE "秩序の種を使用しました。"
+KEY_WAIT
+END 0
+LABEL 15
+MESSAGE "高貴なる泉水を使用しました。"
+KEY_WAIT
+END 0
+LABEL 16
+MESSAGE "やさしさの玉露を使用しました。"
+KEY_WAIT
+END 0
+LABEL 17
+MESSAGE "芸術の水飴を使用しました。"
+KEY_WAIT
+END 0
+LABEL 18
+MESSAGE "魅惑の香水を使用しました。"
+KEY_WAIT
+END 0
+LABEL 19
+MESSAGE "清らかな若葉を使用しました。"
+KEY_WAIT
+END 0
+LABEL 20
+MESSAGE "武神の香を使用しました。"
+KEY_WAIT
+END 0
+LABEL 21
+MESSAGE "天帝の香を使用しました。"
+KEY_WAIT
+END 0
+LABEL 22
+MESSAGE "妖精のしずくを使用しました。"
+KEY_WAIT
+END 0
+LABEL 23
+MESSAGE "超神水を使用しました。"
+KEY_WAIT
+END 0
+LABEL 24
+MESSAGE "魔界の清水を使用しました。"
+KEY_WAIT
+END 0
+LABEL 25
+MESSAGE "禁断の実を使用しました。"
+KEY_WAIT
+END 0
+LABEL 26
+MESSAGE "聖水を使用しました。"
+KEY_WAIT
+END 0

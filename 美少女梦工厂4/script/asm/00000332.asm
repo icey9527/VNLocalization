@@ -1,0 +1,135 @@
+LABEL 0
+FLAG 711, 1
+LABEL 1
+FLAG 712, 1
+BGM_STOP 30
+BGM_PLAY 14
+BG 0
+CHAR 0, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 469
+MESSAGE "今日は雨降りで外に出られないなー\nつまらないなぁ～"
+KEY_WAIT
+VOICE 470
+MESSAGE "何か面白いものでもないかな～\n……ん？\nなぁに……これ？"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_CHAR 3
+BG 60
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 471
+MESSAGE "肖像画……\nきれいな女の人だけど……\n誰なんだろう……？"
+KEY_WAIT
+VOICE 472
+MESSAGE "パパ、パパ㌍"
+KEY_WAIT
+VOICE 473
+MESSAGE "この絵に描いてある\n女の人、だぁれ？"
+SELECT 3, 2, "昔の知り合い", 3, "キューブが知っている", 4, "黙っている"
+LABEL 2
+END 0
+LABEL 3
+END 1
+LABEL 4
+END 2
+LABEL 5
+FLAG 713, 1
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 474
+MESSAGE "知り合い～？\nその割には立派な絵だし……"
+KEY_WAIT
+FACE 1
+VOICE 475
+MESSAGE "あーっ、わかった！\nパパ、この女の人、\n好きだったんでしょ㌍"
+KEY_WAIT
+FACE 5
+VOICE 476
+MESSAGE "でも、きっと\n振られちゃったんだね！\nそれで、絵をしまい込んで……"
+KEY_WAIT
+FACE 1
+VOICE 477
+MESSAGE "そっか、そうなんだぁ～"
+KEY_WAIT
+VOICE 478
+MESSAGE "でも、今は私がいるんだもん！\n寂しくないよね？\nウフフフッ㍍"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0
+LABEL 6
+FLAG 714, 1
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "え、ええっ㌍\nわたしですかぁ？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 479
+MESSAGE "ねえねえ、キューブ、\nこの人のこと、知ってるの？"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "え？　いや、まあ、\n知らないと言うわけでは\nありませんが……"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 480
+MESSAGE "ほんと㌍\n教えて、教えてっ！！"
+KEY_WAIT
+FACE 28
+MESSAGE_NAME "キューブ"
+MESSAGE "し、しかし……"
+KEY_WAIT
+MESSAGE "だ、旦那様、見てないで\n助けてくださいよ……\nあ、ちょ、ちょっと㌍"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 481
+MESSAGE "ねえ、キューブってば！"
+KEY_WAIT
+FACE 24
+MESSAGE_NAME "キューブ"
+MESSAGE "ひぇぇー、\nか、勘弁してくださいよ、\nお嬢様ぁ～！！"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0
+LABEL 7
+FLAG 715, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 482
+MESSAGE "ねえねえ、パパ？"
+KEY_WAIT
+FACE 7
+VOICE 483
+MESSAGE "パパってば！"
+KEY_WAIT
+FACE 8
+VOICE 484
+MESSAGE "むぅ～…………"
+KEY_WAIT
+FACE 2
+VOICE 485
+MESSAGE "教えてくれたって\nいいじゃない！"
+KEY_WAIT
+FACE 0
+VOICE 486
+MESSAGE "もー、パパのケチ！\nキラーイ！！"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+BG 0
+END 0

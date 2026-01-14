@@ -1,0 +1,82 @@
+LABEL 0
+FLAG 1727, 1
+BG 0
+CHAR 0, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2993
+MESSAGE "……あ、そうだ！\nパパ、パパ。"
+KEY_WAIT
+CHAR 0, 6
+FACE 5
+VOICE 2994
+MESSAGE "かいだんって知ってる？"
+KEY_WAIT
+CHAR 0, 3
+FACE 2
+VOICE 2995
+MESSAGE "２階に上がるのじゃなくって\nおはなしのかいだん！"
+KEY_WAIT
+CHAR 0, 1
+FACE 0
+VOICE 2996
+MESSAGE "あのね、この前、おともだちがね。\nかいだんばなしをしたって\nいってたの。"
+KEY_WAIT
+VOICE 2997
+MESSAGE "すっごくおもしろかったんだって。\nそれでね、どんなのかな～って\n気になって……"
+KEY_WAIT
+VOICE 2998
+MESSAGE "ね、パパ。知ってるなら\nおはなしして。"
+KEY_WAIT
+CHAR 0, 2
+FACE 1
+VOICE 2999
+MESSAGE "いいの？\nわーい、やったぁ。"
+KEY_WAIT
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_FACE_WINDOW
+MESSAGE_WINDOW 0
+BG 277
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 3000
+MESSAGE "あう～……こ、こわいよぉ。\nもういやぁ……"
+KEY_WAIT
+VOICE 3001
+MESSAGE "パパぁ、なんでこわい\nおはなしなんてするのぉ？"
+KEY_WAIT
+VOICE 3002
+MESSAGE "かいだんって、\nおもしろいおはなしじゃないの？"
+KEY_WAIT
+FACE 4
+VOICE 3003
+MESSAGE "えー、かいだんって\nこわいおはなしのことなの㌍"
+KEY_WAIT
+FACE 0
+VOICE 3004
+MESSAGE "あう～\n知らなかったよぉ。"
+KEY_WAIT
+VOICE 3005
+MESSAGE "こわいおはなしだって知ってたら\n聞かなかったのにぃ。"
+KEY_WAIT
+VOICE 3006
+MESSAGE "夜、おトイレに\nいけなくなっちゃうよぉ。"
+KEY_WAIT
+FACE 2
+VOICE 3007
+MESSAGE "も～、かいだんなんてキラーイ。"
+KEY_WAIT
+FACE 65535
+OFF_FACE_WINDOW
+BGM_STOP 30
+BG 176
+END 0

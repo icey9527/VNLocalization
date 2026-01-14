@@ -1,0 +1,118 @@
+LABEL 0
+FLAG 801, 1
+LABEL 1
+FLAG 802, 1
+OFF_CHAR 3
+FACE 26
+MESSAGE_NAME "キューブ"
+MESSAGE "お嬢様、リーゼ様が\nお見えになりましたよー。"
+KEY_WAIT
+SE_PLAY 1
+SE_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2600
+MESSAGE "はーい、\nお待たせリーゼ。\nどうしたの急に。"
+KEY_WAIT
+BGM_STOP 30
+CHAR 1, 1
+CHAR 2, 12
+BGM_PLAY 29
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "[娘の名前]……\n今日は別れの挨拶に来た。"
+KEY_WAIT
+CHAR 1, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 960
+MESSAGE "リーゼ……"
+KEY_WAIT
+OFF_FACE_WINDOW
+FACE 65535
+OFF_CHAR 1
+OFF_CHAR 2
+BG 101
+FACE 4
+VOICE 961
+MESSAGE "どうして㌍　いったい\n何があったの？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "魔族との戦いの義勇軍に\n参加するんだ。\n私は明日から軍人となる。"
+KEY_WAIT
+FACE 11
+MESSAGE "亡き父の仇を討つ機会が\nついに来たんだ……"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 962
+MESSAGE "そんな……とうとう\n魔族との戦いに……"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうだ！"
+KEY_WAIT
+MESSAGE "憎んでも憎みきれぬ魔族どもめ！\n私は決して許さない。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 963
+MESSAGE "で、でも……魔族にだって\nいい人も……"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+SE_PLAY 35
+MESSAGE "魔族は人じゃない！"
+KEY_WAIT
+MESSAGE "人の姿をした獣だ！\n滅ぼすか滅ぼされるかの\n敵なんだ！"
+KEY_WAIT
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 964
+MESSAGE "リーゼ……"
+KEY_WAIT
+BG 0
+CHAR 1, 4
+CHAR 2, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "私の晴れの門出を祝福して\n欲しかったのだが……"
+KEY_WAIT
+MESSAGE "……[娘の名前]。\n国のために私は戦う。"
+KEY_WAIT
+MESSAGE "私は……戦場で待っているぞ。\nそして、私は信じている。"
+KEY_WAIT
+CHAR 1, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 965
+MESSAGE "えっ……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "お前も私と共に……"
+LINE_FEED
+CHAR 1, 9
+MESSAGE "戦ってくれると、な。"
+KEY_WAIT
+MESSAGE "じゃあな……"
+SE_PLAY 3
+OFF_CHAR 2
+KEY_WAIT
+CHAR 1, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 966
+MESSAGE "リーゼ……"
+KEY_WAIT
+CHAR 1, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+MESSAGE "…………"
+KEY_WAIT
+BGM_STOP 30
+OFF_FACE_WINDOW
+FACE 65535
+OFF_CHAR 1
+END 0

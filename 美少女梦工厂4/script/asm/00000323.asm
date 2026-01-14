@@ -1,0 +1,2022 @@
+LABEL 0
+FLAG 1028, 1
+LABEL 1
+FLAG 1029, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "お、[娘の名前]。\n元気か！"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1584
+MESSAGE "あ、リーゼちゃん。\n今日も修行なの？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "日々の鍛錬は欠かせないからな。\n「武道に近道はないんだ」って、\n父さんも言ってたし。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1585
+MESSAGE "ふうん……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "早くワタシも強くなって、\nこの国１番の剣士になるんだ！"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1586
+MESSAGE "すごいなぁ、リーゼちゃん。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "おいおい、感心してる\n場合じゃないだろう。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1587
+MESSAGE "へ？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "ワタシが強くなるためには、\nお前も一緒に強くなって\nもらわないとな！"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "うん、ちょうどワタシたちの\n父親同士のように……"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1588
+MESSAGE "えっ、ええっ㌍\nなんでそうなっちゃってるの㌍"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "「強くなるためには共に\n競い合う強敵が必要」だって、\n父さんがいつも言ってるんだ。"
+KEY_WAIT
+CHAR 2, 4
+CHAR 1, 14
+FACE 13
+MESSAGE "そう……これはワタシたちの\n運命なんだ！"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1589
+MESSAGE "そ、そんなぁ～"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ははははっ！"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 2
+FLAG 1149, 1
+BGM_PLAY 32
+BG 160
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2070
+MESSAGE "あ、マリーちゃんと\nリーゼちゃんだ。\nこんにちは。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "お、[娘の名前]か。"
+KEY_WAIT
+CHAR 1, 18
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "こんにちは。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2071
+MESSAGE "ふたり一緒って珍しいね。\nどうしたの？"
+KEY_WAIT
+FACE 17
+MESSAGE_NAME "マリー"
+MESSAGE "お散歩してたら偶然会ったの。\nそれで一緒にお散歩しようって。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "よかったらお前もどうだ？"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2072
+MESSAGE "うん、私もいく。"
+KEY_WAIT
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+BG 160
+CHAR 2, 2
+CHAR 1, 12
+FACE 1
+MESSAGE_NAME "[娘の名字]"
+VOICE 2073
+MESSAGE "えへへ、みんなでおさんぽ、\n楽しいね。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、たまにはこういうのも\nいいかもな。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2074
+MESSAGE "うん。\nクリスチーナちゃんもいれば\nよかったのになぁ。"
+KEY_WAIT
+OFF_CHAR 2
+SE_PLAY 59
+SE_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2075
+MESSAGE "きゃあっ㌍"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんでこんなところで\n転ぶんだ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "石にでもつまずいたのか？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2076
+MESSAGE "うぅ、痛いよう……\nひっく……ぐす……"
+KEY_WAIT
+CHAR 2, 20
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "あ、[娘の名前]ちゃん、\n血が出てるよ。\n痛そう……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2077
+MESSAGE "えーん！\n痛いよぉ。"
+KEY_WAIT
+FACE 19
+MESSAGE_NAME "マリー"
+MESSAGE "あうぅぅ、[娘の名前]ちゃん\n泣かないで……"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2078
+MESSAGE "えーん！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、泣くんじゃない。\nほら傷口をふいて、\nハンカチでしばって……"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "あとは……\n痛いの痛いのトンデケー！！"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2079
+MESSAGE "……ふえ？"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ほら、もう大丈夫だろ？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2080
+MESSAGE "……あ、う、うん。\nホントだぁ。"
+KEY_WAIT
+CHAR 2, 19
+FACE 18
+MESSAGE_NAME "マリー"
+MESSAGE "うわぁ、リーゼちゃん\n凄い。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "あとは帰ったら家の人に\nちゃんと治療してもらえよ。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2081
+MESSAGE "うん。\nありがとう、リーゼちゃん。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_CHAR 3
+OFF_FACE_WINDOW
+FACE 65535
+END 4
+LABEL 3
+FLAG 1030, 1
+LABEL 4
+FLAG 1031, 1
+BGM_PLAY 32
+BG 158
+CHAR 1, 12
+SE_PLAY 43
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うう、腹減ったなぁ……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1590
+MESSAGE "あら、どうしたの、リーゼちゃん？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "いや、その……\n今日、ちょっと寝坊して……\n慌てて出てきたから……"
+KEY_WAIT
+CHAR 2, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 1591
+MESSAGE "ご飯、食べてないの……？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うん……"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1592
+MESSAGE "わぁ、大変ね……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1593
+MESSAGE "そうだ！\nよかったら、私のおうちで\nご飯食べてく？"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+VOICE 1594
+MESSAGE "キューブにお願いすれば\n用意してくれるよ。"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "な、なに㌍\nほ、本当かッ㌍"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1595
+MESSAGE "うん！\nじゃあ、さっそく……"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "い、いや、待て！"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1596
+MESSAGE "えっ？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "やはり止めておく。\n寝坊したワタシが悪いんだし、\nそれに……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1597
+MESSAGE "それに？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "騎士の娘が他人から施しを\n受けるわけにはいかん！"
+KEY_WAIT
+SE_PLAY 43
+SE_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1598
+MESSAGE "でも、お腹なってる……"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "う、ぅうるさいっ！\nいいったらいいんだ！"
+KEY_WAIT
+SE_PLAY 7
+FACE 65535
+OFF_CHAR 1
+SE_STOP
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1599
+MESSAGE "あ、リーゼちゃん㌍\n行っちゃった……"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+VOICE 1600
+MESSAGE "（別に、そんなつもりは\nないのになぁ……）"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 5
+FLAG 1032, 1
+LABEL 6
+FLAG 1033, 1
+BGM_PLAY 31
+BG 162
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "お、[娘の名前]じゃないか。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1601
+MESSAGE "あ、リーゼ。\nどうしたの、こんなところで。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うん。何か新しい武器でも\n入ってないかと思って\n店を覗いていたんだが……"
+KEY_WAIT
+MESSAGE "ほら、あそこの……"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1602
+MESSAGE "わ、見たことのない剣があるね。"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、なんでも東の国でしか\n作られてない、珍しいものらしい。"
+KEY_WAIT
+CHAR 2, 7
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 1603
+MESSAGE "へえ～、刀身が細くて\nきれいな剣だねぇ。"
+KEY_WAIT
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "いいよな。\n強そうだよな。\n欲しいよなあ……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1604
+MESSAGE "お父さんに頼んでみたら？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "いや、きっとダメだ。\nすごく高いし……"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1605
+MESSAGE "そっかぁ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "それに、父さんはいつも\n言ってるんだ。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "「武器に使われるようでは、\n剣士として失格だ」って……"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1606
+MESSAGE "……？\nどういう意味？\n剣は使うものよね。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ワタシもまだよくわからない。\nでも、父さんの言うことだし、\nきっと大事なことだと思うんだ。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1607
+MESSAGE "ふふ……\nリーゼはお父さんのこと、\n大好きなのね。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "あ……当たり前だろ！\n父さんみたいに強くなりたくて、\nワタシは頑張ってるんだから。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "でも……それはそれとして、だ。\nやっぱりほしいなァ……"
+KEY_WAIT
+MESSAGE "ダメもとで、\n父さんに頼んでみようかな……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1608
+MESSAGE "あ、あらら……"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 7
+FLAG 1034, 1
+LABEL 8
+FLAG 1035, 1
+BGM_PLAY 31
+BG 159
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1609
+MESSAGE "（何かお買い物でも\nしていこうかな……）"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "お～い、[娘の名前]ッ！！"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1610
+MESSAGE "えっ㌍"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ノラネコ"
+SE_PLAY 52
+SE_WAIT
+MESSAGE "ニャーン！"
+KEY_WAIT
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1611
+MESSAGE "わわっ㌍\nね、猫ぉ㌍"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "そいつを！\nそいつを捕まえろっ！！"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1612
+MESSAGE "ええっ、リーゼ㌍\nいきなり捕まえろって\n言われても……"
+KEY_WAIT
+SE_PLAY 7
+SE_STOP
+CHAR 2, 8
+FACE 7
+VOICE 1613
+MESSAGE "あ、逃げないで！！"
+KEY_WAIT
+SE_PLAY 7
+FACE 65535
+SE_STOP
+FACE 65535
+MESSAGE_NAME "ノラネコ"
+SE_PLAY 53
+SE_WAIT
+MESSAGE "ニャニャニャッ㌍"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1614
+MESSAGE "ちょ、ちょっと、\nおとなしく、してちょうだい！"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ノラネコ"
+SE_PLAY 53
+SE_WAIT
+MESSAGE "ウニャーッ㌍"
+KEY_WAIT
+SE_PLAY 7
+CHAR 1, 14
+FACE 13
+SE_STOP
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "よーし、いいぞ！"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1615
+MESSAGE "リーゼ……\nどうしたの、一体？\nそれに、この猫……"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、さっき魚屋の店先から\n魚を盗ったのを目撃したんだ。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1616
+MESSAGE "それで……追いかけてたの？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ。\nまったく……市場中\n走り回らされた。"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE "オマエが捕まえてくれて\n助かったよ。"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1617
+MESSAGE "うん……それはいいけど……"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん？"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1618
+MESSAGE "この子……\n魚くわえてないわよ？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "な、なんだってー㌍"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1619
+MESSAGE "（それだけ走り回ったんじゃ、\n魚も落としちゃうわよね……）"
+KEY_WAIT
+FACE 65535
+MESSAGE_NAME "ノラネコ"
+SE_PLAY 52
+SE_WAIT
+MESSAGE "ニャーン！"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 9
+FLAG 1157, 1
+BGM_PLAY 32
+BG 160
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "てい！　たあっ！　やあっ！！"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2120
+MESSAGE "あら、リーゼ、\nこんなところで何してるの？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うん？　ああ、[娘の名前]か。"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "これを見てくれ。"
+KEY_WAIT
+CHAR 2, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2121
+MESSAGE "ん？　それって……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、以前、道具屋で見つけた\n東の国の剣だ。"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "ダメもとで父さんに頼んでみたら\n買ってくれたんだ。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2122
+MESSAGE "よかったじゃない。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ただし、向こう一年おこづかいが\n半分になってしまったが……"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2123
+MESSAGE "あらら……"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "とにかくこの剣にふさわしい\n使い手になるためにも、\n修練をつまないといけないんだ。"
+KEY_WAIT
+END 5
+LABEL 10
+MESSAGE_NAME "リーゼ"
+MESSAGE "……というわけで、\n修練に付き合ってくれ。"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2124
+MESSAGE "……え？"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "いやぁ、素振りだけだとどうにも\n物足りなくて。誰かいないかと\n思っていたところなんだ。"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "ちょうどいい時に来てくれて\n助かったよ。\nさ、それじゃあ、向こうに行こう。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 2125
+MESSAGE "え？　え？\nちょ、ちょっと待って～"
+KEY_WAIT
+OFF_CHAR 1
+OFF_CHAR 2
+BGM_STOP 30
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 11
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2126
+MESSAGE "がんばってね。リーゼならきっと\nすぐに使いこなせるように\nなると思うわ。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "はは、それじゃあ、\n期待に応えられるように\n頑張らないとな。"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "よし！　修練の続きだ。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "えい！　やあ！　たあ！！"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2127
+MESSAGE "うん、それじゃあ、私行くね。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 12
+FLAG 1036, 1
+LABEL 13
+FLAG 1037, 1
+BGM_PLAY 31
+BG 163
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "おお、[娘の名前]。\nめずらしいところで会うな。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1620
+MESSAGE "あら、リーゼ。\nもしかして、お食事中だった？"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+VOICE 1621
+MESSAGE "うわ、すごい量ね……\nこれ、全部１人で？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "なんだ、驚くことは\nないだろう？"
+KEY_WAIT
+MESSAGE "鍛錬をしていれば、このくらいは\n食べないと体がもたないのは\n当然だ。"
+KEY_WAIT
+CHAR 2, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1622
+MESSAGE "うーん、私だったら\nダイエット大変だろうなぁ……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ダイエットか……\n毎日きちんと３食摂っているが、\nその手の行為はした覚えがないな。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1623
+MESSAGE "ええっ、うそぉ㌍\nクリスチーナなんか、いつも\n体重気にしてたりするのに……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "何を言ってるんだ。\n体重のコントロールなんてものは\n武道家ならできて当然だぞ。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "しっかり食べ、そして\nしっかりと体を動かす！"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE "余計な肉などつくはずも\nないじゃないか。"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1624
+MESSAGE "そ、そうね……\nそうなんだけど、ね……"
+KEY_WAIT
+VOICE 1625
+MESSAGE "（うーん、確かに\nそのとおりかもしれないけど……\nなんだか複雑な気分ね）"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 14
+FLAG 1153, 1
+BGM_PLAY 31
+BG 163
+CHAR 1, 2
+CHAR 2, 13
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2095
+MESSAGE "あー、美味しかった。"
+KEY_WAIT
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、そうだな。でも、\n少し食べ過ぎてしまったかな？"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2096
+MESSAGE "うふふ、リーゼったら\nたくさん食べてたものね。"
+KEY_WAIT
+CHAR 2, 17
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "うぅ………………"
+KEY_WAIT
+CHAR 1, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2097
+MESSAGE "あれ？\nクリスチーナ、どうしたの？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "……リーゼさんの食事を\n見ていたら、少々胸焼けが……"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "どうしてあんなに食べられますの？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうか？　別にいつもあのくらい\n食べてるけどなぁ。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ええっ㌍\nそれなのに、そんなスマートな\nスタイルなんですの！"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "な、なにか特別な\nダイエットでも……？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "いや、ダイエットなんて\n一度もしたことはないぞ。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "っ㌍"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "普段から身体を動かしていれば\nあれくらい食べても全然問題は\nないだろ？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "…………………………"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん？　どうかしたか。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "そ、そんな……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "クリスチーナ？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "そんな不条理なこと……"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "神が許してもわたくしが\n許しませんわ！！"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+CHAR 1, 14
+FACE 13
+MESSAGE "わっ㌍"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "リーゼさん、あなたは今、\n世の女性の大半を敵に回しました。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "な、なんでだ……？"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "そのような自覚のない発言……\nそれだけでも許しがたいですわ。"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "ねえ、[娘の名前]さんも\nそう思いますでしょ！"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2098
+MESSAGE "ク、クリスチーナ\nとりあえず少し落ち着いて……"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "落ち着いてなどいられませんわ！"
+KEY_WAIT
+FACE 16
+MESSAGE_NAME "クリスチーナ"
+MESSAGE "いいですか、リーゼさん！\n大体、あなたという人は……"
+KEY_WAIT
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 2099
+MESSAGE "ええと……どうしよう。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+END 0
+LABEL 15
+FLAG 1038, 1
+LABEL 16
+FLAG 1039, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ふんふ～ん♪"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1626
+MESSAGE "ごきげんね、リーゼ。\n練習の帰り？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん、[娘の名前]か。\n今日は身体のキレがよくてな。\n気持ちよく練習できた。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1627
+MESSAGE "ふふ、それはそれは♪"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+VOICE 1628
+MESSAGE "あら、リーゼ、その服……\n袖がほつれちゃってるわよ？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん？\nああ……動きが激しいからな。\nどうしても服が傷んでしまうんだ。"
+KEY_WAIT
+MESSAGE "まあ、動くのに支障はないし、\n別にこのままでも……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1629
+MESSAGE "そういうわけにもいかないでしょ。\n直してあげるから\nほら、見せて？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "お、おい？\nちょっと……㌍"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1630
+MESSAGE "ほらほら、動かないの。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "う、うん……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1631
+MESSAGE "…………\nはい、できたわよ。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+VOICE 1632
+MESSAGE "……どうしたの？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "え㌍"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "ああ、いや、なんでもない。\nなんでもないぞ！"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1633
+MESSAGE "そう？\n変なリーゼ……"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 17
+FLAG 1160, 1
+BGM_PLAY 31
+BG 163
+CHAR 2, 1
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "う～ん。"
+KEY_WAIT
+CHAR 2, 6
+FACE 5
+MESSAGE_NAME "[娘の名前]"
+VOICE 2160
+MESSAGE "あら？　リーゼ、どうしたの？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "いや、今朝時間がなくて\n朝食を少ししかとれなかったんだ。\nそれで、ちょっと小腹がすいてな。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2161
+MESSAGE "ふ～ん、だったらそこの屋台で\nクレープでも買って食べない？\n私も少しおなかが空いてるし。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "クレープか……\nうん、それはいいな。"
+KEY_WAIT
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+BG 176
+MESSAGE "　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　\n　　　　　　　　・　　　　　　　"
+KEY_WAIT
+BG 163
+CHAR 2, 2
+CHAR 1, 13
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2162
+MESSAGE "あ～ん、このクレープおいしい♪"
+KEY_WAIT
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、そうだな。\n私はハムとチーズにしたんだが\nお前は？"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2163
+MESSAGE "私はミックスフルーツと\n生クリームがたっぷりのにしたわ。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2164
+MESSAGE "甘さを控えめにしたクリームが\nフルーツの酸味とよくあってて、\n最高よ。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ふ～ん……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2165
+MESSAGE "ん？　どうしたの、リーゼ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "……いや、ちょっとどんな味か\n気になってな。"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "普段はあまり甘いものを\n食べないし。"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 2166
+MESSAGE "そうなんだ。\nそれじゃ、一口味見してみる？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "え、いいのか。\n悪いな。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2167
+MESSAGE "ううん、いいわよ。\nそれじゃ、あ～んして。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "え？"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2168
+MESSAGE "はい、あ～ん♪"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "え、えっと……\nあ～ん。"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "……………………"
+KEY_WAIT
+MESSAGE_NAME "リーゼ"
+MESSAGE "……美味しい。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2169
+MESSAGE "でしょ？"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、これは気に入った。\nこれからは甘いのも\n食べてみるか。"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 2170
+MESSAGE "うん、じゃあ、\nまた一緒に食べに行きましょうね。"
+KEY_WAIT
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、そうだな。"
+KEY_WAIT
+BGM_STOP 30
+OFF_CHAR 1
+OFF_CHAR 2
+OFF_FACE_WINDOW
+FACE 65535
+END 4
+LABEL 18
+FLAG 1040, 1
+LABEL 19
+FLAG 1041, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1634
+MESSAGE "あら、リーゼ。\n浮かない顔して、どうかしたの？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "[娘の名前]か……"
+KEY_WAIT
+MESSAGE "なに、そろそろ城で建国祭の\n一般参賀があるだろう？"
+KEY_WAIT
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1635
+MESSAGE "ええ、そうね。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "いや、それでな……\n母さんがどうしても\n着ていけってうるさいんだよ……"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1636
+MESSAGE "着ていくって、なにを……？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "……ドレス。\nそれもクリスチーナが\n着るような……"
+KEY_WAIT
+CHAR 2, 7
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 1637
+MESSAGE "ほ、本当っ㌍\nリーゼが、ドレスを？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "あ、こら！\n笑うんじゃない！"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1638
+MESSAGE "わ、笑ってなんかいないわよ？"
+KEY_WAIT
+CHAR 2, 7
+FACE 6
+VOICE 1639
+MESSAGE "でも、リーゼのドレス姿かぁ……\n私もちょっと見てみたいなぁ。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "そ、想像するな！　頼む！"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "そ、それにあんな重くて\n動きにくい服、着ていられるか！\nそもそも……似合わん！"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1640
+MESSAGE "そうかな？\n似合うと思うんだけど……"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "母はともかく、オ、オマエまで\nそんなことを言うのか……？"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "ええい、もういい！\nこの話はこれで終わりだ。\nじゃあな、[娘の名前]！"
+KEY_WAIT
+SE_PLAY 7
+FACE 65535
+OFF_CHAR 1
+SE_STOP
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1641
+MESSAGE "あん、待ってよ、リーゼ～"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 4
+LABEL 20
+FLAG 1060, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "おーい、[娘の名前]！\nワタシもこれからは\n魔法を習うことにしたんだ！"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "剣以外の勝負でも負けないからな！"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 21
+FLAG 1061, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "最近父さんが、\n魔法はやめておけって\nうるさいんだ……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE "そりゃ、父さんのことは好きだけど\nこれだけはゆずれないよなー"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 22
+FLAG 1062, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "今日は大きな魚が\nいっぱい釣れたんだ！\n夕ご飯が楽しみだなぁ。"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 23
+FLAG 1063, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "武術の鍛錬は積み重ねが\n大事なんだ。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "１日だって休んじゃ\nいけないんだぞ……って、\n父さんが言ってた。"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 24
+FLAG 1064, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "最近、畑を荒らす野良魔獣が\n出てるらしい。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "ワタシがもっと強かったら、\n全部やっつけてやるのになぁ……"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 25
+FLAG 1065, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "やぁ、[娘の名前]！\n今日は夕ご飯までに\n町の中を１０周するんだ。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "毎日１周ずつ増やしているんだ。\nお前に負けないためにはこれくらい\nやらないとな。じゃあな！"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 26
+FLAG 1066, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "もうすぐ収穫祭だな。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "今年は絶対に勝ぁつ！\n頑張るぞー！！"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 27
+FLAG 1067, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "聞いてくれ、[娘の名前]！\nさらに強くなるために、\nワタシも魔法を習い始めたんだ！"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "なかなか難しいが……\nいつかはこれも一人前に\nなってみせるぞ。"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 28
+FLAG 1068, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "たまには休養も必要だ……って\n父さんは言うんだけどな。"
+KEY_WAIT
+MESSAGE "やっぱり体を動かしてないと\n不安だ。そうは思わないか？"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 29
+FLAG 1069, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "どんな時でも、万が一に\n備えておくのが騎士のつとめ。\nオマエも気をつけておくんだぞ。"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 30
+FLAG 1070, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "もっと……\nもっと強くなりたい……"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 31
+FLAG 1071, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "確かに魔法は便利だが……\nいざというときにものを言うのは、\nやっぱり剣だと思わないか？"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 32
+FLAG 1072, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "剣を奪われたときでも、\n魔法なら戦える……"
+KEY_WAIT
+MESSAGE "父さんはなかなか分かって\nくれないけど、戦闘には魔法も\n大事だと思うんだ。うん。"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 33
+FLAG 1073, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "そろそろ武闘大会の季節か……\n今年も狙うは優勝のみだ！"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 34
+FLAG 1074, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "[娘の名前]、\nこれからはワタシも\n魔法の道を歩むことにした！"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "もちろん剣を捨てるつもりはないが\n魔法も同様、真剣にやろうと\n思っている。"
+KEY_WAIT
+MESSAGE "死んだ父には申し訳ないが、\nワタシがもっと強くなるためだ。\nきっと許してくれるさ。"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 35
+FLAG 1075, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "剣の道と魔法の道。"
+KEY_WAIT
+MESSAGE "２足のわらじを履くことが\nどれだけ難しいかなんて\nわかっている。"
+KEY_WAIT
+MESSAGE "それでも、強くなりたいんだ……"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 36
+FLAG 1076, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "最近は町の外にいるモンスターも\n凶暴になってるらしい。\nそれもこれも魔族のせいだろう。"
+KEY_WAIT
+MESSAGE "まったく、許せない奴らだな。"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 37
+FLAG 1077, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "剣士たるもの、腕前に見合うだけの\n武具はそろえておきたいものだな。"
+KEY_WAIT
+MESSAGE "……まあ、財布とも\n相談しなければならないが。\nくっ、今月は厳しいな……"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 38
+FLAG 1078, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "最近はどれだけ体を動かしても、\nまだまだ足りないような気がして\n不安なんだ。"
+KEY_WAIT
+MESSAGE "おまえも、そんな気分に\nなったことはないか？"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 39
+FLAG 1079, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "オマエとこうやって過ごせるのも、\nあと少しか……\nいや、独り言だ。忘れてくれ……"
+KEY_WAIT
+SE_STOP
+END 0
+LABEL 40
+FLAG 1080, 1
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "今年も収穫祭の季節か……\nお互い、悔いなく\n過ごしたいものだな。"
+KEY_WAIT
+SE_STOP
+END 6
+LABEL 41
+FLAG 1042, 1
+END 0
+LABEL 42
+FLAG 1043, 1
+BGM_PLAY 32
+SE_PLAY 14
+BG 158
+SE_WAIT
+CHAR 2, 1
+CHAR 1, 12
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1642
+MESSAGE "あ、リーゼちゃん！\nこんにちは～"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "誰かと思ったら\n[娘の名前]か。"
+KEY_WAIT
+MESSAGE "ん……そうだ。\nオマエ、今何か用事あるか？"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1643
+MESSAGE "ううん、ないよー\n今日はお休みだもん。"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "そっか、じゃあ\nちょうどいい。"
+KEY_WAIT
+MESSAGE "これから剣の修行に行くんだ。\n１人じゃいまいち\n練習にならないからな。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "だから、\n[娘の名前]もつき合え。"
+KEY_WAIT
+END 7
+LABEL 43
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1644
+MESSAGE "ええっ㌍\n私とするのぉっ㌍\nでも、剣なんか持ったこと……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "木刀だから大丈夫だ！\nさ、行こう！"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1645
+MESSAGE "そういう問題じゃなくて～"
+KEY_WAIT
+LABEL 44
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 45
+FLAG 1044, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "よ、[娘の名前]。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1646
+MESSAGE "あ、リーゼちゃん。こんにちは。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+VOICE 1647
+MESSAGE "そういえば、\nリーゼちゃんのお父さんって、\n騎士様なのよね？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、そうだ。\n背も高くて、すごく強いんだ。"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE "オマエの父さんも強いらしいが、\nうちの父さんにはかなわないな！\nハハハハッ。"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 1648
+MESSAGE "そ、そんなことないもん。\nうちのパパだって……\n強いんだもん！"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "ぬぬぬー！！"
+KEY_WAIT
+CHAR 2, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1649
+MESSAGE "むうう～っ！"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 46
+FLAG 1045, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 2, 3
+FACE 2
+MESSAGE_NAME "[娘の名前]"
+VOICE 1650
+MESSAGE "あ、リーゼちゃん、\nこんにち……わわっ㌍"
+KEY_WAIT
+VOICE 1651
+MESSAGE "ど、どうしたの、\nその格好？　ボロボロじゃない！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん、[娘の名前]か。"
+KEY_WAIT
+MESSAGE "いや、さっき子供を\nいじめている奴らがいてな。\nちょっと懲らしめてやった。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1652
+MESSAGE "懲らしめたって……１人で㌍"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ。\n数が多かったから……\n手こずったが。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1653
+MESSAGE "す、すごいんだねぇ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "いや。\nいつも鍛錬してるんだ、\nこのくらいは……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1654
+MESSAGE "あは、違うよ。"
+KEY_WAIT
+CHAR 2, 7
+FACE 6
+VOICE 1655
+MESSAGE "悪いことをしてる人を見て、\nためらわずに止めに入れる\nリーゼちゃんはえらいなぁって。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "や、やめろ。"
+KEY_WAIT
+MESSAGE "そんなの当然の事というか……\nワタシがそういうの\n嫌いなだけだ！"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1656
+MESSAGE "でも、やっぱりすごいよ。\n私、尊敬しちゃうな。"
+KEY_WAIT
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "だ、だからやめろってばー！"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 47
+FLAG 1046, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1657
+MESSAGE "こんにちは、リーゼ。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "…………"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1658
+MESSAGE "どうしたの？\nなんだか考え込んでる\nみたいだけど……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "あ、ああ。毎日がむしゃらに\n修行をしてるつもりなんだが……"
+KEY_WAIT
+MESSAGE "こうしていて、自分は父さんに\n追いつくことができるのだろうか\n……と、ちょっと不安になってな。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1659
+MESSAGE "あは、大丈夫よ！\nリーゼは才能もあるんだし。"
+KEY_WAIT
+VOICE 1660
+MESSAGE "きっとお父様に負けないくらい\n強くなれるわ、うん！"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そうかな……そうなれたら、\nうれしいんだが……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1661
+MESSAGE "急いては事を仕損じる、って\nいうじゃない？　焦らずに……\n続ける事が大事なんだよ、きっと。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "[娘の名前]……"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1662
+MESSAGE "少しは気が楽になった？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "あ、ああ……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE "その……助かった。\nありがと、な……"
+KEY_WAIT
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1663
+MESSAGE "ふふ……どういたしまして。"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 48
+FLAG 1047, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "[娘の名前]。\n最近、ダークタウンとか\n行ってるか？"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1664
+MESSAGE "ど、どうしたの、リーゼ？\nやぶからぼうに。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "忠告だ。"
+KEY_WAIT
+MESSAGE "あのあたりは、ガラの悪い人間も\n多いが……人間のフリをした\n魔族もうろついてるって噂だ。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "だから……\nあまり行くな。いいな。"
+KEY_WAIT
+CHAR 2, 9
+FACE 8
+MESSAGE_NAME "[娘の名前]"
+VOICE 1665
+MESSAGE "そ、そうなんだ……"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "お前が魔族のせいで危ない目に\nあうのは、その……\n嫌だからな。"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1666
+MESSAGE "う、うん。\n気を……つけるね。\nありがとう。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "い、いや……"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 49
+FLAG 1048, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ん、[娘の名前]か。\nいい天気だな。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1667
+MESSAGE "そうだね、リーゼ。\n今日はお出かけ？"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、ちょっと川に\n釣りにでも行こうかと\n思ってな。"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1668
+MESSAGE "釣り？\n剣の修行じゃないんだ？"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "はは、ワタシだって四六時中\n剣を振り回してるわけじゃないさ。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "それに、のんびりと釣り糸を\nたらしてアタリを待つのも、\nいい精神修行になるんだぞ。"
+KEY_WAIT
+MESSAGE "釣れなくても、\n色々と考え事をしたり……な。"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1669
+MESSAGE "へぇ～……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "よかったら、一緒に行くか？\nクリスチーナやマリーも\n誘ったんだがつき合いが悪くてな。"
+KEY_WAIT
+CHAR 2, 8
+FACE 7
+MESSAGE_NAME "[娘の名前]"
+VOICE 1670
+MESSAGE "あー、まあ、普通はね……\nあははは。"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1671
+MESSAGE "（まあでも、たまには\nそうやってのんびり過ごすのも\nいいかな……）"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 50
+FLAG 1049, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 2, 2
+FACE 1
+MESSAGE_NAME "[娘の名前]"
+VOICE 1672
+MESSAGE "いつも思うんだけど……\nリーゼって、すらっと\n背が伸びててカッコイイわよね。"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE_NAME "リーゼ"
+MESSAGE "な、なんだ、唐突に㌍"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1673
+MESSAGE "私もそのくらい\n背が高かったらなぁ……"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "そ、そうか？\nワタシはあまり背が高いのも\n考え物だと思うのだが……"
+KEY_WAIT
+CHAR 2, 5
+FACE 4
+MESSAGE_NAME "[娘の名前]"
+VOICE 1674
+MESSAGE "あら、どうして？"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "その……ワタシのように背の\n高い女では……あまり、かわいい\n感じになれないじゃないか……"
+KEY_WAIT
+CHAR 2, 7
+FACE 6
+MESSAGE_NAME "[娘の名前]"
+VOICE 1675
+MESSAGE "ふふふっ、リーゼったら！"
+KEY_WAIT
+CHAR 1, 14
+FACE 13
+MESSAGE "あ、こら㌍　わ、笑うな！\n笑うんじゃないっ！！"
+KEY_WAIT
+CHAR 2, 2
+FACE 1
+VOICE 1676
+MESSAGE "（そんな風に悩んだりしてるところ\nかわいいと思うんだけどなぁ……）"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
+LABEL 51
+FLAG 1050, 1
+BGM_PLAY 32
+BG 158
+CHAR 2, 1
+CHAR 1, 12
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1677
+MESSAGE "ねえ、リーゼは……"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "うん？"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1678
+MESSAGE "リーゼは、志願して魔族と……\n戦いに行ってしまうのよね。"
+KEY_WAIT
+FACE 11
+MESSAGE_NAME "リーゼ"
+MESSAGE "ああ、そうするつもりだ。\n奴らとの戦いで人間の被害は\n増える一方だからな。"
+KEY_WAIT
+MESSAGE "戦える人間は何人いても\n多すぎることはないだろう。"
+KEY_WAIT
+MESSAGE "それに……\nワタシのような人間を\nこれ以上出さないためにも……"
+KEY_WAIT
+MESSAGE "奴らを一刻も早く\n滅ぼさなければならない。"
+KEY_WAIT
+CHAR 2, 4
+FACE 3
+MESSAGE_NAME "[娘の名前]"
+VOICE 1679
+MESSAGE "リーゼ……"
+KEY_WAIT
+CHAR 1, 13
+FACE 12
+MESSAGE_NAME "リーゼ"
+MESSAGE "そんな顔をするな。\nたとえ離ればなれになっても、\nワタシたちはずっと友人だ。"
+KEY_WAIT
+CHAR 1, 12
+FACE 11
+MESSAGE "それを、忘れないで\nいてくれればいい……"
+KEY_WAIT
+CHAR 2, 1
+FACE 0
+MESSAGE_NAME "[娘の名前]"
+VOICE 1680
+MESSAGE "う、うん……"
+KEY_WAIT
+SE_STOP
+BGM_STOP 30
+END 0
