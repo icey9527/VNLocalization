@@ -1,0 +1,45 @@
+{
+  "byte_order": "little",
+
+  "symbols": {
+    "28": "(",
+    "29": ")",
+    "5B": "[",
+    "5D": "]"
+  },
+
+  "padding": {
+    "ff_min_run": 16,
+    "pad_words": ["FFFF", "FFF3"],
+    "pad_word_min_run": 4
+  },
+
+  "sjis": {
+    "enabled": true,
+    "min_len": 6
+  },
+
+  "ops": [
+    { "op": "00", "name": "Nul", "args": [] },
+
+    { "op": "0A", "name": "DebugLine", "args": [ { "type": "u16", "name": "line" } ] },
+
+    { "op": "21", "name": "KidokuBang", "args": [ { "type": "u16", "name": "kidoku" } ] },
+    { "op": "2C", "name": "DebugComma", "args": [] },
+    { "op": "40", "name": "KidokuAt", "args": [ { "type": "u16", "name": "kidoku" } ] },
+
+    { "op": "6E", "name": "Op6E", "args": [ { "type": "u24", "name": "imm24" } ] },
+
+    {
+      "op": "23",
+      "name": "HashCall",
+      "args": [
+        { "type": "u8",  "name": "group" },
+        { "type": "u8",  "name": "sub" },
+        { "type": "u16", "name": "op16" },
+        { "type": "u16", "name": "argc" },
+        { "type": "u8",  "name": "overload" }
+      ]
+    }
+  ]
+}
