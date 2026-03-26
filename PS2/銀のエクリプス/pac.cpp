@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <thread>
+#include <atomic>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -17,6 +19,20 @@
 #define PATH_SEP '/'
 #define mkdir_p(path) mkdir(path, 0755)
 #endif
+
+static inline uint32_t read_u32_le(const uint8_t* p) {
+    return (uint32_t)p[0] |
+           ((uint32_t)p[1] << 8) |
+           ((uint32_t)p[2] << 16) |
+           ((uint32_t)p[3] << 24);
+}
+
+static inline void write_u32_le(uint8_t* p, uint32_t v) {
+    p[0] = (uint8_t)(v & 0xFF);
+    p[1] = (uint8_t)((v >> 8) & 0xFF);
+    p[2] = (uint8_t)((v >> 16) & 0xFF);
+    p[3] = (uint8_t)((v >> 24) & 0xFF);
+}
 
 std::vector<uint8_t> decompress_lzss(const uint8_t* src, size_t comp_size, size_t decomp_size) {
     std::vector<uint8_t> output(decomp_size);
@@ -66,54 +82,89 @@ std::vector<uint8_t> decompress_lzss(const uint8_t* src, size_t comp_size, size_
 
 std::vector<uint8_t> compress_lzss(const uint8_t* src, size_t src_size) {
     std::vector<uint8_t> output;
-    
-    size_t src_pos = 0;
-    size_t dic_off = 0xFEE;
-    
-    while (src_pos < src_size) {
+    if (src_size == 0) {
+        return output;
+    }
+
+    static const int RING_SIZE = 0x1000;
+    static const int RING_MASK = 0x0FFF;
+    static const int RING_INIT = 0x0FEE;
+    static const int MAX_BACK = 0x0FEE;
+    static const int MIN_MATCH = 3;
+    static const int MAX_MATCH = 18;
+    static const int CANDIDATE_LIMIT = 128;
+
+    const int n = (int)src_size;
+    std::vector<int> head(1 << 16, -1);
+    std::vector<int> chain(RING_SIZE, -1);
+
+    output.reserve(src_size + (src_size / 8) + 16);
+
+    int sp = 0;
+
+    while (sp < n) {
         size_t flag_pos = output.size();
         output.push_back(0);
         uint8_t flag = 0;
         uint8_t mask = 1;
-        
-        for (int bit = 0; bit < 8 && src_pos < src_size; bit++) {
-            int best_len = 0;
-            int best_loc = 0;
-            
-            size_t max_back = (src_pos < 0x1000) ? src_pos : 0x1000;
-            
-            for (size_t back = 1; back <= max_back; back++) {
-                int len = 0;
-                while (len < 18 && src_pos + len < src_size &&
-                       src[src_pos - back + len] == src[src_pos + len]) {
-                    len++;
-                }
-                
-                if (len >= 3 && len > best_len) {
-                    best_len = len;
-                    best_loc = (dic_off - back) & 0xFFF;
+
+        for (int bit = 0; bit < 8 && sp < n; bit++) {
+            int best = 0;
+            int off = 0;
+
+            if (sp + 1 < n) {
+                int h = ((int)src[sp] << 8) | src[sp + 1];
+                int c = CANDIDATE_LIMIT;
+
+                for (int p = head[h];
+                     p >= 0 && sp - p <= MAX_BACK && c-- > 0;
+                     p = chain[p & RING_MASK]) {
+                    int len = 0;
+                    while (len < MAX_MATCH &&
+                           sp + len < n &&
+                           src[p + len] == src[sp + len]) {
+                        ++len;
+                    }
+                    if (len > best) {
+                        best = len;
+                        off = (RING_INIT + p) & RING_MASK;
+                        if (len == MAX_MATCH) {
+                            break;
+                        }
+                    }
                 }
             }
-            
-            if (best_len >= 3) {
-                uint8_t b1 = best_loc & 0xFF;
-                uint8_t b2 = ((best_loc >> 4) & 0xF0) | ((best_len - 3) & 0x0F);
-                output.push_back(b1);
-                output.push_back(b2);
-                dic_off = (dic_off + best_len) & 0xFFF;
-                src_pos += best_len;
+
+            if (best >= MIN_MATCH) {
+                output.push_back((uint8_t)off);
+                output.push_back((uint8_t)(((off >> 4) & 0xF0) | (best - 3)));
+
+                int limit = std::min(best, n - sp - 1);
+                for (int i = 0; i < limit; ++i) {
+                    int hh = ((int)src[sp + i] << 8) | src[sp + i + 1];
+                    int idx = (sp + i) & RING_MASK;
+                    chain[idx] = head[hh];
+                    head[hh] = sp + i;
+                }
+                sp += best;
             } else {
                 flag |= mask;
-                output.push_back(src[src_pos++]);
-                dic_off = (dic_off + 1) & 0xFFF;
+                if (sp + 1 < n) {
+                    int h = ((int)src[sp] << 8) | src[sp + 1];
+                    int idx = sp & RING_MASK;
+                    chain[idx] = head[h];
+                    head[h] = sp;
+                }
+                output.push_back(src[sp]);
+                ++sp;
             }
-            
+
             mask <<= 1;
         }
-        
+
         output[flag_pos] = flag;
     }
-    
+
     return output;
 }
 
@@ -123,7 +174,7 @@ std::vector<uint8_t> make_lzs(const uint8_t* src, size_t src_size) {
     std::vector<uint8_t> result(8 + compressed.size());
     memcpy(result.data(), "LZS", 3);
     result[3] = 0;
-    *(uint32_t*)(result.data() + 4) = (uint32_t)src_size;
+    write_u32_le(result.data() + 4, (uint32_t)src_size);
     memcpy(result.data() + 8, compressed.data(), compressed.size());
     
     return result;
@@ -194,16 +245,20 @@ int extract_pac(const char* input_path, const char* output_dir) {
         return 1;
     }
     
-    uint32_t name_tbl_off = *(uint32_t*)(data.data() + 4);
-    uint32_t num_files = *(uint32_t*)(data.data() + 8);
+    uint32_t name_tbl_off = read_u32_le(data.data() + 4);
+    uint32_t num_files = read_u32_le(data.data() + 8);
     uint32_t file_tbl = 12;
     
     printf("Files: %u\n", num_files);
     make_dir(output_dir);
     
     for (uint32_t i = 0; i < num_files; i++) {
-        uint32_t offset = *(uint32_t*)(data.data() + file_tbl + i * 8);
-        uint32_t size = *(uint32_t*)(data.data() + file_tbl + i * 8 + 4);
+        uint32_t offset = read_u32_le(data.data() + file_tbl + i * 8);
+        uint32_t size = read_u32_le(data.data() + file_tbl + i * 8 + 4);
+        if ((size_t)offset + (size_t)size > data.size()) {
+            printf("[%04u] invalid range: off=0x%08X size=%u\n", i, offset, size);
+            continue;
+        }
         
         char filename[0x41] = {0};
         memcpy(filename, data.data() + name_tbl_off + i * 0x40, 0x40);
@@ -212,7 +267,7 @@ int extract_pac(const char* input_path, const char* output_dir) {
         
         bool was_lzs = false;
         if (size >= 8 && memcmp(file_data.data(), "LZS", 3) == 0) {
-            uint32_t decomp_size = *(uint32_t*)(file_data.data() + 4);
+            uint32_t decomp_size = read_u32_le(file_data.data() + 4);
             file_data = decompress_lzss(file_data.data() + 8, size - 8, decomp_size);
             was_lzs = true;
         }
@@ -232,6 +287,12 @@ int extract_pac(const char* input_path, const char* output_dir) {
 }
 
 int create_pac(const char* input_dir, const char* output_path) {
+    struct PackedFile {
+        bool ready = false;
+        size_t orig_size = 0;
+        std::vector<uint8_t> store_data;
+    };
+
     std::vector<std::string> files = list_files(input_dir);
     
     if (files.empty()) {
@@ -249,41 +310,79 @@ int create_pac(const char* input_dir, const char* output_path) {
     uint32_t data_start = name_tbl_off + name_tbl_size;
     data_start = (data_start + 0x7FF) & ~0x7FF;
     
+    std::vector<PackedFile> packed(num_files);
+    std::atomic<uint32_t> next_index(0);
+
+    unsigned int thread_count = std::thread::hardware_concurrency();
+    if (thread_count == 0) {
+        thread_count = 4;
+    }
+    thread_count = std::min<unsigned int>(thread_count, num_files);
+
+    std::vector<std::thread> workers;
+    workers.reserve(thread_count);
+    for (unsigned int t = 0; t < thread_count; t++) {
+        workers.emplace_back([&]() {
+            while (true) {
+                uint32_t i = next_index.fetch_add(1);
+                if (i >= num_files) {
+                    break;
+                }
+
+                std::string file_path = std::string(input_dir) + PATH_SEP + files[i];
+                FILE* in_fp = fopen(file_path.c_str(), "rb");
+                if (!in_fp) {
+                    continue;
+                }
+
+                fseek(in_fp, 0, SEEK_END);
+                size_t orig_size = ftell(in_fp);
+                fseek(in_fp, 0, SEEK_SET);
+
+                std::vector<uint8_t> file_data(orig_size);
+                fread(file_data.data(), 1, orig_size, in_fp);
+                fclose(in_fp);
+
+                packed[i].orig_size = orig_size;
+                packed[i].store_data = make_lzs(file_data.data(), file_data.size());
+                packed[i].ready = true;
+            }
+        });
+    }
+    for (size_t t = 0; t < workers.size(); t++) {
+        workers[t].join();
+    }
+
     std::vector<uint8_t> output;
     output.resize(data_start, 0);
     
     memcpy(output.data(), "PAC", 3);
     output[3] = 0;
-    *(uint32_t*)(output.data() + 4) = name_tbl_off;
-    *(uint32_t*)(output.data() + 8) = num_files;
+    write_u32_le(output.data() + 4, name_tbl_off);
+    write_u32_le(output.data() + 8, num_files);
     
     uint32_t current_offset = data_start;
     
     for (uint32_t i = 0; i < num_files; i++) {
-        std::string file_path = std::string(input_dir) + PATH_SEP + files[i];
-        
-        FILE* in_fp = fopen(file_path.c_str(), "rb");
-        if (!in_fp) continue;
-        
-        fseek(in_fp, 0, SEEK_END);
-        size_t orig_size = ftell(in_fp);
-        fseek(in_fp, 0, SEEK_SET);
-        
-        std::vector<uint8_t> file_data(orig_size);
-        fread(file_data.data(), 1, orig_size, in_fp);
-        fclose(in_fp);
-        
-        std::vector<uint8_t> store_data = make_lzs(file_data.data(), file_data.size());
+        if (!packed[i].ready) {
+            printf("[%04u] failed to pack: %s\n", i, files[i].c_str());
+            continue;
+        }
+
+        size_t orig_size = packed[i].orig_size;
+        std::vector<uint8_t>& store_data = packed[i].store_data;
         size_t store_size = store_data.size();
-        
-        *(uint32_t*)(output.data() + header_size + i * 8) = current_offset;
-        *(uint32_t*)(output.data() + header_size + i * 8 + 4) = (uint32_t)store_size;
+
+        write_u32_le(output.data() + header_size + i * 8, current_offset);
+        write_u32_le(output.data() + header_size + i * 8 + 4, (uint32_t)store_size);
         
         strncpy((char*)(output.data() + name_tbl_off + i * 0x40), files[i].c_str(), 0x3F);
         
         size_t old_size = output.size();
         output.resize(old_size + store_size);
-        memcpy(output.data() + old_size, store_data.data(), store_size);
+        if (store_size > 0) {
+            memcpy(output.data() + old_size, store_data.data(), store_size);
+        }
         
         uint32_t padding = ((store_size + 0x7FF) & ~0x7FF) - store_size;
         if (padding > 0) {
