@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import re
 import sys
+import json
 from pathlib import Path
 import char
 char.MAP_PATH = Path('font/font.tbl')
@@ -13,6 +14,40 @@ g_name_table: list[str] = []
 TAG_RE = re.compile(r"<([^<>]+)>")
 TRAILING_LABEL_RE = re.compile(r"\([^()]*\)$")
 
+def parse_translation_json(json_path: Path) -> dict[int, str]:
+    data = json.loads(json_path.read_text(encoding="utf-8"))
+
+    if not isinstance(data, list):
+        raise ValueError(f"JSON格式错误，不是数组: {json_path}")
+
+    translations: dict[int, str] = {}
+
+    for idx, item in enumerate(data):
+        if not isinstance(item, dict):
+            continue
+
+        key = item.get("key")
+        translated = item.get("translation", "")
+
+        if not isinstance(key, str):
+            continue
+        if not isinstance(translated, str):
+            translated = str(translated)
+
+        if not re.fullmatch(r"[0-9A-Fa-f]{8}", key):
+            continue
+
+        addr = int(key, 16)
+        translations[addr] = translated
+
+    return translations
+
+def parse_translation_any(path: Path) -> dict[int, str]:
+    if path.suffix.lower() == ".json":
+        return parse_translation_json(path)
+    return parse_translation_file(path)
+    
+        
 
 @dataclass
 class ScriptBlock:
@@ -609,20 +644,64 @@ def process_extract(input_dir: Path, output_dir: Path, keep_control_only: bool =
     print(f"\n提取完成! 处理了 {total_files} 个文件，共提取 {total_blocks} 个块")
 
 
-def find_matching_bin(bin_dir: Path, txt_path: Path, txt_dir: Path) -> Path | None:
-    relative_path = txt_path.relative_to(txt_dir)
-    normalized_name = normalize_txt_stem(relative_path.stem)
+def find_translation_and_bin(bin_dir: Path, trans_dir: Path) -> list[tuple[Path, Path]]:
+    pairs: list[tuple[Path, Path]] = []
 
-    for ext in ("", ".bin", ".dat", ".BIN", ".DAT"):
-        candidate = bin_dir / relative_path.parent / (normalized_name + ext)
-        if candidate.exists():
-            return candidate
+    trans_files = sorted(
+        [p for p in trans_dir.rglob("*") if p.is_file() and p.suffix.lower() in {".json", ".txt"}]
+    )
 
+    if not trans_files:
+        return pairs
+
+    # 按“标准化文件名”全局分组，不区分子目录
+    grouped: dict[str, dict[str, list[Path]]] = {}
+    for p in trans_files:
+        key = normalize_txt_stem(p.stem)
+        grouped.setdefault(key, {}).setdefault(p.suffix.lower(), []).append(p)
+
+    # 建立 bin 索引：优先用 stem 匹配
+    bin_map: dict[str, list[Path]] = {}
     for bin_file in bin_dir.rglob("*"):
-        if bin_file.is_file() and bin_file.stem == normalized_name:
-            return bin_file
+        if not bin_file.is_file():
+            continue
+        bin_map.setdefault(bin_file.stem, []).append(bin_file)
 
-    return None
+    used_bin_paths: set[Path] = set()
+
+    for key in sorted(grouped.keys()):
+        files = grouped[key]
+
+        # json 优先，txt 次之
+        trans_path = None
+        if files.get(".json"):
+            trans_path = sorted(files[".json"])[0]
+        elif files.get(".txt"):
+            trans_path = sorted(files[".txt"])[0]
+
+        if trans_path is None:
+            continue
+
+        candidates = bin_map.get(key, [])
+        if not candidates:
+            print(f"[!!] 找不到对应的bin文件: {trans_path}")
+            continue
+
+        # 如果有多个同名bin，优先选还没被占用的
+        bin_path = None
+        for c in sorted(candidates):
+            if c not in used_bin_paths:
+                bin_path = c
+                break
+
+        if bin_path is None:
+            # 都被占用了，就取第一个
+            bin_path = sorted(candidates)[0]
+
+        used_bin_paths.add(bin_path)
+        pairs.append((trans_path, bin_path))
+
+    return pairs
 
 
 def process_write_back(bin_dir: Path, txt_dir: Path, output_dir: Path) -> None:
@@ -630,17 +709,27 @@ def process_write_back(bin_dir: Path, txt_dir: Path, output_dir: Path) -> None:
     total_files = 0
     total_blocks = 0
 
-    for txt_path in txt_dir.rglob("*.txt"):
-        bin_path = find_matching_bin(bin_dir, txt_path, txt_dir)
-        if bin_path is None:
-            print(f"[!!] 找不到对应的bin文件: {txt_path.name}")
+    pairs = find_translation_and_bin(bin_dir, txt_dir)
+
+    if not pairs:
+        print("[--] 文本文件夹中没有可用的 txt/json 翻译文件")
+        print("\n写回完成! 处理了 0 个文件，共写回 0 条")
+        return
+
+    for trans_path, bin_path in pairs:
+        original_data = bin_path.read_bytes()
+
+        try:
+            translations = parse_translation_any(trans_path)
+        except ValueError as e:
+            print(f"[!!] 解析失败: {trans_path.name}: {e}")
+            continue
+        except json.JSONDecodeError as e:
+            print(f"[!!] JSON解析失败: {trans_path.name}: {e}")
             continue
 
-        original_data = bin_path.read_bytes()
-        translations = parse_translation_file(txt_path)
-
         if not translations:
-            print(f"[--] {txt_path.name} -> 无翻译内容")
+            print(f"[--] {trans_path.name} -> 无翻译内容")
             continue
 
         valid_count = sum(1 for t in translations.values() if t)
@@ -651,7 +740,7 @@ def process_write_back(bin_dir: Path, txt_dir: Path, output_dir: Path) -> None:
         output_path.write_bytes(new_data)
 
         added_bytes = len(new_data) - len(original_data)
-        print(f"[OK] {bin_path.name} <- {valid_count} 条 (+{added_bytes} bytes)")
+        print(f"[OK] {bin_path.name} <- {valid_count} 条 ({trans_path.suffix.lower()}，+{added_bytes} bytes)")
         total_files += 1
         total_blocks += valid_count
 
