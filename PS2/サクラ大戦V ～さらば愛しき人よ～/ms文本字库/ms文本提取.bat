@@ -1,1 +1,1 @@
-python ms.py e ms txt
+python ms.py e -l ms txt

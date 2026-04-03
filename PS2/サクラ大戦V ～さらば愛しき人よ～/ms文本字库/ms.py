@@ -1,5 +1,5 @@
 ﻿#!/usr/bin/env python3
-import sys, struct
+import sys, struct, re
 from pathlib import Path
 import char
 
@@ -21,11 +21,14 @@ def parse(p: Path):
     txts = [py[so+u32(py, so+i*4):py.find(0, so+u32(py, so+i*4))].decode("cp932", "ignore") for i in range(sc)]
     return b, hs, py, so, sc, txts
 
-def extract(src_d: Path, dst_d: Path):
+def extract(src_d: Path, dst_d: Path, rm_tags: bool):
     for f in src_d.rglob("*"):
         if f.suffix.lower() not in (".msx", ".msb"): continue
         try:
             txts = parse(f)[5]
+            if rm_tags:
+                txts = [re.sub(r"<SPD=[^>]+>", "", t) for t in txts]
+            txts = [t.replace("//", "\\n") for t in txts]
             out = dst_d / f.relative_to(src_d).with_name(f.name + ".txt")
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text("\n".join(txts), "utf-8")
@@ -38,8 +41,7 @@ def write(txt_d: Path, base_d: Path, out_d: Path):
         base = base_d / rel.with_suffix('')
         if not base.exists(): continue
         try:
-            raw = f.read_text("utf-8")
-            lines = [conv(x.replace(" ", "　")) for x in raw.splitlines()]
+            lines = [conv(x.replace("\\n", "//")) for x in f.read_text("utf-8").splitlines()]
             
             b, hs, py, so, sc, _ = parse(base)
             if len(lines) != sc: raise ValueError("Count mismatch")
@@ -66,5 +68,11 @@ def write(txt_d: Path, base_d: Path, out_d: Path):
 if __name__ == "__main__":
     a = sys.argv[1:]
     if not a: sys.exit(0)
-    if a[0] == "e": extract(Path(a[1]), Path(a[2]))
-    elif a[0] == "w": conv = char.make_translation_converter(); write(Path(a[1]), Path(a[2]), Path(a[3]))
+    
+    if a[0] == "e":
+        rm = "-l" in a
+        a = [x for x in a if x != "-l"]
+        extract(Path(a[1]), Path(a[2]), rm)
+    elif a[0] == "w":
+        conv = char.make_translation_converter()
+        write(Path(a[1]), Path(a[2]), Path(a[3]))
