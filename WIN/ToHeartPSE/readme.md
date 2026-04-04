@@ -65,4 +65,4 @@ python refont.py
 
 `refont.py` reads `gbk.tbl`, uses the font file configured inside the script, and generates `FONTEX24.FD0`.
 
-If `psth.exe` is in the same folder, the script will also patch the character range table inside the executable.
+`psth.exe` must be in the same folder, because the script modifies the character range table inside the executable.
