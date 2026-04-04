@@ -20,7 +20,7 @@
 | WIN | プリズムパレット | `arc` unpack/pack, `.yx` text export/insert |
 | WIN | 家族計画 Re：紡ぐ糸 | `.adb` text extract/insert |
 | WIN | 快盗天使ツインエンジェル　～幻の少女～ | `.kgo` text extract/insert |
-| WIN | 空の森 ~追憶ノ棲ム館~ / 夏音-Overture- | `.axr` / `.ax2-.ax9` unpack/pack, `.scn` text extract/insert |
+| WIN | 空の森 ～追憶ノ棲ム館～ / 夏音-Overture- | `.axr` / `.ax2-.ax9` unpack/pack, `.scn` text extract/insert |
 
 
 
