@@ -24,7 +24,7 @@
 
 
 
-| 工具 | 说明 | 支持的功能 |
+| 通用工具 | 说明 | 支持的功能 |
 | --- | --- | --- |
 | `VNTextract` | WinForms 文本提取工具 | scan readable plain text and extract Japanese lines, supports `alltxt` / `dltxt` / `Paratranz JSON` export/import |
 | `krkr_dfm` | Windows PE `RT_RCDATA` binary DFM resource tool, mainly for krkr engine executables | extract/edit/insert Delphi or C++Builder DFM layout resources |
