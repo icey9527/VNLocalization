@@ -7,8 +7,8 @@
 
 | 平台 | 游戏名 | 支持的功能 |
 | --- | --- | --- |
-| NDS | Aquarian Age Perpetual Period | script parse/rebuild, font table generation, SNCG -> PNG conversion |
-| NDS | Princess Maker 4 | `.bin` <-> `.asm`, script text extract/insert, font generation |
+| NDS | Aquarian Age Perpetual Period | script parse/rebuild, font table generation, `SNCG` -> PNG conversion |
+| NDS | Princess Maker 4 | `.bin` script parse/rebuild, font generation |
 | PS2 | My Merry May With Be | `.bin` script parse/rebuild, `.klz` decompress/compress |
 | PS2 | サクラ大戦V ～さらば愛しき人よ～ | `.msx` decompress/compress, `.msb` text editing |
 | PS2 | 双恋 | script parse/rebuild, font generation |
@@ -17,7 +17,7 @@
 | WIN | Galaxy Angel Eternal Lovers | `.isb` script parse/rebuild, `.pak` movie decrypt |
 | WIN | Galaxy Angel EX | text export/insert, font generation |
 | WIN | ToHeartPSE | `.pak` unpack/pack, `.dat` script parse/rebuild, font generation |
-| WIN | プリズムパレット | `arc` unpack/pack, `.yx` text export/insert |
+| WIN | プリズムパレット | `arc` unpack/pack, `.yx` script parse/rebuild |
 | WIN | 家族計画 Re：紡ぐ糸 | `.adb` text extract/insert |
 | WIN | 快盗天使ツインエンジェル　～幻の少女～ | `.kgo` text extract/insert |
 | WIN | 空の森 ～追憶ノ棲ム館～ / 夏音-Overture- | `.axr` / `.ax2-.ax9` unpack/pack, `.scn` text extract/insert |
