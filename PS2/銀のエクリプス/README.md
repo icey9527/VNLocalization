@@ -13,7 +13,7 @@ Unpacking code from [PS2-Visual-Novel-Tool](https://github.com/punk7890/PS2-Visu
   
   Pack:   pac P <input_folder> <output.pac>
 
-  Later, I found that both PS2-Visual-Novel-Tool and GARbro differed from the game's actual decompression method, so I ended up reverse-engineering it again from scratch. The decompression fill value should be 0x20.
+  Later, I found that some extracted images had noise. After reverse-engineering it again, I found that both PS2-Visual-Novel-Tool and GARbro use the standard LZSS algorithm, but the algorithm actually used by the game is slightly different: the initial fill value should be 0x20, and the maximum back-reference distance is limited to 0xFEE.
 
 
 TAK SCRIPT
