@@ -36,7 +36,7 @@ static inline void write_u32_le(uint8_t* p, uint32_t v) {
 
 std::vector<uint8_t> decompress_lzss(const uint8_t* src, size_t comp_size, size_t decomp_size) {
     std::vector<uint8_t> output(decomp_size);
-    std::vector<uint8_t> dict(0x1000, 0);
+    std::vector<uint8_t> dict(0x1000, 0x20);
     
     size_t src_pos = 0;
     size_t dst_pos = 0;

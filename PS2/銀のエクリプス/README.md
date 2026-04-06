@@ -13,6 +13,8 @@ Unpacking code from [PS2-Visual-Novel-Tool](https://github.com/punk7890/PS2-Visu
   
   Pack:   pac P <input_folder> <output.pac>
 
+  Later, I found that both PS2-Visual-Novel-Tool and GARbro differed from the game's actual decompression method, so I ended up reverse-engineering it again from scratch. The decompression fill value should be 0x20.
+
 
 TAK SCRIPT
 
