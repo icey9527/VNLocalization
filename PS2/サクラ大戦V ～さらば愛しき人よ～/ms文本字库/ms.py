@@ -41,8 +41,12 @@ def write(txt_d: Path, base_d: Path, out_d: Path):
         base = base_d / rel.with_suffix('')
         if not base.exists(): continue
         try:
-            lines = [conv(x.replace("\\n", "//")) for x in f.read_text("utf-8").splitlines()]
-            
+            raw_lines = f.read_text("utf-8").splitlines()
+            for i, s in enumerate(raw_lines, 1):
+                if ' ' in s:
+                    print(f"E: {f.name} - 第{i}行有半角空格: {s}")
+            lines = [conv(x.replace("\\n", "//")) for x in raw_lines]
+                     
             b, hs, py, so, sc, _ = parse(base)
             if len(lines) != sc: raise ValueError("Count mismatch")
             
