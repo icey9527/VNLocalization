@@ -107,7 +107,17 @@ internal static class BitmapTools
         for (int y = 0; y < height; y++)
         {
             int srcRow = (height - 1 - y) * stride;
-            Buffer.BlockCopy(topDown, srcRow, pixels, y * stride, stride);
+            int dstRow = y * stride;
+            for (int x = 0; x < width; x++)
+            {
+                int src = srcRow + x * 4;
+                int dst = dstRow + x * 4;
+                // Standard LFB uses 32bpp BMP headers, but stores pixels as A,B,G,R.
+                pixels[dst + 0] = topDown[src + 3];
+                pixels[dst + 1] = topDown[src + 0];
+                pixels[dst + 2] = topDown[src + 1];
+                pixels[dst + 3] = topDown[src + 2];
+            }
         }
 
         using var ms = new MemoryStream();

@@ -10,13 +10,13 @@
 | NDS | Aquarian Age Perpetual Period | script parse/rebuild, font table generation, `SNCG` -> PNG conversion |
 | NDS | Princess Maker 4 | `.bin` script parse/rebuild, font generation |
 | PS2 | My Merry May With Be | `.bin` script parse/rebuild, `.klz` decompress/compress |
-| PS2 | サクラ大戦V ～さらば愛しき人よ～ | `.msx` decompress/compress, `.msb` text editing |
+| PS2 | サクラ大戦V ～さらば愛しき人よ～ | `.msx` decompress/compress, `.msb` text extract/insert |
 | PS2 | 双恋 | script parse/rebuild, font generation |
 | PS2 | 銀のエクリプス / きると 貴方と紡ぐ夢と恋のドレス | `.pac` unpack/pack, `.lzs` decompress/compress, `.bin` script parse/rebuild |
 | PSP | EDEN / 僕の心は雨のち晴れ | `.ipb` script parse/rebuild, `.ipg` -> `.png` conversion, font generation |
 | WIN | Galaxy Angel Eternal Lovers | `.isb` script parse/rebuild, `.pak` movie decrypt |
 | WIN | Galaxy Angel EX | text export/insert, font generation |
-| WIN | ToHeartPSE | `.pak` unpack/pack, `.dat` script parse/rebuild, font generation |
+| WIN | To Heart PSE | `.pak` unpack/pack, `.lcf`/`.lff`/`.lfb`  -> `.png` conversion,`.dat` script parse/rebuild, font generation |
 | WIN | プリズムパレット | `arc` unpack/pack, `.yx` script parse/rebuild |
 | WIN | 家族計画 Re：紡ぐ糸 | `.adb` text extract/insert |
 | WIN | 快盗天使ツインエンジェル　～幻の少女～ / （工画堂スタジオ的引擎）| `.kgo` text extract/insert |

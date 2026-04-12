@@ -173,7 +173,7 @@ internal static class LeafFormats
         int outputSize = ReadInt32LE(data, 0);
         byte[] bmp = LeafCodec.Decompress(data.AsSpan(4).ToArray(), outputSize);
         if (!IsCustomIndexedAlphaBmp(bmp))
-            return new Bitmap(new MemoryStream(bmp, writable: false));
+            return DecodeStandardLeafBmp32(bmp);
 
         int width = ReadInt32LE(bmp, 18);
         int heightRaw = ReadInt32LE(bmp, 22);
@@ -233,6 +233,51 @@ internal static class LeafFormats
         && ReadUInt16LE(bmp, 26) == 1
         && ReadUInt16LE(bmp, 28) == 16
         && ReadInt32LE(bmp, 30) == 0;
+
+    static Bitmap DecodeStandardLeafBmp32(byte[] bmp)
+    {
+        if (bmp.Length < 54 || bmp[0] != (byte)'B' || bmp[1] != (byte)'M')
+            throw new InvalidDataException("LFB standard BMP data is invalid");
+
+        int width = ReadInt32LE(bmp, 18);
+        int heightRaw = ReadInt32LE(bmp, 22);
+        int height = Math.Abs(heightRaw);
+        bool bottomUp = heightRaw > 0;
+        int bpp = ReadUInt16LE(bmp, 28);
+        int pixelOffset = ReadInt32LE(bmp, 10);
+        if (bpp != 32)
+            return new Bitmap(new MemoryStream(bmp, writable: false));
+
+        var outBmp = BitmapTools.CreateArgb(width, height, out BitmapData bmpData, out int stride);
+        try
+        {
+            byte[] row = new byte[width * 4];
+            for (int y = 0; y < height; y++)
+            {
+                int srcY = bottomUp ? (height - 1 - y) : y;
+                int srcRow = pixelOffset + srcY * width * 4;
+                for (int x = 0; x < width; x++)
+                {
+                    int src = srcRow + x * 4;
+                    int dst = x * 4;
+                    byte a = bmp[src + 0];
+                    byte b = bmp[src + 1];
+                    byte g = bmp[src + 2];
+                    byte r = bmp[src + 3];
+                    row[dst + 0] = b;
+                    row[dst + 1] = g;
+                    row[dst + 2] = r;
+                    row[dst + 3] = a;
+                }
+                BitmapTools.CopyRow(bmpData, y, row, stride);
+            }
+        }
+        finally
+        {
+            outBmp.UnlockBits(bmpData);
+        }
+        return outBmp;
+    }
 
     static int MeasureLcfPixelStream(byte[] pixels, int width, int height)
     {

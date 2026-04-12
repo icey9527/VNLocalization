@@ -28,7 +28,6 @@ internal static class App
             }
 
             File.WriteAllBytes(Path.Combine(outputDir, diskName), entry.Data);
-            Console.WriteLine($"{entry.Name} -> {diskName}");
         }
 
         if (list.HasAny)
@@ -63,6 +62,7 @@ internal static class App
                         : throw new FileNotFoundException($"missing converted or raw file for {item.Name}");
 
                 AddPackedEntry(entries, rawName, data);
+                Console.WriteLine(File.Exists(pngPath) ? $"{item.Name} -> {rawName}" : rawName);
                 consumed.Add(pngPath);
                 if (File.Exists(rawPath))
                     consumed.Add(rawPath);
@@ -79,6 +79,7 @@ internal static class App
                 continue;
 
             AddPackedEntry(entries, fileName, File.ReadAllBytes(filePath));
+            Console.WriteLine(fileName);
         }
 
         if (entries.Count == 0)
@@ -89,7 +90,6 @@ internal static class App
             Directory.CreateDirectory(dir);
 
         LeafPak.Write(entries, pakPath);
-        Console.WriteLine($"packed {entries.Count} file(s)");
     }
 
     static bool TryConvertSpecialImage(string archiveName, string diskName, byte[] data, out Bitmap? image, out ListEntry? listEntry)

@@ -73,6 +73,7 @@ internal static class LeafCodec
             {
                 int bestLen = 0;
                 int bestOff = 0;
+
                 if (sp + 1 < src.Length)
                 {
                     int h = (src[sp] << 8) | src[sp + 1];
