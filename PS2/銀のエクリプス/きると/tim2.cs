@@ -8,6 +8,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Processing.Processors.Quantization;
 
 internal static class Program
 {
@@ -64,7 +68,7 @@ internal static class Program
         return h;
     }
 
-    private static byte[] BuildTim2PictureHeader(int imageSize, int clutSize, int width, int height)
+    private static byte[] BuildTim2PictureHeaderIndexed8(int imageSize, int clutSize, int width, int height)
     {
         var h = new byte[0x30];
         BinaryPrimitives.WriteUInt32LittleEndian(h.AsSpan(0x00, 4), (uint)(0x30 + imageSize + clutSize));
@@ -76,6 +80,26 @@ internal static class Program
         h[0x11] = 1;
         h[0x12] = 3;
         h[0x13] = 5;
+        BinaryPrimitives.WriteUInt16LittleEndian(h.AsSpan(0x14, 2), (ushort)width);
+        BinaryPrimitives.WriteUInt16LittleEndian(h.AsSpan(0x16, 2), (ushort)height);
+        Buffer.BlockCopy(GsTex0, 0, h, 0x18, GsTex0.Length);
+        h[0x20] = (byte)((width == 256 && height == 256) ? 0x6C : 0x60);
+        h[0x21] = 0x02;
+        return h;
+    }
+
+    private static byte[] BuildTim2PictureHeaderTrueColor32(int imageSize, int width, int height)
+    {
+        var h = new byte[0x30];
+        BinaryPrimitives.WriteUInt32LittleEndian(h.AsSpan(0x00, 4), (uint)(0x30 + imageSize));
+        BinaryPrimitives.WriteUInt32LittleEndian(h.AsSpan(0x04, 4), 0);
+        BinaryPrimitives.WriteUInt32LittleEndian(h.AsSpan(0x08, 4), (uint)imageSize);
+        BinaryPrimitives.WriteUInt16LittleEndian(h.AsSpan(0x0C, 2), 0x30);
+        BinaryPrimitives.WriteUInt16LittleEndian(h.AsSpan(0x0E, 2), 0);
+        h[0x10] = 0;
+        h[0x11] = 1;
+        h[0x12] = 0;
+        h[0x13] = 3;
         BinaryPrimitives.WriteUInt16LittleEndian(h.AsSpan(0x14, 2), (ushort)width);
         BinaryPrimitives.WriteUInt16LittleEndian(h.AsSpan(0x16, 2), (ushort)height);
         Buffer.BlockCopy(GsTex0, 0, h, 0x18, GsTex0.Length);
@@ -665,13 +689,48 @@ internal static class Program
         return set.Count;
     }
 
+    private static void QuantizeTo8bppWu(string pngPath, out byte[] indices, out List<Rgba> palette, int expectedWidth, int expectedHeight)
+    {
+        using var image = SixLabors.ImageSharp.Image.Load<Rgba32>(pngPath);
+        var quantizer = new WuQuantizer(new QuantizerOptions { MaxColors = 256, Dither = null });
+        image.Mutate(x => x.Quantize(quantizer));
+
+        var width = image.Width;
+        var height = image.Height;
+        if (width != expectedWidth || height != expectedHeight)
+            throw new InvalidOperationException("Image size mismatch");
+
+        var pixels = new Rgba32[width * height];
+        image.CopyPixelDataTo(pixels);
+
+        indices = new byte[width * height];
+        palette = new List<Rgba>(256);
+        var map = new Dictionary<uint, byte>(256);
+
+        for (var i = 0; i < pixels.Length; i++)
+        {
+            var p = pixels[i];
+            if (p.A == 0) p = new Rgba32(0, 0, 0, 0);
+            var key = ((uint)p.A << 24) | ((uint)p.R << 16) | ((uint)p.G << 8) | p.B;
+            if (!map.TryGetValue(key, out var pi))
+            {
+                pi = (byte)palette.Count;
+                palette.Add(new Rgba(p.R, p.G, p.B, p.A));
+                map.Add(key, pi);
+            }
+            indices[i] = pi;
+        }
+
+        while (palette.Count < 256) palette.Add(new Rgba(0, 0, 0, 0));
+    }
+
     private static (Rgb[] rgbPixels, byte[] alphaPixels, int width, int height) ReadRgbaBitmap(string path)
     {
         using var src = new Bitmap(path);
         var width = src.Width;
         var height = src.Height;
-        using var bmp = src.Clone(new Rectangle(0, 0, width, height), PixelFormat.Format32bppArgb);
-        var rect = new Rectangle(0, 0, width, height);
+        using var bmp = src.Clone(new System.Drawing.Rectangle(0, 0, width, height), PixelFormat.Format32bppArgb);
+        var rect = new System.Drawing.Rectangle(0, 0, width, height);
         var data = bmp.LockBits(rect, ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
         try
         {
@@ -704,7 +763,7 @@ internal static class Program
         }
     }
 
-    private static (int uniqueColorCount, bool quantized) PngToTm2(string src, string dst, bool convertAlpha)
+    private static (int uniqueColorCount, bool quantized, bool trueColor32) PngToTm2(string src, string dst, bool convertAlpha, bool prefer32bppOnOverflow)
     {
         var (rgbPixels, alphaPixels, width, height) = ReadRgbaBitmap(src);
         var rgbaPixels = new Rgba[rgbPixels.Length];
@@ -716,6 +775,25 @@ internal static class Program
         }
         var uniqueColorCount = CountUniqueRgba(rgbaPixels);
 
+        if (prefer32bppOnOverflow && uniqueColorCount > 256)
+        {
+            var imageBytes = new byte[rgbaPixels.Length * 4];
+            for (var i = 0; i < rgbaPixels.Length; i++)
+            {
+                var p = rgbaPixels[i];
+                var o = i * 4;
+                imageBytes[o + 0] = p.R;
+                imageBytes[o + 1] = p.G;
+                imageBytes[o + 2] = p.B;
+                imageBytes[o + 3] = p.A;
+            }
+            using var fs32 = File.Create(dst);
+            fs32.Write(BuildTim2FileHeader());
+            fs32.Write(BuildTim2PictureHeaderTrueColor32(imageBytes.Length, width, height));
+            fs32.Write(imageBytes);
+            return (uniqueColorCount, false, true);
+        }
+
         byte[] indices;
         List<Rgba> finalPalette;
         var quantized = uniqueColorCount > 256;
@@ -726,31 +804,7 @@ internal static class Program
         }
         else
         {
-            var paletteRgb = QuantizeWuRgb(rgbaPixels, 256);
-            indices = new byte[rgbPixels.Length];
-            var indexCache = new Dictionary<uint, byte>(4096);
-            var paletteAlphaMax = new int[256];
-            Array.Fill(paletteAlphaMax, -1);
-            for (var i = 0; i < rgbPixels.Length; i++)
-            {
-                var p = rgbaPixels[i];
-                var key = ((uint)p.R << 16) | ((uint)p.G << 8) | p.B;
-                if (!indexCache.TryGetValue(key, out var idxByte))
-                {
-                    idxByte = (byte)NearestColorIndex(paletteRgb, p.R, p.G, p.B);
-                    indexCache[key] = idxByte;
-                }
-                indices[i] = idxByte;
-                var idx = idxByte;
-                if (p.A > paletteAlphaMax[idx]) paletteAlphaMax[idx] = p.A;
-            }
-            finalPalette = new List<Rgba>(256);
-            for (var i = 0; i < 256; i++)
-            {
-                var c = paletteRgb[i];
-                var a = paletteAlphaMax[i] >= 0 ? (byte)paletteAlphaMax[i] : (byte)0;
-                finalPalette.Add(new Rgba(c.R, c.G, c.B, a));
-            }
+            QuantizeTo8bppWu(src, out indices, out finalPalette, width, height);
         }
         var swizzled = SwizzlePalette256(finalPalette);
         var paletteBytes = new byte[256 * 4];
@@ -764,10 +818,10 @@ internal static class Program
 
         using var fs = File.Create(dst);
         fs.Write(BuildTim2FileHeader());
-        fs.Write(BuildTim2PictureHeader(indices.Length, paletteBytes.Length, width, height));
+        fs.Write(BuildTim2PictureHeaderIndexed8(indices.Length, paletteBytes.Length, width, height));
         fs.Write(indices);
         fs.Write(paletteBytes);
-        return (uniqueColorCount, quantized);
+        return (uniqueColorCount, quantized, false);
     }
 
     private static void Tm2ToPng(string src, string dst, bool convertAlpha)
@@ -797,6 +851,45 @@ internal static class Program
         var paletteData = br.ReadBytes(paletteSize);
         if (imageData.Length != imageSize || paletteData.Length != paletteSize) throw new EndOfStreamException("Unexpected EOF");
 
+        var imageType = header[0x13];
+        if (paletteSize == 0 || imageType == 3)
+        {
+            var bmp32 = new Bitmap(width, height, PixelFormat.Format32bppArgb);
+            var rect32 = new System.Drawing.Rectangle(0, 0, width, height);
+            var data32 = bmp32.LockBits(rect32, ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
+            try
+            {
+                var stride32 = data32.Stride;
+                var raw32 = new byte[Math.Abs(stride32) * height];
+                var p = 0;
+                for (var y = 0; y < height; y++)
+                {
+                    var row = y * stride32;
+                    for (var x = 0; x < width; x++, p++)
+                    {
+                        var srcOff = p * 4;
+                        var i = row + x * 4;
+                        var r = srcOff + 0 < imageData.Length ? imageData[srcOff + 0] : (byte)0;
+                        var g = srcOff + 1 < imageData.Length ? imageData[srcOff + 1] : (byte)0;
+                        var b = srcOff + 2 < imageData.Length ? imageData[srcOff + 2] : (byte)0;
+                        var a = srcOff + 3 < imageData.Length ? imageData[srcOff + 3] : (byte)0;
+                        raw32[i + 0] = b;
+                        raw32[i + 1] = g;
+                        raw32[i + 2] = r;
+                        raw32[i + 3] = convertAlpha ? FixAlphaPs2(a) : a;
+                    }
+                }
+                Marshal.Copy(raw32, 0, data32.Scan0, raw32.Length);
+            }
+            finally
+            {
+                bmp32.UnlockBits(data32);
+            }
+            bmp32.Save(dst, ImageFormat.Png);
+            bmp32.Dispose();
+            return;
+        }
+
         var swizzled = new Rgba[256];
         for (var i = 0; i < 256 && i * 4 + 3 < paletteData.Length; i++)
         {
@@ -805,7 +898,7 @@ internal static class Program
         var palette = DeswizzlePalette256(swizzled);
 
         var bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
-        var rect = new Rectangle(0, 0, width, height);
+        var rect = new System.Drawing.Rectangle(0, 0, width, height);
         var data = bmp.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
         try
         {
@@ -867,7 +960,7 @@ internal static class Program
         Console.WriteLine($"Done: success={ok}, failed={fail}");
     }
 
-    private static void BatchEncode(string srcDir, string dstDir, bool convertAlpha)
+    private static void BatchEncode(string srcDir, string dstDir, bool convertAlpha, bool prefer32bppOnOverflow)
     {
         Directory.CreateDirectory(dstDir);
         var files = Directory.EnumerateFiles(srcDir, "*.png", SearchOption.TopDirectoryOnly).OrderBy(x => x, StringComparer.OrdinalIgnoreCase).ToList();
@@ -885,8 +978,9 @@ internal static class Program
             var outPath = Path.Combine(dstDir, Path.GetFileNameWithoutExtension(f) + ".tm2");
             try
             {
-                var info = PngToTm2(f, outPath, convertAlpha);
+                var info = PngToTm2(f, outPath, convertAlpha, prefer32bppOnOverflow);
                 Interlocked.Increment(ref ok);
+                if (info.trueColor32) lock (logLock) Console.WriteLine($"[32B] {Path.GetFileName(f)} colors={info.uniqueColorCount} (>256)");
                 if (info.quantized) lock (logLock) Console.WriteLine($"[QTZ] {Path.GetFileName(f)} colors={info.uniqueColorCount} (>256)");
                 lock (logLock) Console.WriteLine($"[OK] {Path.GetFileName(f)} -> {Path.GetFileName(outPath)}");
             }
@@ -903,11 +997,12 @@ internal static class Program
     {
         var argList = new List<string>(args);
         var convertAlpha = argList.Remove("-a");
+        var prefer32bppOnOverflow = argList.Remove("-32");
         if (argList.Count != 3 || (argList[0] != "d" && argList[0] != "e"))
         {
             Console.WriteLine("Usage:");
             Console.WriteLine("tim2 [-a] d <tm2_dir> <png_dir>");
-            Console.WriteLine("tim2 [-a] e <png_dir> <tm2_dir>");
+            Console.WriteLine("tim2 [-a] [-32] e <png_dir> <tm2_dir>");
             return 1;
         }
 
@@ -921,7 +1016,7 @@ internal static class Program
         }
 
         if (mode == "d") BatchDecode(srcDir, dstDir, convertAlpha);
-        else BatchEncode(srcDir, dstDir, convertAlpha);
+        else BatchEncode(srcDir, dstDir, convertAlpha, prefer32bppOnOverflow);
         return 0;
     }
 }
