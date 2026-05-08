@@ -11,9 +11,10 @@
 | NDS | Princess Maker 4 | `.bin` script parse/rebuild, font generation |
 | PS2 | My Merry May With Be | `.bin` script parse/rebuild, `.klz` decompress/compress |
 | PS2 | サクラ大戦V ～さらば愛しき人よ～ | `.msx` decompress/compress, `.msb` text extract/insert |
-| PS2 | 双恋 | script parse/rebuild, font generation |
+| PS2 | フタコイ オルタナティブ 恋と少女とマシンガン  | script parse/rebuild, font generation |
 | PS2 | 銀のエクリプス / きると 貴方と紡ぐ夢と恋のドレス | `.pac` unpack/pack, `.lzs` decompress/compress, `.bin` script parse/rebuild |
 | PS2 | 花と乙女に祝福を -春風の贈り物- | `cd.bin` unpack/pack, `.1tex` <-> `.png` conversion, `.1bin` script parse/rebuild, font generation |
+| PS2 | To Heart | `.bin` script parse/rebuild, `.klz` decompress/compress |
 | PSP | EDEN / 僕の心は雨のち晴れ | `.ipb` script parse/rebuild, `.ipg` <-> `.png` conversion, font generation |
 | WIN | Galaxy Angel Eternal Lovers | `.isb` script parse/rebuild, `.pak` movie decrypt |
 | WIN | Galaxy Angel EX | text export/insert, font generation |
