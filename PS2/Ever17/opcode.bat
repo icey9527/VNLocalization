@@ -1,0 +1,1 @@
+gcc kid_opcode\*.c -o kid_opcode.exe -static -static-libgcc

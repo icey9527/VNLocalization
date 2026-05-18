@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AFSLib</name>
+    </assembly>
+    <members>
+        <member name="T:AFSLib.AFS">
+            <summary>
+            Class that represents one AFS archive. It can be created from scratch or loaded from a file or stream.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.Entries">
+            <summary>
+            Each of the entries in the AFS object.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.HeaderMagicType">
+            <summary>
+            The header magic that the AFS file will have.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.AttributesInfoType">
+            <summary>
+            The location where the attributes info will be stored. Or if the file won't contain any attributes.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.EntryBlockAlignment">
+            <summary>
+            The amount of bytes the entry block will be aligned to. Minimum accepted value is 2048, which is what most games use. But some games have bigger values.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.EntryCount">
+            <summary>
+            The amount of entries in this AFS object.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.ContainsAttributes">
+            <summary>
+            If the AFS object contains attributes or not. It will be false if AttributesInfoType == AttributesInfoType.NoAttributes.
+            </summary>
+        </member>
+        <member name="P:AFSLib.AFS.AllAttributesContainEntrySize">
+            <summary>
+            Returns true if all attributes contain the size of the entry.
+            Some AFS archives contain each entry's size in their attributes, while others contain custom developer data.
+            To access this data use the CustomData property of the Entry.
+            </summary>
+        </member>
+        <member name="E:AFSLib.AFS.NotifyProgress">
+            <summary>
+            Event that will be called each time some process wants to report something.
+            </summary>
+        </member>
+        <member name="T:AFSLib.AFS.NotifyProgressDelegate">
+            <summary>
+            Represents the method that will handle the NotifyProgress event.
+            </summary>
+            <param name="type">Type of notification.</param>
+            <param name="message">The notification message.</param>
+        </member>
+        <member name="M:AFSLib.AFS.#ctor">
+            <summary>
+            Create an empty AFS object.
+            </summary>
+        </member>
+        <member name="M:AFSLib.AFS.#ctor(System.IO.Stream)">
+            <summary>
+            Create an AFS object out of a stream. The stream will need to remain open until the AFS object is disposed, as it will need to access the stream's data during various operations.
+            </summary>
+            <param name="afsStream">Stream containing the AFS file data.</param>
+        </member>
+        <member name="M:AFSLib.AFS.#ctor(System.String)">
+            <summary>
+            Create an AFS object out of a file. The file will remain open until the AFS object is disposed.
+            </summary>
+            <param name="afsFilePath">Path to the AFS file containing the data.</param>
+        </member>
+        <member name="M:AFSLib.AFS.Dispose">
+            <summary>
+            Dispose the AFS object.
+            </summary>
+        </member>
+        <member name="M:AFSLib.AFS.SaveToFile(System.String)">
+            <summary>
+            Saves the contents of this AFS object into a file.
+            </summary>
+            <param name="outputFilePath">The path to the file where the data is going to be saved.</param>
+        </member>
+        <member name="M:AFSLib.AFS.SaveToStream(System.IO.Stream)">
+            <summary>
+            Saves the contents of this AFS object into a stream.
+            </summary>
+            <param name="outputStream">The stream where the data is going to be saved.</param>
+        </member>
+        <member name="M:AFSLib.AFS.AddEntryFromFile(System.String,System.String)">
+            <summary>
+            Adds a new entry from a file.
+            </summary>
+            <param name="filePath">Path to the file that will be added.</param>
+            <param name="entryName">The name of the entry. If null, it will be the name of the file in fileNamePath.</param>
+            <returns>A reference to the added entry.</returns>
+        </member>
+        <member name="M:AFSLib.AFS.AddEntryFromStream(System.IO.Stream,System.String)">
+            <summary>
+            Adds a new entry from a stream.
+            </summary>
+            <param name="entryStream">Stream that contains the file that will be added.</param>
+            <param name="entryName">The name of the entry. If null, it will be considered as string.Empty.</param>
+            <returns>A reference to the added entry.</returns>
+        </member>
+        <member name="M:AFSLib.AFS.AddNullEntry">
+            <summary>
+            Adds a new null entry.
+            </summary>
+            <returns>A reference to the added entry.</returns>
+        </member>
+        <member name="M:AFSLib.AFS.AddEntriesFromDirectory(System.String,System.Boolean)">
+            <summary>
+            Adds all files in the specified directory to the AFS object.
+            </summary>
+            <param name="directory">The path to the directory.</param>
+            <param name="recursiveSearch">When true, it adds all files in the specified directory and its subdirectories. When false, it ignores any subdirectories.</param>
+        </member>
+        <member name="M:AFSLib.AFS.RemoveEntry(AFSLib.Entry)">
+            <summary>
+            Removes an entry from the AFS object.
+            </summary>
+            <param name="entry">The entry to remove.</param>
+        </member>
+        <member name="M:AFSLib.AFS.ExtractEntryToFile(AFSLib.Entry,System.String)">
+            <summary>
+            Extracts one entry to a file.
+            </summary>
+            <param name="entry">The entry to extract.</param>
+            <param name="outputFilePath">The path to the file where the entry will be saved. If it doesn't exist, it will be created.</param>
+        </member>
+        <member name="M:AFSLib.AFS.ExtractAllEntriesToDirectory(System.String)">
+            <summary>
+            Extracts all the entries from the AFS object.
+            </summary>
+            <param name="outputDirectory">The directory where the entries will be saved. If it doesn't exist, it will be created.</param>
+        </member>
+        <member name="M:AFSLib.AFS.GetVersion">
+            <summary>
+            Get the version of AFSLib.
+            </summary>
+        </member>
+        <member name="M:AFSLib.AFS.AddEntry(System.String,System.String)">
+            <summary>
+            Adds a new entry from a file.
+            </summary>
+            <param name="entryName">The name of the entry.</param>
+            <param name="fileNamePath">Path to the file that will be added.</param>
+        </member>
+        <member name="M:AFSLib.AFS.AddEntry(System.String,System.IO.Stream)">
+            <summary>
+            Adds a new entry from a stream.
+            </summary>
+            <param name="entryName">The name of the entry.</param>
+            <param name="entryStream">Stream that contains the file that will be added.</param>
+        </member>
+        <member name="M:AFSLib.AFS.ExtractEntry(AFSLib.Entry,System.String)">
+            <summary>
+            Extracts one entry to a file.
+            </summary>
+            <param name="entry">The entry to extract.</param>
+            <param name="outputFilePath">The path to the file where the entry will be saved. If it doesn't exist, it will be created.</param>
+        </member>
+        <member name="M:AFSLib.AFS.ExtractAllEntries(System.String)">
+            <summary>
+            Extracts all the entries from the AFS object.
+            </summary>
+            <param name="outputDirectory">The directory where the entries will be saved. If it doesn't exist, it will be created.</param>
+        </member>
+        <member name="T:AFSLib.AttributesInfoType">
+            <summary>
+            Enumeration that contains all possible attribute info locations in an AFS archive.
+            </summary>
+        </member>
+        <member name="F:AFSLib.AttributesInfoType.NoAttributes">
+            <summary>
+            The AFS file doesn't contain an attributes block.
+            </summary>
+        </member>
+        <member name="F:AFSLib.AttributesInfoType.InfoAtBeginning">
+            <summary>
+            Info about the attributes block is located at the beginning of the attributes info block.
+            </summary>
+        </member>
+        <member name="F:AFSLib.AttributesInfoType.InfoAtEnd">
+            <summary>
+            Info about the attributes block is located at the end of the attributes info block.
+            </summary>
+        </member>
+        <member name="T:AFSLib.DataEntry">
+            <summary>
+            Abstract class that represents an entry with data.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.Name">
+            <summary>
+            The name of the entry, which can't be longer than 32 characters, including extension.
+            It can contain special characters like ":", be an empty string,
+            and it can be the same name as other entries.
+            For that reason, it's not safe to use this name to extract a file into the operating system.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.SanitizedName">
+            <summary>
+            An autogenerated name of the entry.
+            It will be unique and won't contain special characters like ":".
+            This can be safely used to name extracted files into the operating system.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.Size">
+            <summary>
+            Size of the entry data.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.LastWriteTime">
+            <summary>
+            Date of the last time the entry was modified.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.CustomData">
+            <summary>
+            In old AFS archives this usually contains the entry size, but in later versions it contains custom developer data.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.CustomDataContainsSize">
+            <summary>
+            Returns true if CustomData contains the entry size.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.Unknown">
+            <summary>
+            Sometimes it's the entry size, sometimes not?
+            </summary>
+        </member>
+        <member name="M:AFSLib.DataEntry.Rename(System.String)">
+            <summary>
+            Renames an entry.
+            </summary>
+            <param name="name">The new name to assign to the entry.</param>
+        </member>
+        <member name="P:AFSLib.DataEntry.UnknownAttribute">
+            <summary>
+            In many AFS archives this contains the entry size, but some of them contain some unknown values.
+            </summary>
+        </member>
+        <member name="P:AFSLib.DataEntry.HasUnknownAttribute">
+            <summary>
+            Usually, UnknownAttribute will contain the same value as Size, but sometimes it will contain a different unknown value.
+            This returns true if it's the later.
+            </summary>
+        </member>
+        <member name="T:AFSLib.Entry">
+            <summary>
+            Abstract class that represents an entry. All types of entries derive from Entry.
+            </summary>
+        </member>
+        <member name="T:AFSLib.FileEntry">
+            <summary>
+            Class that represents an entry with data referenced from a file.
+            </summary>
+        </member>
+        <member name="T:AFSLib.HeaderMagicType">
+            <summary>
+            Enumeration containing each type of header magic that can be found in an AFS archive.
+            </summary>
+        </member>
+        <member name="F:AFSLib.HeaderMagicType.AFS_00">
+            <summary>
+            Some AFS files contain a 4-byte header magic with 'AFS' followed by 0x00.
+            </summary>
+        </member>
+        <member name="F:AFSLib.HeaderMagicType.AFS_20">
+            <summary>
+            Some AFS files contain a 4-byte header magic with 'AFS' followed by 0x20.
+            </summary>
+        </member>
+        <member name="T:AFSLib.NotificationType">
+            <summary>
+            Enumeration containing all types of notifications.
+            </summary>
+        </member>
+        <member name="F:AFSLib.NotificationType.Info">
+            <summary>
+            Notification considered as Information.
+            </summary>
+        </member>
+        <member name="F:AFSLib.NotificationType.Warning">
+            <summary>
+            Notification considered as Warning.
+            </summary>
+        </member>
+        <member name="F:AFSLib.NotificationType.Error">
+            <summary>
+            Notification considered as Error.
+            </summary>
+        </member>
+        <member name="F:AFSLib.NotificationType.Success">
+            <summary>
+            Notification considered as Success.
+            </summary>
+        </member>
+        <member name="T:AFSLib.NullEntry">
+            <summary>
+            Class that represents an empty entry with no data.
+            </summary>
+        </member>
+        <member name="T:AFSLib.StreamEntry">
+            <summary>
+            Class that represents an entry with data referenced from a stream.
+            </summary>
+        </member>
+    </members>
+</doc>
