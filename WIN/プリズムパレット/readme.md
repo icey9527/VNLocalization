@@ -12,7 +12,7 @@ python arc1.py u file.arc outdir -e cp932  # specify encoding
 
 ```bash
 python GH3.py d file.GH outdir      # decode to PNG
-python GH3.py e file.png outdir     # encode to GH (requires list.xml)
+python GH3.py e indir outdir     # encode to GH (requires list.xml)
 ```
 
 ## `.yx` Scripts
