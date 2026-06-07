@@ -590,6 +590,9 @@ def write_back_to_bin(original_data: bytes, translations: dict[int, str], filena
         if new_len <= old_len:
             result[block.start_addr:block.end_addr] = b"\x04" * old_len
             result[block.start_addr:block.start_addr + new_len] = new_payload
+            
+            new_end_addr = block.start_addr + new_len
+            result[block.cmd_addr + 1:block.cmd_addr + 3] = new_end_addr.to_bytes(2, "little")
             continue
 
         text_block_addr = len(original_data) + len(append_data)
