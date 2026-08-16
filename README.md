@@ -2,7 +2,7 @@
 
 存储一些研究过游戏的汉化工具
 全部由我辅助Ai编写
-
+如果只想提取资源文件，可以试试更方便的 [VerViewer](https://github.com/icey9527/Verviewer)。
 
 
 | 平台 | 游戏名 | 支持的功能 |
