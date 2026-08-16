@@ -1,0 +1,2 @@
+ScrIf(446, 0x01AB, 364, 3, 65532)
+ScrJump(0x01AC)

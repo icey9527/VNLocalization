@@ -1,0 +1,8 @@
+ScrMess(22347, 0, "", "蓮との腕相撲で全身に鳥肌が立って<cr>しまった修史は、少しでも早く<cr>試合を終わらせようとするのだった。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(22348, 0, "", "そして選ぶ試合の終わらせ方は……")
+ScrWaitKey()
+ScrWinClear()
+ScrMov(418, 1)
+ScrJump(0x02FA)

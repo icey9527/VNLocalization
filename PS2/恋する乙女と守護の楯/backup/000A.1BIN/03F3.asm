@@ -1,0 +1,5 @@
+ScrInc(368)
+ScrIf(1100, 0x03F5, 436, 0, 0)
+ScrIf(1101, 0x03F4, 209, 1, 1)
+ScrIf(1102, 0x03F4, 2, 1, 1)
+ScrJump(0x03FA)

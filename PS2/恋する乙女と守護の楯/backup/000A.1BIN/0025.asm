@@ -1,0 +1,7 @@
+ScrMov(7, 1)
+ScrMov(3, 1)
+ScrBgmStop(150)
+ScrChrSet(5, 28250)
+ScrUpDateImage(90, 5)
+ScrWaitTime(60)
+ScrTitleReturn()

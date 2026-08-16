@@ -1,0 +1,8 @@
+ScrMess(28241, 0, "", "ここは黙って見ていよう。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(28242, 0, "", "俺が余計なことを言って、フォローにならなかったら<cr>意味がないし。")
+ScrWaitKey()
+ScrWinClear()
+ScrMov(210, 1)
+ScrJump(0x03F9)

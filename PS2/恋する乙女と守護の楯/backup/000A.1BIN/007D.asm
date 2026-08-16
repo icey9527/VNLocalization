@@ -1,0 +1,7 @@
+ScrMess(3359, 0, "", "眠気は完全に覚めた。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(3360, 0, "", "それより写真立てだ。")
+ScrWaitKey()
+ScrWinClear()
+ScrJump(0x0076)

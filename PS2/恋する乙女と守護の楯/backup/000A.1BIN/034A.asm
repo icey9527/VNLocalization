@@ -1,0 +1,5 @@
+ScrInc(365)
+ScrIf(916, 0x034C, 425, 0, 0)
+ScrIf(917, 0x034B, 169, 1, 1)
+ScrIf(918, 0x034B, 2, 1, 1)
+ScrJump(0x034E)

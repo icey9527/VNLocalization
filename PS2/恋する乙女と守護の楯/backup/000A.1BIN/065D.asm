@@ -1,0 +1,8 @@
+ScrMess(44051, 22879, "修史", "「はい、もちろん！　今から伺います」")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(44052, 0, "", "一緒にいた方が、なにかと警護しやすいし。")
+ScrWaitKey()
+ScrWinClear()
+ScrInc(364)
+ScrJump(0x065E)

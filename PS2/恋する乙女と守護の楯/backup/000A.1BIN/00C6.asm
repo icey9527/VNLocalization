@@ -1,0 +1,5 @@
+ScrMov(371, 1)
+ScrIf(187, 0x00C8, 380, 0, 0)
+ScrIf(188, 0x00C7, 30, 1, 1)
+ScrIf(189, 0x00C7, 2, 1, 1)
+ScrJump(0x00CD)

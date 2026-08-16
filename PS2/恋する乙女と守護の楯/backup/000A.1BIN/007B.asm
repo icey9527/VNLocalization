@@ -1,0 +1,7 @@
+ScrMess(3349, 0, "", "机はもう見たくない。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(3350, 0, "", "それより写真立てだ。")
+ScrWaitKey()
+ScrWinClear()
+ScrJump(0x0076)

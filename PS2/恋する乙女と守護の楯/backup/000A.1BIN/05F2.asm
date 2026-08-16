@@ -1,0 +1,7 @@
+ScrWinFrame(0)
+ScrWinFrameType(1)
+ScrChrSet(5, 27280)
+ScrBgmPlay(28767, 1)
+ScrJumpR(0x0002)
+ScrWinFrame(1)
+ScrJump(0x05F3)

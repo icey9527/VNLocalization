@@ -1,0 +1,7 @@
+ScrMess(10588, 0, "", "設子さんの分は特別に雪乃が作った物らしい。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(10589, 0, "", "だったらみんなの分も作ってくれたらいいのに、<cr>と思ってしまう、ちょっぴり卑屈な俺。")
+ScrWaitKey()
+ScrWinClear()
+ScrJump(0x0167)

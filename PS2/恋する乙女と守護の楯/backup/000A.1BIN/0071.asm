@@ -1,0 +1,5 @@
+ScrIf(106, 0x03E3, 373, 0, 1)
+ScrMess(3309, 0, "", "自分でも不思議だが、なんだか気になるのだった。")
+ScrWaitKey()
+ScrWinClear()
+ScrJump(0x03E3)

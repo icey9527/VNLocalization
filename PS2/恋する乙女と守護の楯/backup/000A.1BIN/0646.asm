@@ -1,0 +1,8 @@
+ScrMess(43424, 22718, "修史", "「仕事なんだ！<cr>　だから、ずっと言えなくて……」")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(43425, 0, "", "縋るように手を伸ばすと。")
+ScrWaitKey()
+ScrWinClear()
+ScrMov(351, 1)
+ScrJump(0x0647)

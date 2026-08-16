@@ -1,0 +1,8 @@
+ScrIf(405, 0x0271, 391, 0, 1)
+ScrMess(11743, 0, "", "鞠奈だな、やっぱり。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(11744, 0, "", "俺は覚悟を決めて近づいた。")
+ScrWaitKey()
+ScrWinClear()
+ScrJump(0x0271)

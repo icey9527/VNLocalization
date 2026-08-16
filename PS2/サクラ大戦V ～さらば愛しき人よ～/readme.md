@@ -1,0 +1,4 @@
+支持半角字符
+patch=1,EE,0022FBD0,word,24070012
+patch=1,EE,001EB02C,word,00001021
+patch=1,EE,001EB030,word,00000000

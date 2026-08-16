@@ -1,0 +1,4 @@
+ScrMov(83, 1)
+ScrIf(534, 0x01ED, 366, 4, 65535)
+ScrIf(535, 0x01ED, 366, 4, 65534)
+ScrJump(0x02F3)

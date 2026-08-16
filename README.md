@@ -13,7 +13,7 @@
 | PS2 | サクラ大戦V ～さらば愛しき人よ～ | `.msx` decompress/compress, `.msb` text extract/insert |
 | PS2 | フタコイ オルタナティブ 恋と少女とマシンガン  | script parse/rebuild, font generation |
 | PS2 | 銀のエクリプス / きると 貴方と紡ぐ夢と恋のドレス | `.pac` unpack/pack, `.lzs` decompress/compress, `.bin` script parse/rebuild |
-| PS2 | 花と乙女に祝福を -春風の贈り物- | `cd.bin` unpack/pack, `.1tex` <-> `.png` conversion, `.1bin` script parse/rebuild, font generation |
+| PS2 | 花と乙女に祝福を -春風の贈り物- / 恋する乙女と守護の楯| `cd.bin` unpack/pack, `.1tex` <-> `.png` conversion, `.1bin` script parse/rebuild, font generation |
 | PS2 | To Heart | `.sfs` unpack/pack, `.ttp` <-> `.png` conversion,`script.dat` script parse/rebuild |
 | PS2 | Ever17 | `.afs` unpack/pack, `.bin`/`init.bin` script parse/rebuild, font generation |
 | PSP | EDEN / 僕の心は雨のち晴れ | `.ipb` script parse/rebuild, `.ipg` <-> `.png` conversion, font generation |

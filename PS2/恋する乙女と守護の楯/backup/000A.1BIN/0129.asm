@@ -1,0 +1,7 @@
+ScrMess(9581, 0, "", "敵の銃弾によって負傷してしまう有里。<cr>原因を知らないものの、怪我をした<cr>有里に設子と優はお見舞いに向かう。")
+ScrWaitKey()
+ScrWinClear()
+ScrMess(9582, 0, "", "そして有里に、色鮮やかな薔薇の花を<cr>プレゼントするのだった。<cr>そんな二人の姿を目の前にして修史は……")
+ScrWaitKey()
+ScrWinClear()
+ScrJump(0x012A)

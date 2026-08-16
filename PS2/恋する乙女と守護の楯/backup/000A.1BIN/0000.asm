@@ -1,0 +1,8 @@
+ScrSystemIcon()
+ScrWaitIcon(1)
+ScrWinDisplay()
+ScrWinFontSize(0, 0)
+ScrChrSetDisp(1)
+ScrWinFrameType(0)
+ScrWinFrame(1)
+ScrJump(0x004F)
