@@ -16,7 +16,9 @@
 | PS2 | 花と乙女に祝福を -春風の贈り物- / 恋する乙女と守護の楯| `cd.bin` unpack/pack, `.1tex` <-> `.png` conversion, `.1bin` script parse/rebuild, font generation |
 | PS2 | To Heart | `.sfs` unpack/pack, `.ttp` <-> `.png` conversion,`script.dat` script parse/rebuild |
 | PS2 | Ever17 | `.afs` unpack/pack, `.bin`/`init.bin` script parse/rebuild, font generation |
+| PS2 | WHITE CLARITY | `.mes` text extract/insert, font generation, `.bmp(pb6)` <-> `.png` conversion |
 | PSP | EDEN / 僕の心は雨のち晴れ | `.ipb` script parse/rebuild, `.ipg` <-> `.png` conversion, font generation |
+| PSP | 快盗天使ツインエンジェル ～時とセカイの迷宮～ | `.pac` <-> `.png` conversion, font generation |
 | WIN | Galaxy Angel Eternal Lovers | `.isb` script parse/rebuild, `.pak` movie decrypt |
 | WIN | Galaxy Angel EX | text export/insert, font generation |
 | WIN | To Heart PSE | `.pak` unpack/pack, `.lcf`/`.lff`/`.lfb` <-> `.png` conversion,`.dat` script parse/rebuild, font generation |

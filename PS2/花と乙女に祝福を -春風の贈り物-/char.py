@@ -39,7 +39,7 @@ MAP_PATH = Path('font.tbl')
 DEFAULT_REPLACE_RULES: dict[str, str] = {
     "·": "・",
     "—": "─",
-    "～": "〜",
+
     "“": "「",
     "”": "」"
 }
@@ -114,7 +114,7 @@ def map_translation(t: str, rhs_to_proxy: dict[str, str]) -> str:
         for ch in t:
             if cp932_code(ch) is None:
                 bad[ch] = ord(ch)
-                out.append("?")
+                out.append("？")
             else:
                 out.append(ch)
         if bad:
@@ -132,7 +132,7 @@ def map_translation(t: str, rhs_to_proxy: dict[str, str]) -> str:
         proxy = rhs_to_proxy.get(ch)
         if proxy is None:
             bad[ch] = ord(ch)
-            out.append("?")
+            out.append("？")
         else:
             out.append(proxy)
     if bad:

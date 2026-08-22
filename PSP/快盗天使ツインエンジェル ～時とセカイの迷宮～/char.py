@@ -35,7 +35,7 @@ def log_bad_chars(chars, path: Path = BADCHARS_PATH) -> None:
 
 MAP_LINE_RE = re.compile(r"^\s*([0-9A-Fa-f]{2,4})\s*=\s*(.+?)\s*$")
 MAP_START = 0x889F
-MAP_PATH = Path('font.tbl')
+MAP_PATH = Path(__file__).with_name('font') / 'font.tbl'
 DEFAULT_REPLACE_RULES: dict[str, str] = {
     "·": "・",
     "—": "─",
@@ -89,14 +89,14 @@ def load_map(p: Path) -> dict[str, str]:
     txt = p.read_text(encoding="utf-16")
     rhs_to_proxy: dict[str, str] = {}
     for raw in txt.splitlines():
-        line = raw.strip()
+        line = raw
         if not line or line.startswith(";") or line.startswith("//"):
             continue
         m = MAP_LINE_RE.match(line)
         if not m:
             continue
         code = int(m.group(1), 16)
-        rhs = m.group(2).split(";", 1)[0].split("//", 1)[0].strip()
+        rhs = m.group(2).split(";", 1)[0].split("//", 1)[0]
         if len(rhs) != 1:
             raise SystemExit(line)
         b = bytes([(code >> 8) & 0xFF, code & 0xFF])

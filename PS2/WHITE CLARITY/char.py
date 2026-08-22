@@ -37,11 +37,7 @@ MAP_LINE_RE = re.compile(r"^\s*([0-9A-Fa-f]{2,4})\s*=\s*(.+?)\s*$")
 MAP_START = 0x889F
 MAP_PATH = Path('font.tbl')
 DEFAULT_REPLACE_RULES: dict[str, str] = {
-    "·": "・",
-    "—": "─",
 
-    "“": "「",
-    "”": "」"
 }
 
 def encode_cp932_or_die(s: str) -> bytes:
@@ -96,13 +92,15 @@ def load_map(p: Path) -> dict[str, str]:
         if not m:
             continue
         code = int(m.group(1), 16)
-        rhs = m.group(2).split(";", 1)[0].split("//", 1)[0].strip()
+        rhs = m.group(2) #.split(";", 1)[0].split("//", 1)[0].strip()
         if len(rhs) != 1:
             raise SystemExit(line)
         b = bytes([(code >> 8) & 0xFF, code & 0xFF])
         try:
             proxy = b.decode("cp932")
         except UnicodeDecodeError:
+            raise SystemExit(f"{code:04X}={rhs}")
+        if proxy.encode("cp932") != b:
             raise SystemExit(f"{code:04X}={rhs}")
         rhs_to_proxy[rhs] = proxy
     return rhs_to_proxy
