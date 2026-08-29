@@ -155,13 +155,19 @@ class Instr:
     issue: str = ""
     # segs: 混合文本行内容. 元素: ('t', 字数) | ('f', 基准words, 注音words)
     segs: list | None = None
+    # 单独一条全角空格文本指令 → 渲染为 indent() 命令, 编码时按当前编码动态取空格 word
+    indent: bool = False
 
     def is_text(self) -> bool:
+        if self.indent:
+            return False
         if self.segs is not None:
             return True
         return self.op >= 0x8000 or 0x44D <= self.op <= 0x47A
 
     def name(self) -> str:
+        if self.indent:
+            return "indent"
         if self.is_text():
             return "text"
         return OP_NAMES.get(self.op, f"op_{self.op:04X}")
@@ -274,6 +280,31 @@ def decode_text_word(word: int) -> str:
         return PARTIAL_TEXT_MAP[word]
     data = bytes((word >> 8, word & 0xFF))
     return data.decode(TEXT_ENCODING, errors="ignore")
+
+
+def space_word() -> int:
+    """全角空格 (U+3000) 在当前 TEXT_ENCODING 下的 word 值。
+    cp932 → 0x8140, cp936 → 0xA1A1。不写死, 随编码动态计算。"""
+    data = "\u3000".encode(TEXT_ENCODING)
+    if len(data) != 2:
+        raise ValueError(f"cannot encode U+3000 under {TEXT_ENCODING}")
+    return (data[0] << 8) | data[1]
+
+
+def mark_indent(instrs: list[Instr]) -> list[Instr]:
+    """把单独一条全角空格文本指令标记为 indent 伪命令。
+    仅匹配整条指令只有一个字且为 U+3000 的情况; 句首带空格的正常文本不受影响。"""
+    for instr in instrs:
+        if (
+            not instr.indent
+            and instr.segs is None
+            and not instr.issue
+            and instr.is_text()
+            and len(instr.raw) == 1
+            and decode_text_word(instr.raw[0]) == "\u3000"
+        ):
+            instr.indent = True
+    return instrs
 
 
 def render_segs(words: list[int], segs: list) -> str:
@@ -567,6 +598,8 @@ def parse_asm(path: Path) -> list[AsmCommand]:
 
 
 def command_length(command: AsmCommand, text_lines: list[str]) -> int:
+    if command.text == "indent()":
+        return 1
     if command.text.startswith("text(") and command.text.endswith(")"):
         line_no = int(command.text[5:-1])
         if line_no < 1 or line_no > len(text_lines):
@@ -624,6 +657,8 @@ def parse_arg(token: str, refs: dict[tuple[int, int], int], flow_target: bool) -
 
 
 def encode_command(command: AsmCommand, text_lines: list[str], refs: dict[tuple[int, int], int]) -> list[int]:
+    if command.text == "indent()":
+        return [space_word()]
     if command.text.startswith("text(") and command.text.endswith(")"):
         line_no = int(command.text[5:-1])
         if line_no < 1 or line_no > len(text_lines):
@@ -674,11 +709,13 @@ def collect_sources(input_path: Path) -> list[Path]:
 
 
 def decode_one(src: Path, output_dir: Path) -> list[str]:
+    output_dir.mkdir(parents=True, exist_ok=True)
     entries, code, code_words = split_dat(src)
     if len(code) != code_words:
         raise ValueError(f"{src.name}: code_words mismatch")
     code, instrs, entries, issues = parse(src)
     instrs = split_text_blocks(instrs, collect_targets(entries, instrs, code_words))
+    instrs = mark_indent(instrs)
     dst_base = output_dir / src.stem.upper()
     text_lines = write_asm(dst_base.with_suffix(".asm"), code_words, entries, instrs, issues)
     if text_lines:
