@@ -4,6 +4,7 @@ import re
 import struct
 import sys
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 
 
@@ -31,6 +32,12 @@ PARTIAL_TEXT_LOOKUP = {
     for index, word in enumerate(seq, start=1)
 }
 TEXT_TOKEN_RE = re.compile(r"<([a-z0-9]+(?::[0-9]+)?)>")
+HEX_TOKEN_RE = re.compile(r"<([0-9a-f]{1,4})(?::([0-9]+(?:,[0-9]+)*))?>")
+FURI_TOKEN_RE = re.compile(r"<f:([^|<>]*)\|([^|<>]*)>")
+
+FURI_MARK_OP = 0x04B0        # 振り仮名结构: [4B0]汉字[4B1]假名[4B2]
+FURI_READ_OP = 0x04B1
+FURI_END_OP = 0x04B2
 
 OP_NAMES = {
     0x0003: "call",
@@ -79,25 +86,48 @@ OP_NAMES = {
     0x0069: "timer",
     0x006E: "stack_push",
     0x006F: "stack_pop",
-    0x0070: "gosub",
+    0x0070: "trans",           # 画面过渡效果 (sub_411800 转场状态机, 阻塞至完成)
     0x0071: "return",
-    0x0072: "gosub_if",
+    0x0072: "trans2",          # 画面过渡效果变体 (初始化后立即返回)
+    0x03E8: "br",              # 换行: x 回行首 + 下移一行
+    0x03E9: "br_keep_x",       # 换行变体: 仅下移一行
+    0x03EA: "click_wait",      # 等待点击 (显示继续箭头)
+    0x03EB: "click_wait_bare", # 等待点击 (无箭头/无图标)
+    0x03EC: "click_wait_auto", # 等待点击 (自动播放图标)
     0x03F0: "text_speed",
+    0x03F1: "auto_off",        # 自动播放关闭
+    0x03F2: "auto_on",         # 自动播放开启
+    0x03F3: "pos_x",           # 设置文本 x 坐标
+    0x03F4: "pos_y",           # 设置文本 y 坐标
+    0x03F5: "page_wait",       # 翻页等待点击
     0x03FC: "msg_reset",
     0x03FD: "msg_wait_idle",
     0x03FE: "msg_sync",
     0x0400: "msg_flags",
+    0x0401: "voice_play",      # 语音播放 (变长等待)
+    0x0402: "voice_check",     # 语音比对 (同 ID 不重播)
+    0x0403: "wait_frame",      # 按参数计算等待帧数
     0x0406: "msg_voice_id",
     0x040A: "msg_layer_reset",
     0x040B: "msg_layer_wait",
     0x040C: "msg_layer_toggle",
     0x040D: "msg_layer_close",
     0x040E: "msg_layer_toggle_wait",
-    0x047E: "choice_hook",
+    0x047E: "voiced",         # 带语音对话段开始: 4 参数, 播语音 + 文本段直到 click_wait
+    0x047F: "voice_wait",     # 等待语音结束
+    0x0480: "nop",
+    0x04B0: "furi_mark",      # 振り仮名开始 (后跟基准汉字文本)
+    0x04B1: "furi_read",      # 基准结束, 后跟注音假名文本
+    0x04B2: "furi_end",       # 注音结束
 }
 
-FLOW_OPS = {0x0003, 0x0070, 0x0072}
+# 引擎静态跳转目标只有入口表 (entry_offsets)。
+# 0x0003/0x0005 的参数是 (脚本号, 入口号), 0x0006 的参数是入口号,
+# 0x0070/0x0072 是画面过渡效果命令 (sub_411800 转场状态机), 参数为效果类型号。
+# 以上参数均非代码区 word 偏移, 不得作为切分文本的跳转目标。
+FLOW_OPS: set[int] = set()
 NAME_TO_OPCODE = {name: op for op, name in OP_NAMES.items()}
+NAME_TO_OPCODE["choice_hook"] = 0x047E  # 旧名兼容 (实为 voiced)
 
 
 @dataclass
@@ -123,8 +153,12 @@ class Instr:
     args: list[Arg]
     raw: list[int]
     issue: str = ""
+    # segs: 混合文本行内容. 元素: ('t', 字数) | ('f', 基准words, 注音words)
+    segs: list | None = None
 
     def is_text(self) -> bool:
+        if self.segs is not None:
+            return True
         return self.op >= 0x8000 or 0x44D <= self.op <= 0x47A
 
     def name(self) -> str:
@@ -156,11 +190,39 @@ class AsmCommand:
     text: str
 
 
-def encode_text_content(text: str) -> list[int]:
+@lru_cache(maxsize=None)
+def encode_text_content(text: str) -> tuple[int, ...]:
     words: list[int] = []
     pos = 0
     while pos < len(text):
+        match = FURI_TOKEN_RE.search(text, pos)
+        if not match:
+            words.extend(encode_text_tokens(text[pos:]))
+            break
+        if match.start() > pos:
+            words.extend(encode_text_tokens(text[pos : match.start()]))
+        base = encode_text_tokens(match.group(1))
+        anno = encode_text_tokens(match.group(2))
+        words.append(FURI_MARK_OP)
+        words.append(0)
+        words.extend(base)
+        words.append(FURI_READ_OP)
+        words.append(0)
+        words.extend(anno)
+        words.append(FURI_END_OP)
+        words.append(0)
+        pos = match.end()
+    return tuple(words)
+
+
+def encode_text_tokens(text: str) -> list[int]:
+    words: list[int] = []
+    pos = 0
+    while pos < len(text):
+        hex_match = HEX_TOKEN_RE.search(text, pos)
         match = TEXT_TOKEN_RE.search(text, pos)
+        if hex_match and (not match or hex_match.start() <= match.start()):
+            match = hex_match
         if not match:
             words.extend(encode_text_plain(text[pos:]))
             break
@@ -174,6 +236,13 @@ def encode_text_content(text: str) -> list[int]:
         elif token in PARTIAL_TEXT_LOOKUP:
             words.append(PARTIAL_TEXT_LOOKUP[token])
             words.append(0)
+        elif re.fullmatch(r"[0-9a-f]{1,4}", token):
+            op = int(token, 16)
+            args = [int(x) for x in match.group(2).split(",")] if match.group(2) else []
+            words.append(op)
+            words.append(len(args))
+            for value in args:
+                words.extend((0, value))
         else:
             raise ValueError(f"unknown text token: <{token}>")
         pos = match.end()
@@ -207,7 +276,23 @@ def decode_text_word(word: int) -> str:
     return data.decode(TEXT_ENCODING, errors="ignore")
 
 
-def render_text_content(words: list[int]) -> str:
+def render_segs(words: list[int], segs: list) -> str:
+    out: list[str] = []
+    off = 0
+    for seg in segs:
+        if seg[0] == "t":
+            out.append(render_text_content(words[off : off + seg[1]]))
+            off += seg[1]
+        else:  # ('f', 基准words, 注音words)
+            _, base, anno = seg
+            out.append(f"<f:{render_text_content(base)}|{render_text_content(anno)}>")
+            off += 2 + len(base) + 2 + len(anno) + 2
+    return "".join(out)
+
+
+def render_text_content(words: list[int], segs: list | None = None) -> str:
+    if segs:
+        return render_segs(words, segs)
     parts: list[str] = []
     i = 0
     while i < len(words):
@@ -285,7 +370,81 @@ def parse(path: Path) -> tuple[list[int], list[Instr], list[int], list[str]]:
         args = [Arg(code[i + 2 + j * 2], code[i + 3 + j * 2]) for j in range(argc)]
         instrs.append(Instr(i, op, argc, args, raw))
         i = end
-    return code, instrs, entries, issues
+    return code, fold_ruby(instrs), entries, issues
+
+
+def match_furi(instrs: list[Instr], j: int) -> tuple[list[int], list[int], int] | None:
+    """匹配振り仮名结构: [4B0][基准汉字text][4B1][注音假名text][4B2], 返回 (基准words, 注音words, 消耗指令数)"""
+    n = len(instrs)
+    if (
+        j + 4 < n
+        and instrs[j].op == FURI_MARK_OP
+        and instrs[j].argc == 0
+        and not instrs[j].issue
+        and instrs[j + 1].is_text()
+        and instrs[j + 1].segs is None
+        and not instrs[j + 1].issue
+        and instrs[j + 2].op == FURI_READ_OP
+        and instrs[j + 2].argc == 0
+        and not instrs[j + 2].issue
+        and instrs[j + 3].is_text()
+        and instrs[j + 3].segs is None
+        and not instrs[j + 3].issue
+        and instrs[j + 4].op == FURI_END_OP
+        and instrs[j + 4].argc == 0
+        and not instrs[j + 4].issue
+    ):
+        return instrs[j + 1].raw, instrs[j + 3].raw, 5
+    return None
+
+
+def fold_ruby(instrs: list[Instr]) -> list[Instr]:
+    """相邻的 文本/振り仮名 合并成一个混合文本行 (不换行, 振り仮名以 <f:汉字|假名> 内联表示).
+    voiced/click_wait 等控制命令保留在 asm 中, 不进入文本."""
+    n = len(instrs)
+    out: list[Instr] = []
+    i = 0
+    while i < n:
+        ins = instrs[i]
+
+        def plain_text(x: Instr) -> bool:
+            return x.is_text() and x.segs is None and not x.issue
+
+        if plain_text(ins) or ins.op == FURI_MARK_OP:
+            segs: list[tuple] = []
+            raw_all: list[int] = []
+            start = ins.offset_words
+            j = i
+            has_furi = False
+            while j < n:
+                cur = instrs[j]
+                if plain_text(cur):
+                    segs.append(("t", len(cur.raw)))
+                    raw_all.extend(cur.raw)
+                    j += 1
+                    continue
+                furi = match_furi(instrs, j)
+                if furi is not None:
+                    base, anno, used = furi
+                    segs.append(("f", base, anno))
+                    raw_all.extend([FURI_MARK_OP, 0])
+                    raw_all.extend(base)
+                    raw_all.extend([FURI_READ_OP, 0])
+                    raw_all.extend(anno)
+                    raw_all.extend([FURI_END_OP, 0])
+                    j += used
+                    has_furi = True
+                    continue
+                break
+            if has_furi and j > i:
+                merged = Instr(start, raw_all[0], len(raw_all), [], raw_all)
+                merged.segs = segs
+                out.append(merged)
+                i = j
+                continue
+        out.append(ins)
+        i += 1
+    return out
 
 
 def split_text_blocks(instrs: list[Instr], targets: set[int]) -> list[Instr]:
@@ -355,7 +514,7 @@ def build_text_table(instrs: list[Instr]) -> tuple[dict[int, int], list[str]]:
         if not instr.is_text():
             continue
         text_refs[instr.offset_words] = len(text_lines) + 1
-        text_lines.append(render_text_content(instr.raw))
+        text_lines.append(render_text_content(instr.raw, instr.segs))
     return text_refs, text_lines
 
 

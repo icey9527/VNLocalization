@@ -194,7 +194,11 @@ def write(txt_dir: Path, base_dir: Path, out_dir: Path):
             for index, (entry_index, delta) in enumerate(info["table1_refs"]):
                 enc_len = len(encode_text(full_lines[entry_index]))
                 if delta > enc_len:
-                    raise ValueError(f"Entry {entry_index} shorter than required anchor delta {delta}")
+                    # 翻译后字符串比原锚点偏移短：锚点改为指向该字符串开头。
+                    # table1 是内部索引（大量锚点原本就切在双字节字符中间，并非显示指针），
+                    # 钳到起点只影响该索引项，不影响 table2 的显示文本。
+                    print(f"W: {base.name} - table1[{index}] anchor delta {delta} > new length {enc_len} of entry {entry_index}, clamped to string start")
+                    delta = 0
                 new_start = full_starts[entry_index]
                 new_off = (new_start + delta) - TABLE1_BASE
                 pos = TABLE1_START + index * 4
