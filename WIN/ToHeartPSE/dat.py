@@ -34,6 +34,10 @@ PARTIAL_TEXT_LOOKUP = {
 TEXT_TOKEN_RE = re.compile(r"<([a-z0-9]+(?::[0-9]+)?)>")
 HEX_TOKEN_RE = re.compile(r"<([0-9a-f]{1,4})(?::([0-9]+(?:,[0-9]+)*))?>")
 FURI_TOKEN_RE = re.compile(r"<f:([^|<>]*)\|([^|<>]*)>")
+RAW_WORD_TOKEN_RE = re.compile(r"<w([0-9a-f]{4})>")
+# 0xF040-0xF047 外字 (字库特殊字形), 文本内写作 <f040>..<f047>, 单字 word 不带 argc
+GAIJI_TOKEN_TO_WORD = {f"{w:x}": w for w in range(0xF040, 0xF048)}
+GAIJI_WORD_TO_TOKEN = {w: t for t, w in GAIJI_TOKEN_TO_WORD.items()}
 
 FURI_MARK_OP = 0x04B0        # 振り仮名结构: [4B0]汉字[4B1]假名[4B2]
 FURI_READ_OP = 0x04B1
@@ -41,6 +45,7 @@ FURI_END_OP = 0x04B2
 
 OP_NAMES = {
     0x0003: "call",
+    0x0004: "ret",             # 弹返回栈 (脚本号,偏移) 回到 call/select 的调用点
     0x0005: "dat_call",
     0x0006: "jump",
     0x0007: "set_seen",
@@ -59,22 +64,24 @@ OP_NAMES = {
     0x0032: "cmp_eq",
     0x0033: "cmp_ne",
     0x0034: "cmp_lt",
-    0x003C: "bg_load",
-    0x003D: "bg_fade",
-    0x003E: "bg_pos",
-    0x003F: "bg_scroll",
-    0x0040: "sprite_load",
-    0x0041: "sprite_move",
-    0x0042: "sprite_show",
-    0x0043: "sprite_hide",
-    0x0044: "sprite_anim",
-    0x0045: "face_load",
-    0x0046: "msg_open",
-    0x0047: "msg_wait",
-    0x0048: "msg_close",
-    0x0049: "voice",
-    0x004A: "sfx",
-    0x0050: "select",
+    # ── 0x3C-0x50 跳转/分支家族 (IDA sub_40CE00 case 0x3C..0x50) ──
+    # 指定下标的参数是"代码区 word 偏移"跳转目标, 重编码时必须重定位 (见 FLOW_ARG_IDX)
+    0x003C: "jmp",             # 无条件跳 arg0
+    0x003D: "je",              # arg0==arg1 → 跳 arg2
+    0x003E: "jne",             # arg0!=arg1 → 跳 arg2
+    0x003F: "jg",              # arg0> arg1 → 跳 arg2
+    0x0040: "jl",              # arg0< arg1 → 跳 arg2
+    0x0041: "jge",             # arg0>=arg1 → 跳 arg2
+    0x0042: "jle",             # arg0<=arg1 → 跳 arg2
+    0x0043: "jbs",             # arg0&(1<<arg1) 非零 → 跳 arg2
+    0x0044: "jbc",             # arg0&(1<<arg1) 为零 → 跳 arg2
+    0x0045: "jtable",          # idx=arg0%arg1 → 跳 arg[2+idx], arg2.. 全是目标
+    0x0046: "nop",
+    0x0047: "nop2",
+    0x0048: "jsys",            # sub_419BF0()==0 → 跳 arg0
+    0x0049: "jrand",           # 跳 arg[rand()%argc], 全部参数都是目标
+    0x004A: "jtimer",          # 等待中标志置位 → 跳 arg0, 否则超时(arg1)后继续
+    0x0050: "select",          # 选项: (跳转目标, 辅助指针)*N, 全部参数都是代码偏移
     0x005F: "bgm",
     0x0060: "if",
     0x0061: "if_not",
@@ -116,18 +123,42 @@ OP_NAMES = {
     0x047E: "voiced",         # 带语音对话段开始: 4 参数, 播语音 + 文本段直到 click_wait
     0x047F: "voice_wait",     # 等待语音结束
     0x0480: "nop",
+    0x007C: "scene_call",     # 场景调用: 参数=0x1C80+目标脚本号(0=跳过), 固定跳目标脚本入口1, 返回栈可回
     0x04B0: "furi_mark",      # 振り仮名开始 (后跟基准汉字文本)
     0x04B1: "furi_read",      # 基准结束, 后跟注音假名文本
     0x04B2: "furi_end",       # 注音结束
 }
 
-# 引擎静态跳转目标只有入口表 (entry_offsets)。
-# 0x0003/0x0005 的参数是 (脚本号, 入口号), 0x0006 的参数是入口号,
-# 0x0070/0x0072 是画面过渡效果命令 (sub_411800 转场状态机), 参数为效果类型号。
-# 以上参数均非代码区 word 偏移, 不得作为切分文本的跳转目标。
-FLOW_OPS: set[int] = set()
+# ── 跳转/分支参数模型 (IDA sub_40CE00 逐 case 核实) ─────────────────────
+# FLOW_ARG_IDX[op] = 作为"代码区 word 偏移跳转目标"的参数下标; None = 全部参数。
+#   引擎取目标: v1 = code_base(dword_495F50) + 2*参数值, 不经过入口表 →
+#   改变文本长度会使这些偏移失效, 解码渲染成 block:cmd 引用、编码时重定位。
+#   0x0003/0x0005 的 (脚本号,入口号)、0x0006/0x007C 的入口号是入口表索引,
+#   与代码布局无关, 不参与重定位。
+FLOW_ARG_IDX: dict[int, tuple[int, ...] | None] = {
+    0x3C: (0,),
+    0x3D: (2,), 0x3E: (2,), 0x3F: (2,), 0x40: (2,), 0x41: (2,),
+    0x42: (2,), 0x43: (2,), 0x44: (2,),
+    0x45: None,   # jtable: arg[2..argc-1]
+    0x48: (0,),
+    0x49: None,   # jrand: arg[0..argc-1]
+    0x4A: (0,),
+    0x50: None,   # select: arg[0..argc-1] (偶=选中跳转, 奇=辅助指针 dword_495EFC)
+}
+
+
+def flow_indices(op: int, argc: int) -> tuple[int, ...]:
+    spec = FLOW_ARG_IDX.get(op)
+    if spec is None:
+        if op == 0x45:
+            return tuple(range(2, max(argc, 2)))
+        if op in (0x49, 0x50):
+            return tuple(range(argc))
+        return ()
+    return spec
+
+
 NAME_TO_OPCODE = {name: op for op, name in OP_NAMES.items()}
-NAME_TO_OPCODE["choice_hook"] = 0x047E  # 旧名兼容 (实为 voiced)
 
 
 @dataclass
@@ -176,11 +207,11 @@ class Instr:
         if self.is_text():
             body = f"text({text_refs[self.offset_words]})"
         else:
+            flow_idx = flow_indices(self.op, len(self.args))
             parts = []
             for index, arg in enumerate(self.args):
-                if self.op == 0x0006 and index == 0 and arg.kind == 0:
-                    parts.append(str(arg.value))
-                elif self.op in FLOW_OPS and index == 0 and arg.kind == 0:
+                if index in flow_idx and arg.kind == 0:
+                    # 代码偏移目标 → 渲染成 block:cmd 引用, 编码时按新布局重定位
                     parts.append(refs.get(arg.value, str(arg.value)))
                 else:
                     parts.append(arg.render())
@@ -225,17 +256,26 @@ def encode_text_tokens(text: str) -> list[int]:
     words: list[int] = []
     pos = 0
     while pos < len(text):
+        raw_match = RAW_WORD_TOKEN_RE.search(text, pos)
         hex_match = HEX_TOKEN_RE.search(text, pos)
         match = TEXT_TOKEN_RE.search(text, pos)
         if hex_match and (not match or hex_match.start() <= match.start()):
             match = hex_match
+        if raw_match and (not match or raw_match.start() <= match.start()):
+            if raw_match.start() > pos:
+                words.extend(encode_text_plain(text[pos : raw_match.start()]))
+            words.append(int(raw_match.group(1), 16))
+            pos = raw_match.end()
+            continue
         if not match:
             words.extend(encode_text_plain(text[pos:]))
             break
         if match.start() > pos:
             words.extend(encode_text_plain(text[pos:match.start()]))
         token = match.group(1)
-        if token in FULL_TEXT_SEQ_LOOKUP:
+        if token in GAIJI_TOKEN_TO_WORD:
+            words.append(GAIJI_TOKEN_TO_WORD[token])
+        elif token in FULL_TEXT_SEQ_LOOKUP:
             for word in FULL_TEXT_SEQ_LOOKUP[token]:
                 words.append(word)
                 words.append(0)
@@ -255,12 +295,56 @@ def encode_text_tokens(text: str) -> list[int]:
     return words
 
 
+# ── 不可编码字符收集: 全程汇总, 编码结束时覆盖写入 badchar.txt ──
+_badchar_locs: dict[str, set[str]] = {}
+_bad_source = "?"
+_bad_line: int | None = None
+
+
+def set_badchar_context(source: str) -> None:
+    global _bad_source
+    _bad_source = source
+
+
+def _set_bad_line(line: int | None) -> None:
+    global _bad_line
+    _bad_line = line
+
+
+def _record_bad_char(ch: str) -> None:
+    loc = _bad_source if _bad_line is None else f"{_bad_source}:{_bad_line}"
+    _badchar_locs.setdefault(ch, set()).add(loc)
+
+
+def write_badchar_report() -> int:
+    """覆盖写入本次运行收集到的不可编码字符表 (ROOT/badchar.txt), 返回字符种数"""
+    lines = [f"# 不可编码字符表 ({TEXT_ENCODING}) 已替换为 ？ — 格式: 字符 [TAB] U+码位 [TAB] 位置(文件:行)"]
+    for ch in sorted(_badchar_locs):
+        locs = ",".join(sorted(_badchar_locs[ch]))
+        lines.append(f"{ch}\tU+{ord(ch):04X}\t{locs}")
+    (ROOT / "badchar.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    count = len(_badchar_locs)
+    _badchar_locs.clear()
+    return count
+
+
 def encode_text_plain(text: str) -> list[int]:
     words: list[int] = []
     for ch in text:
         if ord(ch) < 0x80 or 0xFF61 <= ord(ch) <= 0xFF9F:
             raise ValueError(f"halfwidth character is not allowed: {ch!r}")
-    encoded = text.encode(TEXT_ENCODING, errors="ignore")
+    try:
+        encoded = text.encode(TEXT_ENCODING)
+    except UnicodeEncodeError:
+        # 不可编码字符 → 替换为全角 ？ 并记入 badchar 表, 不再报错中断/静默丢弃
+        buf = bytearray()
+        for ch in text:
+            try:
+                buf += ch.encode(TEXT_ENCODING)
+            except UnicodeEncodeError:
+                buf += "？".encode(TEXT_ENCODING)
+                _record_bad_char(ch)
+        encoded = bytes(buf)
     if len(encoded) % 2:
         raise ValueError("text encoded to odd byte length")
     for i in range(0, len(encoded), 2):
@@ -275,11 +359,18 @@ def decode_text_word(word: int) -> str:
     if word in {0x0000, 0xFFFF}:
         return ""
     if word == 0x86A2:
-        word = 0x849F
+        return "─"                    # 引擎绘制时特判映射为 0x849F (sub_40C210)
+    if word == 0x849F:
+        return "<w849f>"              # 字面 0x849F 与上映射值分开表示, 否则无法字节级往返
     if word in PARTIAL_TEXT_MAP:
         return PARTIAL_TEXT_MAP[word]
+    if word in GAIJI_WORD_TO_TOKEN:
+        return f"<{GAIJI_WORD_TO_TOKEN[word]}>"
     data = bytes((word >> 8, word & 0xFF))
-    return data.decode(TEXT_ENCODING, errors="ignore")
+    text = data.decode(TEXT_ENCODING, errors="ignore")
+    if not text:
+        return f"<w{word:04x}>"       # 当前编码下的不可映射字, 保留原字避免静默丢失
+    return text
 
 
 def space_word() -> int:
@@ -502,11 +593,14 @@ def split_text_blocks(instrs: list[Instr], targets: set[int]) -> list[Instr]:
 def collect_targets(entries: list[int], instrs: list[Instr], code_words: int) -> set[int]:
     targets = {offset for offset in entries if 0 <= offset < code_words}
     for instr in instrs:
-        if instr.op not in FLOW_OPS or not instr.args:
+        if instr.issue or instr.is_text() or not instr.args:
             continue
-        arg = instr.args[0]
-        if arg.kind == 0 and 0 <= arg.value < code_words:
-            targets.add(arg.value)
+        for index in flow_indices(instr.op, len(instr.args)):
+            if index >= len(instr.args):
+                continue
+            arg = instr.args[index]
+            if arg.kind == 0 and 0 <= arg.value < code_words:
+                targets.add(arg.value)
     return targets
 
 
@@ -577,14 +671,15 @@ def write_txt(dst: Path, text_lines: list[str]) -> None:
 
 
 def read_text_lines(path: Path) -> list[str]:
-    with path.open("r", encoding="utf-8", newline="") as handle:
+    # utf-8-sig 读取: 有 BOM 自动剥掉, 无 BOM 等同 utf-8, 两种都能读
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
         return [line.rstrip("\r\n") for line in handle]
 
 
 def parse_asm(path: Path) -> list[AsmCommand]:
     commands: list[AsmCommand] = []
     current_block = -1
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
+    for raw_line in path.read_text(encoding="utf-8-sig").splitlines():
         line = raw_line.split(";", 1)[0].rstrip()
         if not line:
             continue
@@ -604,7 +699,11 @@ def command_length(command: AsmCommand, text_lines: list[str]) -> int:
         line_no = int(command.text[5:-1])
         if line_no < 1 or line_no > len(text_lines):
             raise ValueError(f"{command.text}: text line does not exist")
-        return len(encode_text_content(text_lines[line_no - 1]))
+        _set_bad_line(line_no)
+        try:
+            return len(encode_text_content(text_lines[line_no - 1]))
+        finally:
+            _set_bad_line(None)
     _, args = parse_call(command.text)
     return 2 + len(args) * 2
 
@@ -663,7 +762,11 @@ def encode_command(command: AsmCommand, text_lines: list[str], refs: dict[tuple[
         line_no = int(command.text[5:-1])
         if line_no < 1 or line_no > len(text_lines):
             raise ValueError(f"{command.text}: text line does not exist")
-        return encode_text_content(text_lines[line_no - 1])
+        _set_bad_line(line_no)
+        try:
+            return encode_text_content(text_lines[line_no - 1])
+        finally:
+            _set_bad_line(None)
     name, raw_args = parse_call(command.text)
     if name.startswith("op_"):
         opcode = int(name[3:], 16)
@@ -671,8 +774,9 @@ def encode_command(command: AsmCommand, text_lines: list[str], refs: dict[tuple[
         if name not in NAME_TO_OPCODE:
             raise ValueError(f"unknown opcode name: {name}")
         opcode = NAME_TO_OPCODE[name]
+    flow_idx = flow_indices(opcode, len(raw_args))
     args = [
-        parse_arg(token, refs, opcode in FLOW_OPS and index == 0)
+        parse_arg(token, refs, index in flow_idx)
         for index, token in enumerate(raw_args)
     ]
     words = [opcode, len(args)]
@@ -684,6 +788,7 @@ def encode_command(command: AsmCommand, text_lines: list[str], refs: dict[tuple[
 def encode_one(input_dir: Path, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     for asm_path in sorted(input_dir.glob("*.asm")):
+        set_badchar_context(asm_path.stem)
         txt_path = asm_path.with_suffix(".txt")
         commands = parse_asm(asm_path)
         text_lines = read_text_lines(txt_path) if txt_path.exists() else []
@@ -700,6 +805,10 @@ def encode_one(input_dir: Path, output_dir: Path) -> None:
         words = [entry_count, len(code), *entries, *code]
         data = struct.pack(f"<{len(words)}H", *words)
         (output_dir / f"{asm_path.stem}.DAT").write_bytes(data)
+    set_badchar_context("?")
+    bad_kinds = write_badchar_report()
+    if bad_kinds:
+        print(f"badchar: {bad_kinds} 种不可编码字符已替换为 ？, 详见 {ROOT / 'badchar.txt'}")
 
 
 def collect_sources(input_path: Path) -> list[Path]:
@@ -715,6 +824,18 @@ def decode_one(src: Path, output_dir: Path) -> list[str]:
         raise ValueError(f"{src.name}: code_words mismatch")
     code, instrs, entries, issues = parse(src)
     instrs = split_text_blocks(instrs, collect_targets(entries, instrs, code_words))
+    starts = {ins.offset_words for ins in instrs}
+    for ins in instrs:
+        if ins.issue or ins.is_text() or not ins.args:
+            continue
+        for index in flow_indices(ins.op, len(ins.args)):
+            if index >= len(ins.args):
+                continue
+            arg = ins.args[index]
+            if arg.kind == 0 and arg.value not in starts:
+                issue = f"branch target {arg.value:#06x} not at instruction boundary"
+                ins.issue = issue
+                issues.append(f"{src.name}:{ins.offset_words:04X}:{issue}")
     instrs = mark_indent(instrs)
     dst_base = output_dir / src.stem.upper()
     text_lines = write_asm(dst_base.with_suffix(".asm"), code_words, entries, instrs, issues)
