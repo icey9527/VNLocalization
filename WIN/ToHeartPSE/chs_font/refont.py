@@ -2,101 +2,159 @@ import os
 import struct
 import base64
 from pathlib import Path
+
+import numpy as np
 import freetype
 
+# 字库(FD0)格式：纯字形数据，无文件头。
+#   全角块：v9*v9 字节/字 (24px字库 v9=27 -> 27x27=729；08px字库 v9=11 -> 121)
+#   半角块：紧跟在全角块后，宽=(v9-3)/2+3、高=v9 (24px: 15x27=405；08px: 7x11=77)
+# 每字节两层4bit覆盖度：高4位=文字alpha(乘17)，低4位=阴影alpha(乘17)。
+# 引擎(sub_414770)经 word_495AE0[b] 查表得 (lo=17*(b>>4), hi=17*(b&15))，
+# 同一像素先按阴影alpha混 a7 色、再按文字alpha混 a6 色。任意8bit灰度会破坏两层语义。
+# 原版阴影配方(拟合自 sys/FONTEX24.FD0)：阴影 = 文字覆盖度在
+# dx∈[-2,1], dy∈[-2,1] 窗口内的最大值滤波，无模糊无整体偏移。
 EXE_PATH = "psth.exe"
 OUT_FD0 = "FONTEX24.FD0"
+OUT_FD0_SMALL = "FONTEX08.FD0"
 TBL_PATH = "gbk.tbl"
 FONT_PATH = Path(os.getenv("LOCALAPPDATA", "")) / "Microsoft/Windows/Fonts/SOURCEHANSANSCN-MEDIUM.OTF"
-FONT_SZ = 24
-EXE_OFF = 0x4D20C
+
+# psth.exe 字体映射表：VA 0x44D208 起共 56 项，每项 { u32 base; u16 start; u16 end }。
+# 引擎按 code-base+start... 即 idx = base + code - start 查区间；第52项的 base 会被引擎
+# 当作全角字形总数(aO, dword_44D3A8)用于半角块偏移，必须等于实际全角字数。
+EXE_OFF = 0x4D208
+GAMMA = 0.8  # 主层加粗系数，沿用旧脚本观感
+
+FW_W, FW_H = 27, 27      # 24px 全角
+HW_W, HW_H = 15, 27      # 24px 半角
+SW_W, SW_H = 11, 11      # 08px 全角
+TW_W, TW_H = 7, 11       # 08px 半角
 
 SPECIAL_B64 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHCwsLCAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAPf48vDw8CAAAEBggIBgMAAAAAAAAAAAAAAAAP////Lw8FBw8PT08/Dw8MAwAAAAAAAAAAAAAPz///Tw8MD3//////zz8PDwIAAAAAAAAAAAAPz///Lw8Pr///r5/v//8vDwoAAAAAAAAAAAAOv///Dw+P/78fDw8Pb/+vDw4AAAAAAAAAAAAOj///Dw///x8PDw8PD//vDw8AAAAAAAAAAAAOj///Dw/f3w8PCwEHD9//Dw8AAAAAAAAAAAAOj///Dw8PDw8PAQAKL///Dw8AAAAAAAAAAAAOj///Dw8ODg4NAAQPr/+vDw8AAAAAAAAAAAANf//PDw8AAAAAAQ9P//9PDw8AAAAAAAAAAAAMT//PDw8AAAAABx///58PDwsAAAAAAAAAAAALT//PDw4AAAAADn//rw8PDwQAAAAAAAAAAAAKT//PDw4AAAAAD9//Hw8PCQAAAAAAAAAAAAAJT//PDw4AAAAAD/+/Dw8KAAAAAAAAAAAAAAAHL/+PDw4AAAAAD/9/Dw8BAAAAAAAAAAAAAAAFD/9vDw4AAAAAD99PDw0AAAAAAAAAAAAAAAACD98vDwsAAAAAD28PDwkAAAAAAAAAAAAAAAACDy8PDwkAAAABDg4ODg4BAAAAAAAAAAAAAAAML49fDw8AAAAGH8/vHw8GAAAAAAAAAAAAAAAOz///Dw8AAAAIb///bw8IAAAAAAAAAAAAAAAOv//vDw8AAAAIT///Tw8IAAAAAAAAAAAAAAAOH08fDw8AAAAIDw8/Dw8IAAAAAAAAAAAAAAALDw8PDw4AAAAEDw8PDw8EAAAAAAAAAAAAAAABBAUFBAEAAAAAAAMDAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQoLCwkEAAABCAsLCwcBAAAAAAAAAAAAAAAADF+PTw8PBgAFH49/Hw8NAAAAAAAAAAAAAAAADb///28PCgAFX///3w8OAAAAAAAAAAAAAAAADo///48PDAAFD///7w8OAAAAAAAAAAAAAAAADo///28PDQAFD///zw8OAAAAAAAAAAAAAAAADX///08PDAAAD///zw8OAAAAAAAAAAAAAAAADE///08PCwAAD///zw8OAAAAAAAAAAAAAAAAC0///08PCgAAD8//zw8OAAAAAAAAAAAAAAAACk///08PCgAAD8//zw8OAAAAAAAAAAAAAAAACk///08PCQAADs//jw8OAAAAAAAAAAAAAAAACD///w8PBgAADs//jw8OAAAAAAAAAAAAAAAABg///w8PBAAADr//jw8OAAAAAAAAAAAAAAAAAw///w8PAAAADo//jw8OAAAAAAAAAAAAAAAAAA///w8PAAAADo//jw8OAAAAAAAAAAAAAAAAAA///w8PAAAADo//bw8NAAAAAAAAAAAAAAAAAA/vzw8PAAAADY//Tw8MAAAAAAAAAAAAAAAAAA/Prw8PAAAADE//Hw8IAAAAAAAAAAAAAAAAAA6ebg4OAAAACi/fDw8EAAAAAAAAAAAAAAAAAQ4uDg4NAAAABw8vDw8CAAAAAAAAAAAAAAAACB9/fw8PBAAAD0+PLw8LAAAAAAAAAAAAAAAAC4///08PBQAAD///vw8NAAAAAAAAAAAAAAAAC3///y8PBQAAD///nw8NAAAAAAAAAAAAAAAACw9PLw8PBQAADy9PDw8NAAAAAAAAAAAAAAAABw8PDw8PAgAADw8PDw8JAAAAAAAAAAAAAAAAAAQFBQUCAAAAAgUFBQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCw4ODg4NCAEIDQ4ODg4LAwAAAAAAAAAAAAMPP6/Pz48fDw8fj8/Pvz8PDwMAAAAAAAAAAA4/////////Pz////////8/Dw4AAAAAAAAABg/v///////////////////vDw8GAAAAAAAACm//////////////////////bw8LAAAAAAAADo//////////////////////nw8OAAAAAAAADs//////////////////////zw8OAAAAAAAADp//////////////////////rw8OAAAAAAAADn//////////////////////jw8OAAAAAAAADD//////////////////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"
 
-FW_W, FW_H, HW_W, HW_H = 27, 27, 15, 27
-LUT = bytes(int((v / 255.0) ** 0.8 * 255) for v in range(256))
-EMP_FW, EMP_HW = bytes(FW_W * FW_H), bytes(HW_W * HW_H)
+def _shift(a, dx, dy):
+    out = np.zeros_like(a)
+    h, w = a.shape
+    out[max(0, -dy):h - max(0, dy), max(0, -dx):w - max(0, dx)] =         a[max(0, dy):h - max(0, -dy), max(0, dx):w - max(0, -dx)]
+    return out
 
-def render_glyph(face, char, w, h, emp):
-    if not char: return emp
-    face.load_char(char, freetype.FT_LOAD_RENDER | freetype.FT_LOAD_TARGET_NORMAL)
-    bmp = face.glyph.bitmap
-    if not bmp.width or not bmp.rows: return emp
 
-    tile = bytearray(emp)
-    asc, desc = face.size.ascender >> 6, face.size.descender >> 6
-    dy = ((h - (asc - desc)) // 2 + asc) - int(face.glyph.bitmap_top)
-    dx = max(0, int(face.glyph.bitmap_left))
+def shadow_layer(cov):
+    out = cov.copy()
+    for dy in (-2, -1, 0, 1):
+        for dx in (-2, -1, 0, 1):
+            if dx or dy:
+                out = np.maximum(out, _shift(cov, dx, dy))
+    return out
 
-    buf, pitch, width = bmp.buffer, bmp.pitch, bmp.width
-    for y in range(bmp.rows):
-        if not (0 <= dy + y < h): continue
-        for x in range(width):
-            if 0 <= dx + x < w:
-                tile[(dy + y) * w + (dx + x)] = LUT[buf[y * pitch + x]]
-    return tile
+
+def encode_tile(canvas):
+    main = np.clip(np.round((canvas / 255.0) ** GAMMA * 15.0), 0, 15)
+    shad = np.clip(np.round(shadow_layer(canvas) / 17.0), 0, 15)
+    return ((main.astype(np.uint8) << 4) | shad.astype(np.uint8)).ravel().tobytes()
+
+
+def render_canvas(face, char, w, h, size, cur_size):
+    canvas = np.zeros((h, w), np.float64)
+    if not char:
+        return canvas, cur_size
+    while True:
+        if size != cur_size:
+            face.set_pixel_sizes(0, size)
+            cur_size = size
+        face.load_char(char, freetype.FT_LOAD_RENDER | freetype.FT_LOAD_TARGET_NORMAL)
+        bmp = face.glyph.bitmap
+        if not bmp.width or not bmp.rows or size <= 8 or bmp.width <= w:
+            break
+        size -= 1  # 窄格放不下时逐级缩小字号
+    if bmp.width and bmp.rows:
+        raw = bytes(bmp.buffer)
+        buf = np.frombuffer(raw, np.uint8, bmp.pitch * bmp.rows) \
+            .reshape(bmp.rows, bmp.pitch)[:, :bmp.width].astype(np.float64)
+        asc = face.size.ascender >> 6
+        desc = face.size.descender >> 6
+        dy = (h - (asc - desc)) // 2 + asc - int(face.glyph.bitmap_top)
+        dx = max(0, (w - bmp.width) // 2)
+        y0, y1 = max(0, dy), min(h, dy + bmp.rows)
+        x0, x1 = max(0, dx), min(w, dx + bmp.width)
+        if y1 > y0 and x1 > x0:
+            canvas[y0:y1, x0:x1] = buf[y0 - dy:y1 - dy, x0 - dx:x1 - dx]
+    return canvas, cur_size
+
+
+def build_font(face, fw_s, fw_e, cmap, fw_w, fw_h, hw_w, hw_h, size, special_raw):
+    fd0 = bytearray()
+    cur = None
+    for c in range(fw_s, fw_e + 1):
+        if special_raw and 0xF040 <= c <= 0xF047:
+            i = c - 0xF040
+            fd0 += special_raw[i * fw_w * fw_h:(i + 1) * fw_w * fw_h]
+            continue
+        canvas, cur = render_canvas(face, cmap.get(c, ""), fw_w, fw_h, size, cur)
+        fd0 += encode_tile(canvas)
+    for c in range(0x21, 0x7F):
+        canvas, cur = render_canvas(face, cmap.get(c) or chr(c), hw_w, hw_h, size, cur)
+        fd0 += encode_tile(canvas)
+    return fd0
+
+
+def build_table(fw_s, fw_e):
+    fw_cnt = fw_e - fw_s + 1
+    table = bytearray(448)
+
+    def set_entry(i, base, s, e):
+        struct.pack_into("<IHH", table, i * 8, base, s, e)
+
+    for i in range(56):
+        set_entry(i, 0, 0xFFFF, 0)
+    set_entry(0, 0, fw_s, fw_e)              # GBK 全角整段（含 0xF040-47 外字）
+    set_entry(52, fw_cnt, 0xA1A1, 0xA1A1)    # base=全角总数(引擎半角偏移aO)；0xA1A1 空格拦截
+    set_entry(53, 0, 0x0021, 0x007E)         # 半角 ASCII
+    set_entry(55, 0, 0x0020, 0x0020)         # 半角空格拦截
+    return table, fw_cnt
+
 
 def main():
     if not FONT_PATH.exists():
         raise FileNotFoundError(f"找不到字体，请检查路径: {FONT_PATH}")
 
     cmap = {}
-    with open(TBL_PATH, 'r', encoding='utf-16', errors='ignore') as f:
+    with open(TBL_PATH, "r", encoding="utf-16", errors="ignore") as f:
         for line in f:
-            line = line.rstrip('\r\n')
-            if '=' in line:
-                k, v = line.split('=', 1)
+            line = line.rstrip("\r\n")
+            if "=" in line:
+                k, v = line.split("=", 1)
                 cmap[int(k, 16)] = v
 
-    hw_codes = sorted(c for c in cmap if c < 0x80)
     fw_codes = sorted(c for c in cmap if c >= 0x80)
     for c in range(0xF040, 0xF048):
-        if c not in fw_codes: fw_codes.append(c)
-    fw_codes.sort()
-
-    fw_ivls = [(fw_codes[0], fw_codes[-1])]
+        if c not in fw_codes:
+            fw_codes.append(c)
+    fw_s, fw_e = fw_codes[0], fw_codes[-1]
 
     face = freetype.Face(str(FONT_PATH))
-    face.set_pixel_sizes(0, FONT_SZ)
-    
-    fd0, table = bytearray(), bytearray(448)
-    def set_entry(i, s, e, b): struct.pack_into("<HHI", table, i*8, s, e, b)
-    for i in range(56): set_entry(i, 0xFFFF, 0, 0)
+    special_raw = base64.b64decode(SPECIAL_B64) if SPECIAL_B64 else b""
 
-    spec_raw = base64.b64decode(SPECIAL_B64) if SPECIAL_B64 else EMP_FW * 8
-    fw_cnt = 0
-
-    for i, (s, e) in enumerate(fw_ivls):
-        set_entry(i, s, e, fw_cnt)
-        for c in range(s, e + 1):
-            if 0xF040 <= c <= 0xF047:
-                idx = c - 0xF040
-                fd0.extend(spec_raw[idx*729 : (idx+1)*729])
-            else:
-                fd0.extend(render_glyph(face, cmap.get(c, ""), FW_W, FW_H, EMP_FW))
-            fw_cnt += 1
-
-    hw_s, hw_e = (hw_codes[0], hw_codes[-1]) if hw_codes else (0x20, 0x7E)
-    for c in range(hw_s, hw_e + 1):
-        fd0.extend(render_glyph(face, cmap.get(c, ""), HW_W, HW_H, EMP_HW))
-
-    set_entry(51, 0xFFFF, 0x0000, fw_cnt)        # 51 项：必须存全角总数，引擎算偏移全靠它！
-    set_entry(52, 0xA1A1, 0xA1A1, 0)             # 52 项：GBK全角空格拦截符
-    
-    set_entry(53, hw_s, hw_e, 0)                 # 53 项：半角 ASCII 映射表
-    set_entry(54, 0xFFFF, 0x0000, 0)             # 54 项：废弃原版半角片假名
-    set_entry(55, 0x0020, 0x0020, 0xFFFFFFFF)    # 55 项：原版半角空格拦截，基址设为 -1
+    fd0 = build_font(face, fw_s, fw_e, cmap, FW_W, FW_H, HW_W, HW_H, 24, special_raw)
     Path(OUT_FD0).write_bytes(fd0)
-    
+
+    fd0s = build_font(face, fw_s, fw_e, cmap, SW_W, SW_H, TW_W, TW_H, 8, b"")
+    Path(OUT_FD0_SMALL).write_bytes(fd0s)
+
+    table, fw_cnt = build_table(fw_s, fw_e)
+
     exe = Path(EXE_PATH)
     if exe.exists():
         with open(exe, "r+b") as f:
             f.seek(EXE_OFF)
             f.write(table)
-        print(f"成功: 字库已生成，EXE已注入 ({len(fw_ivls)} 个区间)")
+        print(f"成功: 字库已生成，EXE表已注入 @{EXE_OFF:#x} (全角 {fw_cnt} 个)")
     else:
         Path("table_patch.bin").write_bytes(table)
-        print("成功: 字库已生成，未找到 EXE，已输出 table_patch.bin")
+        print(f"成功: 字库已生成，未找到 EXE，已输出 table_patch.bin (全角 {fw_cnt} 个)")
+    print(f"{OUT_FD0}: {len(fd0)} 字节, {OUT_FD0_SMALL}: {len(fd0s)} 字节")
+
 
 if __name__ == "__main__":
     main()
