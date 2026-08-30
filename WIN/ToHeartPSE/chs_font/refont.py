@@ -1,105 +1,150 @@
+"""ToHeartPSE 字库生成: FONTEX24.FD0 / FONTEX08.FD0 + psth.exe 码表
+
+- 全角区 (GBK 8140-FDA0): 思源黑体渲染 + 原版同款阴影 (tile 字节 = 主笔画4bit<<4 | 阴影4bit)
+- 半角区 (0x21-7E) / 外字区 (0xF040-47) / PRESERVE_CODES 集合: 字形整块取自原版字库, 不渲染
+- 码表已内嵌 (ORIG_TABLE, 逐字节取自 backup/psth.exe VA 0x44D208), 原版 24px/08px 字库同表同索引
+- 原版字库文件尾部多 1 个 0x00 字节, 读取时自动裁掉
+"""
 import os
 import struct
-import base64
-from pathlib import Path
+import sys
+import time
 
 import numpy as np
 import freetype
 
-# 字库(FD0)格式：纯字形数据，无文件头。
-#   全角块：v9*v9 字节/字 (24px字库 v9=27 -> 27x27=729；08px字库 v9=11 -> 121)
-#   半角块：紧跟在全角块后，宽=(v9-3)/2+3、高=v9 (24px: 15x27=405；08px: 7x11=77)
-# 每字节两层4bit覆盖度：高4位=文字alpha(乘17)，低4位=阴影alpha(乘17)。
-# 引擎(sub_414770)经 word_495AE0[b] 查表得 (lo=17*(b>>4), hi=17*(b&15))，
-# 同一像素先按阴影alpha混 a7 色、再按文字alpha混 a6 色。任意8bit灰度会破坏两层语义。
-# 原版阴影配方(拟合自 sys/FONTEX24.FD0)：阴影 = 文字覆盖度在
-# dx∈[-2,1], dy∈[-2,1] 窗口内的最大值滤波，无模糊无整体偏移。
-EXE_PATH = "psth.exe"
-OUT_FD0 = "FONTEX24.FD0"
-OUT_FD0_SMALL = "FONTEX08.FD0"
-TBL_PATH = "gbk.tbl"
-FONT_PATH = Path(os.getenv("LOCALAPPDATA", "")) / "Microsoft/Windows/Fonts/SOURCEHANSANSCN-MEDIUM.OTF"
+# 路径均相对当前目录; 字体在 Windows 用户字体目录
+FONT_PATH = os.path.expandvars(r"%LOCALAPPDATA%\Microsoft\Windows\Fonts\SOURCEHANSANSCN-MEDIUM.OTF")
 
-# psth.exe 字体映射表：VA 0x44D208 起共 56 项，每项 { u32 base; u16 start; u16 end }。
-# 引擎按 code-base+start... 即 idx = base + code - start 查区间；第52项的 base 会被引擎
-# 当作全角字形总数(aO, dword_44D3A8)用于半角块偏移，必须等于实际全角字数。
+# psth.exe 字体映射表: VA 0x44D208 (文件 0x4D208), 56 项 {u32 base; u16 start; u16 end}。
+# 第52项 base = 全角字形总数 (引擎算半角区偏移用, dword_44D3A8), start/end = 全角空格拦截;
+# 第53项 = 半角 ASCII (0x21-7E, 94 tile); 55 = 半角空格拦截。半角 tile: 宽=(v9-3)/2+3, 高=v9。
 EXE_OFF = 0x4D208
-GAMMA = 0.8  # 主层加粗系数，沿用旧脚本观感
+ORIG_TABLE = bytes.fromhex(
+    "000000004181AC816C000000B881BF8174000000C881CE817B000000DA81FC81"
+    "9E0000004F825882A800000060827982C200000081829A82DC0000009F82F182"
+    "2F01000040839683860100009F83B6839E010000BF83D683B601000040846084"
+    "D701000070849184F90100009F84BE841902000040879987730200009F88FC88"
+    "D10200004089FC898E030000408AFC8A4B040000408BFC8B08050000408CFC8C"
+    "C5050000408DFC8D82060000408EFC8E3F070000408FFC8FFC0700004090FC90"
+    "B90800004091FC91760900004092FC92330A00004093FC93F00A00004094FC94"
+    "AD0B00004095FC956A0C00004096FC96270D00004097FC97E40D000040987298"
+    "170E00009F98FC98750E00004099FC99320F0000409AFC9AEF0F0000409BFC9B"
+    "AC100000409CFC9C69110000409DFC9D26120000409EFC9EE3120000409FFC9F"
+    "A013000040E0FCE05D14000040E1FCE11A15000040E2FCE2D715000040E3FCE3"
+    "9416000040E4FCE45117000040E5FCE50E18000040E6FCE6CB18000040E7FCE7"
+    "8819000040E8FCE8451A000040E9FCE9021B000040EAA4EA671B000040F047F0"
+    "6F1B0000408140810000000021007E005E000000A1FFDFFF9D00000020002000")
 
-FW_W, FW_H = 27, 27      # 24px 全角
-HW_W, HW_H = 15, 27      # 24px 半角
+ORIG_FULL = []                                    # 前 52 项 [(start, end, base)]
+for _i in range(56):
+    _b, _s, _e = struct.unpack_from("<IHH", ORIG_TABLE, _i * 8)
+    if _i < 52:
+        ORIG_FULL.append((_s, _e, _b))
+ORIG_FULL_COUNT = ORIG_FULL[-1][2] + (ORIG_FULL[-1][1] - ORIG_FULL[-1][0] + 1)   # 7023
+ORIG_HALF_COUNT = 0x7E - 0x21 + 1                                                # 94 (半角 ASCII)
+ORIG_HALF_TILES = ORIG_HALF_COUNT + (0xFFDF - 0xFFA1 + 1)                        # 157 (94+63 片假名)
+
+# ── 保留集合表: 想保留原版字形的原版码位, 直接往里加一行 ────────────────
+# 集合里的码位按原版码表取 tile, 放到新字库同一码位。
+# 例: 0x8788=㊧ 0x8789=㊨, 译文里直接用这两个码位即可显示。
+PRESERVE_CODES = {
+    # 外字区 (游戏特殊图形)
+    0xF040, 0xF041, 0xF042, 0xF043,
+    0xF044, 0xF045, 0xF046, 0xF047,
+    # 自定义保留
+    0x8788, 0x8789,
+}
+
+# 渲染参数
+FW_W, FW_H = 27, 27      # 24px 全角 tile
+HW_W, HW_H = 15, 27      # 24px 半角 tile (整块复制, 不渲染)
 SW_W, SW_H = 11, 11      # 08px 全角
 TW_W, TW_H = 7, 11       # 08px 半角
-
-SPECIAL_B64 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHCwsLCAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAPf48vDw8CAAAEBggIBgMAAAAAAAAAAAAAAAAP////Lw8FBw8PT08/Dw8MAwAAAAAAAAAAAAAPz///Tw8MD3//////zz8PDwIAAAAAAAAAAAAPz///Lw8Pr///r5/v//8vDwoAAAAAAAAAAAAOv///Dw+P/78fDw8Pb/+vDw4AAAAAAAAAAAAOj///Dw///x8PDw8PD//vDw8AAAAAAAAAAAAOj///Dw/f3w8PCwEHD9//Dw8AAAAAAAAAAAAOj///Dw8PDw8PAQAKL///Dw8AAAAAAAAAAAAOj///Dw8ODg4NAAQPr/+vDw8AAAAAAAAAAAANf//PDw8AAAAAAQ9P//9PDw8AAAAAAAAAAAAMT//PDw8AAAAABx///58PDwsAAAAAAAAAAAALT//PDw4AAAAADn//rw8PDwQAAAAAAAAAAAAKT//PDw4AAAAAD9//Hw8PCQAAAAAAAAAAAAAJT//PDw4AAAAAD/+/Dw8KAAAAAAAAAAAAAAAHL/+PDw4AAAAAD/9/Dw8BAAAAAAAAAAAAAAAFD/9vDw4AAAAAD99PDw0AAAAAAAAAAAAAAAACD98vDwsAAAAAD28PDwkAAAAAAAAAAAAAAAACDy8PDwkAAAABDg4ODg4BAAAAAAAAAAAAAAAML49fDw8AAAAGH8/vHw8GAAAAAAAAAAAAAAAOz///Dw8AAAAIb///bw8IAAAAAAAAAAAAAAAOv//vDw8AAAAIT///Tw8IAAAAAAAAAAAAAAAOH08fDw8AAAAIDw8/Dw8IAAAAAAAAAAAAAAALDw8PDw4AAAAEDw8PDw8EAAAAAAAAAAAAAAABBAUFBAEAAAAAAAMDAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQoLCwkEAAABCAsLCwcBAAAAAAAAAAAAAAAADF+PTw8PBgAFH49/Hw8NAAAAAAAAAAAAAAAADb///28PCgAFX///3w8OAAAAAAAAAAAAAAAADo///48PDAAFD///7w8OAAAAAAAAAAAAAAAADo///28PDQAFD///zw8OAAAAAAAAAAAAAAAADX///08PDAAAD///zw8OAAAAAAAAAAAAAAAADE///08PCwAAD///zw8OAAAAAAAAAAAAAAAAC0///08PCgAAD8//zw8OAAAAAAAAAAAAAAAACk///08PCgAAD8//zw8OAAAAAAAAAAAAAAAACk///08PCQAADs//jw8OAAAAAAAAAAAAAAAACD///w8PBgAADs//jw8OAAAAAAAAAAAAAAAABg///w8PBAAADr//jw8OAAAAAAAAAAAAAAAAAw///w8PAAAADo//jw8OAAAAAAAAAAAAAAAAAA///w8PAAAADo//jw8OAAAAAAAAAAAAAAAAAA///w8PAAAADo//bw8NAAAAAAAAAAAAAAAAAA/vzw8PAAAADY//Tw8MAAAAAAAAAAAAAAAAAA/Prw8PAAAADE//Hw8IAAAAAAAAAAAAAAAAAA6ebg4OAAAACi/fDw8EAAAAAAAAAAAAAAAAAQ4uDg4NAAAABw8vDw8CAAAAAAAAAAAAAAAACB9/fw8PBAAAD0+PLw8LAAAAAAAAAAAAAAAAC4///08PBQAAD///vw8NAAAAAAAAAAAAAAAAC3///y8PBQAAD///nw8NAAAAAAAAAAAAAAAACw9PLw8PBQAADy9PDw8NAAAAAAAAAAAAAAAABw8PDw8PAgAADw8PDw8JAAAAAAAAAAAAAAAAAAQFBQUCAAAAAgUFBQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCw4ODg4NCAEIDQ4ODg4LAwAAAAAAAAAAAAMPP6/Pz48fDw8fj8/Pvz8PDwMAAAAAAAAAAA4/////////Pz////////8/Dw4AAAAAAAAABg/v///////////////////vDw8GAAAAAAAACm//////////////////////bw8LAAAAAAAADo//////////////////////nw8OAAAAAAAADs//////////////////////zw8OAAAAAAAADp//////////////////////rw8OAAAAAAAADn//////////////////////jw8OAAAAAAAADD//////////////////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"
-
-def _shift(a, dx, dy):
-    out = np.zeros_like(a)
-    h, w = a.shape
-    out[max(0, -dy):h - max(0, dy), max(0, -dx):w - max(0, dx)] =         a[max(0, dy):h - max(0, -dy), max(0, dx):w - max(0, -dx)]
-    return out
+GAMMA = 0.8              # 主笔画加粗系数
 
 
-def shadow_layer(cov):
-    out = cov.copy()
-    for dy in (-2, -1, 0, 1):
-        for dx in (-2, -1, 0, 1):
-            if dx or dy:
-                out = np.maximum(out, _shift(cov, dx, dy))
-    return out
+# ── 原版字库 ─────────────────────────────────────────────────────────
+def load_orig(path: str, exact: int) -> bytes:
+    data = open(path, "rb").read()
+    if len(data) == exact + 1:            # 原版 pak 内多 1 个 0x00 尾字节
+        data = data[:-1]
+    if len(data) != exact:
+        raise ValueError(f"{path}: 大小 {len(data)} != {exact}(±1)")
+    return data
 
 
-def encode_tile(canvas):
-    main = np.clip(np.round((canvas / 255.0) ** GAMMA * 15.0), 0, 15)
-    shad = np.clip(np.round(shadow_layer(canvas) / 17.0), 0, 15)
-    return ((main.astype(np.uint8) << 4) | shad.astype(np.uint8)).ravel().tobytes()
+def orig_index(sjis: int) -> int:
+    for s, e, b in ORIG_FULL:
+        if s <= sjis <= e:
+            return b + sjis - s
+    raise KeyError(f"码位 {sjis:04X} 不在原版码表内")
 
 
-def render_canvas(face, char, w, h, size, cur_size):
-    canvas = np.zeros((h, w), np.float64)
+# ── 渲染 ─────────────────────────────────────────────────────────────
+_MAIN_LUT = np.round((np.arange(256) / 255.0) ** GAMMA * 15).astype(np.uint8)
+_SHD_LUT = np.minimum(15, np.round(np.arange(256) / 17.0)).astype(np.uint8)
+
+
+def shadow_layer(cov: np.ndarray) -> np.ndarray:
+    """原版阴影配方: 主笔画覆盖度的窗口最大值 (左/上伸 2px, 右/下伸 1px), 可分离实现"""
+    h, w = cov.shape
+    p = np.zeros((h, w + 3), cov.dtype)          # 水平窗口 [x-2, x+1]
+    p[:, 2:w + 2] = cov
+    hm = np.maximum(np.maximum(p[:, :w], p[:, 1:w + 1]),
+                    np.maximum(p[:, 2:w + 2], p[:, 3:w + 3]))
+    p2 = np.zeros((h + 3, w), cov.dtype)         # 垂直窗口 [y-2, y+1]
+    p2[2:h + 2, :] = hm
+    return np.maximum(np.maximum(p2[:h], p2[1:h + 1]),
+                      np.maximum(p2[2:h + 2], p2[3:h + 3]))
+
+
+def encode_tile(canvas: np.ndarray) -> bytes:
+    tile = (_MAIN_LUT[canvas] << 4) | _SHD_LUT[shadow_layer(canvas)]
+    return tile.tobytes()
+
+
+def render_canvas(face, char: str, w: int, h: int, cur: int) -> tuple[np.ndarray, int]:
+    """cur = 当前字号; 返回 (画布, 新字号)。位图超宽时逐级缩号 (如"丂")"""
+    canvas = np.zeros((h, w), np.uint8)
     if not char:
-        return canvas, cur_size
+        return canvas, cur
+    size = cur
     while True:
-        if size != cur_size:
-            face.set_pixel_sizes(0, size)
-            cur_size = size
         face.load_char(char, freetype.FT_LOAD_RENDER | freetype.FT_LOAD_TARGET_NORMAL)
         bmp = face.glyph.bitmap
         if not bmp.width or not bmp.rows or size <= 8 or bmp.width <= w:
             break
-        size -= 1  # 窄格放不下时逐级缩小字号
-    if bmp.width and bmp.rows:
-        raw = bytes(bmp.buffer)
-        buf = np.frombuffer(raw, np.uint8, bmp.pitch * bmp.rows) \
-            .reshape(bmp.rows, bmp.pitch)[:, :bmp.width].astype(np.float64)
-        asc = face.size.ascender >> 6
-        desc = face.size.descender >> 6
-        dy = (h - (asc - desc)) // 2 + asc - int(face.glyph.bitmap_top)
-        dx = max(0, (w - bmp.width) // 2)
-        y0, y1 = max(0, dy), min(h, dy + bmp.rows)
-        x0, x1 = max(0, dx), min(w, dx + bmp.width)
-        if y1 > y0 and x1 > x0:
-            canvas[y0:y1, x0:x1] = buf[y0 - dy:y1 - dy, x0 - dx:x1 - dx]
-    return canvas, cur_size
+        size -= 1
+        face.set_pixel_sizes(0, size)
+    buf = np.frombuffer(bytes(bmp.buffer), np.uint8, bmp.pitch * bmp.rows).reshape(bmp.rows, bmp.pitch)[:, :w]
+    asc = face.size.ascender >> 6
+    desc = face.size.descender >> 6
+    dy = (h - (asc - desc)) // 2 + asc - int(face.glyph.bitmap_top)
+    dx = max(0, (w - bmp.width) // 2)
+    y0, y1 = max(0, dy), min(h, dy + bmp.rows)
+    x0, x1 = max(0, dx), min(w, dx + bmp.width)
+    if y1 > y0 and x1 > x0:
+        canvas[y0:y1, x0:x1] = buf[y0 - dy:y1 - dy, x0 - dx:x1 - dx]
+    return canvas, size
 
 
-def build_font(face, fw_s, fw_e, cmap, fw_w, fw_h, hw_w, hw_h, size, special_raw):
+def build_full(face, fw_s: int, fw_e: int, cmap: dict, keep: dict, w: int, h: int, size: int) -> bytearray:
     fd0 = bytearray()
-    cur = None
+    face.set_pixel_sizes(0, size)
+    cur = size
     for c in range(fw_s, fw_e + 1):
-        if special_raw and 0xF040 <= c <= 0xF047:
-            i = c - 0xF040
-            fd0 += special_raw[i * fw_w * fw_h:(i + 1) * fw_w * fw_h]
+        tile = keep.get(c)
+        if tile is not None:
+            fd0 += tile
             continue
-        canvas, cur = render_canvas(face, cmap.get(c, ""), fw_w, fw_h, size, cur)
-        fd0 += encode_tile(canvas)
-    for c in range(0x21, 0x7F):
-        canvas, cur = render_canvas(face, cmap.get(c) or chr(c), hw_w, hw_h, size, cur)
+        canvas, cur = render_canvas(face, cmap.get(c, ""), w, h, cur)
         fd0 += encode_tile(canvas)
     return fd0
 
 
-def build_table(fw_s, fw_e):
+# ── 码表/装配 ────────────────────────────────────────────────────────
+def build_table(fw_s: int, fw_e: int) -> tuple[bytearray, int]:
     fw_cnt = fw_e - fw_s + 1
     table = bytearray(448)
 
@@ -108,53 +153,71 @@ def build_table(fw_s, fw_e):
 
     for i in range(56):
         set_entry(i, 0, 0xFFFF, 0)
-    set_entry(0, 0, fw_s, fw_e)              # GBK 全角整段（含 0xF040-47 外字）
-    set_entry(52, fw_cnt, 0xA1A1, 0xA1A1)    # base=全角总数(引擎半角偏移aO)；0xA1A1 空格拦截
+    set_entry(0, 0, fw_s, fw_e)              # GBK 全角整段 (含 0xF040-47 外字)
+    set_entry(52, fw_cnt, 0xA1A1, 0xA1A1)    # base=全角总数 (引擎半角偏移 aO)
     set_entry(53, 0, 0x0021, 0x007E)         # 半角 ASCII
     set_entry(55, 0, 0x0020, 0x0020)         # 半角空格拦截
     return table, fw_cnt
 
 
-def main():
-    if not FONT_PATH.exists():
-        raise FileNotFoundError(f"找不到字体，请检查路径: {FONT_PATH}")
-
+def main(input_dir: str, output_dir: str):
+    """输入目录放旧字库 (FONTEX24/08.FD0), 生成的写进输出目录"""
+    t0 = time.time()
+    if not os.path.exists(FONT_PATH):
+        raise FileNotFoundError(f"找不到字体: {FONT_PATH}")
+    os.makedirs(output_dir, exist_ok=True)
     cmap = {}
-    with open(TBL_PATH, "r", encoding="utf-16", errors="ignore") as f:
-        for line in f:
-            line = line.rstrip("\r\n")
-            if "=" in line:
-                k, v = line.split("=", 1)
-                cmap[int(k, 16)] = v
+    for line in open("gbk.tbl", encoding="utf-16", errors="ignore"):
+        line = line.rstrip("\r\n")
+        if "=" in line:
+            k, _, v = line.partition("=")
+            cmap[int(k, 16)] = v
+    codes = [c for c in cmap if c >= 0x80] + sorted(PRESERVE_CODES)
+    fw_s, fw_e = min(codes), max(codes)
 
-    fw_codes = sorted(c for c in cmap if c >= 0x80)
-    for c in range(0xF040, 0xF048):
-        if c not in fw_codes:
-            fw_codes.append(c)
-    fw_s, fw_e = fw_codes[0], fw_codes[-1]
+    orig24 = load_orig(os.path.join(input_dir, "FONTEX24.FD0"), ORIG_FULL_COUNT * 729 + ORIG_HALF_TILES * HW_W * HW_H)
+    orig08 = load_orig(os.path.join(input_dir, "FONTEX08.FD0"), ORIG_FULL_COUNT * 121 + ORIG_HALF_TILES * TW_W * TW_H)
+    half24 = orig24[ORIG_FULL_COUNT * 729: ORIG_FULL_COUNT * 729 + ORIG_HALF_COUNT * HW_W * HW_H]
+    half08 = orig08[ORIG_FULL_COUNT * 121: ORIG_FULL_COUNT * 121 + ORIG_HALF_COUNT * TW_W * TW_H]
+
+    # 保留集合 → 原版 tile 同码直取
+    keep24, keep08, miss = {}, {}, []
+    for code in sorted(PRESERVE_CODES):
+        try:
+            i = orig_index(code)
+        except KeyError:
+            miss.append(code)
+            continue
+        keep24[code] = orig24[i * 729:i * 729 + 729]
+        keep08[code] = orig08[i * 121:i * 121 + 121]
+    for code in miss:
+        print(f"警告: 保留码位 {code:04X} 不在原版码表内, 用 TTF 渲染")
 
     face = freetype.Face(str(FONT_PATH))
-    special_raw = base64.b64decode(SPECIAL_B64) if SPECIAL_B64 else b""
-
-    fd0 = build_font(face, fw_s, fw_e, cmap, FW_W, FW_H, HW_W, HW_H, 24, special_raw)
-    Path(OUT_FD0).write_bytes(fd0)
-
-    fd0s = build_font(face, fw_s, fw_e, cmap, SW_W, SW_H, TW_W, TW_H, 8, b"")
-    Path(OUT_FD0_SMALL).write_bytes(fd0s)
+    fd0 = build_full(face, fw_s, fw_e, cmap, keep24, FW_W, FW_H, 24) + half24
+    fd0s = build_full(face, fw_s, fw_e, cmap, keep08, SW_W, SW_H, 8) + half08
+    open(os.path.join(output_dir, "FONTEX24.FD0"), "wb").write(fd0)
+    open(os.path.join(output_dir, "FONTEX08.FD0"), "wb").write(fd0s)
 
     table, fw_cnt = build_table(fw_s, fw_e)
-
-    exe = Path(EXE_PATH)
-    if exe.exists():
-        with open(exe, "r+b") as f:
-            f.seek(EXE_OFF)
-            f.write(table)
-        print(f"成功: 字库已生成，EXE表已注入 @{EXE_OFF:#x} (全角 {fw_cnt} 个)")
+    if os.path.exists("psth.exe"):
+        try:
+            with open("psth.exe", "r+b") as f:
+                f.seek(EXE_OFF)
+                f.write(table)
+            print(f"EXE 表已注入 @{EXE_OFF:#x}")
+        except PermissionError:
+            print("警告: psth.exe 被占用 (游戏开着?), 本次未注入码表; 关闭游戏后重跑本脚本即可")
     else:
-        Path("table_patch.bin").write_bytes(table)
-        print(f"成功: 字库已生成，未找到 EXE，已输出 table_patch.bin (全角 {fw_cnt} 个)")
-    print(f"{OUT_FD0}: {len(fd0)} 字节, {OUT_FD0_SMALL}: {len(fd0s)} 字节")
+        print("未找到 psth.exe, 跳过表注入")
+    print(f"全角 {fw_cnt} (保留原版 {len(keep24)}) + 半角 {ORIG_HALF_COUNT} (原版复制) | "
+          f"FONTEX24 {len(fd0)}B / FONTEX08 {len(fd0s)}B | {time.time() - t0:.1f}s")
+    print(f"输出: {output_dir}")
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 3:
+        print("usage: python refont.py 旧字库目录 输出目录")
+        print("example: python refont.py backup .")
+        raise SystemExit(1)
+    main(sys.argv[1], sys.argv[2])
