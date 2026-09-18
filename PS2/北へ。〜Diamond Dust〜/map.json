@@ -1,0 +1,2641 @@
+[
+  {
+    "key": "place_000",
+    "original": "明理宅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_001",
+    "original": "救急病院",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_002",
+    "original": "京子宅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_003",
+    "original": "果鈴の病院",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_004",
+    "original": "茜木鮮魚店",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_005",
+    "original": "大野宅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_006",
+    "original": "森永宅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_007",
+    "original": "白石宅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_008",
+    "original": "佐々木宅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_009",
+    "original": "前原邸",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_010",
+    "original": "三笠",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_011",
+    "original": "スタープラザ芦別",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_012",
+    "original": "南ふらの",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_013",
+    "original": "しらぬか恋問",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_014",
+    "original": "びふか",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_015",
+    "original": "江差",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_016",
+    "original": "望羊中山",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_017",
+    "original": "富士見",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_018",
+    "original": "忠類",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_019",
+    "original": "足寄湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_020",
+    "original": "摩周温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_021",
+    "original": "おといねっぷ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_022",
+    "original": "中湧別",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_023",
+    "original": "いわない",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_024",
+    "original": "まるせっぷ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_025",
+    "original": "厚岸グルメパーク",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_026",
+    "original": "サンフラワー北竜",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_027",
+    "original": "みついし",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_028",
+    "original": "あっさぶ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_029",
+    "original": "よってけ！島牧",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_030",
+    "original": "てっくいランド大成",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_031",
+    "original": "オホーツク紋別",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_032",
+    "original": "ＹＯＵ・遊・もり",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_033",
+    "original": "おんねゆ温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_034",
+    "original": "ルート229元和台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_035",
+    "original": "ハウスヤルビ奈井江",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_036",
+    "original": "おびら鰊番屋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_037",
+    "original": "マリーンアイランド岡島",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_038",
+    "original": "おこっぺ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_039",
+    "original": "阿寒丹頂の里",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_040",
+    "original": "おとふけ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_041",
+    "original": "ピンネシリ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_042",
+    "original": "フォーレスト276大滝",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_043",
+    "original": "上ノ国もんじゅ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_044",
+    "original": "オスコイ！かもえない",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_045",
+    "original": "なかさつない",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_046",
+    "original": "マオイの丘公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_047",
+    "original": "樹海ロード日高",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_048",
+    "original": "そうべつサムズ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_049",
+    "original": "ニセコビュープラザ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_050",
+    "original": "しりうち",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_051",
+    "original": "横綱の里ふくしま",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_052",
+    "original": "サラブレッドロード新冠",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_053",
+    "original": "ピア21しほろ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_054",
+    "original": "香りの里たきのうえ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_055",
+    "original": "田園の里うりゅう",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_056",
+    "original": "みたら室蘭",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_057",
+    "original": "とうま",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_058",
+    "original": "スペース・アップルよいち",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_059",
+    "original": "ほっと＄はぼろ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_060",
+    "original": "サロマ湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_061",
+    "original": "愛ランド湧別",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_062",
+    "original": "おうむ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_063",
+    "original": "さるふつ公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_064",
+    "original": "森と湖の里ほろかない",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_065",
+    "original": "うたしないチロルの湯",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_066",
+    "original": "くろまつない",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_067",
+    "original": "たきかわ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_068",
+    "original": "スワン44ねむろ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_069",
+    "original": "つるぬま",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_070",
+    "original": "なとわ・えさん",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_071",
+    "original": "つどーる・プラザ･さわら",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_072",
+    "original": "知床・らうす",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_073",
+    "original": "さらべつ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_074",
+    "original": "だて歴史の杜",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_075",
+    "original": "あさひかわ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_076",
+    "original": "自然体感しむかっぷ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_077",
+    "original": "にしおこっぺ花夢",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_078",
+    "original": "オーロラタウン93りくべつ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_079",
+    "original": "はなやか（葉菜野花）小清水",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_080",
+    "original": "ぐるっとﾊﾟﾉﾗﾏ美幌峠",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_081",
+    "original": "居酒屋の食歓場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_082",
+    "original": "クランベリー本店",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_083",
+    "original": "炉ばたのあかり",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_084",
+    "original": "帯広名物豚どんのぶた八",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_085",
+    "original": "柳月大通本店",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_086",
+    "original": "炉ばた 鶴巣",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_087",
+    "original": "イートアップ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_088",
+    "original": "スリランカ狂我国",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_089",
+    "original": "廻転鮨処なごやか亭",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_090",
+    "original": "刺身居酒屋うおや一丁",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_091",
+    "original": "森彦",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_092",
+    "original": "鉄火ラーメン 火の鳥",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_093",
+    "original": "俺のしょうゆラーメン　龍の巣",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_094",
+    "original": "北欧館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_095",
+    "original": "ハーフダイム",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_096",
+    "original": "食通のやまどり",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_097",
+    "original": "レストラン　シェーンベルグ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_098",
+    "original": "マッカリーナ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_099",
+    "original": "ランチョ・エルパソ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_100",
+    "original": "笑い屋　総本店",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_101",
+    "original": "カチューシャ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_102",
+    "original": "トップス",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_103",
+    "original": "はこだて柳屋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_104",
+    "original": "ハセガワストア",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_105",
+    "original": "ペシェ・ミニヨン",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_106",
+    "original": "ラッキーピエロ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_107",
+    "original": "五島軒",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_108",
+    "original": "創作料理屋かに八総本店",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_109",
+    "original": "元祖大沼だんご　沼の家",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_110",
+    "original": "やきとり一平本店",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_111",
+    "original": "やまねこ軒",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_112",
+    "original": "あさひかわ ラーメン村",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_113",
+    "original": "刺身居酒屋 うおや一丁",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_114",
+    "original": "ｽｰﾊﾟｰﾊﾞｲｷﾝｸﾞﾚｽﾄﾗﾝ空海",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_115",
+    "original": "菓子処 梅屋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_116",
+    "original": "丸太小屋ウッディライフ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_117",
+    "original": "スガイディノス帯広",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_118",
+    "original": "菅野温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_119",
+    "original": "池田町ワイン城",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_120",
+    "original": "帯広駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_121",
+    "original": "グリーンパーク",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_122",
+    "original": "グリュック王国",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_123",
+    "original": "愛国駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_124",
+    "original": "幸福駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_125",
+    "original": "帯広動物園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_126",
+    "original": "八千代公共育成牧場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_127",
+    "original": "オンネトー",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_128",
+    "original": "ピョウタンの滝",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_129",
+    "original": "上士幌航空公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_130",
+    "original": "ナイタイ高原牧場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_131",
+    "original": "然別湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_132",
+    "original": "十勝が丘公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_133",
+    "original": "十勝牧場　白樺並木",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_134",
+    "original": "日勝峠　展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_135",
+    "original": "狩勝峠　展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_136",
+    "original": "いなほ公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_137",
+    "original": "幕別町　ふるさと館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_138",
+    "original": "ハルニレの木",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_139",
+    "original": "シーサイドパーク広尾",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_140",
+    "original": "カムイコタン農村公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_141",
+    "original": "晩成海岸原生花園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_142",
+    "original": "ナウマン公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_143",
+    "original": "屈斜路湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_144",
+    "original": "硫黄山",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_145",
+    "original": "摩周湖 第一展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_146",
+    "original": "摩周湖 第三展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_147",
+    "original": "裏摩周展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_148",
+    "original": "開陽台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_149",
+    "original": "阿寒湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_150",
+    "original": "釧路駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_151",
+    "original": "札幌スガイビル",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_152",
+    "original": "五色温泉旅館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_153",
+    "original": "北海道百年記念塔",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_154",
+    "original": "ｲｼﾔﾁｮｺﾚｰﾄﾌｧｸﾄﾘｰ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_155",
+    "original": "サッポロビール園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_156",
+    "original": "サッポロファクトリー",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_157",
+    "original": "ススキノ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_158",
+    "original": "ちざきバラ園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_159",
+    "original": "モエレ沼公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_160",
+    "original": "旭山記念公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_161",
+    "original": "札幌駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_162",
+    "original": "時計台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_163",
+    "original": "藻岩山展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_164",
+    "original": "大通公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_165",
+    "original": "滝野すずらん丘陵公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_166",
+    "original": "旧北海道道庁本館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_167",
+    "original": "百合が原公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_168",
+    "original": "豊平峡",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_169",
+    "original": "豊平川緑地ウォーターガーデン",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_170",
+    "original": "羊ケ丘展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_171",
+    "original": "定山渓温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_172",
+    "original": "さっぽろテレビ塔",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_173",
+    "original": "佐藤水産サーモンファクトリー",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_174",
+    "original": "夕張石炭の歴史村",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_175",
+    "original": "ハイジ牧場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_176",
+    "original": "京極ふきだし公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_177",
+    "original": "名水ふれあい公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_178",
+    "original": "千歳サケのふるさと館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_179",
+    "original": "ポロピナイ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_180",
+    "original": "支笏湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_181",
+    "original": "オタモイ遊園地跡",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_182",
+    "original": "小樽ドリームビーチ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_183",
+    "original": "小樽マリーナ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_184",
+    "original": "小樽運河",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_185",
+    "original": "赤岩海岸",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_186",
+    "original": "朝里ダム",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_187",
+    "original": "ニッカウヰスキー北海道工場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_188",
+    "original": "神威岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_189",
+    "original": "島武意海岸",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_190",
+    "original": "ギミーシェルター",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_191",
+    "original": "川東グランドホテル",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_192",
+    "original": "東稜公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_193",
+    "original": "富里ダム",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_194",
+    "original": "北見駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_195",
+    "original": "北見工業大学",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_196",
+    "original": "野付牛公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_197",
+    "original": "網走刑務所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_198",
+    "original": "計呂地交通公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_199",
+    "original": "常呂百年記念塔",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_200",
+    "original": "ワッカ原生花園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_201",
+    "original": "サロマ湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_202",
+    "original": "石北峠",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_203",
+    "original": "いずみの森来運公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_204",
+    "original": "知床峠",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_205",
+    "original": "オシンコシンの滝",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_206",
+    "original": "知床五湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_207",
+    "original": "小清水原生花園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_208",
+    "original": "カラオケ ソングパーク",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_209",
+    "original": "国民宿舎ひらたない荘",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_210",
+    "original": "おもしろ健康函館博物館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_211",
+    "original": "メモリアルシップ摩周丸",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_212",
+    "original": "函館駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_213",
+    "original": "外人墓地",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_214",
+    "original": "旧ロシア領事館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_215",
+    "original": "元町公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_216",
+    "original": "五稜郭公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_217",
+    "original": "四稜郭",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_218",
+    "original": "ハリストス正教会",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_219",
+    "original": "中野ダム公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_220",
+    "original": "笹流ダム前庭広場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_221",
+    "original": "啄木小公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_222",
+    "original": "函館公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_223",
+    "original": "函館朝市",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_224",
+    "original": "ベイエリア",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_225",
+    "original": "松前城",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_226",
+    "original": "白神岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_227",
+    "original": "弁慶岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_228",
+    "original": "サンゴの沢",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_229",
+    "original": "日暮山展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_230",
+    "original": "イクサンダー大沼カヌーハウス",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_231",
+    "original": "大沼国定公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_232",
+    "original": "地球岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_233",
+    "original": "クッタラ湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_234",
+    "original": "大湯沼・奥の湯沼",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_235",
+    "original": "地獄谷",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_236",
+    "original": "ホテルまほろば",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_237",
+    "original": "サイロ展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_238",
+    "original": "観光船乗り場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_239",
+    "original": "西山火口",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_240",
+    "original": "有珠山・昭和新山",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_241",
+    "original": "洞爺湖万世閣",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_242",
+    "original": "ノーザンホースパーク",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_243",
+    "original": "高丘森林公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_244",
+    "original": "緑ヶ丘公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_245",
+    "original": "ロッジ・ヌタプカウシペ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_246",
+    "original": "優佳良織工芸館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_247",
+    "original": "旭橋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_248",
+    "original": "旭山動物園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_249",
+    "original": "旭川駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_250",
+    "original": "常磐公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_251",
+    "original": "神居古潭",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_252",
+    "original": "雪の美術館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_253",
+    "original": "平和通買物公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_254",
+    "original": "北邦野草園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_255",
+    "original": "嵐山展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_256",
+    "original": "旭川医大",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_257",
+    "original": "旭岳",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_258",
+    "original": "大雪ダム",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_259",
+    "original": "層雲峡",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_260",
+    "original": "美瑛",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_261",
+    "original": "サロベツ原野",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_262",
+    "original": "宗谷岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_263",
+    "original": "かなやま湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_264",
+    "original": "ファーム冨田",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_265",
+    "original": "上富良野日の出公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_266",
+    "original": "黄金岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_267",
+    "original": "浜勇知展望休憩施設",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_268",
+    "original": "コンビニ前",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_269",
+    "original": "ガソリンスタンド",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_270",
+    "original": "幣舞橋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_271",
+    "original": "歴舟川",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_272",
+    "original": "ＦＭ　ＮＯＲＴＨ　ＷＡＶＥ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_273",
+    "original": "北大イチョウ並木",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_274",
+    "original": "立待岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_275",
+    "original": "白鳥大橋展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_276",
+    "original": "函館市内の空き地",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_277",
+    "original": "湯の川温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_278",
+    "original": "中央埠頭",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_279",
+    "original": "函館山",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_280",
+    "original": "亀井勝一郎文学碑",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_281",
+    "original": "城岱牧場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_282",
+    "original": "日の出岬",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_283",
+    "original": "釧路湿原細岡展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_284",
+    "original": "車内",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_285",
+    "original": "レストラン泉屋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_286",
+    "original": "HERB喫茶&ﾗｲﾀﾞｰﾊｳｽ TEEPEE",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_287",
+    "original": "中国茶専門店 聞香",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_288",
+    "original": "アグリオ１９７９",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_289",
+    "original": "クロック",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_290",
+    "original": "ショコラティエ・マサール",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_291",
+    "original": "ステラ☆マリス",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_292",
+    "original": "ポレポレ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_293",
+    "original": "倫敦館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_294",
+    "original": "とり安",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_295",
+    "original": "オーストリアハウス",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_296",
+    "original": "サブロッソ・ノーヴァ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_297",
+    "original": "ﾎｰﾙｽﾃｱｰｽﾞエスプレッソバー",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_298",
+    "original": "ナイトクラブ・ブルーミン",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_299",
+    "original": "Cafe＆booze　あんじろ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_300",
+    "original": "珈琲専科　茶豆館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_301",
+    "original": "喫茶　遊木民族",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_302",
+    "original": "紅茶専門店ハーヴェスト",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_303",
+    "original": "Ｂｅｅｓ．Ｂｅｅ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_304",
+    "original": "ハーヴェスト　ロードハウス",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_305",
+    "original": "旭川スガイ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_306",
+    "original": "ｃａｆｅ’花みずき",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_307",
+    "original": "二幸",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_308",
+    "original": "とかち帯広空港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_309",
+    "original": "帯広氷まつり",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_310",
+    "original": "観月苑",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_311",
+    "original": "釧路空港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_312",
+    "original": "釧路キャッスルホテル",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_313",
+    "original": "釧路西港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_314",
+    "original": "十勝ネイチャーセンター",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_315",
+    "original": "然別湖付近",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_316",
+    "original": "川湯温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_317",
+    "original": "フンベの滝",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_318",
+    "original": "襟裳岬 風の館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_319",
+    "original": "和商市場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_320",
+    "original": "アルファリゾート・トマム",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_321",
+    "original": "サッポロビール博物館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_322",
+    "original": "大倉山ジャンプ競技場",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_323",
+    "original": "札幌地下街",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_324",
+    "original": "新千歳空港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_325",
+    "original": "桂沢湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_326",
+    "original": "札幌へ移動中(恵庭)",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_327",
+    "original": "小樽駅",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_328",
+    "original": "朝里クラッセホテル",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_329",
+    "original": "小樽天狗山展望台",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_330",
+    "original": "北見冬祭り",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_331",
+    "original": "おーろらターミナル",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_332",
+    "original": "オホーツク流氷館",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_333",
+    "original": "女満別空港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_334",
+    "original": "白鳥公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_335",
+    "original": "オホーツクタワー",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_336",
+    "original": "ガリンコ号",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_337",
+    "original": "スノーモビルランドinサロマ湖",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_338",
+    "original": "流氷自然公園",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_339",
+    "original": "函館空港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_340",
+    "original": "函館山西地区",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_341",
+    "original": "釜田本家（むめを自宅）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_342",
+    "original": "旭川空港",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_343",
+    "original": "旭川大雪アリーナ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_344",
+    "original": "スノーモービルランド雪の村",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_345",
+    "original": "催馬楽笙子のエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_346",
+    "original": "北野スオミのエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_347",
+    "original": "原田明理のエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_348",
+    "original": "朝比奈京子のエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_349",
+    "original": "森永まふゆのエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_350",
+    "original": "白石果鈴のエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_351",
+    "original": "茜木温子のエンディングの場所",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_352",
+    "original": "厚田海岸",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_353",
+    "original": "小樽ドリームビーチ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_354",
+    "original": "中山峠",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_355",
+    "original": "喜茂別町",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_356",
+    "original": "ニセコ町",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_357",
+    "original": "ウトロを望む",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_358",
+    "original": "羅臼岳を望む",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_359",
+    "original": "常呂川",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_360",
+    "original": "北見峠ＰＡ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_361",
+    "original": "豊浦町を望む",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_362",
+    "original": "瀬棚の夕暮れ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_363",
+    "original": "登別温泉",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_364",
+    "original": "大雪国道ＰＡ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_365",
+    "original": "宗谷村",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_366",
+    "original": "天売国道",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_367",
+    "original": "利尻富士を望む",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_368",
+    "original": "夕日が丘ＰＡ",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_369",
+    "original": "主人公の部屋",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_370",
+    "original": "札幌駅（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_371",
+    "original": "トマム駅（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_372",
+    "original": "釧路駅（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_373",
+    "original": "千歳空港（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_374",
+    "original": "函館空港（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_375",
+    "original": "旭川空港（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  },
+  {
+    "key": "place_376",
+    "original": "釧路空港（演出接続用）",
+    "translation": "",
+    "stage": 0,
+    "context": ""
+  }
+]

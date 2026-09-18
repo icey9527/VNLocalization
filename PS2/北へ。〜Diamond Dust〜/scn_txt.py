@@ -1,10 +1,34 @@
 #!/usr/bin/env python3
 import json
+import re
 import sys
 from pathlib import Path
 import char
 
 char.MAP_PATH = Path("font/font.tbl")
+
+
+# 半角(0x21-0x7E) -> 全角(0xFF01-0xFF5E)；半角空格 -> 全角空格(U+3000)；半角 / 保留不转
+FULLWIDTH_MAP = {i: i - 0x20 + 0xFF00 for i in range(0x21, 0x7F) if i != 0x2F}
+FULLWIDTH_MAP[0x20] = 0x3000
+
+# 控制符：脚本 {...} 标记、手机文本 #命令、printf 格式符（如 %2d）
+CONTROL_RE = re.compile(
+    r"\{[^}]*\}"
+    r"|#[cwen][0-9A-Fa-f]*"
+    r"|%[-+ 0#]*[0-9]*(?:\.[0-9]+)?[diouxXeEfFgGaAcspn]"
+)
+
+
+def to_fullwidth(text: str) -> str:
+    out = []
+    pos = 0
+    for m in CONTROL_RE.finditer(text):
+        out.append(text[pos:m.start()].translate(FULLWIDTH_MAP))
+        out.append(m.group(0))
+        pos = m.end()
+    out.append(text[pos:].translate(FULLWIDTH_MAP))
+    return "".join(out)
 
 
 def unquote(s: str) -> str:
@@ -136,7 +160,6 @@ def extract_all(input_dir: Path, json_dir: Path):
 
 
 def load_json_dir(json_dir: Path):
-    conv = char.make_translation_converter()
     texts = {}
     for f in json_dir.glob("*.json"):
         data = json.loads(f.read_text(encoding="utf-8"))
@@ -144,7 +167,7 @@ def load_json_dir(json_dir: Path):
         for item in data:
             tr = item.get("translation") or ""
             if tr:
-                item["translation"] = conv(tr)
+                item["translation"] = to_fullwidth(char.convert_translation(tr))
             by_key[item["key"]] = item
         texts[f.stem.upper()] = by_key
     return texts

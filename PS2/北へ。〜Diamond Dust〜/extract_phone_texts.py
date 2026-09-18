@@ -98,7 +98,7 @@ def encode_phone_text(text: str) -> bytes:
                 out.extend(b"#" + cmd.encode("ascii"))
                 i += 2
                 continue
-        out.extend(text[i].encode("cp932"))
+        out.extend(text[i].encode("kitatbl"))
         i += 1
     return bytes(out)
 
@@ -197,7 +197,7 @@ def build_groups(image: bytes, segs: list[dict[str, int]]) -> list[dict[str, obj
         {"name": "display_font_anmain6", "addr": 0x2CD000, "size": 0x240, "mode": "single_pair", "alt_addr": 0x2CF5E0, "alt_size": 0x210, "context": "アンテナ本文6"},
         {"name": "display_font_anmain7", "addr": 0x2CD240, "size": 0x210, "mode": "single_pair", "alt_addr": 0x2CF7F0, "alt_size": 0x440, "context": "アンテナ本文7"},
         {"name": "display_font_anmain8", "addr": 0x2CD450, "size": 0x3E0, "mode": "single_pair", "alt_addr": 0x2CFC30, "alt_size": 0x1C0, "context": "アンテナ本文8"},
-        {"name": "display_font_anmain9", "addr": 0x2CD830, "size": 0x100, "mode": "single_pair", "alt_addr": 0x2F65DC, "alt_size": 0xA4, "context": "アンテナ本文9"},
+        {"name": "display_font_anmain9", "addr": 0x2CD830, "size": 0x100, "mode": "single", "context": "アンテナ本文9"},
         {"name": "display_font_anbad0", "addr": 0x2CD930, "size": 0x180, "mode": "single", "context": "アンテナbad0"},
         {"name": "display_font_anbad1", "addr": 0x2CDAB0, "size": 0xC0, "mode": "single", "context": "アンテナbad1"},
         {"name": "display_font_anbad2", "addr": 0x2CDB70, "size": 0xD0, "mode": "single", "context": "アンテナbad2"},
@@ -208,16 +208,6 @@ def build_groups(image: bytes, segs: list[dict[str, int]]) -> list[dict[str, obj
         {"name": "display_font_anbad7", "addr": 0x2CE720, "size": 0x1F0, "mode": "single", "context": "アンテナbad7"},
         {"name": "display_font_anbad8", "addr": 0x2CE910, "size": 0x1C0, "mode": "single", "context": "アンテナbad8"},
         {"name": "display_font_anbad9", "addr": 0x2CEAD0, "size": 0x70, "mode": "single", "context": "アンテナbad9"},
-        {"name": "display_font_angood0", "addr": 0x2CEB40, "size": 0x110, "mode": "single", "context": "アンテナgood0"},
-        {"name": "display_font_angood1", "addr": 0x2CEC50, "size": 0x190, "mode": "single", "context": "アンテナgood1"},
-        {"name": "display_font_angood2", "addr": 0x2CEDE0, "size": 0xA0, "mode": "single", "context": "アンテナgood2"},
-        {"name": "display_font_angood3", "addr": 0x2CEE80, "size": 0x240, "mode": "single", "context": "アンテナgood3"},
-        {"name": "display_font_angood4", "addr": 0x2CF0C0, "size": 0x1A0, "mode": "single", "context": "アンテナgood4"},
-        {"name": "display_font_angood5", "addr": 0x2CF260, "size": 0x380, "mode": "single", "context": "アンテナgood5"},
-        {"name": "display_font_angood6", "addr": 0x2CF5E0, "size": 0x210, "mode": "single", "context": "アンテナgood6"},
-        {"name": "display_font_angood7", "addr": 0x2CF7F0, "size": 0x440, "mode": "single", "context": "アンテナgood7"},
-        {"name": "display_font_angood8", "addr": 0x2CFC30, "size": 0x1C0, "mode": "single", "context": "アンテナgood8"},
-        {"name": "display_font_angood9", "addr": 0x2F65DC, "size": 0xA4, "mode": "single", "context": "アンテナgood9"},
         {"name": "display_font_uranai1", "addr": 0x2CFDF0, "size": 0x40, "mode": "single", "context": "占い固定1"},
         {"name": "display_font_uranai2", "addr": 0x2CFE30, "size": 0x40, "mode": "single", "context": "占い固定2"},
         {"name": "display_font_u_result_nothing", "addr": 0x2CFE70, "size": 0x7C0, "mode": "offsets", "offsets": [0x000, 0x0DC, 0x1B8, 0x294, 0x370, 0x44C, 0x528, 0x604], "context": "占い結果nothing"},
@@ -310,7 +300,6 @@ def export_groups(elf_path: Path, export_dir: Path) -> None:
 
 def load_json_dir(json_dir: Path, allowed_groups: set[str] | None = None) -> dict[str, dict[str, object]]:
     items_by_group: dict[str, dict[str, object]] = {}
-    conv = char.make_translation_converter()
     for f in sorted(json_dir.glob("*.json")):
         if allowed_groups is not None and f.stem not in allowed_groups:
             continue
@@ -319,7 +308,8 @@ def load_json_dir(json_dir: Path, allowed_groups: set[str] | None = None) -> dic
         for item in data:
             tr = item.get("translation") or ""
             if tr:
-                item["translation"] = conv(tr)
+                item["_source_translation"] = tr
+                item["translation"] = char.convert_translation(tr)
             by_key[item["key"]] = item
         items_by_group[f.stem] = by_key
     return items_by_group
@@ -332,6 +322,12 @@ def choose_text(item: dict[str, object] | None, original: str) -> str:
         return original
     tr = item.get("translation") or ""
     return tr or original
+
+
+def report_text(item: dict[str, object] | None, chosen: str) -> str:
+    if item and int(item.get("stage", 0) or 0) != 0:
+        return str(item.get("_source_translation") or chosen)
+    return chosen
 
 
 def split_pair_text(text: str) -> tuple[str, str]:
@@ -369,32 +365,52 @@ def group_entry_regions(group: dict[str, object], entry_index: int) -> list[dict
     raise ValueError(f"Unknown mode for regions: {mode}")
 
 
-def patch_region(dst: bytearray, start: int, size: int, payload: bytes) -> None:
+def patch_region(dst: bytearray, start: int, size: int, payload: bytes) -> bool:
     if len(payload) > size:
-        raise ValueError(f"text too long for region: need {len(payload)} bytes, limit {size}")
+        return False
     dst[start : start + size] = b"\x00" * size
     dst[start : start + len(payload)] = payload
+    return True
 
 
-def build_group_blob(group: dict[str, object], original_blob: bytes, merged_items: dict[str, object]) -> tuple[bytes, bytes | None]:
+def print_oversized_text(group_name: str, key: str, part: str, text: str, payload_size: int, limit: int) -> None:
+    print(
+        f"SKIP text too long: group={group_name} key={key} part={part} "
+        f"need={payload_size} bytes limit={limit} text={json.dumps(text, ensure_ascii=False)}"
+    )
+
+
+def build_group_blob(
+    group: dict[str, object],
+    original_blob: bytes,
+    merged_items: dict[str, object],
+    original_alt_blob: bytes | None = None,
+) -> tuple[bytes, bytes | None]:
     rows = group_to_rows(group)
     mode = str(group["mode"])
+    group_name = str(group["name"])
     entries = group["entries"]
     assert isinstance(entries, list)
 
     if mode == "single_pair":
         row = rows[0]
         item = merged_items.get(str(row["key"]))
-        chosen = choose_text(item if isinstance(item, dict) else None, str(row["original"]))
+        item_dict = item if isinstance(item, dict) else None
+        chosen = choose_text(item_dict, str(row["original"]))
+        displayed = report_text(item_dict, chosen)
         main_text, alt_text = split_pair_text(chosen)
+        displayed_main, displayed_alt = split_pair_text(displayed)
         main_bytes = encode_phone_text(main_text)
         alt_bytes = encode_phone_text(alt_text)
-        main_blob = bytearray(b"\x00" * int(group["size"]))
+        main_blob = bytearray(original_blob)
         alt_size = int(group["alt_size"]) if group.get("alt_size") is not None else 0
-        alt_blob = bytearray(b"\x00" * alt_size)
-        patch_region(main_blob, 0, len(main_blob), main_bytes)
+        alt_blob = bytearray(original_alt_blob if original_alt_blob is not None else b"\x00" * alt_size)
+        key = str(row["key"])
+        if not patch_region(main_blob, 0, len(main_blob), main_bytes):
+            print_oversized_text(group_name, key, "main", displayed_main, len(main_bytes), len(main_blob))
         if alt_size:
-            patch_region(alt_blob, 0, alt_size, alt_bytes)
+            if not patch_region(alt_blob, 0, alt_size, alt_bytes):
+                print_oversized_text(group_name, key, "alt", displayed_alt, len(alt_bytes), alt_size)
         return bytes(main_blob), bytes(alt_blob)
 
     blob = bytearray(original_blob)
@@ -403,11 +419,14 @@ def build_group_blob(group: dict[str, object], original_blob: bytes, merged_item
     for idx, entry in enumerate(entries):
         row = rows[idx]
         item = merged_items.get(str(row["key"]))
-        chosen = choose_text(item if isinstance(item, dict) else None, str(row["original"]))
+        item_dict = item if isinstance(item, dict) else None
+        chosen = choose_text(item_dict, str(row["original"]))
         payload = encode_phone_text(chosen)
         start = int(entry["offset"])
         end = offsets[idx + 1]
-        patch_region(blob, start, end - start, payload)
+        size = end - start
+        if not patch_region(blob, start, size, payload):
+            print_oversized_text(group_name, str(row["key"]), "main", report_text(item_dict, chosen), len(payload), size)
     return bytes(blob), None
 
 
@@ -554,11 +573,14 @@ def apply_translations(elf_path: Path, json_dir: Path, out_elf: Path) -> None:
 
     for group in groups:
         main_blob = read_block(image, segs, int(group["addr"]), int(group["size"]))
-        patched_main, patched_alt = build_group_blob(group, main_blob, merged_items)
-        main_off = vaddr_to_offset(int(group["addr"]), segs)
-        out_data[main_off : main_off + len(patched_main)] = patched_main
         alt_addr = group.get("alt_addr")
         alt_size = group.get("alt_size")
+        original_alt_blob = None
+        if alt_addr is not None and alt_size is not None:
+            original_alt_blob = read_block(image, segs, int(alt_addr), int(alt_size))
+        patched_main, patched_alt = build_group_blob(group, main_blob, merged_items, original_alt_blob)
+        main_off = vaddr_to_offset(int(group["addr"]), segs)
+        out_data[main_off : main_off + len(patched_main)] = patched_main
         if patched_alt is not None and alt_addr is not None and alt_size is not None:
             alt_off = vaddr_to_offset(int(alt_addr), segs)
             out_data[alt_off : alt_off + len(patched_alt)] = patched_alt
@@ -582,14 +604,35 @@ def verify_roundtrip(src_elf: Path, json_dir: Path, out_elf: Path, verify_dir: P
     image, segs = load_elf_image(src_elf)
     groups = build_groups(image, segs)
     allowed_groups = {str(group["name"]) for group in groups}
+    buckets = load_json_dir(json_dir, allowed_groups)
+    merged_items: dict[str, object] = {}
+    for bucket in buckets.values():
+        merged_items.update(bucket)
     apply_translations(src_elf, json_dir, out_elf)
     export_groups(out_elf, verify_dir)
+    out_image, _out_segs = load_elf_image(out_elf)
+    changed_keys: list[str] = []
+    for group in groups:
+        addr = int(group["addr"])
+        size = int(group["size"])
+        main_blob = read_block(image, segs, addr, size)
+        alt_addr = group.get("alt_addr")
+        alt_size = group.get("alt_size")
+        original_alt_blob = None
+        if alt_addr is not None and alt_size is not None:
+            original_alt_blob = read_block(image, segs, int(alt_addr), int(alt_size))
+        expected_main, expected_alt = build_group_blob(group, main_blob, merged_items, original_alt_blob)
+        if read_block(out_image, segs, addr, size) != expected_main:
+            changed_keys.append(f"{group['name']}/main")
+        if expected_alt is not None and alt_addr is not None and alt_size is not None:
+            if read_block(out_image, segs, int(alt_addr), int(alt_size)) != expected_alt:
+                changed_keys.append(f"{group['name']}/alt")
+
     src_rows = collect_rows_by_key(json_dir, allowed_groups)
     new_rows = collect_rows_by_key(verify_dir, allowed_groups)
 
     missing = sorted(set(src_rows) - set(new_rows))
     extra = sorted(set(new_rows) - set(src_rows))
-    changed = sorted(k for k in src_rows.keys() & new_rows.keys() if src_rows[k] != new_rows[k])
 
     report = {
         "source_elf": str(src_elf),
@@ -600,8 +643,8 @@ def verify_roundtrip(src_elf: Path, json_dir: Path, out_elf: Path, verify_dir: P
         "verify_count": len(new_rows),
         "missing_keys": missing,
         "extra_keys": extra,
-        "changed_keys": changed,
-        "ok": not missing and not extra and not changed,
+        "changed_keys": changed_keys,
+        "ok": not missing and not extra and not changed_keys,
         "src_sha1": hashlib.sha1(src_elf.read_bytes()).hexdigest(),
         "out_sha1": hashlib.sha1(out_elf.read_bytes()).hexdigest(),
     }

@@ -8,6 +8,8 @@ import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
 
+import char
+
 
 SCRIPT_HEADER_SIZE = 0x40
 TEXT_HEADER_SIZE = 0x30
@@ -607,6 +609,14 @@ def write_list_xml(path: Path, rows: list[dict[str, str]]) -> None:
     ET.ElementTree(root).write(path, encoding="utf-8", xml_declaration=True)
 
 
+def print_created(paths: list[Path], base: Path) -> None:
+    for path in paths:
+        try:
+            print(path.relative_to(base).as_posix())
+        except Exception:
+            print(path.as_posix())
+
+
 def read_list_xml(path: Path) -> dict[tuple[int, int], Path]:
     if not path.exists():
         return {}
@@ -969,6 +979,7 @@ def cmd_decompile(src_dir: Path, out_dir: Path, encoding: str = "cp932") -> int:
     scr_dir = find_scr_dir(src_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(accessdb, out_dir / "ACCESSDB.BIN")
+    created: list[Path] = [out_dir / "ACCESSDB.BIN"]
     list_rows: list[dict[str, str]] = []
     for group in range(9):
         src = scr_dir / f"scr{group}00.bin"
@@ -987,6 +998,7 @@ def cmd_decompile(src_dir: Path, out_dir: Path, encoding: str = "cp932") -> int:
             event_id = events[0]
             name = f"ev{group * 1000 + event_id:04d}.txt"
             write_text(out_dir / name, result)
+            created.append(out_dir / name)
             row = {
                 "g": str(group),
                 "e": str(group * 1000 + event_id),
@@ -999,7 +1011,8 @@ def cmd_decompile(src_dir: Path, out_dir: Path, encoding: str = "cp932") -> int:
                 row["alias"] = ",".join(str(group * 1000 + x) for x in events[1:])
             list_rows.append(row)
     write_list_xml(out_dir / "list.xml", list_rows)
-    print(f"output={out_dir}")
+    created.append(out_dir / "list.xml")
+    print_created(created, out_dir)
     return 0
 
 
@@ -1011,6 +1024,7 @@ def cmd_encode(src_dir: Path, out_dir: Path) -> int:
     scr_src = find_scr_dir(src_dir)
     scr_out = out_dir / "SCR"
     scr_out.mkdir(exist_ok=True)
+    created: list[Path] = [accessdb_out]
     fdb = Fdb(accessdb.read_bytes())
     fdb_bytes = bytearray(accessdb.read_bytes())
     list_map = read_list_xml(src_dir / "list.xml")
@@ -1083,10 +1097,10 @@ def cmd_encode(src_dir: Path, out_dir: Path) -> int:
                         raise ValueError(f"unsupported debug line: {node.name}")
                 debug = bytes(debug_buf)
             setup = compile_setup(sections.get("setup", []))
-            main = compile_main(main_lines, "cp932")
+            main = compile_main(main_lines, "kitatbl")
             plain = bytearray(b"\x00" * SCRIPT_HEADER_SIZE)
             if header_text_value is not None:
-                raw_header = header_text_value.encode("cp932")[:TEXT_HEADER_SIZE]
+                raw_header = header_text_value.encode("kitatbl")[:TEXT_HEADER_SIZE]
                 raw_header = raw_header.ljust(TEXT_HEADER_SIZE, b"\x00")
             plain[:TEXT_HEADER_SIZE] = raw_header
             plain[KEY_OFFSET:KEY_OFFSET + KEY_SIZE] = key[:KEY_SIZE].ljust(KEY_SIZE, b"\x00")
@@ -1100,13 +1114,14 @@ def cmd_encode(src_dir: Path, out_dir: Path) -> int:
             new_entries.append((sector, size))
             data += chunk
         bin_path.write_bytes(bytes(data))
+        created.append(bin_path)
         off = fdb.dir_offsets[25 + group]
         for i, (sector, size) in enumerate(new_entries):
             base = off + i * 8
             fdb_bytes[base:base + 4] = int(sector).to_bytes(4, "little")
             fdb_bytes[base + 4:base + 8] = int(size).to_bytes(4, "little")
     accessdb_out.write_bytes(bytes(fdb_bytes))
-    print(f"output={out_dir}")
+    print_created(created, out_dir)
     return 0
 
 

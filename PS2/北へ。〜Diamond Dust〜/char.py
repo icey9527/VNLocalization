@@ -1,3 +1,4 @@
+import codecs
 import re
 import sys
 from pathlib import Path
@@ -35,8 +36,13 @@ def log_bad_chars(chars, path: Path = BADCHARS_PATH) -> None:
 
 MAP_LINE_RE = re.compile(r"^\s*([0-9A-Fa-f]{2,4})\s*=\s*(.+?)\s*$")
 MAP_START = 0x889F
-MAP_PATH = Path('font.tbl')
+MAP_PATH = Path(__file__).with_name('font') / 'font.tbl'
 DEFAULT_REPLACE_RULES: dict[str, str] = {
+    "·": "・",
+    "—": "─",
+
+    "“": "「",
+    "”": "」"
 }
 
 def encode_cp932_or_die(s: str) -> bytes:
@@ -74,31 +80,78 @@ def apply_replace_rules(t: str, rules: dict[str, str] | None = None) -> str:
         return t
     return "".join(r.get(ch, ch) for ch in t)
 
+def convert_translation(t: str, rules: dict[str, str] | None = None) -> str:
+    return apply_replace_rules(t, rules)
+
 def make_translation_converter(rules: dict[str, str] | None = None):
     rhs_to_proxy = load_map(MAP_PATH)
     def conv(t: str) -> str:
         return map_translation(apply_replace_rules(t, rules), rhs_to_proxy)
     return conv
 
+def make_translation_encoder(rules: dict[str, str] | None = None):
+    char_to_code = load_code_map(MAP_PATH)
+    def encode(t: str) -> bytes:
+        t = apply_replace_rules(t, rules)
+        output = bytearray()
+        bad: dict[str, int] = {}
+        for ch in t:
+            standard = cp932_code(ch)
+            if standard is not None and standard < MAP_START:
+                code = standard
+            else:
+                code = char_to_code.get(ch, standard)
+            if code is None:
+                bad[ch] = ord(ch)
+                output += "？".encode("cp932")
+            elif code <= 0xFF:
+                output.append(code)
+            else:
+                output += bytes((code >> 8, code & 0xFF))
+        if bad:
+            log_bad_chars(sorted(bad.keys(), key=ord))
+        return bytes(output)
+    return encode
+
+def load_code_map(p: Path) -> dict[str, int]:
+    raw = p.read_bytes()
+    txt = raw.decode("utf-16") if raw[:2] in (b"\xff\xfe", b"\xfe\xff") else raw.decode("utf-8-sig")
+    result: dict[str, int] = {}
+    for raw_line in txt.splitlines():
+        line = raw_line
+        if not line or line.startswith(";") or line.startswith("//"):
+            continue
+        match = MAP_LINE_RE.match(line)
+        if not match:
+            continue
+        code = int(match.group(1), 16)
+        char = match.group(2).split(";", 1)[0].split("//", 1)[0]
+        if len(char) == 1:
+            result[char] = code
+    return result
+
 def load_map(p: Path) -> dict[str, str]:
-    txt = p.read_text(encoding="utf-16")
+    raw = p.read_bytes()
+    txt = raw.decode("utf-16") if raw[:2] in (b"\xff\xfe", b"\xfe\xff") else raw.decode("utf-8-sig")
     rhs_to_proxy: dict[str, str] = {}
     for raw in txt.splitlines():
-        line = raw.strip()
+        line = raw
         if not line or line.startswith(";") or line.startswith("//"):
             continue
         m = MAP_LINE_RE.match(line)
         if not m:
             continue
         code = int(m.group(1), 16)
-        rhs = m.group(2).split(";", 1)[0].split("//", 1)[0].strip()
+        rhs = m.group(2).split(";", 1)[0].split("//", 1)[0]
         if len(rhs) != 1:
             raise SystemExit(line)
         b = bytes([(code >> 8) & 0xFF, code & 0xFF])
         try:
             proxy = b.decode("cp932")
         except UnicodeDecodeError:
-            raise SystemExit(f"{code:04X}={rhs}")
+            # font.tbl also describes physical font slots. Invalid Shift-JIS
+            # holes such as 0x817F can be rendered but can never occur in text.
+            continue
         rhs_to_proxy[rhs] = proxy
     return rhs_to_proxy
 
@@ -109,7 +162,7 @@ def map_translation(t: str, rhs_to_proxy: dict[str, str]) -> str:
         for ch in t:
             if cp932_code(ch) is None:
                 bad[ch] = ord(ch)
-                out.append("?")
+                out.append("？")
             else:
                 out.append(ch)
         if bad:
@@ -127,7 +180,7 @@ def map_translation(t: str, rhs_to_proxy: dict[str, str]) -> str:
         proxy = rhs_to_proxy.get(ch)
         if proxy is None:
             bad[ch] = ord(ch)
-            out.append("?")
+            out.append("？")
         else:
             out.append(proxy)
     if bad:
@@ -135,3 +188,26 @@ def map_translation(t: str, rhs_to_proxy: dict[str, str]) -> str:
         #print(items, file=sys.stderr)
         log_bad_chars(sorted(bad.keys(), key=ord))
     return "".join(out)
+
+# 编码名 kitatbl：直接查码表出字节（make_translation_encoder），不经过代理字符串。
+# scn.py / sysdat.py 等用 .encode("kitatbl") 调用。
+CODEC_NAME = "kitatbl"
+_encoder_cache: list = []
+
+def _get_encoder():
+    if not _encoder_cache:
+        _encoder_cache.append(make_translation_encoder())
+    return _encoder_cache[0]
+
+def _kitatbl_encode(input: str, errors: str = "strict"):
+    return (_get_encoder()(input), len(input))
+
+def _kitatbl_decode(input: bytes, errors: str = "strict"):
+    return (input.decode("cp932", errors), len(input))
+
+def _search_codec(name: str):
+    if name == CODEC_NAME:
+        return codecs.CodecInfo(name=CODEC_NAME, encode=_kitatbl_encode, decode=_kitatbl_decode)
+    return None
+
+codecs.register(_search_codec)
