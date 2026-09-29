@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 纯 GUI 工具（照 GA2）：双击即用 -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>kita</AssemblyName>
+    <RootNamespace>kita</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Platforms>AnyCPU</Platforms>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- 单文件发布：dotnet publish -c Release -r win-x64（依赖本机 .NET 8 运行时） -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <!-- 开发期验证台 kitatest 访问 internal 格式层 -->
+    <InternalsVisibleTo Include="kitatest" />
+  </ItemGroup>
+</Project>
