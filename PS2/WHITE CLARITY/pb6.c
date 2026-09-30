@@ -298,12 +298,19 @@ static void from_argb(const uint8_t *argb, uint8_t *rgba, size_t px) {
     }
 }
 
+/* raw 变体：magic 为 "BM8"，offset 4 记录总长度。标准 32bpp BMP 那里是尺寸高位
+   （offset 2 才是尺寸），据此区分，避免把普通 BMP 当成 raw 变体。 */
+static int is_raw_variant(const uint8_t *d, size_t n) {
+    return n >= 8 && !memcmp(d, "BM8", 3)
+        && (uint32_t)(d[4] | d[5] << 8 | d[6] << 16 | d[7] << 24) == (uint32_t)n;
+}
+
 static uint8_t *pb6_decode(const uint8_t *d, size_t n, uint32_t *W, uint32_t *H, int *bpp_out) {
     uint32_t w = d[18] | d[19] << 8, h = d[22] | d[23] << 8;
     int bpp = d[28] | d[29] << 8;
     size_t px = (size_t)w * h, i, y, x;
     uint8_t *rgba = xmalloc(px * 4);
-    if (!memcmp(d, "BM8", 3)) {
+    if (is_raw_variant(d, n)) {
         uint8_t *argb = xmalloc(px * 4);
         memcpy(argb, d + 54, px * 4);
         from_argb(argb, rgba, px);
@@ -311,7 +318,7 @@ static uint8_t *pb6_decode(const uint8_t *d, size_t n, uint32_t *W, uint32_t *H,
     } else if (bpp == 8) {
         for (i = 0; i < px; i++) {
             const uint8_t *e = d + 54 + d[1078 + i] * 4;
-            rgba[i * 4 + 0] = e[0]; rgba[i * 4 + 1] = e[1]; rgba[i * 4 + 2] = e[2];
+            rgba[i * 4 + 0] = e[2]; rgba[i * 4 + 1] = e[1]; rgba[i * 4 + 2] = e[0];
             rgba[i * 4 + 3] = (!e[0] && !e[1] && !e[2]) ? 0 : 255;
         }
     } else if (bpp == 24) {
@@ -397,6 +404,7 @@ static uint8_t *pb6_encode(const uint8_t *rgba, uint32_t w, uint32_t h, int bpp,
         put32(out + 10, 1078);
         put32(out + 14, 40); put32(out + 18, w); put32(out + 22, h);
         put16(out + 26, 1); put16(out + 28, 8);
+        for (i = 0; i < 256; i++) { uint8_t t = pal[i * 4]; pal[i * 4] = pal[i * 4 + 2]; pal[i * 4 + 2] = t; }
         memcpy(out + 54, pal, 1024);
         for (y = 0; y < h; y++) memcpy(out + 1078 + y * w, idx + y * w, w);
         *out_size = 1078 + px;
@@ -447,7 +455,7 @@ static DWORD WINAPI worker_d(void *arg) {
         if ((size_t)i >= ctx->count) break;
         _splitpath(ctx->paths[i], NULL, NULL, name, NULL);
         d = read_file(ctx->paths[i], &n);
-        raw = !memcmp(d, "BM8", 3);
+        raw = is_raw_variant(d, n);
         fprintf(stderr, "A %s\n", name);
         rgba = pb6_decode(d, n, &w, &h, &bpp);
         free(d);
@@ -514,15 +522,18 @@ int main(int argc, char **argv) {
         h = FindFirstFileA(pat, &fd);
         if (h == INVALID_HANDLE_VALUE) fail("no bmp files found");
         do {
-            uint8_t magic[3];
+            uint8_t head[8];
             char ppath[1024];
             FILE *f;
+            long fsz;
             if (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) continue;
             path_join(ppath, argv[2], fd.cFileName);
             f = fopen(ppath, "rb");
-            if (!f || fread(magic, 1, 3, f) != 3) { if (f) fclose(f); continue; }
+            if (!f) continue;
+            fseek(f, 0, SEEK_END); fsz = ftell(f); fseek(f, 0, SEEK_SET);
+            if (fsz < (long)sizeof(head) || fread(head, 1, sizeof(head), f) != sizeof(head)) { fclose(f); continue; }
             fclose(f);
-            if (memcmp(magic, "PB6", 3) && memcmp(magic, "BM8", 3)) continue;
+            if (memcmp(head, "PB6", 3) && !is_raw_variant(head, (size_t)fsz)) continue;
             if (count == cap) { cap *= 2; ctx.paths = realloc(ctx.paths, cap * sizeof(*ctx.paths)); }
             strcpy(ctx.paths[count++], ppath);
         } while (FindNextFileA(h, &fd));
