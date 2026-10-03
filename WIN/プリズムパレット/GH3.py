@@ -519,8 +519,10 @@ class BW:
         return bytes(out)
 
 
-PA_A40 = [(0, 0), (2, 0), (4, 4), (6, 20), (8, 84), (12, 340), (16, 4436), (18, 69972), (1, 2), (4, 8), (16, 32), (64, 128)]
-PA_AE0 = [(2, 0), (4, 4), (6, 20), (8, 84), (12, 340), (16, 4436), (18, 69972), (1, 2), (4, 8), (16, 32), (64, 128)]
+# RoFAS.dll's prefix table ends at 0x1002E187. The following DWORDs
+# at 0x1002E188 belong to the separate pixel mask table (1, 2, 4, ...).
+PA_A40 = [(0, 0), (2, 0), (4, 4), (6, 20), (8, 84), (12, 340), (16, 4436), (18, 69972)]
+PA_AE0 = [(2, 0), (4, 4), (6, 20), (8, 84), (12, 340), (16, 4436), (18, 69972)]
 
 
 def clog2(n: int) -> int:
@@ -538,12 +540,16 @@ def rd_a40(br: BR) -> int:
     idx = br.unary1()
     if idx == 0:
         return 3
+    if idx >= len(PA_A40):
+        raise ValueError("invalid GHP3 repeat prefix")
     bits, base = PA_A40[idx]
     return base + br.get(bits) + 4
 
 
 def rd_ae0(br: BR) -> int:
     idx = br.unary1()
+    if idx >= len(PA_AE0):
+        raise ValueError("invalid GHP3 position prefix")
     bits, base = PA_AE0[idx]
     return base + br.get(bits) + 1
 
@@ -616,12 +622,14 @@ def decode_one(gh_path: Path, out_dir: Path) -> None:
                 word = struct.unpack_from("<I", mask, w * 4)[0] | (1 << bit)
                 struct.pack_into("<I", mask, w * 4, word)
             if step >= 5:
+                ev += 1
+                if ev == h.opaque_count:
+                    break
                 d = rd_ae0(br) + bx
                 by += d // h.width
                 bx = d % h.width
                 x, y = bx, by
                 cur = br.get(bits) if bits else 0
-                ev += 1
             else:
                 x += step - 2
                 y += 1
