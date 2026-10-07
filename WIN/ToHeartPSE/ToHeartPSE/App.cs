@@ -117,10 +117,12 @@ internal static class App
     {
         image = null;
         listEntry = null;
-        if (!LeafFormats.TryInspectLff(data, out _))
+        if (!LeafFormats.TryInspectLff(data, out LffMeta meta))
             return false;
         image = LeafFormats.DecodeLff(data);
         listEntry = new ListEntry("lff", ChangeExtensionToPng(diskName));
+        listEntry["x"] = meta.X.ToString();
+        listEntry["y"] = meta.Y.ToString();
         return true;
     }
 
@@ -132,8 +134,7 @@ internal static class App
             return false;
         image = LeafFormats.DecodeLfb(data);
         listEntry = new ListEntry("lfb", ChangeExtensionToPng(diskName));
-        if (meta.Kind == "custom-indexed-alpha")
-            listEntry["t"] = "1";
+        listEntry["bpp"] = meta.Bpp.ToString();
         return true;
     }
 

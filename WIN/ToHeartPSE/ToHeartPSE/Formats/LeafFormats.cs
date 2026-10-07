@@ -164,7 +164,7 @@ internal static class LeafFormats
         if (bmp.Length < 54 || bmp[0] != (byte)'B' || bmp[1] != (byte)'M')
             return false;
 
-        meta = new LfbMeta(ReadInt32LE(bmp, 18), Math.Abs(ReadInt32LE(bmp, 22)), IsCustomIndexedAlphaBmp(bmp) ? "custom-indexed-alpha" : "standard-bmp");
+        meta = new LfbMeta(ReadInt32LE(bmp, 18), Math.Abs(ReadInt32LE(bmp, 22)), ReadUInt16LE(bmp, 28));
         return true;
     }
 
@@ -214,10 +214,19 @@ internal static class LeafFormats
     public static byte[] EncodeLfb(ListEntry item, Bitmap source)
     {
         using var bitmap = BitmapTools.CloneToArgb(source);
-        int type = item.GetIntOrDefault("t", 0);
-        byte[] bmp = type == 1
-            ? BitmapTools.BuildCustomIndexedAlphaBmp(bitmap)
-            : BitmapTools.BuildStandardBmp32(bitmap);
+        // 游戏按调用点写死 bpp 分派绘制（8/16/24/32 各一条，不匹配则静默跳过不画），
+        // 因此必须按 list.xml 记录的原始 bpp 重编码。bpp 缺失（旧版 list.xml）直接报错，
+        // 不允许静默回退成 32bpp——那会重现 8bpp/24bpp 图片在游戏里消失的问题。
+        // 本游戏的 16bpp LFB 均为 custom-indexed-alpha。
+        byte[] bmp = item.GetInt("bpp") switch
+        {
+            8 => BitmapTools.BuildStandardBmp8(bitmap),
+            16 => BitmapTools.BuildCustomIndexedAlphaBmp(bitmap),
+            24 => BitmapTools.BuildStandardBmp24(bitmap),
+            32 => BitmapTools.BuildStandardBmp32(bitmap),
+            _ => throw new InvalidOperationException(
+                $"{item.Name}: unsupported LFB bpp {item.GetInt("bpp")}, expected 8/16/24/32"),
+        };
         byte[] compressed = LeafCodec.Compress(bmp);
         using var ms = new MemoryStream();
         using var bw = new BinaryWriter(ms, System.Text.Encoding.ASCII, leaveOpen: true);

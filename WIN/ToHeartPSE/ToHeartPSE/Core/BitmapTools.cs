@@ -120,27 +120,54 @@ internal static class BitmapTools
             }
         }
 
-        using var ms = new MemoryStream();
-        using var bw = new BinaryWriter(ms, System.Text.Encoding.ASCII, leaveOpen: true);
-        bw.Write((byte)'B');
-        bw.Write((byte)'M');
-        bw.Write(14 + 40 + pixels.Length);
-        bw.Write((ushort)0);
-        bw.Write((ushort)0);
-        bw.Write(54);
-        bw.Write(40);
-        bw.Write(width);
-        bw.Write(height);
-        bw.Write((ushort)1);
-        bw.Write((ushort)32);
-        bw.Write(0);
-        bw.Write(pixels.Length);
-        bw.Write(2835);
-        bw.Write(2835);
-        bw.Write(0);
-        bw.Write(0);
-        bw.Write(pixels);
-        return ms.ToArray();
+        return BuildBmpHeader(width, height, 32, 54, pixels.Length, 0, null)
+            .Concat(pixels).ToArray();
+    }
+
+    public static byte[] BuildStandardBmp24(Bitmap bitmap)
+    {
+        byte[] topDown = ExtractTopDownBgra32(bitmap);
+        int width = bitmap.Width;
+        int height = bitmap.Height;
+        int srcStride = width * 4;
+        int stride = (width * 3 + 3) & ~3;
+        byte[] pixels = new byte[stride * height];
+        for (int y = 0; y < height; y++)
+        {
+            int srcRow = (height - 1 - y) * srcStride;
+            int dstRow = y * stride;
+            for (int x = 0; x < width; x++)
+            {
+                int src = srcRow + x * 4;
+                int dst = dstRow + x * 3;
+                pixels[dst + 0] = topDown[src + 0];
+                pixels[dst + 1] = topDown[src + 1];
+                pixels[dst + 2] = topDown[src + 2];
+            }
+        }
+
+        return BuildBmpHeader(width, height, 24, 54, pixels.Length, 0, null)
+            .Concat(pixels).ToArray();
+    }
+
+    public static byte[] BuildStandardBmp8(Bitmap bitmap)
+    {
+        byte[] topDown = ExtractTopDownBgra32(bitmap);
+        int width = bitmap.Width;
+        int height = bitmap.Height;
+        byte[] indices = IndexedQuantizer.Build(topDown, width, height, 256, out var palette);
+        int stride = (width + 3) & ~3;
+        byte[] pixels = new byte[stride * height];
+        for (int y = 0; y < height; y++)
+        {
+            int srcRow = (height - 1 - y) * width;
+            int dstRow = y * stride;
+            for (int x = 0; x < width; x++)
+                pixels[dstRow + x] = indices[srcRow + x];
+        }
+
+        return BuildBmpHeader(width, height, 8, 14 + 40 + 256 * 4, pixels.Length, 0, palette)
+            .Concat(pixels).ToArray();
     }
 
     public static byte[] BuildCustomIndexedAlphaBmp(Bitmap bitmap)
@@ -148,117 +175,69 @@ internal static class BitmapTools
         int width = bitmap.Width;
         int height = bitmap.Height;
         byte[] topDown = ExtractTopDownBgra32(bitmap);
-        byte[] palette;
-        byte[] pixels = TryCreateExactPalette(topDown, out palette)
-            ? BuildCustomPixelsExact(topDown, width, height, palette)
-            : BuildCustomPixelsQuantized(topDown, width, height, out palette);
+        byte[] indices = IndexedQuantizer.Build(topDown, width, height, 256, out var palette);
+        byte[] pixels = new byte[width * height * 2];
+        int dst = 0;
+        for (int y = height - 1; y >= 0; y--)
+        {
+            int row = y * width * 4;
+            for (int x = 0; x < width; x++)
+            {
+                int src = row + x * 4;
+                pixels[dst++] = topDown[src + 3];
+                pixels[dst++] = indices[y * width + x];
+            }
+        }
 
+        return BuildBmpHeader(width, height, 16, 14 + 40 + 256 * 4, pixels.Length, 0, palette)
+            .Concat(pixels).ToArray();
+    }
+
+    // 原版 LFB 的 BMP 头除 width/height/planes/bpp/offBits 外全部为 0
+    // （sizeImage/xppm/yppm/clrUsed 原版不统一，但游戏端四条绘制路径都不读），
+    // 这里统一写 0，保持与原版尽可能字节对齐。
+    static byte[] BuildBmpHeader(int width, int height, int bpp, int offBits, int pixelBytes,
+        int sizeImage, List<(byte R, byte G, byte B)>? palette)
+    {
         using var ms = new MemoryStream();
         using var bw = new BinaryWriter(ms, System.Text.Encoding.ASCII, leaveOpen: true);
         bw.Write((byte)'B');
         bw.Write((byte)'M');
-        bw.Write(14 + 40 + 256 * 4 + pixels.Length);
+        int paletteBytes = palette != null ? 256 * 4 : 0;
+        bw.Write(14 + 40 + paletteBytes + pixelBytes);
         bw.Write((ushort)0);
         bw.Write((ushort)0);
-        bw.Write(14 + 40 + 256 * 4);
+        bw.Write(offBits);
         bw.Write(40);
         bw.Write(width);
         bw.Write(height);
         bw.Write((ushort)1);
-        bw.Write((ushort)16);
+        bw.Write((ushort)bpp);
         bw.Write(0);
-        bw.Write(pixels.Length);
-        bw.Write(2835);
-        bw.Write(2835);
-        bw.Write(256);
+        bw.Write(sizeImage);
         bw.Write(0);
-        bw.Write(palette);
-        bw.Write(pixels);
+        bw.Write(0);
+        bw.Write(0);
+        bw.Write(0);
+        if (palette != null)
+        {
+            for (int i = 0; i < 256; i++)
+            {
+                if (i < palette.Count)
+                {
+                    bw.Write(palette[i].B);
+                    bw.Write(palette[i].G);
+                    bw.Write(palette[i].R);
+                }
+                else
+                {
+                    bw.Write((byte)0);
+                    bw.Write((byte)0);
+                    bw.Write((byte)0);
+                }
+                bw.Write((byte)0);
+            }
+        }
         return ms.ToArray();
-    }
-
-    static bool TryCreateExactPalette(byte[] topDown, out byte[] palette)
-    {
-        var colors = new List<int>(256);
-        var seen = new HashSet<int>();
-        for (int i = 0; i < topDown.Length; i += 4)
-        {
-            int rgb = topDown[i + 2] << 16 | topDown[i + 1] << 8 | topDown[i + 0];
-            if (!seen.Add(rgb))
-                continue;
-            if (colors.Count >= 256)
-            {
-                palette = Array.Empty<byte>();
-                return false;
-            }
-            colors.Add(rgb);
-        }
-
-        palette = new byte[256 * 4];
-        for (int i = 0; i < colors.Count; i++)
-        {
-            int rgb = colors[i];
-            palette[i * 4 + 0] = (byte)(rgb & 0xFF);
-            palette[i * 4 + 1] = (byte)((rgb >> 8) & 0xFF);
-            palette[i * 4 + 2] = (byte)((rgb >> 16) & 0xFF);
-        }
-        return true;
-    }
-
-    static byte[] BuildCustomPixelsExact(byte[] topDown, int width, int height, byte[] palette)
-    {
-        var lookup = new Dictionary<int, byte>();
-        for (int i = 0; i < 256; i++)
-        {
-            int rgb = palette[i * 4 + 2] << 16 | palette[i * 4 + 1] << 8 | palette[i * 4 + 0];
-            if (!lookup.ContainsKey(rgb))
-                lookup.Add(rgb, (byte)i);
-        }
-
-        byte[] pixels = new byte[width * height * 2];
-        int dst = 0;
-        for (int y = height - 1; y >= 0; y--)
-        {
-            int row = y * width * 4;
-            for (int x = 0; x < width; x++)
-            {
-                int src = row + x * 4;
-                int rgb = topDown[src + 2] << 16 | topDown[src + 1] << 8 | topDown[src + 0];
-                pixels[dst++] = topDown[src + 3];
-                pixels[dst++] = lookup[rgb];
-            }
-        }
-        return pixels;
-    }
-
-    static byte[] BuildCustomPixelsQuantized(byte[] topDown, int width, int height, out byte[] palette)
-    {
-        palette = new byte[256 * 4];
-        for (int r = 0; r < 8; r++)
-        for (int g = 0; g < 8; g++)
-        for (int b = 0; b < 4; b++)
-        {
-            int index = (r << 5) | (g << 2) | b;
-            palette[index * 4 + 0] = (byte)(b * 255 / 3);
-            palette[index * 4 + 1] = (byte)(g * 255 / 7);
-            palette[index * 4 + 2] = (byte)(r * 255 / 7);
-        }
-
-        byte[] pixels = new byte[width * height * 2];
-        int dst = 0;
-        for (int y = height - 1; y >= 0; y--)
-        {
-            int row = y * width * 4;
-            for (int x = 0; x < width; x++)
-            {
-                int src = row + x * 4;
-                int ri = (topDown[src + 2] * 7 + 127) / 255;
-                int gi = (topDown[src + 1] * 7 + 127) / 255;
-                int bi = (topDown[src + 0] * 3 + 127) / 255;
-                pixels[dst++] = topDown[src + 3];
-                pixels[dst++] = (byte)((ri << 5) | (gi << 2) | bi);
-            }
-        }
-        return pixels;
     }
 }
