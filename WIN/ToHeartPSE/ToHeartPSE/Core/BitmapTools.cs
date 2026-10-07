@@ -97,7 +97,7 @@ internal static class BitmapTools
         return output;
     }
 
-    public static byte[] BuildStandardBmp32(Bitmap bitmap)
+    public static byte[] BuildStandardBmp32Pixels(Bitmap bitmap)
     {
         byte[] topDown = ExtractTopDownBgra32(bitmap);
         int width = bitmap.Width;
@@ -119,12 +119,10 @@ internal static class BitmapTools
                 pixels[dst + 3] = topDown[src + 2];
             }
         }
-
-        return BuildBmpHeader(width, height, 32, 54, pixels.Length, 0, null)
-            .Concat(pixels).ToArray();
+        return pixels;
     }
 
-    public static byte[] BuildStandardBmp24(Bitmap bitmap)
+    public static byte[] BuildStandardBmp24Pixels(Bitmap bitmap)
     {
         byte[] topDown = ExtractTopDownBgra32(bitmap);
         int width = bitmap.Width;
@@ -145,17 +143,15 @@ internal static class BitmapTools
                 pixels[dst + 2] = topDown[src + 2];
             }
         }
-
-        return BuildBmpHeader(width, height, 24, 54, pixels.Length, 0, null)
-            .Concat(pixels).ToArray();
+        return pixels;
     }
 
-    public static byte[] BuildStandardBmp8(Bitmap bitmap)
+    public static byte[] BuildStandardBmp8Pixels(Bitmap bitmap, int maxColors, out List<(byte R, byte G, byte B)> palette)
     {
         byte[] topDown = ExtractTopDownBgra32(bitmap);
         int width = bitmap.Width;
         int height = bitmap.Height;
-        byte[] indices = IndexedQuantizer.Build(topDown, width, height, 256, out var palette);
+        byte[] indices = IndexedQuantizer.Build(topDown, width, height, maxColors, out palette);
         int stride = (width + 3) & ~3;
         byte[] pixels = new byte[stride * height];
         for (int y = 0; y < height; y++)
@@ -165,17 +161,15 @@ internal static class BitmapTools
             for (int x = 0; x < width; x++)
                 pixels[dstRow + x] = indices[srcRow + x];
         }
-
-        return BuildBmpHeader(width, height, 8, 14 + 40 + 256 * 4, pixels.Length, 0, palette)
-            .Concat(pixels).ToArray();
+        return pixels;
     }
 
-    public static byte[] BuildCustomIndexedAlphaBmp(Bitmap bitmap)
+    public static byte[] BuildCustomIndexedAlphaPixels(Bitmap bitmap, int maxColors, out List<(byte R, byte G, byte B)> palette)
     {
         int width = bitmap.Width;
         int height = bitmap.Height;
         byte[] topDown = ExtractTopDownBgra32(bitmap);
-        byte[] indices = IndexedQuantizer.Build(topDown, width, height, 256, out var palette);
+        byte[] indices = IndexedQuantizer.Build(topDown, width, height, maxColors, out palette);
         byte[] pixels = new byte[width * height * 2];
         int dst = 0;
         for (int y = height - 1; y >= 0; y--)
@@ -188,23 +182,23 @@ internal static class BitmapTools
                 pixels[dst++] = indices[y * width + x];
             }
         }
-
-        return BuildBmpHeader(width, height, 16, 14 + 40 + 256 * 4, pixels.Length, 0, palette)
-            .Concat(pixels).ToArray();
+        return pixels;
     }
 
-    // 原版 LFB 的 BMP 头除 width/height/planes/bpp/offBits 外全部为 0
-    // （sizeImage/xppm/yppm/clrUsed 原版不统一，但游戏端四条绘制路径都不读），
-    // 这里统一写 0，保持与原版尽可能字节对齐。
-    static byte[] BuildBmpHeader(int width, int height, int bpp, int offBits, int pixelBytes,
-        int sizeImage, List<(byte R, byte G, byte B)>? palette)
+    // 生成 LFB 的 BMP 头。游戏端全部 7 个 BMP 消费函数（4 条 bpp 绘制路径、
+    // 位置/尺寸辅助 sub_415A50/AA0、加载器）读取的字段经逐一审计仅为：
+    //   +10 offBits（像素起点，= 54 + 调色板字节数）、+14 biSize（=40，调色板定位）、
+    //   +18/+22 宽高、+28 bpp、+38/+42（被 sub_415A50 挪用为默认绘制坐标 x/y）。
+    // 其余字段（fileSize/sizeImage/clrUsed/clrImportant）无任何代码读取，按惯例
+    // 生成：fileSize=精确值、sizeImage=0、clrUsed=有调色板时 256 否则 0、clrImportant=0。
+    public static byte[] BuildBmpHeader(int width, int height, int bpp, int offBits, int pixelBytes,
+        int posX, int posY, int clrUsed)
     {
         using var ms = new MemoryStream();
         using var bw = new BinaryWriter(ms, System.Text.Encoding.ASCII, leaveOpen: true);
         bw.Write((byte)'B');
         bw.Write((byte)'M');
-        int paletteBytes = palette != null ? 256 * 4 : 0;
-        bw.Write(14 + 40 + paletteBytes + pixelBytes);
+        bw.Write(offBits + pixelBytes);
         bw.Write((ushort)0);
         bw.Write((ushort)0);
         bw.Write(offBits);
@@ -214,30 +208,11 @@ internal static class BitmapTools
         bw.Write((ushort)1);
         bw.Write((ushort)bpp);
         bw.Write(0);
-        bw.Write(sizeImage);
         bw.Write(0);
+        bw.Write(posX);
+        bw.Write(posY);
+        bw.Write(clrUsed);
         bw.Write(0);
-        bw.Write(0);
-        bw.Write(0);
-        if (palette != null)
-        {
-            for (int i = 0; i < 256; i++)
-            {
-                if (i < palette.Count)
-                {
-                    bw.Write(palette[i].B);
-                    bw.Write(palette[i].G);
-                    bw.Write(palette[i].R);
-                }
-                else
-                {
-                    bw.Write((byte)0);
-                    bw.Write((byte)0);
-                    bw.Write((byte)0);
-                }
-                bw.Write((byte)0);
-            }
-        }
         return ms.ToArray();
     }
 }

@@ -164,7 +164,8 @@ internal static class LeafFormats
         if (bmp.Length < 54 || bmp[0] != (byte)'B' || bmp[1] != (byte)'M')
             return false;
 
-        meta = new LfbMeta(ReadInt32LE(bmp, 18), Math.Abs(ReadInt32LE(bmp, 22)), ReadUInt16LE(bmp, 28));
+        meta = new LfbMeta(ReadInt32LE(bmp, 18), Math.Abs(ReadInt32LE(bmp, 22)), ReadUInt16LE(bmp, 28),
+            ReadInt32LE(bmp, 38), ReadInt32LE(bmp, 42));
         return true;
     }
 
@@ -218,21 +219,48 @@ internal static class LeafFormats
         // 因此必须按 list.xml 记录的原始 bpp 重编码。bpp 缺失（旧版 list.xml）直接报错，
         // 不允许静默回退成 32bpp——那会重现 8bpp/24bpp 图片在游戏里消失的问题。
         // 本游戏的 16bpp LFB 均为 custom-indexed-alpha。
-        byte[] bmp = item.GetInt("bpp") switch
+        int bpp = item.GetInt("bpp");
+        bool hasPalette = bpp is 8 or 16;
+        // 调色板统一 256 槽（offBits 恒 1078）：槽位数对游戏只是自洽问题；
+        // 16bpp 的 custom 格式检测（IsCustomIndexedAlphaBmp）也硬性要求 offBits=1078。
+        byte[] pixels;
+        List<(byte R, byte G, byte B)>? palette = null;
+        switch (bpp)
         {
-            8 => BitmapTools.BuildStandardBmp8(bitmap),
-            16 => BitmapTools.BuildCustomIndexedAlphaBmp(bitmap),
-            24 => BitmapTools.BuildStandardBmp24(bitmap),
-            32 => BitmapTools.BuildStandardBmp32(bitmap),
-            _ => throw new InvalidOperationException(
-                $"{item.Name}: unsupported LFB bpp {item.GetInt("bpp")}, expected 8/16/24/32"),
-        };
-        byte[] compressed = LeafCodec.Compress(bmp);
+            case 8: pixels = BitmapTools.BuildStandardBmp8Pixels(bitmap, 256, out palette); break;
+            case 16: pixels = BitmapTools.BuildCustomIndexedAlphaPixels(bitmap, 256, out palette); break;
+            case 24: pixels = BitmapTools.BuildStandardBmp24Pixels(bitmap); break;
+            case 32: pixels = BitmapTools.BuildStandardBmp32Pixels(bitmap); break;
+            default: throw new InvalidOperationException(
+                $"{item.Name}: unsupported LFB bpp {bpp}, expected 8/16/24/32");
+        }
+
+        int paletteBytes = palette != null ? 256 * 4 : 0;
+        byte[] header = BitmapTools.BuildBmpHeader(bitmap.Width, bitmap.Height, bpp,
+            14 + 40 + paletteBytes, pixels.Length,
+            item.GetIntOrDefault("x", 0), item.GetIntOrDefault("y", 0), hasPalette ? 256 : 0);
+
         using var ms = new MemoryStream();
-        using var bw = new BinaryWriter(ms, System.Text.Encoding.ASCII, leaveOpen: true);
-        bw.Write(bmp.Length);
+        ms.Write(header);
+        if (palette != null)
+        {
+            var pal = new byte[paletteBytes];
+            for (int i = 0; i < 256; i++)
+            {
+                pal[i * 4 + 0] = palette[i].B;
+                pal[i * 4 + 1] = palette[i].G;
+                pal[i * 4 + 2] = palette[i].R;
+            }
+            ms.Write(pal);
+        }
+        ms.Write(pixels);
+
+        byte[] compressed = LeafCodec.Compress(ms.ToArray());
+        using var outMs = new MemoryStream();
+        using var bw = new BinaryWriter(outMs, System.Text.Encoding.ASCII, leaveOpen: true);
+        bw.Write((int)ms.Length);
         bw.Write(compressed);
-        return ms.ToArray();
+        return outMs.ToArray();
     }
 
     static bool IsCustomIndexedAlphaBmp(byte[] bmp) =>

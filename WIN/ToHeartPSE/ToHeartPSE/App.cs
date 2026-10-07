@@ -135,6 +135,8 @@ internal static class App
         image = LeafFormats.DecodeLfb(data);
         listEntry = new ListEntry("lfb", ChangeExtensionToPng(diskName));
         listEntry["bpp"] = meta.Bpp.ToString();
+        listEntry["x"] = meta.PosX.ToString();
+        listEntry["y"] = meta.PosY.ToString();
         return true;
     }
 
