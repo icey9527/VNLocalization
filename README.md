@@ -18,6 +18,7 @@
 | PS2 | Ever17 | `.afs` unpack/pack, `.bin`/`init.bin` script parse/rebuild, font generation |
 | PS2 | WHITE CLARITY | `.mes` text extract/insert, font generation, `.bmp(pb6)` <-> `.png` conversion |
 | PS2 | ゆめりあ | `.bin` unpack/pack,`.scr` text extract/insert, `.sfo` font generation |
+| PS2 | お嬢様組曲 | `.saf` unpack/pack,`script` text extract/insert, `kwmtsr` font generation |
 | PSP | EDEN / 僕の心は雨のち晴れ | `.ipb` script parse/rebuild, `.ipg` <-> `.png` conversion, font generation |
 | PSP | 快盗天使ツインエンジェル ～時とセカイの迷宮～ | `.pac` <-> `.png` conversion, font generation |
 | PSP | ヴァイスシュヴァルツ ポータブル | `.brp` unpack/pack |

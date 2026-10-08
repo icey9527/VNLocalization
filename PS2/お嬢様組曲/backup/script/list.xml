@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <archive version="1">
+    <entry name="script" flags="0xAC3F1000" />
+    <entry name="label" flags="0xD0811000" />
+  </archive>
+</resources>
